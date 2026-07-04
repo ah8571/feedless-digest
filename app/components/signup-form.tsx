@@ -5,14 +5,36 @@ import { createClient } from "@supabase/supabase-js";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
+const subnewsletterOptions = [
+  { value: "ai-engineering", label: "AI engineering" },
+  { value: "open-source-intrigues", label: "Open Source Intrigues" },
+  { value: "mobile-development", label: "Mobile development" },
+  { value: "developer-tooling", label: "Developer tooling" },
+  { value: "crypto-investing", label: "Crypto Investing" },
+  { value: "security", label: "Security" },
+  { value: "compliance", label: "Compliance" },
+  { value: "financing-bootstrapping", label: "Financing & Bootstrapping" },
+  { value: "lead-generation", label: "Lead Generation" },
+  { value: "seo", label: "SEO" },
+  { value: "cold-outreach-marketing", label: "Cold outreach marketing" },
+  { value: "social-media-marketing", label: "Social Media marketing" },
+  { value: "ads-advice", label: "Ads advice" },
+  { value: "data-cloud-engineering", label: "Data & Cloud Engineering" },
+];
+
 export function SignupForm() {
   const [email, setEmail] = useState("");
+  const [subnewsletter, setSubnewsletter] = useState("");
   const [status, setStatus] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
 
   const listmonkUrl = process.env.NEXT_PUBLIC_LISTMONK_URL;
   const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
+  const showSubnewsletterPicker = email.trim().length > 0;
+  const signupSource = subnewsletter
+    ? `landing-page:${subnewsletter}`
+    : "landing-page";
 
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -42,6 +64,11 @@ export function SignupForm() {
           body: JSON.stringify({
             email: email.trim().toLowerCase(),
             list_uuids: [listmonkListUuid],
+            attribs: subnewsletter
+              ? {
+                  subnewsletter,
+                }
+              : {},
           }),
         }
       );
@@ -53,6 +80,7 @@ export function SignupForm() {
       }
 
       setEmail("");
+  setSubnewsletter("");
       setStatus("success");
       setMessage("You are on the list.");
       return;
@@ -66,7 +94,7 @@ export function SignupForm() {
 
     const { error } = await supabase.from("newsletter_signups").insert({
       email: email.trim().toLowerCase(),
-      source: "landing-page",
+      source: signupSource,
     });
 
     if (error) {
@@ -81,6 +109,7 @@ export function SignupForm() {
     }
 
     setEmail("");
+    setSubnewsletter("");
     setStatus("success");
     setMessage("You are on the list.");
   }
@@ -106,6 +135,26 @@ export function SignupForm() {
           {status === "loading" ? "Saving..." : "Get Early Access"}
         </button>
       </div>
+      {showSubnewsletterPicker ? (
+        <div className="signup-subnewsletter">
+          <label className="signup-sublabel" htmlFor="subnewsletter">
+            Pick a sub-newsletter to follow first
+          </label>
+          <select
+            id="subnewsletter"
+            className="signup-select"
+            value={subnewsletter}
+            onChange={(event) => setSubnewsletter(event.target.value)}
+          >
+            <option value="">Choose a topic (optional)</option>
+            {subnewsletterOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      ) : null}
       <p className={`signup-message signup-${status}`}>
         {message || "Thoughtful long-form curation, delivered by email."}
       </p>
