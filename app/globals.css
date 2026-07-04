@@ -200,7 +200,7 @@ h2 {
 }
 
 .hero {
-  align-items: stretch;
+  align-items: start;
 }
 
 .hero-copy h1,
