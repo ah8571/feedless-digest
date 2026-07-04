@@ -261,6 +261,11 @@ h2 {
   color: #fff8f2;
 }
 
+.button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
 .button-secondary {
   background: transparent;
   border-color: rgba(29, 27, 24, 0.18);
@@ -270,6 +275,59 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.signup-form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 6px;
+}
+
+.signup-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.signup-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.signup-input {
+  min-height: 52px;
+  width: 100%;
+  padding: 0 18px;
+  border: 1px solid rgba(29, 27, 24, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.92);
+  color: var(--ink);
+  font: inherit;
+}
+
+.signup-input:focus {
+  outline: 2px solid rgba(196, 91, 50, 0.3);
+  outline-offset: 1px;
+}
+
+.signup-message {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.signup-success {
+  color: var(--olive);
+}
+
+.signup-error {
+  color: var(--accent-deep);
 }
 
 .stat-value {
@@ -382,5 +440,9 @@ h2 {
 
   .cta-row {
     width: 100%;
+  }
+
+  .signup-row {
+    grid-template-columns: 1fr;
   }
 }

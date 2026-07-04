@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SignupForm } from "./components/signup-form";
 
 const sourcingChannels = [
   "Developer blogs like dev.to, Hashnode, and Hackernoon",
@@ -66,10 +67,9 @@ export default function HomePage() {
             best ideas are usually hidden behind hours of scrolling.
           </p>
 
+          <SignupForm />
+
           <div className="cta-row">
-            <a className="button button-primary" href="mailto:hello@feedfreedigest.com?subject=Join%20the%20waitlist">
-              Join the Waitlist
-            </a>
             <Link className="button button-secondary" href="/advertise">
               Advertise With Us
             </Link>
