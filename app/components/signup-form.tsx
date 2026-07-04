@@ -25,6 +25,7 @@ const subnewsletterOptions = [
 export function SignupForm() {
   const [email, setEmail] = useState("");
   const [topics, setTopics] = useState<string[]>([]);
+  const [topicsExpanded, setTopicsExpanded] = useState(false);
   const [status, setStatus] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
 
@@ -86,6 +87,7 @@ export function SignupForm() {
 
       setEmail("");
       setTopics([]);
+      setTopicsExpanded(false);
       setStatus("success");
       setMessage("You are on the list.");
       return;
@@ -115,6 +117,7 @@ export function SignupForm() {
       if (!fallback.error) {
         setEmail("");
         setTopics([]);
+        setTopicsExpanded(false);
         setStatus("success");
         setMessage(
           "You are on the list. Run the latest Supabase signup SQL to start saving topic preferences."
@@ -136,6 +139,7 @@ export function SignupForm() {
 
     setEmail("");
     setTopics([]);
+    setTopicsExpanded(false);
     setStatus("success");
     setMessage("You are on the list.");
   }
@@ -154,7 +158,20 @@ export function SignupForm() {
           autoComplete="email"
           placeholder="Enter your email"
           value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={(event) => {
+            const nextEmail = event.target.value;
+            const hasEmail = nextEmail.trim().length > 0;
+
+            setEmail(nextEmail);
+
+            if (hasEmail) {
+              setTopicsExpanded(true);
+              return;
+            }
+
+            setTopics([]);
+            setTopicsExpanded(false);
+          }}
           required
         />
         <button className="button button-primary" type="submit" disabled={!canSubmit}>
@@ -167,30 +184,47 @@ export function SignupForm() {
             Pick one or more sub-newsletters to follow
           </legend>
           <p className="signup-subhelp">You can choose multiple topics before joining.</p>
-          <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
-            {subnewsletterOptions.map((option) => {
-              const checked = topics.includes(option.value);
+          <button
+            className="signup-toggle"
+            type="button"
+            aria-expanded={topicsExpanded}
+            onClick={() => setTopicsExpanded((current) => !current)}
+          >
+            <span>
+              {topics.length > 0
+                ? `${topics.length} newsletter${topics.length === 1 ? "" : "s"} selected`
+                : "Choose newsletter topics"}
+            </span>
+            <span className={`signup-toggle-chevron${topicsExpanded ? " is-open" : ""}`}>
+              v
+            </span>
+          </button>
+          {topicsExpanded ? (
+            <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
+              {subnewsletterOptions.map((option) => {
+                const checked = topics.includes(option.value);
 
-              return (
-                <label className="signup-checkitem" key={option.value}>
-                  <input
-                    className="signup-checkbox"
-                    type="checkbox"
-                    checked={checked}
-                    onChange={(event) => {
-                      if (event.target.checked) {
-                        setTopics((current) => [...current, option.value]);
-                        return;
-                      }
+                return (
+                  <label className="signup-checkitem" key={option.value}>
+                    <input
+                      className="signup-checkbox"
+                      type="checkbox"
+                      checked={checked}
+                      onChange={(event) => {
+                        if (event.target.checked) {
+                          setTopics((current) => [...current, option.value]);
+                          return;
+                        }
 
-                      setTopics((current) => current.filter((topic) => topic !== option.value));
-                    }}
-                  />
-                  <span>{option.label}</span>
-                </label>
-              );
-            })}
-          </div>
+                        setTopics((current) => current.filter((topic) => topic !== option.value));
+                      }}
+                    />
+                    <span>{option.label}</span>
+                  </label>
+                );
+              })}
+            </div>
+          ) : null}
         </fieldset>
       ) : null}
       <p className={`signup-message signup-${status}`}>
