@@ -20,14 +20,15 @@ export default function HomePage() {
       <section className="hero card-grid">
         <div className="hero-copy panel panel-accent">
           <p className="eyebrow">A newsletter for people who value signal</p>
-          <h1>Read the internet without living inside the feed.</h1>
+          <h1>Read blog length social posts without doom scrolling.</h1>
+
+          <SignupForm />
+
           <p className="lede">
             Feedless Digest isolates substantive posts, deep threads, and
             long-form discussions from the forums and social platforms where the
             best ideas are usually hidden behind hours of scrolling.
           </p>
-
-          <SignupForm />
 
           <div className="cta-row">
             <Link className="button button-secondary" href="/advertise">
@@ -74,19 +75,21 @@ export default function HomePage() {
 
       <section className="workflow-section">
         <div className="section-heading">
-          <p className="section-label">How the MVP should work</p>
-          <h2>Let readers move through past editions without searching the open web again.</h2>
+          <p className="section-label">Past Editions</p>
+          <h2>See past editions</h2>
         </div>
 
         <div className="workflow-grid">
           {archiveIssues.map((issue) => (
             <article className="panel workflow-card" key={issue.id}>
               <span className="step-chip">{issue.date}</span>
-              <h3>{issue.title}</h3>
-              <p>{issue.summary}</p>
-              <Link className="text-link" href={`/archive#${issue.id}`}>
-                Jump to this edition in the archive
-              </Link>
+              {issue.title ? <h3>{issue.title}</h3> : null}
+              {issue.summary ? <p>{issue.summary}</p> : null}
+              {issue.title ? (
+                <Link className="text-link" href={`/archive#${issue.id}`}>
+                  Jump to this edition in the archive
+                </Link>
+              ) : null}
             </article>
           ))}
         </div>

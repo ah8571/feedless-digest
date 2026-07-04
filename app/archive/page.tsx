@@ -17,8 +17,8 @@ export default function ArchivePage() {
         {archiveIssues.map((issue) => (
           <article className="panel archive-card" id={issue.id} key={issue.id}>
             <p className="section-label">{issue.date}</p>
-            <h2>{issue.title}</h2>
-            <p>{issue.summary}</p>
+            {issue.title ? <h2>{issue.title}</h2> : null}
+            {issue.summary ? <p>{issue.summary}</p> : null}
           </article>
         ))}
       </section>
