@@ -10,6 +10,10 @@ export function SignupForm() {
   const [status, setStatus] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
 
+  const listmonkUrl = process.env.NEXT_PUBLIC_LISTMONK_URL;
+  const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
+  const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
+
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -24,14 +28,41 @@ export function SignupForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    setStatus("loading");
+    setMessage("");
+
+    if (useListmonk) {
+      const response = await fetch(
+        `${listmonkUrl!.replace(/\/$/, "")}/api/public/subscription`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email.trim().toLowerCase(),
+            list_uuids: [listmonkListUuid],
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        setStatus("error");
+        setMessage("List signup failed. Check Listmonk public signup settings.");
+        return;
+      }
+
+      setEmail("");
+      setStatus("success");
+      setMessage("You are on the list.");
+      return;
+    }
+
     if (!supabase) {
       setStatus("error");
       setMessage("Signup is not configured yet.");
       return;
     }
-
-    setStatus("loading");
-    setMessage("");
 
     const { error } = await supabase.from("newsletter_signups").insert({
       email: email.trim().toLowerCase(),
@@ -75,7 +106,9 @@ export function SignupForm() {
           {status === "loading" ? "Saving..." : "Get Early Access"}
         </button>
       </div>
-      <p className={`signup-message signup-${status}`}>{message || "No spam. Just thoughtful long-form curation."}</p>
+      <p className={`signup-message signup-${status}`}>
+        {message || "No spam. Just thoughtful long-form curation."}
+      </p>
     </form>
   );
 }
