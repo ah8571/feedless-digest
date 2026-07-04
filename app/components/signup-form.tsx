@@ -32,7 +32,6 @@ export function SignupForm() {
   const listmonkUrl = process.env.NEXT_PUBLIC_LISTMONK_URL;
   const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
-  const showSubnewsletterPicker = email.trim().length > 0;
   const canSubmit = email.trim().length > 0 && topics.length > 0 && status !== "loading";
 
   const supabase = useMemo(() => {
@@ -158,75 +157,57 @@ export function SignupForm() {
           autoComplete="email"
           placeholder="Enter your email"
           value={email}
-          onChange={(event) => {
-            const nextEmail = event.target.value;
-            const hasEmail = nextEmail.trim().length > 0;
-
-            setEmail(nextEmail);
-
-            if (hasEmail) {
-              setTopicsExpanded(true);
-              return;
-            }
-
-            setTopics([]);
-            setTopicsExpanded(false);
-          }}
+          onChange={(event) => setEmail(event.target.value)}
           required
         />
         <button className="button button-primary" type="submit" disabled={!canSubmit}>
           {status === "loading" ? "Saving..." : "Get Early Access"}
         </button>
       </div>
-      {showSubnewsletterPicker ? (
-        <fieldset className="signup-subnewsletter">
-          <legend className="signup-sublabel">
-            Pick one or more sub-newsletters to follow
-          </legend>
-          <p className="signup-subhelp">You can choose multiple topics before joining.</p>
-          <button
-            className="signup-toggle"
-            type="button"
-            aria-expanded={topicsExpanded}
-            onClick={() => setTopicsExpanded((current) => !current)}
-          >
-            <span>
-              {topics.length > 0
-                ? `${topics.length} newsletter${topics.length === 1 ? "" : "s"} selected`
-                : "Choose newsletter topics"}
-            </span>
-            <span className={`signup-toggle-chevron${topicsExpanded ? " is-open" : ""}`}>
-              v
-            </span>
-          </button>
-          {topicsExpanded ? (
-            <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
-              {subnewsletterOptions.map((option) => {
-                const checked = topics.includes(option.value);
+      <fieldset className="signup-subnewsletter">
+        <p className="signup-subhelp">You can choose multiple topics before joining.</p>
+        <button
+          className="signup-toggle"
+          type="button"
+          aria-expanded={topicsExpanded}
+          onClick={() => setTopicsExpanded((current) => !current)}
+        >
+          <span>
+            {topics.length > 0
+              ? `${topics.length} newsletter${topics.length === 1 ? "" : "s"} selected`
+              : "Choose newsletter topics"}
+          </span>
+          <span className={`signup-toggle-chevron${topicsExpanded ? " is-open" : ""}`}>
+            v
+          </span>
+        </button>
+        {topicsExpanded ? (
+          <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
+            {subnewsletterOptions.map((option) => {
+              const checked = topics.includes(option.value);
 
-                return (
-                  <label className="signup-checkitem" key={option.value}>
-                    <input
-                      className="signup-checkbox"
-                      type="checkbox"
-                      checked={checked}
-                      onChange={(event) => {
-                        if (event.target.checked) {
-                          setTopics((current) => [...current, option.value]);
-                          return;
-                        }
+              return (
+                <label className="signup-checkitem" key={option.value}>
+                  <input
+                    className="signup-checkbox"
+                    type="checkbox"
+                    checked={checked}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setTopics((current) => [...current, option.value]);
+                        return;
+                      }
 
-                        setTopics((current) => current.filter((topic) => topic !== option.value));
-                      }}
-                    />
-                    <span>{option.label}</span>
-                  </label>
-                );
-              })}
-            </div>
-          ) : null}
-        </fieldset>
-      ) : null}
+                      setTopics((current) => current.filter((topic) => topic !== option.value));
+                    }}
+                  />
+                  <span>{option.label}</span>
+                </label>
+              );
+            })}
+          </div>
+        ) : null}
+      </fieldset>
       <p className={`signup-message signup-${status}`}>
         {message || "Thoughtful long-form curation, delivered by email."}
       </p>
