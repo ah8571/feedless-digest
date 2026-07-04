@@ -1,51 +1,11 @@
 import Link from "next/link";
+import { archiveIssues } from "./archive-issues";
 import { SignupForm } from "./components/signup-form";
 
 const sourcingChannels = [
   "Developer blogs like dev.to, Hashnode, and Hackernoon",
   "Structured discussion hubs like Hacker News, Reddit, Lemmy, and Indie Hackers",
   "Social platforms where thoughtful threads and essays get buried by short-form churn",
-];
-
-const workflowSteps = [
-  {
-    title: "Source",
-    copy:
-      "Pull article-length posts and discussion threads from targeted communities instead of asking readers to hunt for them manually.",
-  },
-  {
-    title: "Filter",
-    copy:
-      "Use lightweight rules first: word count, engagement thresholds, recency, and forum-level quality cues before any AI summarization step.",
-  },
-  {
-    title: "Publish",
-    copy:
-      "Package the best findings into a clean digest with direct links, context, and a permanent archive readers can revisit later.",
-  },
-];
-
-const launchSteps = [
-  {
-    title: "Mailing stack",
-    copy:
-      "Run the newsletter operation on a small Linux droplet with Keila, Ghost, or Listmonk so the publishing system stays independent from the public site.",
-  },
-  {
-    title: "Deliverability",
-    copy:
-      "Use Amazon SES or Resend with SPF, DKIM, and DMARC configured at the domain level so the digest lands reliably in inboxes.",
-  },
-  {
-    title: "Sourcing script",
-    copy:
-      "Use n8n, Make, or Python to collect long-form candidates from X, LinkedIn, Reddit, Quora, and Hacker News before manual review.",
-  },
-  {
-    title: "Editorial triage",
-    copy:
-      "Spend a short daily block reviewing the filtered queue in Airtable or Google Sheets, then publish only the genuinely worthwhile pieces.",
-  },
 ];
 
 const audienceFits = [
@@ -115,30 +75,18 @@ export default function HomePage() {
       <section className="workflow-section">
         <div className="section-heading">
           <p className="section-label">How the MVP should work</p>
-          <h2>Keep the site simple. Put complexity in the ingestion pipeline.</h2>
+          <h2>Let readers move through past editions without searching the open web again.</h2>
         </div>
 
         <div className="workflow-grid">
-          {workflowSteps.map((step) => (
-            <article className="panel workflow-card" key={step.title}>
-              <span className="step-chip">{step.title}</span>
-              <p>{step.copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="workflow-section">
-        <div className="section-heading">
-          <p className="section-label">Launch architecture</p>
-          <h2>The business works because the website and the publishing system are separate.</h2>
-        </div>
-
-        <div className="content-grid">
-          {launchSteps.map((step) => (
-            <article className="panel" key={step.title}>
-              <span className="step-chip">{step.title}</span>
-              <p>{step.copy}</p>
+          {archiveIssues.map((issue) => (
+            <article className="panel workflow-card" key={issue.id}>
+              <span className="step-chip">{issue.date}</span>
+              <h3>{issue.title}</h3>
+              <p>{issue.summary}</p>
+              <Link className="text-link" href={`/archive#${issue.id}`}>
+                Jump to this edition in the archive
+              </Link>
             </article>
           ))}
         </div>
@@ -153,20 +101,6 @@ export default function HomePage() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </article>
-
-        <article className="panel">
-          <p className="section-label">Recommended stack</p>
-          <h2>Use Vercel for the front end, and a separate system for email operations.</h2>
-          <p>
-            For the public website, a static-first Next.js app is enough. For
-            delivery and sourcing, keep your mailing platform and automation
-            pipeline separate so the site stays fast, cheap, and easy to reason
-            about.
-          </p>
-          <Link className="text-link" href="/archive">
-            View the archive page structure
-          </Link>
         </article>
       </section>
     </div>
