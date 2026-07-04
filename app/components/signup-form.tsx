@@ -107,7 +107,7 @@ export function SignupForm() {
         </button>
       </div>
       <p className={`signup-message signup-${status}`}>
-        {message || "No spam. Just thoughtful long-form curation."}
+        {message || "Thoughtful long-form curation, delivered by email."}
       </p>
     </form>
   );

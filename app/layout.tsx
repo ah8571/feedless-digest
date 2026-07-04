@@ -45,7 +45,7 @@ export default function RootLayout({
               <span className="brand-mark">FD</span>
               <span className="brand-copy">
                 <strong>Feedless Digest</strong>
-                <span>Long-form signal with the feed</span>
+                <span>Long-form signal without the feed</span>
               </span>
             </Link>
 
