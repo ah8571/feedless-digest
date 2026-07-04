@@ -4,7 +4,7 @@ create table if not exists public.newsletter_signups (
   status text not null default 'pending',
   confirm_token text unique,
   source text,
-  primary_topic text,
+  topics text[] not null default '{}',
   confirmed_at timestamptz,
   unsubscribed_at timestamptz,
   created_at timestamptz not null default now(),
@@ -14,7 +14,7 @@ create table if not exists public.newsletter_signups (
 );
 
 alter table public.newsletter_signups add column if not exists source text;
-alter table public.newsletter_signups add column if not exists primary_topic text;
+alter table public.newsletter_signups add column if not exists topics text[] not null default '{}';
 alter table public.newsletter_signups alter column source drop not null;
 alter table public.newsletter_signups alter column source drop default;
 
@@ -34,5 +34,5 @@ on public.newsletter_signups (status);
 create index if not exists newsletter_signups_confirm_token_idx
 on public.newsletter_signups (confirm_token);
 
-create index if not exists newsletter_signups_primary_topic_idx
-on public.newsletter_signups (primary_topic);
+create index if not exists newsletter_signups_topics_idx
+on public.newsletter_signups using gin (topics);

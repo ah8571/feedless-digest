@@ -24,7 +24,7 @@ const subnewsletterOptions = [
 
 export function SignupForm() {
   const [email, setEmail] = useState("");
-  const [subnewsletter, setSubnewsletter] = useState("");
+  const [topics, setTopics] = useState<string[]>([]);
   const [status, setStatus] = useState<SubmitState>("idle");
   const [message, setMessage] = useState("");
 
@@ -51,7 +51,7 @@ export function SignupForm() {
     setMessage("");
 
     const normalizedEmail = email.trim().toLowerCase();
-    const primaryTopic = subnewsletter || null;
+    const selectedTopics = topics;
 
     if (useListmonk) {
       const response = await fetch(
@@ -64,9 +64,9 @@ export function SignupForm() {
           body: JSON.stringify({
             email: normalizedEmail,
             list_uuids: [listmonkListUuid],
-            attribs: primaryTopic
+            attribs: selectedTopics.length
               ? {
-                  primary_topic: primaryTopic,
+                  topics: selectedTopics,
                 }
               : {},
           }),
@@ -80,7 +80,7 @@ export function SignupForm() {
       }
 
       setEmail("");
-  setSubnewsletter("");
+      setTopics([]);
       setStatus("success");
       setMessage("You are on the list.");
       return;
@@ -94,22 +94,22 @@ export function SignupForm() {
 
     const { error } = await supabase.from("newsletter_signups").insert({
       email: normalizedEmail,
-      primary_topic: primaryTopic,
+      topics: selectedTopics,
     });
 
-    const missingPrimaryTopicColumn =
+    const missingTopicsColumn =
       error &&
       ((typeof error.code === "string" && error.code === "PGRST204") ||
-        (typeof error.message === "string" && error.message.includes("primary_topic")));
+        (typeof error.message === "string" && error.message.includes("topics")));
 
-    if (missingPrimaryTopicColumn) {
+    if (missingTopicsColumn) {
       const fallback = await supabase.from("newsletter_signups").insert({
         email: normalizedEmail,
       });
 
       if (!fallback.error) {
         setEmail("");
-        setSubnewsletter("");
+        setTopics([]);
         setStatus("success");
         setMessage(
           "You are on the list. Run the latest Supabase signup SQL to start saving topic preferences."
@@ -130,7 +130,7 @@ export function SignupForm() {
     }
 
     setEmail("");
-    setSubnewsletter("");
+    setTopics([]);
     setStatus("success");
     setMessage("You are on the list.");
   }
@@ -158,16 +158,20 @@ export function SignupForm() {
       </div>
       {showSubnewsletterPicker ? (
         <div className="signup-subnewsletter">
-          <label className="signup-sublabel" htmlFor="subnewsletter">
-            Pick a sub-newsletter to follow first
+          <label className="signup-sublabel" htmlFor="topics">
+            Pick one or more sub-newsletters to follow
           </label>
+          <p className="signup-subhelp">You can choose multiple topics before joining.</p>
           <select
-            id="subnewsletter"
+            id="topics"
             className="signup-select"
-            value={subnewsletter}
-            onChange={(event) => setSubnewsletter(event.target.value)}
+            multiple
+            size={6}
+            value={topics}
+            onChange={(event) =>
+              setTopics(Array.from(event.target.selectedOptions, (option) => option.value))
+            }
           >
-            <option value="">Choose a topic (optional)</option>
             {subnewsletterOptions.map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}
