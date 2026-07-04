@@ -88,8 +88,13 @@ export default function HomePage() {
         </article>
 
         <article className="panel">
-          <p className="section-label">Why it matters</p>
-          <h2>The problem is not lack of content. It is bad retrieval.</h2>
+          <p className="section-label">Who this is for</p>
+          <h2>Readers who want compounding insight, not compounding screen time.</h2>
+          <ul className="feature-list">
+            {audienceFits.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </article>
       </section>
 
@@ -113,18 +118,6 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="content-grid audience-section">
-        <article className="panel panel-warm">
-          <p className="section-label">Who this is for</p>
-          <h2>Readers who want compounding insight, not compounding screen time.</h2>
-          <ul className="feature-list">
-            {audienceFits.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
       </section>
     </div>
   );
