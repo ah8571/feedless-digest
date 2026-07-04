@@ -303,6 +303,9 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .signup-sublabel {
@@ -332,10 +335,18 @@ h2 {
   outline-offset: 1px;
 }
 
-.signup-select {
-  min-height: 160px;
-  width: 100%;
-  padding: 12px 18px;
+.signup-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.signup-checkitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 14px;
   border: 1px solid rgba(29, 27, 24, 0.14);
   border-radius: 18px;
   background: rgba(255, 252, 247, 0.92);
@@ -343,11 +354,19 @@ h2 {
   font: inherit;
 }
 
-.signup-select option {
-  padding: 6px 0;
+.signup-checkitem:has(.signup-checkbox:checked) {
+  border-color: rgba(196, 91, 50, 0.4);
+  background: rgba(255, 246, 238, 0.95);
 }
 
-.signup-select:focus {
+.signup-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.signup-checkbox:focus {
   outline: 2px solid rgba(196, 91, 50, 0.3);
   outline-offset: 1px;
 }
@@ -364,6 +383,12 @@ h2 {
 
 .signup-error {
   color: var(--accent-deep);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
 }
 
 .stat-value {
@@ -479,6 +504,10 @@ h2 {
   }
 
   .signup-row {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-checklist {
     grid-template-columns: 1fr;
   }
 }

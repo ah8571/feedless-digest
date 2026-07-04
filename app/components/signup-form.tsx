@@ -32,6 +32,7 @@ export function SignupForm() {
   const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
   const showSubnewsletterPicker = email.trim().length > 0;
+  const canSubmit = email.trim().length > 0 && topics.length > 0 && status !== "loading";
 
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -46,6 +47,10 @@ export function SignupForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (!canSubmit) {
+      return;
+    }
 
     setStatus("loading");
     setMessage("");
@@ -152,33 +157,41 @@ export function SignupForm() {
           onChange={(event) => setEmail(event.target.value)}
           required
         />
-        <button className="button button-primary" type="submit" disabled={status === "loading"}>
+        <button className="button button-primary" type="submit" disabled={!canSubmit}>
           {status === "loading" ? "Saving..." : "Get Early Access"}
         </button>
       </div>
       {showSubnewsletterPicker ? (
-        <div className="signup-subnewsletter">
-          <label className="signup-sublabel" htmlFor="topics">
+        <fieldset className="signup-subnewsletter">
+          <legend className="signup-sublabel">
             Pick one or more sub-newsletters to follow
-          </label>
+          </legend>
           <p className="signup-subhelp">You can choose multiple topics before joining.</p>
-          <select
-            id="topics"
-            className="signup-select"
-            multiple
-            size={6}
-            value={topics}
-            onChange={(event) =>
-              setTopics(Array.from(event.target.selectedOptions, (option) => option.value))
-            }
-          >
-            {subnewsletterOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
+          <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
+            {subnewsletterOptions.map((option) => {
+              const checked = topics.includes(option.value);
+
+              return (
+                <label className="signup-checkitem" key={option.value}>
+                  <input
+                    className="signup-checkbox"
+                    type="checkbox"
+                    checked={checked}
+                    onChange={(event) => {
+                      if (event.target.checked) {
+                        setTopics((current) => [...current, option.value]);
+                        return;
+                      }
+
+                      setTopics((current) => current.filter((topic) => topic !== option.value));
+                    }}
+                  />
+                  <span>{option.label}</span>
+                </label>
+              );
+            })}
+          </div>
+        </fieldset>
       ) : null}
       <p className={`signup-message signup-${status}`}>
         {message || "Thoughtful long-form curation, delivered by email."}
