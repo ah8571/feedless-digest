@@ -62,7 +62,7 @@ export default function HomePage() {
           <p className="eyebrow">A newsletter for people who value signal</p>
           <h1>Read the internet without living inside the feed.</h1>
           <p className="lede">
-            Feedfree Digest isolates substantive posts, deep threads, and
+            Feedless Digest isolates substantive posts, deep threads, and
             long-form discussions from the forums and social platforms where the
             best ideas are usually hidden behind hours of scrolling.
           </p>

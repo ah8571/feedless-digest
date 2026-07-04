@@ -1,4 +1,4 @@
-# Feedfree Digest Development Roadmap
+# Feedless Digest Development Roadmap
 
 - [ ] Finish the website and domain setup.
 - [ ] Start with Resend and authenticate the sending domain.

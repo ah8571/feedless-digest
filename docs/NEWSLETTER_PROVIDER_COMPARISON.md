@@ -2,7 +2,7 @@
 
 ## Summary
 
-For Feedfree Digest, the real question is not just which tool sends email. It is which tool best fits a workflow where the website is separate, sourcing is semi-manual, and sending should stay cheap early.
+For Feedless Digest, the real question is not just which tool sends email. It is which tool best fits a workflow where the website is separate, sourcing is semi-manual, and sending should stay cheap early.
 
 ## Quick Recommendation
 
@@ -91,7 +91,7 @@ For Feedfree Digest, the real question is not just which tool sends email. It is
 
 - Best if you want the lowest software cost and are comfortable assembling the rest of the stack yourself.
 
-## Recommended Choice For Feedfree Digest
+## Recommended Choice For Feedless Digest
 
 If the front end stays on Cloudflare and you want the newsletter engine separate, Keila is probably the best starting point.
 

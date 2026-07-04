@@ -1,6 +1,6 @@
 Unbundled
 
-Feedfree Digest
+Feedless Digest
 
 Feedless Digest
 

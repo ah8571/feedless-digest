@@ -29,7 +29,7 @@ High-level flow:
 - Public subscription and tracking routes must be exposed.
 - Media uploads can be stored with Docker volumes or bind mounts.
 - Some VPS hosts block SMTP ports, so verify that early.
-## API relevance for Feedfree Digest
+## API relevance for Feedless Digest
 Listmonk has REST-like APIs for:
 - subscribers
 - lists

@@ -1,4 +1,4 @@
-# Feedfree Digest Docs
+# Feedless Digest Docs
 
 This folder is for execution documents rather than concept notes.
 
