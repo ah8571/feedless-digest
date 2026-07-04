@@ -102,7 +102,7 @@ export default function HomePage() {
         <div className="workflow-grid">
           {archiveIssues.filter((issue) => issue.title).map((issue) => (
             <article className="panel workflow-card" key={issue.id}>
-              <span className="step-chip">{issue.date}</span>
+              {issue.date ? <span className="step-chip">{issue.date}</span> : null}
               {issue.title ? <h3>{issue.title}</h3> : null}
               {issue.summary ? <p>{issue.summary}</p> : null}
               {issue.title ? (

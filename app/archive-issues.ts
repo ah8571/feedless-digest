@@ -9,7 +9,6 @@ export const archiveIssues = [
   },
   {
     id: "2026-06-20",
-    date: "June 20, 2026",
     title: "Issue 001",
     summary: "To come.",
   },

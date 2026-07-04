@@ -14,9 +14,9 @@ export default function ArchivePage() {
       </section>
 
       <section className="archive-list">
-        {archiveIssues.map((issue) => (
+        {archiveIssues.filter((issue) => issue.title).map((issue) => (
           <article className="panel archive-card" id={issue.id} key={issue.id}>
-            <p className="section-label">{issue.date}</p>
+            {issue.date ? <p className="section-label">{issue.date}</p> : null}
             {issue.title ? <h2>{issue.title}</h2> : null}
             {issue.summary ? <p>{issue.summary}</p> : null}
           </article>
