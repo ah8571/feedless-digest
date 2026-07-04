@@ -9,7 +9,7 @@ This folder keeps the project's Supabase-specific assets in one place.
 
 ## Current files
 
-- `snippets/newsletter_signups.sql` creates the confirmation-aware signup table and public insert policy.
+- `snippets/newsletter_signups.sql` creates the confirmation-aware signup table, including a dedicated `primary_topic` field for sub-newsletter preference, and the public insert policy.
 - `snippets/confirmed_signups.sql` is the later export query for confirmed subscribers.
 - `functions/send-confirmation/README.md` describes the email-sending function.
 - `functions/confirm-signup/README.md` describes the token confirmation function.

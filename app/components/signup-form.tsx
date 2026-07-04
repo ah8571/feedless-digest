@@ -32,9 +32,6 @@ export function SignupForm() {
   const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
   const showSubnewsletterPicker = email.trim().length > 0;
-  const signupSource = subnewsletter
-    ? `landing-page:${subnewsletter}`
-    : "landing-page";
 
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -53,6 +50,9 @@ export function SignupForm() {
     setStatus("loading");
     setMessage("");
 
+    const normalizedEmail = email.trim().toLowerCase();
+    const primaryTopic = subnewsletter || null;
+
     if (useListmonk) {
       const response = await fetch(
         `${listmonkUrl!.replace(/\/$/, "")}/api/public/subscription`,
@@ -62,11 +62,11 @@ export function SignupForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            email: email.trim().toLowerCase(),
+            email: normalizedEmail,
             list_uuids: [listmonkListUuid],
-            attribs: subnewsletter
+            attribs: primaryTopic
               ? {
-                  subnewsletter,
+                  primary_topic: primaryTopic,
                 }
               : {},
           }),
@@ -93,9 +93,30 @@ export function SignupForm() {
     }
 
     const { error } = await supabase.from("newsletter_signups").insert({
-      email: email.trim().toLowerCase(),
-      source: signupSource,
+      email: normalizedEmail,
+      primary_topic: primaryTopic,
     });
+
+    const missingPrimaryTopicColumn =
+      error &&
+      ((typeof error.code === "string" && error.code === "PGRST204") ||
+        (typeof error.message === "string" && error.message.includes("primary_topic")));
+
+    if (missingPrimaryTopicColumn) {
+      const fallback = await supabase.from("newsletter_signups").insert({
+        email: normalizedEmail,
+      });
+
+      if (!fallback.error) {
+        setEmail("");
+        setSubnewsletter("");
+        setStatus("success");
+        setMessage(
+          "You are on the list. Run the latest Supabase signup SQL to start saving topic preferences."
+        );
+        return;
+      }
+    }
 
     if (error) {
       const duplicate = error.code === "23505";
