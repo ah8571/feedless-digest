@@ -8,6 +8,25 @@ const sourcingChannels = [
   "Social platforms where thoughtful threads and essays get buried by short-form churn",
 ];
 
+const trackedPlatforms = [
+  {
+    category: "Open blog forums",
+    platforms: "dev.to, Hashnode, Medium, Hackernoon",
+  },
+  {
+    category: "Structured social forums",
+    platforms: "Hacker News, Reddit, Lemmy, Indie Hackers",
+  },
+  {
+    category: "Social media platforms",
+    platforms: "X, LinkedIn, Threads",
+  },
+  {
+    category: "Gated community platforms",
+    platforms: "Discord forum channels",
+  },
+];
+
 const audienceFits = [
   "Founders and operators who want ideas without platform addiction",
   "Developers trying to keep up with technical essays, not hot takes",
@@ -38,6 +57,13 @@ export default function HomePage() {
         </div>
 
         <aside className="hero-aside panel">
+          <span className="stat-label">Platforms we track</span>
+          {trackedPlatforms.map((group) => (
+            <p className="stat-copy" key={group.category}>
+              <strong>{group.category}:</strong> {group.platforms}
+            </p>
+          ))}
+          <div className="mini-rule" />
           <span className="stat-label">What it replaces</span>
           <p className="stat-value">Hours of feed grazing</p>
           <p className="stat-copy">
@@ -64,12 +90,6 @@ export default function HomePage() {
         <article className="panel">
           <p className="section-label">Why it matters</p>
           <h2>The problem is not lack of content. It is bad retrieval.</h2>
-          <p>
-            Your concept is strong because it does not try to compete with the
-            platforms at their own game. It acts as a layer above them: find the
-            worthwhile essays, remove the addictive interface, and preserve the
-            original links.
-          </p>
         </article>
       </section>
 
@@ -80,7 +100,7 @@ export default function HomePage() {
         </div>
 
         <div className="workflow-grid">
-          {archiveIssues.map((issue) => (
+          {archiveIssues.filter((issue) => issue.title).map((issue) => (
             <article className="panel workflow-card" key={issue.id}>
               <span className="step-chip">{issue.date}</span>
               {issue.title ? <h3>{issue.title}</h3> : null}
