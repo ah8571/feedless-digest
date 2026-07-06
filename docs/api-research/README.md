@@ -17,7 +17,7 @@ Use the following structure for each source:
 
 ### Source Summary
 - What kind of long-form material can be found here?
-- Why is it useful for Feedless Digest?
+- Why is it useful for Feedfree Digest?
 
 ### Access Path
 - Official API, RSS, search index, Google Alerts, or other discovery path

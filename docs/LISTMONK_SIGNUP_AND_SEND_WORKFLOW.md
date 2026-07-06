@@ -16,7 +16,7 @@ Add these Cloudflare Pages environment variables:
 
 Example:
 
-- `NEXT_PUBLIC_LISTMONK_URL=https://mail.feedless.tech`
+- `NEXT_PUBLIC_LISTMONK_URL=https://mail.feedfree.tech`
 - `NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID=your-public-list-uuid`
 
 When these exist, the signup form posts to:

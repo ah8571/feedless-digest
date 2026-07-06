@@ -10,11 +10,11 @@ Why:
 
 ## Recommended starter setup
 
-- Droplet name: `feedless-digest`
+- Droplet name: `feedfree-digest`
 - 1 Ubuntu Droplet
 - 1 GB RAM is the minimum practical starting point
 - Docker + Docker Compose
-- Cloudflare DNS record like `mail.feedless.tech`
+- Cloudflare DNS record like `mail.feedfree.tech`
 - SES or Resend later for outbound mail
 
 ## Files in this repo
@@ -25,7 +25,7 @@ Why:
 ## Setup steps
 
 1. Create an Ubuntu Droplet in DigitalOcean.
-2. Point a subdomain like `mail.feedless.tech` to the Droplet IP in Cloudflare.
+2. Point a subdomain like `mail.feedfree.tech` to the Droplet IP in Cloudflare.
 3. SSH into the server.
 4. Install Docker and Docker Compose.
 5. Copy `infra/listmonk/` to the server.

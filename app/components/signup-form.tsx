@@ -56,6 +56,7 @@ export function SignupForm() {
 
     const normalizedEmail = email.trim().toLowerCase();
     const selectedTopics = topics;
+    const confirmToken = `${crypto.randomUUID()}-${Date.now().toString(36)}`;
 
     if (useListmonk) {
       const response = await fetch(
@@ -98,6 +99,7 @@ export function SignupForm() {
 
     const { error } = await supabase.from("newsletter_signups").insert({
       email: normalizedEmail,
+      confirm_token: confirmToken,
       topics: selectedTopics,
     });
 
@@ -109,14 +111,28 @@ export function SignupForm() {
     if (missingTopicsColumn) {
       const fallback = await supabase.from("newsletter_signups").insert({
         email: normalizedEmail,
+        confirm_token: confirmToken,
       });
 
       if (!fallback.error) {
+        const { error: emailError } = await supabase.functions.invoke("send-confirmation", {
+          body: {
+            email: normalizedEmail,
+            confirmToken,
+          },
+        });
+
+        if (emailError) {
+          setStatus("error");
+          setMessage("We saved your signup, but could not send the confirmation email.");
+          return;
+        }
+
         setEmail("");
         setTopics([]);
         setStatus("success");
         setMessage(
-          "You are on the list. Run the latest Supabase signup SQL to start saving topic preferences."
+          "Check your inbox to confirm your signup. Run the latest Supabase signup SQL to start saving topic preferences."
         );
         return;
       }
@@ -133,10 +149,23 @@ export function SignupForm() {
       return;
     }
 
+    const { error: emailError } = await supabase.functions.invoke("send-confirmation", {
+      body: {
+        email: normalizedEmail,
+        confirmToken,
+      },
+    });
+
+    if (emailError) {
+      setStatus("error");
+      setMessage("We saved your signup, but could not send the confirmation email.");
+      return;
+    }
+
     setEmail("");
     setTopics([]);
     setStatus("success");
-    setMessage("You are on the list.");
+    setMessage("Check your inbox to confirm your signup.");
   }
 
   return (
@@ -161,7 +190,7 @@ export function SignupForm() {
         </button>
       </div>
       <fieldset className="signup-subnewsletter">
-        <p className="signup-subhelp">You can choose multiple topics before joining.</p>
+        <p className="signup-subhelp">Choose one or more topics to follow</p>
         <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
           {subnewsletterOptions.map((option) => {
             const checked = topics.includes(option.value);

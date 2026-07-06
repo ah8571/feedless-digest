@@ -4,7 +4,7 @@
 
 Listmonk is a self-hosted newsletter and mailing list manager built around PostgreSQL.
 
-For Feedless Digest, it should be treated as:
+For Feedfree Digest, it should be treated as:
 
 - the subscriber system
 - the campaign engine
@@ -19,7 +19,7 @@ It is not the public website and it is not the content discovery engine.
 
 A subscriber is a person identified by email and name.
 
-Subscribers can also have `attribs`, which is a JSON object. This is one of the most important features for Feedless.
+Subscribers can also have `attribs`, which is a JSON object. This is one of the most important features for Feedfree.
 
 Example uses for subscriber attributes:
 
@@ -40,7 +40,7 @@ Lists can be:
 - `single` opt-in or `double` opt-in
 - `active` or `archived`
 
-For Feedless, lists are likely better for broad newsletter lanes such as:
+For Feedfree, lists are likely better for broad newsletter lanes such as:
 
 - AI engineering
 - security
@@ -70,7 +70,7 @@ A template is a reusable email layout. Templates can contain header/footer struc
 
 ### Transactional Message
 
-Listmonk also supports transactional messages via API, but for Feedless the main value is campaign sending rather than app notifications.
+Listmonk also supports transactional messages via API, but for Feedfree the main value is campaign sending rather than app notifications.
 
 ## Main Capabilities
 
@@ -124,7 +124,7 @@ Useful list fields:
 - `tags`
 - `description`
 
-Recommended Feedless pattern:
+Recommended Feedfree pattern:
 
 - use public lists for user-visible newsletter categories
 - use private lists for internal workflows or editorial/testing groups
@@ -188,7 +188,7 @@ Supported content types include:
 - `plain`
 - `visual`
 
-This is important because Feedless can generate issue drafts outside Listmonk and push them in programmatically.
+This is important because Feedfree can generate issue drafts outside Listmonk and push them in programmatically.
 
 ### Templates and Dynamic Content
 
@@ -224,7 +224,7 @@ You can:
 - set archive slugs
 - attach archive metadata
 
-This may be useful, but note the overlap with your public website archive. Feedless should decide whether:
+This may be useful, but note the overlap with your public website archive. Feedfree should decide whether:
 
 - the canonical archive lives on the marketing site, or
 - Listmonk hosts the canonical archive and the site links to it
@@ -278,7 +278,7 @@ Listmonk supports two integration patterns:
 - use the APIs
 - interact directly with the database
 
-For Feedless, the correct default is the API, not direct DB writes.
+For Feedfree, the correct default is the API, not direct DB writes.
 
 Use cases:
 
@@ -314,7 +314,7 @@ You still need:
 - an SMTP provider like SES or Resend
 - SPF, DKIM, and DMARC
 
-### How Feedless Should Likely Use It
+### How Feedfree Should Likely Use It
 
 Near term:
 
@@ -347,7 +347,7 @@ Example attributes:
 }
 ```
 
-### Best Features For Feedless
+### Best Features For Feedfree
 
 If we narrow Listmonk to the features that matter most for this project, the most important are:
 
@@ -363,6 +363,6 @@ If we narrow Listmonk to the features that matter most for this project, the mos
 
 ### Practical Conclusion
 
-Listmonk makes sense for Feedless because it provides the real newsletter operating layer: subscriber state, opt-in flow, campaign control, archives, analytics, and bounce handling.
+Listmonk makes sense for Feedfree because it provides the real newsletter operating layer: subscriber state, opt-in flow, campaign control, archives, analytics, and bounce handling.
 
 That is the difference between having a list of emails and having a functioning newsletter system.

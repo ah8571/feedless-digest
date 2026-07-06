@@ -4,11 +4,31 @@ Now that you have mapped out the core idea, the sources, the name, and the open-
 
 Server Droplet: Spin up a $5–$7/month Linux server on DigitalOcean or Hetzner and install an open-source mailing manager like Keila, Ghost, or Listmonk.
 
-DNS Security: Hook your domain feedless.com (or similar) up to Amazon SES or Resend, and paste the SPF, DKIM, and DMARC text records into your domain registrar to secure premium deliverability.
+DNS Security: Hook your domain feedfree.tech (or similar) up to Amazon SES or Resend, and paste the SPF, DKIM, and DMARC text records into your domain registrar to secure premium deliverability.
 
 The Sourcing Script: Build out your Make.com or Python automation to hit the search filters we mapped out for X, LinkedIn, Reddit, Quora, and Hacker News.
 
 Triage & Learn: Spend 15 minutes a morning looking at your clean Google Sheet or Airtable grid, reading the hidden gems, and hitting "Publish."
+
+## Google Alerts via RSS
+Working on using a kind of first level filter for quality
+
+
+
+Alternatives: Search engine api's: Serper.dev, SerpApi
+
+## API's initial pull with an internal filter for length
+
+Looks to be x / reddit don't have a word length filter so will probably need to run large queries first then distill for length minimum's. 
+
+Some useful parameters include self:yes means that it is a text block, not a video on reddit
+
+Can target the thread symbol on x or the 1/ but probably will benefit from lessor limits to isolate articles
+
+n8n possibilities:
+"Create a daily AI & automation content digest from YouTube, Reddit, X and Perplexity with OpenAI and Airtable": https://n8n.io/workflows/12703-create-a-daily-ai-and-automation-content-digest-from-youtube-reddit-x-and-perplexity-with-openai-and-airtable/
+
+"Reddit Digest": https://n8n.io/workflows/1895-reddit-ai-digest/
 
 ## Recommended Operating Approach
 
@@ -130,7 +150,7 @@ return items.filter(item => {
 ### 2. The GPT-Powered Advanced Quality Filter
 *   **The Workflow:** [Automate tweet filtering and replies on X with GPT](https://n8n.io/workflows/7027-automate-tweet-filtering-and-replies-on-x-with-gpt-and-scheduled-rotation/)
 *   **Why it helps:** This template is engineered specifically to weed out social media garbage. It pulls tweets based on topics and passes them to an OpenAI block tasked explicitly with **identifying and eliminating spam, short jokes, memes, or low-effort updates**.
-*   **How to adapt it:** Delete the final "reply/post" node of this template. Instead, use its filtering section to route the winning high-signal text blocks straight into your **Feedless Digest** staging dashboard.
+*   **How to adapt it:** Delete the final "reply/post" node of this template. Instead, use its filtering section to route the winning high-signal text blocks straight into your **Feedfree Digest** staging dashboard.
 
 ### 3. The Bright Data Scraping Alternative (Bypasses X API Fees)
 *   **The Workflow:** [Find, scrape & analyze Twitter posts with Bright Data and Gemini](https://n8n.io/workflows/4325-find-scrape-and-analyze-twitter-posts-by-name-with-bright-data-and-gemini/)

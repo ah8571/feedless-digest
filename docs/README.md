@@ -1,12 +1,11 @@
-# Feedless Digest Docs
+# Feedfree Digest Docs
 
-This folder is for execution documents rather than concept notes.
+This folder holds the working notes for building Feedfree Digest.
 
-## Structure
+The project is about curating strong long-form writing from around the web, turning it into a readable newsletter, and keeping past editions easy to browse through a public archive.
 
-- `development-roadmap.md`: the step-by-step plan to get the project live.
-- `api-research/`: source-by-source notes for acquisition, limits, heuristics, and implementation decisions.
+## Main areas
 
-## Working Rule
-
-Keep the public website, the email delivery stack, and the sourcing pipeline documented as separate systems. That separation mirrors how the product should actually be built and operated.
+- `DEVELOPMENT_ROADMAP.md`: the current launch checklist
+- `api-research/`: notes on where good source material can be found
+- setup docs for newsletter tooling, hosting, and signup flow

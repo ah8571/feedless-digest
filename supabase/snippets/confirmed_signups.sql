@@ -1,6 +1,7 @@
 select
   email,
   source,
+  topics,
   confirmed_at,
   created_at
 from public.newsletter_signups

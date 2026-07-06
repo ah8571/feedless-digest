@@ -1,6 +1,6 @@
-# Feedless Digest
+# Feedfree Digest
 
-Feedless Digest is an attempt to build a better way to read the internet.
+Feedfree Digest is an attempt to build a better way to read the internet.
 
 The problem is straightforward: a huge amount of the best writing now lives inside social feeds, forums, and community platforms, but finding it usually requires wading through addictive interfaces, noise, and endless scrolling.
 

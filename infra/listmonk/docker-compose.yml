@@ -21,6 +21,7 @@ services:
     environment:
       TZ: ${TZ}
       LISTMONK_app__address: 0.0.0.0:9000
+      LISTMONK_app__url: ${LISTMONK_APP_URL}
       LISTMONK_db__host: db
       LISTMONK_db__port: 5432
       LISTMONK_db__user: ${POSTGRES_USER}

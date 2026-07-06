@@ -14,7 +14,7 @@ export default function TermsPage() {
       <section className="panel legal-copy">
         <h2>Content use</h2>
         <p>
-          Feedless Digest should link to original sources and avoid republishing
+          Feedfree Digest should link to original sources and avoid republishing
           full third-party articles without permission.
         </p>
 

@@ -5,7 +5,7 @@ export default function AdvertisePage() {
         <p className="eyebrow">Advertise With Us</p>
         <h1>Reach readers who are deliberately looking for depth.</h1>
         <p className="lede">
-          Feedless Digest is aimed at professionals who actively choose
+          Feedfree Digest is aimed at professionals who actively choose
           long-form writing over algorithmic noise. That makes it a strong fit
           for sponsorships tied to software tools, research products, education,
           recruiting, and operator-focused services.
@@ -40,7 +40,7 @@ export default function AdvertisePage() {
           rates, subscriber profile, sample issue links, and package pricing.
           For now, a direct contact path is enough.
         </p>
-        <a className="button button-primary" href="mailto:ads@feedlessdigest.com?subject=Advertising%20Inquiry">
+        <a className="button button-primary" href="mailto:ads@feedfree.tech?subject=Advertising%20Inquiry">
           Email for Sponsorship Details
         </a>
       </section>

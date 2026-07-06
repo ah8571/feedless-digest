@@ -14,8 +14,8 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://feedless.tech"),
-  title: "Feedless Digest",
+  metadataBase: new URL("https://feedfree.tech"),
+  title: "Feedfree Digest",
   description:
     "A weekly newsletter that isolates high-signal long-form posts from forums and social platforms so readers can skip the scroll.",
 };
@@ -44,7 +44,7 @@ export default function RootLayout({
             <Link className="brand" href="/">
               <span className="brand-mark">FD</span>
               <span className="brand-copy">
-                <strong>Feedless Digest</strong>
+                <strong>Feedfree Digest</strong>
                 <span>Long-form signal without the feed</span>
               </span>
             </Link>
@@ -62,7 +62,7 @@ export default function RootLayout({
 
           <footer className="site-footer">
             <p>
-              Feedless Digest curates substantive writing from forums and social
+              Feedfree Digest curates substantive writing from forums and social
               platforms so readers can stay informed without getting trapped in
               infinite feeds.
             </p>

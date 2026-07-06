@@ -44,7 +44,7 @@ export default function HomePage() {
           <SignupForm />
 
           <p className="lede">
-            Feedless Digest isolates substantive posts, deep threads, and
+            Feedfree Digest isolates substantive posts, deep threads, and
             long-form discussions from the forums and social platforms where the
             best ideas are usually hidden behind hours of scrolling.
           </p>
