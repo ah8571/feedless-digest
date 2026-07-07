@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "x:recent-search": "node scripts/x-recent-search.mjs",
+    "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
+    "x:apify-run": "node scripts/x-apify-run.mjs"
   },
   "dependencies": {
     "next": "16.2.10",
