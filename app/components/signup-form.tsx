@@ -53,73 +53,88 @@ export function SignupForm() {
     }
 
     setStatus("loading");
-    setMessage("");
+    setMessage("Submitting your signup...");
 
     const normalizedEmail = email.trim().toLowerCase();
     const selectedTopics = topics;
 
-    if (useListmonk) {
-      const response = await fetch(
-        `${listmonkUrl!.replace(/\/$/, "")}/api/public/subscription`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: normalizedEmail,
-            list_uuids: [listmonkListUuid],
-            attribs: selectedTopics.length
-              ? {
-                  topics: selectedTopics,
-                }
-              : {},
-          }),
-        }
-      );
+    try {
+      if (useListmonk) {
+        const response = await fetch(
+          `${listmonkUrl!.replace(/\/$/, "")}/api/public/subscription`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: normalizedEmail,
+              list_uuids: [listmonkListUuid],
+              attribs: selectedTopics.length
+                ? {
+                    topics: selectedTopics,
+                  }
+                : {},
+            }),
+          }
+        );
 
-      if (!response.ok) {
-        setStatus("error");
-        setMessage("List signup failed. Check Listmonk public signup settings.");
+        if (!response.ok) {
+          setStatus("error");
+          setMessage(`List signup failed (${response.status}). Check Listmonk public signup settings.`);
+          return;
+        }
+
+        setEmail("");
+        setTopics([]);
+        setStatus("success");
+        setMessage("You are on the list.");
         return;
       }
+
+      if (!supabase) {
+        setStatus("error");
+        setMessage("Signup is not configured yet.");
+        return;
+      }
+
+      const { data, error } = await supabase.functions.invoke("create-signup", {
+        body: {
+          email: normalizedEmail,
+          topics: selectedTopics,
+        },
+      });
+
+      if (error) {
+        console.error("Signup invoke failed", error);
+        setStatus("error");
+        setMessage(
+          error.message
+            ? `Signup failed: ${error.message}`
+            : "We could not process your signup just now. Please try again."
+        );
+        return;
+      }
+
+      const signupStatus = data?.status;
 
       setEmail("");
       setTopics([]);
       setStatus("success");
-      setMessage("You are on the list.");
-      return;
-    }
-
-    if (!supabase) {
+      setMessage(
+        signupStatus === "confirmed_existing"
+          ? "You are already subscribed."
+          : "Thanks for subscribing. Check your inbox to confirm your signup."
+      );
+    } catch (error) {
+      console.error("Unexpected signup error", error);
       setStatus("error");
-      setMessage("Signup is not configured yet.");
-      return;
+      setMessage(
+        error instanceof Error
+          ? `Signup failed: ${error.message}`
+          : "Something unexpected went wrong during signup."
+      );
     }
-
-    const { data, error } = await supabase.functions.invoke("create-signup", {
-      body: {
-        email: normalizedEmail,
-        topics: selectedTopics,
-      },
-    });
-
-    if (error) {
-      setStatus("error");
-      setMessage("We could not process your signup just now. Please try again.");
-      return;
-    }
-
-    const signupStatus = data?.status;
-
-    setEmail("");
-    setTopics([]);
-    setStatus("success");
-    setMessage(
-      signupStatus === "confirmed_existing"
-        ? "You are already subscribed."
-        : "Check your inbox to confirm your signup."
-    );
   }
 
   return (
@@ -174,7 +189,7 @@ export function SignupForm() {
           })}
         </div>
       </fieldset>
-      <p className={`signup-message signup-${status}`}>
+      <p className={`signup-message signup-${status}`} aria-live="polite">
         {message ||
           (needsTopicSelection
             ? "Choose at least one topic to continue."
