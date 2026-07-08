@@ -8,14 +8,6 @@ LLM evaluations, RAG architecture, agent workflows, prompt engineering, inferenc
 
 open source maintainers, project governance, maintainer burnout, open source monetization, community building, licensing changes, self-hosted tools, project postmortems, contributor workflows, developer communities
 
-### Mobile development
-
-iOS architecture, Android architecture, React Native, Flutter, mobile performance, app store growth, offline-first apps, mobile testing, push notification strategy, subscription apps
-
-### Developer tooling
-
-CI/CD workflows, testing infrastructure, observability tooling, local development environments, build systems, code review workflows, debugging tools, developer productivity, API tooling, release engineering
-
 ### Crypto Investing
 
 onchain analysis, tokenomics, DeFi strategy, stablecoins, crypto market structure, protocol revenue, crypto regulation, treasury management, long-term crypto theses, risk management
@@ -28,7 +20,7 @@ application security, cloud security, incident response, threat intelligence, vu
 
 SOC 2, ISO 27001, GDPR, HIPAA, PCI compliance, vendor risk, audit readiness, data retention policies, security controls, regulatory operations
 
-### Financing & Bootstrapping
+### Early founder bootstrapping
 
 bootstrapped startups, founder finance, cash flow management, SaaS pricing, runway planning, profitability, indie hacking, capital efficiency, revenue growth, startup lessons learned
 
@@ -47,12 +39,3 @@ cold email systems, personalization at scale, outbound copywriting, reply rate o
 ### Social Media marketing
 
 organic social growth, content repurposing, creator strategy, audience building, social content systems, LinkedIn growth, X growth, Threads strategy, engagement strategy, brand voice
-
-### Ads advice
-
-paid acquisition, Meta ads, Google ads, creative testing, CAC reduction, landing page conversion, media buying, attribution, ad account structure, performance marketing
-
-
-### Data & Cloud Engineering
-
-data pipelines, ETL architecture, data warehouses, orchestration, Kubernetes, platform engineering, cloud cost optimization, distributed systems, observability, infrastructure as code

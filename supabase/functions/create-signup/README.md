@@ -27,7 +27,7 @@ That makes the signup flow idempotent for launch traffic. If someone signs up tw
 ```json
 {
   "email": "reader@example.com",
-  "topics": ["ai-engineering", "developer-tooling"]
+  "topics": ["ai-engineering", "social-media-marketing"]
 }
 ```
 

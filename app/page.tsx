@@ -3,27 +3,19 @@ import { archiveIssues } from "./archive-issues";
 import { SignupForm } from "./components/signup-form";
 
 const sourcingChannels = [
-  "Developer blogs like dev.to, Hashnode, and Hackernoon",
-  "Structured discussion hubs like Hacker News, Reddit, Lemmy, and Indie Hackers",
-  "Social platforms where thoughtful threads and essays get buried by short-form churn",
+  "Social media platforms like X and LinkedIn where thoughtful threads and essays get buried by short-form churn",
+  "Open blog forums like Medium where strong long-form posts are still discoverable",
+  "A narrower source set chosen for reliability over inflated platform claims",
 ];
 
 const trackedPlatforms = [
   {
-    category: "Open blog forums",
-    platforms: "dev.to, Hashnode, Medium, Hackernoon",
-  },
-  {
-    category: "Structured social forums",
-    platforms: "Hacker News, Reddit, Lemmy, Indie Hackers",
-  },
-  {
     category: "Social media platforms",
-    platforms: "X, LinkedIn, Threads",
+    platforms: "X and LinkedIn",
   },
   {
-    category: "Gated community platforms",
-    platforms: "Discord forum channels",
+    category: "Open blog forums",
+    platforms: "Medium",
   },
 ];
 

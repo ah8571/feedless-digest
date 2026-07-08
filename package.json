@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "listmonk:sync-subscribers": "node scripts/listmonk-sync-subscribers.mjs",
+    "listmonk:test-send": "node scripts/listmonk-test-send.mjs",
     "x:recent-search": "node scripts/x-recent-search.mjs",
     "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
     "x:apify-run": "node scripts/x-apify-run.mjs"

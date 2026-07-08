@@ -6,11 +6,31 @@ Updated: 2026-07-06
 
 Baseline article-gated query that worked before the larger family split:
 
+one version like this with no english parameter, articles from 2 days before:
+
+```json
+[
+"((article OR \"read this\" OR \"wrote about\" OR thread OR 1/) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+]
+```
+
+one version like this with an english parameter and 2 days before:
+
+```json
+[
+"((article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+]
+```
+
+
+smaller apify version:
 ```json
 [
   "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (AI OR LLM OR Claude OR \"Claude Code\" OR OpenAI OR GPT OR Gemini) (code OR engineer OR developer OR agent OR development OR workflow OR PR OR deploy)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
+
+
 
 Expanded non-article families:
 

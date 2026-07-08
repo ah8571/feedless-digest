@@ -2,26 +2,32 @@
 
 [consider adding: bluesky, mastodon.social to get an RSS feed for long form posts?, ]
 
-Mainstream networking applications where industry experts post micro-insights, but are increasingly introducing long-form writing features that must be isolated via URL pathing.
+X
 
-X (formerly Twitter) – Highly active but addictive ecosystem; requires precise filters to isolate native X Articles (://x.com) or structured X Threads (1/ or 🧵).
+- api working along with a potential scraper
 
-LinkedIn – Gated professional network; excellent for corporate case studies and marketing playbooks, best scraped externally via Google Search index operators (site:://linkedin.com).
+LinkedIn
 
-Threads – Meta's text-focused platform; features native 10,000-character "Text Attachments" that can be targeted through open web crawling filters (site:threads.net/ "post/").
+- RSS feed building
+
+Threads 
+
+- RSS feed buildling
 
 ## Social, link-sharing forums
 
 [to research: Digg, lobste.rs, slashdot, fark, warrior forum and kern.al for marketing potential]
 
-Link-sharing nodes and text-heavy discussion boards where content is heavily filtered, peer-reviewed, and ranked entirely by community upvotes, points, or downvotes.
+Reddit
 
-Reddit – Mass-scale community forum; requires targeting highly specific, text-only subreddits (e.g., r/SaaS, r/webdev) and filtering for high upvote scores.
+- RSS feed building
 
 Hacker News (HN) 
 – Minimalist link aggregator; elite quality control with an incredibly sharp technical comments section that often holds more value than the linked articles.
 
 Lemmy – Decentralized, open-source alternative to Reddit; highly technical audience, completely ad-free, and offers a completely unrestricted public API for easy scraping.
+
+- look into API, looks like they have RSS feeds too
 
 ## Open-Submission Blog Forums
 
@@ -29,9 +35,13 @@ Lemmy – Decentralized, open-source alternative to Reddit; highly technical aud
 
 Independent platforms where individual creators can natively publish long-form articles with little to no upfront editorial filter, driving visibility through community tags and algorithms.
 
-Medium – Massive general-interest publishing forum; excellent for marketing frameworks and personal tech essays, though many pieces sit behind a paywall.
+Medium
 
-dev.to – Open developer community; highly conversational but requires strict comment filters to weed out beginner clickbait.
+- RSS feed building
+
+dev.to 
+
+- api available
 
 Hashnode – Developer blogging network; skews slightly more professional and technical than dev.to.
 
@@ -45,7 +55,11 @@ FreeCodeCamp
 
 ## Question blogging
 
-consider adding: reddit, quora, facebook discussion posts
+consider adding: quora, facebook discussion posts
+
+## Streaming sites
+
+Youtube
 
 ## Gated Community Platforms
 Private or semi-private messaging systems where critical, high-signal information is shared entirely behind closed digital doors, hidden from public search engines.

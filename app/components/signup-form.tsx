@@ -8,18 +8,14 @@ type SubmitState = "idle" | "loading" | "success" | "error";
 const subnewsletterOptions = [
   { value: "ai-engineering", label: "AI engineering" },
   { value: "open-source-intrigues", label: "Open Source Intrigues" },
-  { value: "mobile-development", label: "Mobile development" },
-  { value: "developer-tooling", label: "Developer tooling" },
   { value: "crypto-investing", label: "Crypto Investing" },
   { value: "security", label: "Security" },
   { value: "compliance", label: "Compliance" },
-  { value: "financing-bootstrapping", label: "Financing & Bootstrapping" },
+  { value: "early-founder-bootstrapping", label: "Early founder bootstrapping" },
   { value: "lead-generation", label: "Lead Generation" },
   { value: "seo", label: "SEO" },
   { value: "cold-outreach-marketing", label: "Cold outreach marketing" },
   { value: "social-media-marketing", label: "Social Media marketing" },
-  { value: "ads-advice", label: "Ads advice" },
-  { value: "data-cloud-engineering", label: "Data & Cloud Engineering" },
 ];
 
 export function SignupForm() {
