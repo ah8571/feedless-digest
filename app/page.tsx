@@ -48,12 +48,6 @@ export default function HomePage() {
             long-form discussions from the forums and social platforms where the
             best ideas are usually hidden behind hours of scrolling.
           </p>
-
-          <div className="cta-row">
-            <Link className="button button-secondary" href="/advertise">
-              Advertise With Us
-            </Link>
-          </div>
         </div>
 
         <aside className="hero-aside panel">

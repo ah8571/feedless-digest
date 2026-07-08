@@ -102,7 +102,7 @@ async function sendConfirmationEmail(
         <div style="margin:0; padding:32px 20px; background-color:#ffffff; background-image:linear-gradient(rgba(17,24,39,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(17,24,39,0.06) 1px, transparent 1px); background-size:34px 34px; color:#111827; font-family:Arial, sans-serif;">
           <div style="max-width:560px; margin:0 auto; background:#ffffff; border:1px solid #e7e1d6; border-radius:24px; padding:36px 32px; box-shadow:0 18px 50px rgba(17, 24, 39, 0.08);">
             <div style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; color:#6b6254; margin-bottom:16px;">Feedfree Digest</div>
-            <h1 style="font-size:34px; line-height:1.05; margin:0 0 18px; color:#111827; font-weight:700; max-width:11ch;">Confirm your signup</h1>
+            <h1 style="font-size:28px; line-height:1.1; margin:0 0 18px; color:#111827; font-weight:700;">Confirm your signup</h1>
             <div style="width:100%; height:1px; margin:0 0 20px; background:#e7e1d6;"></div>
             <p style="font-size:18px; line-height:1.7; margin:0 0 14px; color:#3f3a33;">Thanks for joining Feedfree Digest.</p>
             <p style="font-size:18px; line-height:1.7; margin:0 0 26px; color:#3f3a33; max-width:30ch;">Click below to confirm your email address and finish joining the list.</p>
