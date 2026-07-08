@@ -32,6 +32,7 @@ export function SignupForm() {
   const listmonkListUuid = process.env.NEXT_PUBLIC_LISTMONK_PUBLIC_LIST_UUID;
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
   const canSubmit = email.trim().length > 0 && topics.length > 0 && status !== "loading";
+  const needsTopicSelection = email.trim().length > 0 && topics.length === 0 && status !== "loading";
 
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -139,7 +140,11 @@ export function SignupForm() {
           required
         />
         <button className="button button-primary" type="submit" disabled={!canSubmit}>
-          {status === "loading" ? "Saving..." : "Get Early Access"}
+          {status === "loading"
+            ? "Saving..."
+            : needsTopicSelection
+              ? "Pick a Topic"
+              : "Get Early Access"}
         </button>
       </div>
       <fieldset className="signup-subnewsletter">
@@ -170,7 +175,10 @@ export function SignupForm() {
         </div>
       </fieldset>
       <p className={`signup-message signup-${status}`}>
-        {message || "Thoughtful long-form curation, delivered by email."}
+        {message ||
+          (needsTopicSelection
+            ? "Choose at least one topic to continue."
+            : "Thoughtful long-form curation, delivered by email.")}
       </p>
     </form>
   );
