@@ -33,6 +33,7 @@ export function SignupForm() {
   const useListmonk = Boolean(listmonkUrl && listmonkListUuid);
   const canSubmit = email.trim().length > 0 && topics.length > 0 && status !== "loading";
   const needsTopicSelection = email.trim().length > 0 && topics.length === 0 && status !== "loading";
+  const isSuccess = status === "success";
 
   const supabase = useMemo(() => {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -135,6 +136,24 @@ export function SignupForm() {
           : "Something unexpected went wrong during signup."
       );
     }
+  }
+
+  if (isSuccess) {
+    return (
+      <div className="signup-success-panel" aria-live="polite">
+        <p className="signup-label">Join the waitlist</p>
+        <h2 className="signup-success-title">
+          {message === "You are already subscribed."
+            ? "You are already subscribed"
+            : "Thanks for subscribing"}
+        </h2>
+        <p className="signup-message signup-success">
+          {message === "You are already subscribed."
+            ? "This email is already confirmed on the list."
+            : "Please confirm your email to finish joining the list."}
+        </p>
+      </div>
+    );
   }
 
   return (

@@ -282,6 +282,28 @@ h2 {
   margin: 20px 0 6px;
 }
 
+.signup-success-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 6px;
+  padding: 24px 22px;
+  border: 1px solid rgba(29, 27, 24, 0.12);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(244, 237, 227, 0.92), rgba(255, 255, 255, 0.98));
+}
+
+.signup-success-title {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1;
+  color: var(--ink);
+  max-width: 12ch;
+}
+
 .signup-label {
   font-size: 0.82rem;
   font-weight: 700;
