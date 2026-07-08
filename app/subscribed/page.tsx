@@ -42,17 +42,6 @@ function SubscribedPageContent() {
         <h1>{content.title}</h1>
         <p className="lede">{content.body}</p>
       </section>
-
-      <section className="panel">
-        <p className="section-label">Next Step</p>
-        <h2>Return to the main site.</h2>
-        <p>
-          Feedfree Digest is focused on thoughtful long-form signal, with topic-based preferences already captured during signup.
-        </p>
-        <a className="button button-primary" href="/">
-          Back to homepage
-        </a>
-      </section>
     </div>
   );
 }

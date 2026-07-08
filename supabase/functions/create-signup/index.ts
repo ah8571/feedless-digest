@@ -46,15 +46,19 @@ function normalizeTopics(topics: string[] | undefined) {
   );
 }
 
+function formatFromEmail(rawFromEmail: string) {
+  return rawFromEmail.includes("<") ? rawFromEmail : `Feedfree Digest <${rawFromEmail}>`;
+}
+
 async function sendConfirmationEmail(
   email: string,
   confirmToken: string
 ): Promise<SendConfirmationEmailResult> {
   const resendApiKey = Deno.env.get("RESEND_API_KEY");
   const confirmBaseUrl = Deno.env.get("CONFIRM_BASE_URL");
-  const fromEmail =
-    Deno.env.get("RESEND_FROM_EMAIL") ??
-    "Feedfree Digest <onboarding@resend.dev>";
+  const fromEmail = formatFromEmail(
+    Deno.env.get("RESEND_FROM_EMAIL") ?? "onboarding@resend.dev"
+  );
 
   if (!resendApiKey || !confirmBaseUrl) {
     return {
@@ -95,15 +99,14 @@ async function sendConfirmationEmail(
         confirmationUrl.toString(),
       ].join("\n"),
       html: `
-        <div style="font-family: Arial, sans-serif; color: #111827; line-height: 1.6;">
-          <h1 style="font-size: 20px; margin-bottom: 12px;">Confirm your Feedfree Digest signup</h1>
-          <p style="margin-bottom: 12px;">Thanks for joining Feedfree Digest.</p>
-          <p style="margin-bottom: 20px;">Click the link below to confirm your email address:</p>
-          <p style="margin-bottom: 20px;">
-            <a href="${confirmationUrl.toString()}" style="display: inline-block; padding: 10px 16px; background: #111827; color: #ffffff; text-decoration: none; border-radius: 999px;">Confirm email</a>
-          </p>
-          <p style="font-size: 14px; color: #4b5563;">If the button does not work, open this URL:</p>
-          <p style="font-size: 14px; word-break: break-all; color: #4b5563;">${confirmationUrl.toString()}</p>
+        <div style="margin:0; padding:32px 20px; background:#f8f6f1; color:#111827; font-family:Arial, sans-serif;">
+          <div style="max-width:560px; margin:0 auto; background:#ffffff; border:1px solid #e7e1d6; border-radius:24px; padding:36px 32px;">
+            <div style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; color:#6b6254; margin-bottom:16px;">Feedfree Digest</div>
+            <h1 style="font-size:34px; line-height:1.05; margin:0 0 18px; color:#111827; font-weight:700;">Confirm your signup</h1>
+            <p style="font-size:18px; line-height:1.7; margin:0 0 14px; color:#3f3a33;">Thanks for joining Feedfree Digest.</p>
+            <p style="font-size:18px; line-height:1.7; margin:0 0 26px; color:#3f3a33;">Click below to confirm your email address and finish joining the list.</p>
+            <a href="${confirmationUrl.toString()}" style="display:inline-block; padding:14px 22px; background:#111827; color:#ffffff; text-decoration:none; border-radius:999px; font-size:16px; font-weight:700;">Confirm email</a>
+          </div>
         </div>
       `.trim(),
     }),
