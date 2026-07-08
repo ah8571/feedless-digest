@@ -9,6 +9,11 @@ const statusContent = {
     title: "Thanks for subscribing.",
     body: "Your email is confirmed and you are on the list for Feedfree Digest updates.",
   },
+  unsubscribed: {
+    eyebrow: "Unsubscribed",
+    title: "You have been removed from the list.",
+    body: "Your email is no longer subscribed to Feedfree Digest updates.",
+  },
   invalid: {
     eyebrow: "Confirmation Link",
     title: "That link is no longer valid.",
@@ -24,7 +29,10 @@ const statusContent = {
 function SubscribedPageContent() {
   const searchParams = useSearchParams();
   const rawStatus = searchParams.get("status");
-  const statusKey = rawStatus === "invalid" || rawStatus === "error" ? rawStatus : "confirmed";
+  const statusKey =
+    rawStatus === "invalid" || rawStatus === "error" || rawStatus === "unsubscribed"
+      ? rawStatus
+      : "confirmed";
   const content = statusContent[statusKey];
 
   return (

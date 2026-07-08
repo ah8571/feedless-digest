@@ -2,6 +2,7 @@ select
   email,
   source,
   topics,
+  unsubscribe_token,
   confirmed_at,
   created_at
 from public.newsletter_signups

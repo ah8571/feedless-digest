@@ -56,7 +56,6 @@ export function SignupForm() {
 
     const normalizedEmail = email.trim().toLowerCase();
     const selectedTopics = topics;
-    const confirmToken = `${crypto.randomUUID()}-${Date.now().toString(36)}`;
 
     if (useListmonk) {
       const response = await fetch(
@@ -97,75 +96,29 @@ export function SignupForm() {
       return;
     }
 
-    const { error } = await supabase.from("newsletter_signups").insert({
-      email: normalizedEmail,
-      confirm_token: confirmToken,
-      topics: selectedTopics,
-    });
-
-    const missingTopicsColumn =
-      error &&
-      ((typeof error.code === "string" && error.code === "PGRST204") ||
-        (typeof error.message === "string" && error.message.includes("topics")));
-
-    if (missingTopicsColumn) {
-      const fallback = await supabase.from("newsletter_signups").insert({
-        email: normalizedEmail,
-        confirm_token: confirmToken,
-      });
-
-      if (!fallback.error) {
-        const { error: emailError } = await supabase.functions.invoke("send-confirmation", {
-          body: {
-            email: normalizedEmail,
-            confirmToken,
-          },
-        });
-
-        if (emailError) {
-          setStatus("error");
-          setMessage("We saved your signup, but could not send the confirmation email.");
-          return;
-        }
-
-        setEmail("");
-        setTopics([]);
-        setStatus("success");
-        setMessage(
-          "Check your inbox to confirm your signup. Run the latest Supabase signup SQL to start saving topic preferences."
-        );
-        return;
-      }
-    }
-
-    if (error) {
-      const duplicate = error.code === "23505";
-      setStatus(duplicate ? "success" : "error");
-      setMessage(
-        duplicate
-          ? "You are already on the list."
-          : "Something went wrong. Please try again."
-      );
-      return;
-    }
-
-    const { error: emailError } = await supabase.functions.invoke("send-confirmation", {
+    const { data, error } = await supabase.functions.invoke("create-signup", {
       body: {
         email: normalizedEmail,
-        confirmToken,
+        topics: selectedTopics,
       },
     });
 
-    if (emailError) {
+    if (error) {
       setStatus("error");
-      setMessage("We saved your signup, but could not send the confirmation email.");
+      setMessage("We could not process your signup just now. Please try again.");
       return;
     }
+
+    const signupStatus = data?.status;
 
     setEmail("");
     setTopics([]);
     setStatus("success");
-    setMessage("Check your inbox to confirm your signup.");
+    setMessage(
+      signupStatus === "confirmed_existing"
+        ? "You are already subscribed."
+        : "Check your inbox to confirm your signup."
+    );
   }
 
   return (

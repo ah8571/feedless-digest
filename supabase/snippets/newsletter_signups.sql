@@ -3,6 +3,7 @@ create table if not exists public.newsletter_signups (
   email text not null unique,
   status text not null default 'pending',
   confirm_token text unique,
+  unsubscribe_token text unique,
   source text,
   topics text[] not null default '{}',
   confirmed_at timestamptz,
@@ -15,8 +16,13 @@ create table if not exists public.newsletter_signups (
 
 alter table public.newsletter_signups add column if not exists source text;
 alter table public.newsletter_signups add column if not exists topics text[] not null default '{}';
+alter table public.newsletter_signups add column if not exists unsubscribe_token text;
 alter table public.newsletter_signups alter column source drop not null;
 alter table public.newsletter_signups alter column source drop default;
+
+update public.newsletter_signups
+set unsubscribe_token = md5(email || ':' || created_at::text || ':' || random()::text)
+where unsubscribe_token is null;
 
 alter table public.newsletter_signups enable row level security;
 
@@ -33,6 +39,9 @@ on public.newsletter_signups (status);
 
 create index if not exists newsletter_signups_confirm_token_idx
 on public.newsletter_signups (confirm_token);
+
+create index if not exists newsletter_signups_unsubscribe_token_idx
+on public.newsletter_signups (unsubscribe_token);
 
 create index if not exists newsletter_signups_topics_idx
 on public.newsletter_signups using gin (topics);
