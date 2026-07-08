@@ -64,7 +64,18 @@ async function sendConfirmationEmail(
     };
   }
 
-  const confirmationUrl = new URL(confirmBaseUrl);
+  let confirmationUrl: URL;
+
+  try {
+    confirmationUrl = new URL(confirmBaseUrl);
+  } catch {
+    return {
+      ok: false,
+      status: 500,
+      error: "CONFIRM_BASE_URL must be a full URL.",
+    };
+  }
+
   confirmationUrl.searchParams.set("token", confirmToken);
 
   const resendResponse = await fetch("https://api.resend.com/emails", {
@@ -112,136 +123,147 @@ async function sendConfirmationEmail(
 }
 
 Deno.serve(async (request: Request) => {
-  if (request.method === "OPTIONS") {
-    return new Response("ok", {
-      headers: corsHeaders,
-    });
-  }
-
-  if (request.method !== "POST") {
-    return jsonResponse(405, {
-      error: "Method not allowed. Use POST.",
-    });
-  }
-
-  const supabaseUrl = Deno.env.get("SUPABASE_URL");
-  const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-
-  if (!supabaseUrl || !serviceRoleKey) {
-    return jsonResponse(500, {
-      error: "Missing required environment variables.",
-    });
-  }
-
-  let payload: CreateSignupPayload;
-
   try {
-    payload = await request.json();
-  } catch {
-    return jsonResponse(400, {
-      error: "Invalid JSON body.",
-    });
-  }
+    if (request.method === "OPTIONS") {
+      return new Response("ok", {
+        headers: corsHeaders,
+      });
+    }
 
-  const email = payload.email?.trim().toLowerCase();
-  const topics = normalizeTopics(payload.topics);
+    if (request.method !== "POST") {
+      return jsonResponse(405, {
+        error: "Method not allowed. Use POST.",
+      });
+    }
 
-  if (!email) {
-    return jsonResponse(400, {
-      error: "Email is required.",
-    });
-  }
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
-  const supabase = createClient(supabaseUrl, serviceRoleKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-    },
-  });
-
-  const { data: existingSignup, error: lookupError } = await supabase
-    .from("newsletter_signups")
-    .select("id, status")
-    .eq("email", email)
-    .maybeSingle();
-
-  if (lookupError) {
-    return jsonResponse(500, {
-      error: "Could not check existing signup state.",
-    });
-  }
-
-  if (existingSignup?.status === "confirmed") {
-    const { error: updateConfirmedError } = await supabase
-      .from("newsletter_signups")
-      .update({
-        topics,
-        updated_at: new Date().toISOString(),
-      })
-      .eq("id", existingSignup.id);
-
-    if (updateConfirmedError) {
+    if (!supabaseUrl || !serviceRoleKey) {
       return jsonResponse(500, {
-        error: "Could not update topic preferences.",
+        error: "Missing required environment variables.",
+      });
+    }
+
+    let payload: CreateSignupPayload;
+
+    try {
+      payload = await request.json();
+    } catch {
+      return jsonResponse(400, {
+        error: "Invalid JSON body.",
+      });
+    }
+
+    const email = payload.email?.trim().toLowerCase();
+    const topics = normalizeTopics(payload.topics);
+
+    if (!email) {
+      return jsonResponse(400, {
+        error: "Email is required.",
+      });
+    }
+
+    const supabase = createClient(supabaseUrl, serviceRoleKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+
+    const { data: existingSignup, error: lookupError } = await supabase
+      .from("newsletter_signups")
+      .select("id, status")
+      .eq("email", email)
+      .maybeSingle();
+
+    if (lookupError) {
+      return jsonResponse(500, {
+        error: "Could not check existing signup state.",
+        details: lookupError.message,
+      });
+    }
+
+    if (existingSignup?.status === "confirmed") {
+      const { error: updateConfirmedError } = await supabase
+        .from("newsletter_signups")
+        .update({
+          topics,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", existingSignup.id);
+
+      if (updateConfirmedError) {
+        return jsonResponse(500, {
+          error: "Could not update topic preferences.",
+          details: updateConfirmedError.message,
+        });
+      }
+
+      return jsonResponse(200, {
+        ok: true,
+        status: "confirmed_existing" satisfies SignupStatus,
+      });
+    }
+
+    const timestamp = new Date().toISOString();
+    const confirmToken = `${crypto.randomUUID()}-${Date.now().toString(36)}`;
+    const unsubscribeToken = crypto.randomUUID();
+
+    if (existingSignup) {
+      const { error: updateError } = await supabase
+        .from("newsletter_signups")
+        .update({
+          status: "pending",
+          confirm_token: confirmToken,
+          topics,
+          unsubscribe_token: unsubscribeToken,
+          unsubscribed_at: null,
+          updated_at: timestamp,
+        })
+        .eq("id", existingSignup.id);
+
+      if (updateError) {
+        return jsonResponse(500, {
+          error: "Could not refresh signup.",
+          details: updateError.message,
+        });
+      }
+    } else {
+      const { error: insertError } = await supabase.from("newsletter_signups").insert({
+        email,
+        status: "pending",
+        confirm_token: confirmToken,
+        topics,
+        unsubscribe_token: unsubscribeToken,
+        updated_at: timestamp,
+      });
+
+      if (insertError) {
+        return jsonResponse(500, {
+          error: "Could not create signup.",
+          details: insertError.message,
+        });
+      }
+    }
+
+    const emailResult = await sendConfirmationEmail(email, confirmToken);
+
+    if (!emailResult.ok) {
+      return jsonResponse(emailResult.status, {
+        error: "Confirmation email failed.",
+        details: emailResult.error,
       });
     }
 
     return jsonResponse(200, {
       ok: true,
-      status: "confirmed_existing" satisfies SignupStatus,
+      status: "pending_confirmation" satisfies SignupStatus,
+    });
+  } catch (error) {
+    return jsonResponse(500, {
+      error: "Unhandled signup error.",
+      details: error instanceof Error ? error.message : String(error),
     });
   }
-
-  const timestamp = new Date().toISOString();
-  const confirmToken = `${crypto.randomUUID()}-${Date.now().toString(36)}`;
-  const unsubscribeToken = crypto.randomUUID();
-
-  if (existingSignup) {
-    const { error: updateError } = await supabase
-      .from("newsletter_signups")
-      .update({
-        status: "pending",
-        confirm_token: confirmToken,
-        topics,
-        unsubscribe_token: unsubscribeToken,
-        unsubscribed_at: null,
-        updated_at: timestamp,
-      })
-      .eq("id", existingSignup.id);
-
-    if (updateError) {
-      return jsonResponse(500, {
-        error: "Could not refresh signup.",
-      });
-    }
-  } else {
-    const { error: insertError } = await supabase.from("newsletter_signups").insert({
-      email,
-      status: "pending",
-      confirm_token: confirmToken,
-      topics,
-      unsubscribe_token: unsubscribeToken,
-      updated_at: timestamp,
-    });
-
-    if (insertError) {
-      return jsonResponse(500, {
-        error: "Could not create signup.",
-      });
-    }
-  }
-
-  const emailResult = await sendConfirmationEmail(email, confirmToken);
-
-  if (!emailResult.ok) {
-    return jsonResponse(emailResult.status, {
-      error: "Confirmation email failed.",
-      details: emailResult.error,
-    });
-  }
-
-  return jsonResponse(200, {
-    ok: true,
-    status: "pending_confirmation" satisfies SignupStatus,
-  });
 });
