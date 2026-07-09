@@ -176,6 +176,14 @@ Put the shared brand elements in the template:
 4. archive link
 5. unsubscribe block
 
+For Feedfree, the footer should point to the site-managed preferences page, not directly to the one-shot unsubscribe handler. After you sync subscribers, Listmonk subscriber `attribs` include the Supabase `unsubscribe_token`, so the template link can be:
+
+```html
+<a href="https://feedfree.tech/subscribed?token={{ .Subscriber.Attribs.unsubscribe_token }}">Unsubscribe</a>
+```
+
+That gives readers one landing page where they can keep some topics, drop others, or unsubscribe from everything.
+
 Put the changing editorial content in the campaign body.
 
 Once the sends are stable, you can branch into:

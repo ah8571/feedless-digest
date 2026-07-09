@@ -302,15 +302,106 @@ function formatFromEmail(fromName, fromEmail) {
   return `${fromName} <${fromEmail}>`;
 }
 
+function escapeHtml(value) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderBodyHtml(rawBody) {
+  const normalizedBody = rawBody
+    .replace(/\\r\\n/g, '\n')
+    .replace(/\\n/g, '\n')
+    .replace(/\r\n/g, '\n');
+  const lines = normalizedBody.split('\n');
+  const blocks = [];
+
+  for (let index = 0; index < lines.length; ) {
+    const line = lines[index].trim();
+
+    if (!line) {
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith('# ')) {
+      blocks.push(`<h1 style="font-size:28px; line-height:1.08; margin:0 0 16px; color:#1d1b18; font-weight:700;">${escapeHtml(line.slice(2).trim())}</h1>`);
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith('## ')) {
+      blocks.push(`<h2 style="font-size:20px; line-height:1.2; margin:24px 0 12px; color:#1d1b18; font-weight:700;">${escapeHtml(line.slice(3).trim())}</h2>`);
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith('- ')) {
+      const items = [];
+      while (index < lines.length && lines[index].trim().startsWith('- ')) {
+        items.push(`<li style="margin:0 0 10px;">${escapeHtml(lines[index].trim().slice(2).trim())}</li>`);
+        index += 1;
+      }
+      blocks.push(`<ul style="margin:0 0 20px; padding-left:20px; color:#5f5647; font-size:16px; line-height:1.7;">${items.join('')}</ul>`);
+      continue;
+    }
+
+    const paragraphLines = [];
+    while (index < lines.length) {
+      const current = lines[index].trim();
+      if (!current || current.startsWith('# ') || current.startsWith('## ') || current.startsWith('- ')) {
+        break;
+      }
+      paragraphLines.push(current);
+      index += 1;
+    }
+
+    const paragraph = escapeHtml(paragraphLines.join(' ')).replace(
+      /(https?:\/\/[^\s<]+)/g,
+      '<a href="$1" style="color:#1d1b18; text-decoration:underline;">$1</a>'
+    );
+    blocks.push(`<p style="font-size:16px; line-height:1.7; margin:0 0 16px; color:#5f5647;">${paragraph}</p>`);
+  }
+
+  return blocks.join('');
+}
+
+function renderBrandedEmailHtml(options, rawBody) {
+  const bodyHtml = renderBodyHtml(rawBody);
+  return `
+    <div style="margin:0; padding:0; background-color:#ffffff; color:#1d1b18; font-family:Arial, sans-serif;">
+      <div style="width:100%; margin:0 auto; padding:0; box-sizing:border-box;">
+        <div style="text-align:center; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; color:#1d1b18; margin-bottom:18px;">${escapeHtml(options.fromName || 'Feedfree Digest')}</div>
+        <div style="width:100%; height:1px; margin:0 0 26px; background:#ebe7e0;"></div>
+        ${bodyHtml}
+        <div style="width:100%; height:1px; margin:30px 0 18px; background:#ebe7e0;"></div>
+        <p style="font-size:14px; line-height:1.6; margin:0; color:#5f5647; text-align:center;">Thoughtful long-form curation, delivered by email.</p>
+      </div>
+    </div>
+  `.trim();
+}
+
+function buildContent(options, rawBody) {
+  return {
+    contentType: 'html',
+    body: renderBrandedEmailHtml(options, rawBody),
+    altBody: options.altBody || rawBody,
+  };
+}
+
 function buildCampaignPayload(options, listId, body) {
+  const content = buildContent(options, body);
   return {
     name: options.name,
     subject: options.subject,
     lists: [listId],
     type: 'regular',
-    content_type: options.contentType,
-    body,
-    altbody: options.altBody || undefined,
+    content_type: content.contentType,
+    body: content.body,
+    altbody: content.altBody,
     from_email: formatFromEmail(options.fromName, options.fromEmail),
     messenger: options.messenger,
     template_id: normalizeTemplateId(options.templateId),

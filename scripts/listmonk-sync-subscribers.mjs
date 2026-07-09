@@ -140,7 +140,7 @@ function buildLaneLookup(lanes) {
 async function fetchConfirmedSignups(supabase) {
   const { data, error } = await supabase
     .from('newsletter_signups')
-    .select('email, source, topics, confirmed_at, created_at, updated_at')
+    .select('email, source, topics, unsubscribe_token, confirmed_at, created_at, updated_at')
     .eq('status', 'confirmed')
     .is('unsubscribed_at', null)
     .order('confirmed_at', { ascending: false, nullsFirst: false })
@@ -211,6 +211,7 @@ function buildSyncPlan(signups, existingSubscribers, laneLookup, managedListMap)
       email,
       source: signup.source ?? 'landing-page',
       topics: signup.topics ?? [],
+      unsubscribeToken: signup.unsubscribe_token ?? null,
       existingSubscriberId: existing?.id ?? null,
       matchedLaneSlugs,
       finalListIds,
@@ -232,6 +233,7 @@ async function applySyncPlan(baseUrl, authHeader, plan) {
         topics: entry.topics,
         source: entry.source,
         sync_source: 'supabase',
+        unsubscribe_token: entry.unsubscribeToken,
       },
       preconfirm_subscriptions: true,
     };

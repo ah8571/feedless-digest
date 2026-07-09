@@ -5,6 +5,15 @@ function redirectTo(path: string) {
   return Response.redirect(path, 303);
 }
 
+function textResponse(status: number, body: string) {
+  return new Response(body, {
+    status,
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+    },
+  });
+}
+
 const publicSiteUrl = Deno.env.get("PUBLIC_SITE_URL") ?? "https://feedfree.tech";
 
 function redirectToStatus(status: "unsubscribed" | "invalid" | "error") {
@@ -12,21 +21,26 @@ function redirectToStatus(status: "unsubscribed" | "invalid" | "error") {
 }
 
 Deno.serve(async (request) => {
-  if (request.method !== "GET") {
-    return redirectToStatus("invalid");
+  const isPost = request.method === "POST";
+  const isGet = request.method === "GET";
+
+  if (!isGet && !isPost) {
+    return isPost
+      ? textResponse(405, "Method not allowed")
+      : redirectToStatus("invalid");
   }
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
   if (!supabaseUrl || !serviceRoleKey) {
-    return redirectToStatus("error");
+    return isPost ? textResponse(500, "Configuration error") : redirectToStatus("error");
   }
 
   const token = new URL(request.url).searchParams.get("token")?.trim();
 
   if (!token) {
-    return redirectToStatus("invalid");
+    return isPost ? textResponse(400, "Missing token") : redirectToStatus("invalid");
   }
 
   const supabase = createClient(supabaseUrl, serviceRoleKey, {
@@ -43,11 +57,11 @@ Deno.serve(async (request) => {
     .maybeSingle();
 
   if (lookupError) {
-    return redirectToStatus("error");
+    return isPost ? textResponse(500, "Lookup error") : redirectToStatus("error");
   }
 
   if (!signup || signup.status === "unsubscribed") {
-    return redirectToStatus("invalid");
+    return isPost ? textResponse(404, "Invalid token") : redirectToStatus("invalid");
   }
 
   const timestamp = new Date().toISOString();
@@ -62,8 +76,8 @@ Deno.serve(async (request) => {
     .neq("status", "unsubscribed");
 
   if (updateError) {
-    return redirectToStatus("error");
+    return isPost ? textResponse(500, "Update error") : redirectToStatus("error");
   }
 
-  return redirectToStatus("unsubscribed");
+  return isPost ? textResponse(200, "Unsubscribed") : redirectToStatus("unsubscribed");
 });
