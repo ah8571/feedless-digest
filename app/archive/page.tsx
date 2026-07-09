@@ -7,12 +7,8 @@ export default function ArchivePage() {
     <div className="page-stack narrow-stack">
       <section className="panel panel-accent">
         <p className="eyebrow">Archive</p>
-        <h1>A single running page for past issues.</h1>
-        <p className="lede">
-          Readers can scroll through previous editions here or jump straight to
-          a specific date from the homepage. Over time, this becomes the public
-          record of the best issues without forcing anyone back into the feed.
-        </p>
+        <h1>Past Issues</h1>
+        <p className="lede">Scroll or jump straight to a specific date.</p>
       </section>
 
       <details className="archive-subscribe archive-subscribe-sticky">
