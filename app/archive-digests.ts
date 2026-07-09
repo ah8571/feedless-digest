@@ -10,6 +10,7 @@ export type ArchiveDigestItem = {
 export type ArchiveIssue = {
   id: string;
   aliases?: string[];
+  series?: string;
   date?: string;
   title?: string;
   summary?: string;
@@ -24,6 +25,7 @@ export type ArchiveIssue = {
 export const aiEngineering001Issue: ArchiveIssue = {
   id: "ai-001",
   aliases: ["ai-engineering-001"],
+  series: "AI Engineering",
   date: "July 8, 2026",
   title: "AI Engineering 001",
   summary:
@@ -153,6 +155,7 @@ export const aiEngineering001Issue: ArchiveIssue = {
 export const aiEngineering002Issue: ArchiveIssue = {
   id: "ai-002",
   aliases: ["ai-engineering-002"],
+  series: "AI Engineering",
   date: "July 8, 2026",
   title: "AI Engineering 002",
   summary:
@@ -340,6 +343,7 @@ export const aiEngineering002Issue: ArchiveIssue = {
 export const socialMediaMarketing001Issue: ArchiveIssue = {
   id: "social-001",
   aliases: ["social-media-marketing-001"],
+  series: "Social Media Marketing",
   date: "July 8, 2026",
   title: "Social Media Marketing 001",
   summary:

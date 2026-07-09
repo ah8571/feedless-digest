@@ -448,8 +448,49 @@ h2 {
   max-width: 17ch;
 }
 
+.section-heading h3 {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.08;
+}
+
+.workflow-lanes {
+  display: grid;
+  gap: 28px;
+}
+
+.workflow-lane {
+  display: grid;
+  gap: 18px;
+}
+
+.workflow-lane-heading {
+  gap: 4px;
+}
+
 .workflow-card {
   min-height: 220px;
+}
+
+.workflow-card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.workflow-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(29, 27, 24, 0.18);
+}
+
+.workflow-card-link h3,
+.workflow-card-link p,
+.workflow-card-link span {
+  position: relative;
+  z-index: 1;
 }
 
 .step-chip {

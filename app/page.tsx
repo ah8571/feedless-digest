@@ -25,7 +25,17 @@ const audienceFits = [
   "Marketers looking for durable playbooks instead of short viral clips",
 ];
 
+const editionSeriesOrder = ["AI Engineering", "Social Media Marketing"] as const;
+
 export default function HomePage() {
+  const publishedIssues = archiveIssues.filter((issue) => issue.title);
+  const editionSections = editionSeriesOrder
+    .map((series) => ({
+      series,
+      issues: publishedIssues.filter((issue) => issue.series === series),
+    }))
+    .filter((section) => section.issues.length > 0);
+
   return (
     <div className="page-stack">
       <section className="hero card-grid">
@@ -90,18 +100,24 @@ export default function HomePage() {
           <h2>See past editions</h2>
         </div>
 
-        <div className="workflow-grid">
-          {archiveIssues.filter((issue) => issue.title).map((issue) => (
-            <article className="panel workflow-card" key={issue.id}>
-              {issue.date ? <span className="step-chip">{issue.date}</span> : null}
-              {issue.title ? <h3>{issue.title}</h3> : null}
-              {issue.summary ? <p>{issue.summary}</p> : null}
-              {issue.title ? (
-                <Link className="text-link" href={`/archive#${issue.id}`}>
-                  Read {issue.title} in the archive
-                </Link>
-              ) : null}
-            </article>
+        <div className="workflow-lanes">
+          {editionSections.map((section) => (
+            <div className="workflow-lane" key={section.series}>
+              <div className="section-heading workflow-lane-heading">
+                <p className="section-label">Edition Section</p>
+                <h3>{section.series}</h3>
+              </div>
+
+              <div className="workflow-grid">
+                {section.issues.map((issue) => (
+                  <Link className="panel workflow-card workflow-card-link" href={`/archive#${issue.id}`} key={issue.id}>
+                    {issue.date ? <span className="step-chip">{issue.date}</span> : null}
+                    {issue.title ? <h3>{issue.title}</h3> : null}
+                    {issue.summary ? <p>{issue.summary}</p> : null}
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
