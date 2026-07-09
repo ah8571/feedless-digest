@@ -62,7 +62,7 @@ Compact article-gated query for influencer, UGC, and short-form growth topics:
 
 ```json
 [
-  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (TikTok OR Instagram OR creator OR creators) (influencer OR influencers OR UGC OR ads OR advertising OR \"creator ads\" OR \"paid social\" OR conversion OR revenue OR campaign)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (TikTok OR Instagram OR creator OR creators or X or youtube) (influencer OR influencers OR UGC OR ads OR advertising OR \"creator ads\" OR \"paid social\" OR conversion OR revenue OR campaign or followers or following or monetize or monetization)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
 

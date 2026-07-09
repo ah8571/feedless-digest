@@ -1,4 +1,7 @@
-export const archiveIssues = [
+import { aiEngineering001Issue, type ArchiveIssue } from "./archive-digests";
+
+export const archiveIssues: ArchiveIssue[] = [
+  aiEngineering001Issue,
   {
     id: "2026-07-04",
     date: "July 4, 2026",
