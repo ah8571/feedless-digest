@@ -59,16 +59,15 @@ function parseArgs(argv) {
     bodyFile: '',
     altBody: '',
     lane: '',
-    listName: process.env.LISTMONK_TEST_LIST_NAME?.trim() || 'Default list',
-    listId: process.env.LISTMONK_TEST_LIST_ID?.trim() || '',
-    emails: splitCsv(process.env.LISTMONK_TEST_EMAILS),
+    listName: '',
+    listId: '',
     tags: splitCsv(process.env.LISTMONK_TAGS),
-    contentType: process.env.LISTMONK_CONTENT_TYPE?.trim() || 'markdown',
     fromName: process.env.LISTMONK_FROM_NAME?.trim() || 'Feedfree Digest',
     fromEmail: process.env.LISTMONK_FROM_EMAIL?.trim() || '',
     messenger: 'email',
     templateId: process.env.LISTMONK_TEMPLATE_ID?.trim() || '',
     noTemplate: false,
+    confirmLiveSend: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -80,7 +79,17 @@ function parseArgs(argv) {
       continue;
     }
 
-    if (!next && !['--help', '-h'].includes(arg)) {
+    if (arg === '--no-template') {
+      options.noTemplate = true;
+      continue;
+    }
+
+    if (arg === '--confirm-live-send') {
+      options.confirmLiveSend = true;
+      continue;
+    }
+
+    if (!next && !['--help', '-h', '--no-template', '--confirm-live-send'].includes(arg)) {
       throw new Error(`${arg} requires a value.`);
     }
 
@@ -120,11 +129,6 @@ function parseArgs(argv) {
       continue;
     }
 
-    if (arg === '--no-template') {
-      options.noTemplate = true;
-      continue;
-    }
-
     if (arg === '--list') {
       options.listName = next;
       index += 1;
@@ -133,12 +137,6 @@ function parseArgs(argv) {
 
     if (arg === '--list-id') {
       options.listId = next;
-      index += 1;
-      continue;
-    }
-
-    if (arg === '--to') {
-      options.emails = splitCsv(next);
       index += 1;
       continue;
     }
@@ -157,35 +155,25 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log([
-    'Usage: npm run listmonk:test-send -- --name "AI Engineering Test" --subject "Feedfree Digest: AI Engineering Test" --body-file drafts/ai-test.md --to you@example.com',
+    'Usage: npm run listmonk:live-send -- --lane ai-engineering --name "AI Engineering 001" --subject "Feedfree AI: AI Engineering 001" --body-file lists/editions/2026-07-06-ai-engineering-001-feedfree-linked.md --confirm-live-send',
     '',
     'Required environment variables:',
     '  LISTMONK_URL            Example: https://mail.feedfree.tech',
     '  LISTMONK_USERNAME       API or admin username',
     '  LISTMONK_PASSWORD       API token or password',
     '',
-    'Optional environment variables:',
-    '  LISTMONK_TEST_LIST_NAME Default: Default list',
-    '  LISTMONK_TEST_LIST_ID   Skips list lookup if provided',
-    '  LISTMONK_TEST_EMAILS    Comma-separated test recipients',
-    '  LISTMONK_FROM_NAME      Default sender name. Defaults to Feedfree Digest.',
-    '  LISTMONK_FROM_EMAIL     Override campaign from address',
-    '  LISTMONK_TEMPLATE_ID    Numeric template id',
-    '  LISTMONK_TAGS           Comma-separated default tags',
-    '  LISTMONK_CONTENT_TYPE   markdown, html, plain, richtext, visual',
-    '',
     'CLI flags:',
-    `  --lane <slug>          Supported lanes: ${listSupportedLaneSlugs().join(', ')}`,
-    '  --name <value>          Campaign name',
-    '  --subject <value>       Email subject',
-    '  --body <value>          Inline campaign body',
-    '  --body-file <path>      Read campaign body from file',
-    '  --altbody <value>       Optional alternate plain text body',
-    '  --no-template           Do not attach a Listmonk template to this campaign',
-    '  --list <value>          Target list name for the draft campaign',
-    '  --list-id <value>       Target list id for the draft campaign',
-    '  --to <emails>           Comma-separated test recipients',
-    '  --tag <value>           Campaign tag; repeatable',
+    `  --lane <slug>              Supported lanes: ${listSupportedLaneSlugs().join(', ')}`,
+    '  --name <value>             Campaign name',
+    '  --subject <value>          Email subject',
+    '  --body <value>             Inline campaign body',
+    '  --body-file <path>         Read campaign body from file',
+    '  --altbody <value>          Optional alternate plain text body',
+    '  --list <value>             Override target list name',
+    '  --list-id <value>          Override target list id',
+    '  --tag <value>              Campaign tag; repeatable',
+    '  --no-template              Do not attach a Listmonk template to this campaign',
+    '  --confirm-live-send        Required safety flag before sending to real subscribers',
   ].join('\n'));
 }
 
@@ -224,65 +212,39 @@ async function resolveListId(baseUrl, authHeader, options) {
   if (options.listId) {
     const parsed = Number(options.listId);
     if (!Number.isInteger(parsed) || parsed <= 0) {
-      throw new Error('LISTMONK_TEST_LIST_ID or --list-id must be a positive integer.');
+      throw new Error('--list-id must be a positive integer.');
     }
     return parsed;
   }
 
-  const params = new URLSearchParams({ per_page: 'all', minimal: 'true', status: 'active' });
+  const listName = options.listName;
+  if (!listName) {
+    throw new Error('A target list is required. Provide --lane or --list.');
+  }
+
+  const params = new URLSearchParams({ per_page: 'all', minimal: 'false', status: 'active' });
   const response = await requestJson(`${baseUrl}/api/lists?${params.toString()}`, {
     headers: {
       Authorization: authHeader,
     },
   });
 
-  const list = response.data.results.find((entry) => entry.name === options.listName);
+  const list = response.data.results.find((entry) => entry.name === listName);
   if (!list) {
-    throw new Error(`Could not find active list named "${options.listName}".`);
+    throw new Error(`Could not find active list named "${listName}".`);
   }
 
   return list.id;
 }
 
-async function getSubscribers(baseUrl, authHeader, options) {
-  const params = new URLSearchParams({ per_page: 'all' });
-  const response = await requestJson(`${baseUrl}/api/subscribers?${params.toString()}`, {
+async function getListDetails(baseUrl, authHeader, listId) {
+  const response = await requestJson(`${baseUrl}/api/lists/${listId}`, {
     headers: {
       Authorization: authHeader,
     },
   });
 
-  const byEmail = new Map();
-  for (const subscriber of response.data.results) {
-    if (!subscriber?.email) continue;
-    byEmail.set(String(subscriber.email).toLowerCase(), subscriber);
-  }
-
-  return options.emails.map((email) => byEmail.get(email.toLowerCase())).filter(Boolean);
-}
-
-async function ensureTestSubscribers(baseUrl, authHeader, options, listId) {
-  const knownSubscribers = await getSubscribers(baseUrl, authHeader, options);
-  const knownEmails = new Set(knownSubscribers.map((subscriber) => subscriber.email.toLowerCase()));
-
-  for (const email of options.emails) {
-    if (knownEmails.has(email.toLowerCase())) continue;
-
-    await requestJson(`${baseUrl}/api/subscribers`, {
-      method: 'POST',
-      headers: {
-        Authorization: authHeader,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email,
-        name: email,
-        status: 'enabled',
-        lists: [listId],
-        preconfirm_subscriptions: true,
-      }),
-    });
-  }
+  return response.data;
 }
 
 async function getBody(options) {
@@ -415,10 +377,6 @@ function renderBodyHtml(rawBody) {
       index += 1;
     }
 
-    const paragraph = escapeHtml(paragraphLines.join(' ')).replace(
-      /(https?:\/\/[^\s<]+)/g,
-      '<a href="$1" style="color:#1d1b18; text-decoration:underline;">$1</a>'
-    );
     const renderedParagraph = renderInlineLinks(paragraphLines.join(' '));
     blocks.push(`<p style="font-size:16px; line-height:1.7; margin:0 0 16px; color:#5f5647;">${renderedParagraph}</p>`);
   }
@@ -475,9 +433,7 @@ function applyLaneDefaults(options) {
   const lane = getLaneOrThrow(options.lane);
   return {
     ...options,
-    listName: options.listName === (process.env.LISTMONK_TEST_LIST_NAME?.trim() || 'Default list')
-      ? getLaneListName(lane)
-      : options.listName,
+    listName: options.listName || getLaneListName(lane),
     fromName: options.fromName === (process.env.LISTMONK_FROM_NAME?.trim() || 'Feedfree Digest')
       ? getLaneSenderName(lane)
       : options.fromName,
@@ -492,19 +448,29 @@ async function main() {
     return;
   }
 
+  if (!options.confirmLiveSend) {
+    throw new Error('Refusing live send without --confirm-live-send.');
+  }
+
   const baseUrl = getRequiredEnv('LISTMONK_URL').replace(/\/$/, '');
   const username = getRequiredEnv('LISTMONK_USERNAME');
   const password = getRequiredEnv('LISTMONK_PASSWORD');
 
   if (!options.name) throw new Error('Missing --name.');
   if (!options.subject) throw new Error('Missing --subject.');
-  if (!options.emails.length) {
-    throw new Error('Provide test recipients with LISTMONK_TEST_EMAILS or --to.');
+  if (!options.lane && !options.listName && !options.listId) {
+    throw new Error('Provide --lane, --list, or --list-id.');
   }
 
   const authHeader = buildAuthHeader(username, password);
   const listId = await resolveListId(baseUrl, authHeader, options);
-  await ensureTestSubscribers(baseUrl, authHeader, options, listId);
+  const listDetails = await getListDetails(baseUrl, authHeader, listId);
+  const confirmedCount = Number(listDetails?.subscriber_statuses?.confirmed ?? 0);
+
+  if (confirmedCount <= 0) {
+    throw new Error(`List ${listDetails.name} (#${listId}) has no confirmed subscribers.`);
+  }
+
   const body = await getBody(options);
   const payload = buildCampaignPayload(options, listId, body);
 
@@ -519,22 +485,20 @@ async function main() {
 
   const campaignId = created.data.id;
 
-  await requestJson(`${baseUrl}/api/campaigns/${campaignId}/test`, {
-    method: 'POST',
+  const started = await requestJson(`${baseUrl}/api/campaigns/${campaignId}/status`, {
+    method: 'PUT',
     headers: {
       Authorization: authHeader,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      ...payload,
-      subscribers: options.emails,
-    }),
+    body: JSON.stringify({ status: 'running' }),
   });
 
   console.log([
-    `Created draft campaign ${campaignId}.`,
-    `Target list: ${options.listName} (#${listId})`,
-    `Sent test message to: ${options.emails.join(', ')}`,
+    `Created campaign ${campaignId}.`,
+    `Started campaign with status ${started.data.status}.`,
+    `Target list: ${listDetails.name} (#${listId})`,
+    `Confirmed subscribers on list: ${confirmedCount}`,
   ].join('\n'));
 }
 

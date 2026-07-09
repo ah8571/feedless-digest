@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.50.3";
+import { reconcileListmonkSubscriber } from "../_shared/listmonk.ts";
 
 function redirectTo(path: string) {
   return Response.redirect(path, 303);
@@ -52,7 +53,7 @@ Deno.serve(async (request) => {
 
   const { data: signup, error: lookupError } = await supabase
     .from("newsletter_signups")
-    .select("id, status")
+    .select("id, email, status, source")
     .eq("unsubscribe_token", token)
     .maybeSingle();
 
@@ -77,6 +78,17 @@ Deno.serve(async (request) => {
 
   if (updateError) {
     return isPost ? textResponse(500, "Update error") : redirectToStatus("error");
+  }
+
+  const syncResult = await reconcileListmonkSubscriber({
+    email: signup.email,
+    topics: [],
+    source: signup.source,
+    unsubscribeToken: token,
+    subscribed: false,
+  });
+  if (!syncResult.ok) {
+    console.error("Listmonk sync failed after one-click unsubscribe", syncResult.reason);
   }
 
   return isPost ? textResponse(200, "Unsubscribed") : redirectToStatus("unsubscribed");

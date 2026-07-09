@@ -2,12 +2,6 @@ import Link from "next/link";
 import { archiveIssues } from "./archive-issues";
 import { SignupForm } from "./components/signup-form";
 
-const sourcingChannels = [
-  "Social media platforms like X and LinkedIn where thoughtful threads and essays get buried by short-form churn",
-  "Open blog forums like Medium where strong long-form posts are still discoverable",
-  "A narrower source set chosen for reliability over inflated platform claims",
-];
-
 const trackedPlatforms = [
   {
     category: "Social media platforms",
@@ -17,12 +11,6 @@ const trackedPlatforms = [
     category: "Open blog forums",
     platforms: "Medium",
   },
-];
-
-const audienceFits = [
-  "Founders and operators who want ideas without platform addiction",
-  "Developers trying to keep up with technical essays, not hot takes",
-  "Marketers looking for durable playbooks instead of short viral clips",
 ];
 
 const editionSeriesOrder = ["AI Engineering", "Social Media Marketing"] as const;
@@ -70,28 +58,6 @@ export default function HomePage() {
           <span className="stat-label">What it preserves</span>
           <p className="stat-value">Depth, nuance, original sources</p>
         </aside>
-      </section>
-
-      <section className="content-grid">
-        <article className="panel">
-          <p className="section-label">Coverage</p>
-          <h2>Built around high-signal corners of the web.</h2>
-          <ul className="feature-list">
-            {sourcingChannels.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
-
-        <article className="panel">
-          <p className="section-label">Who this is for</p>
-          <h2>Readers who want compounding insight, not compounding screen time.</h2>
-          <ul className="feature-list">
-            {audienceFits.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
       </section>
 
       <section className="workflow-section">

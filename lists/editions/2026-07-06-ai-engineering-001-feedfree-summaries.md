@@ -169,3 +169,71 @@ Date: July 4, 2026
 rvaniaaa closes the set by arguing that Fable only looks overrated if you judge it on tasks that smaller models already handle well. The article says the real advantage appears when the work gets larger, messier, and more interconnected, with more tradeoffs surfacing along the way. It is a useful ending note for the whole batch because it reinforces the same broader theme running through many of these pieces: model quality matters, but the real gains show up when the workflow, memory, and problem framing are strong enough to let that quality matter.
 
 [disclosure: for efficiency, this was written with AI with human article selection. If you would like to see more lists like the latest AI advice, please subscribe to my newsletter in my bio]
+
+# AI Engineering 001 - Feedfree Summary Proof - Quick Links Version
+
+Hey, providing these articles below in case people missed them. There are many interesting articles floating around X, but they are easy to miss. Here is a quicker links-first version in case helpful.
+
+Volume note: this set includes 12 informational articles published between June 7 and July 6, 2026.
+
+## 1. Getting started with loops
+Author: ClaudeDevs (@ClaudeDevs)
+Date: July 6, 2026
+Source: https://x.com/ClaudeDevs/article/2074208949205881033
+
+## 2. Loop Engineering - From Prompting to Looping
+Author: kaize (@0x_kaize)
+Date: July 4, 2026
+Source: https://x.com/0x_kaize/article/2073438517775003671
+
+## 3. How to Set Up Claude Loops That Keep Working While You Sleep (Step by Step)
+Author: Hanako (@hanakoxbt)
+Date: June 13, 2026
+Source: https://x.com/hanakoxbt/article/2065807526268920103
+
+## 4. A Field Guide to Fable: Finding Your Unknowns
+Author: Thariq (@trq212)
+Date: July 3, 2026
+Source: https://x.com/trq212/article/2073100352921215386
+
+## 5. I Gave My Second Brain 1,500 Conversations and It Changed Everything
+Author: leopardracer (@leopardracer)
+Date: July 4, 2026
+Source: https://x.com/leopardracer/article/2073340097051689327
+
+## 6. How to Turn Claude Code Into a Full Team of Specialists:
+Author: Madni Aghadi (@hey_madni)
+Date: June 22, 2026
+Source: https://x.com/hey_madni/article/2069010198040326329
+
+## 7. How to Build Independent AI Agents That Actually Work in Production
+Author: Sumanth (@Sumanth_077)
+Date: July 2, 2026
+Source: https://x.com/Sumanth_077/article/2072679526556189021
+
+## 8. 10 hidden Claude skills built a $40,000 month while everyone else still types prompts by hand.
+Author: Spike 1% (@SpikeCalls)
+Date: June 7, 2026
+Source: https://x.com/SpikeCalls/article/2063606252999958726
+
+## 9. Stop Being the Loop. Here's How to Make Claude Work While You Sleep.
+Author: Raytar (@Raytar)
+Date: June 23, 2026
+Source: https://x.com/Raytar/article/2069212188619805179
+
+## 10. 20 CLAUDE.md Rules for Getting Ahead of Your Competitors by 5 Years
+Author: Cosmo (@0xCosmoo)
+Date: July 2, 2026
+Source: https://x.com/0xCosmoo/article/2072751013031985423
+
+## 11. ANTHROPIC RAN THE SAME MODEL TWICE. ONE HARNESS SPENT $200 A RUN, THE OTHER SPENT $9.
+Author: belorix (@0xbelorix)
+Date: July 5, 2026
+Source: https://x.com/0xbelorix/article/2073854908772839456
+
+## 12. The Claude Fable 5 Playbook: How to Get the Most Out of Anthropic's Strongest Model
+Author: rvaniaaa (@rvaniaaaa)
+Date: July 4, 2026
+Source: https://x.com/rvaniaaaa/article/2073439189685633533
+
+[disclosure: for efficiency, this was written with AI with human article selection. If you would like to see more lists like the latest AI advice, please subscribe to my newsletter in my bio]

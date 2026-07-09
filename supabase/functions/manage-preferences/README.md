@@ -13,6 +13,9 @@ Purpose: load and update newsletter topic preferences from a public tokenized li
 
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_ROLE_KEY`
+- `LISTMONK_URL`
+- `LISTMONK_USERNAME`
+- `LISTMONK_PASSWORD`
 
 ## Expected behavior
 
@@ -20,3 +23,4 @@ Purpose: load and update newsletter topic preferences from a public tokenized li
 2. `load`: return the email, status, and selected topics.
 3. `save`: update topics and keep the row `confirmed` when at least one topic remains.
 4. `unsubscribe`: mark the row `unsubscribed` and stamp `unsubscribed_at`.
+5. After `save` or `unsubscribe`, reconcile the subscriber's managed Listmonk list memberships immediately.

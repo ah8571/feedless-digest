@@ -6,21 +6,22 @@ Updated: 2026-07-06
 
 Baseline article-gated query that worked before the larger family split:
 
-one version like this with no english parameter, articles from 2 days before:
+one version like this with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
 
 ```json
 [
-"((article OR \"read this\" OR \"wrote about\" OR thread OR 1/) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+"((article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
 
-one version like this with an english parameter and 2 days before:
+alternative w/ threads / broader query
 
 ```json
 [
-"((article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+"((article OR \"read this\" OR \"wrote about\" OR thread OR 1/) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
+
 
 
 smaller apify version:
@@ -30,44 +31,40 @@ smaller apify version:
 ]
 ```
 
+## Open source intrigue
 
-
-Expanded non-article families:
-
-```json
-[
-  "((\"AI\" OR \"artificial intelligence\" OR LLM OR Claude OR \"Claude Code\" OR vibe OR \"vibe coding\" OR \"vibe coder\") (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
-  "((Cursor OR Fable OR OpenCode OR Copilot OR Codex OR Cline) (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
-  "((Gemini OR GPT OR Sonnet OR Opus OR NotebookLM) (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
-]
-```
-
-Expanded article-gated families:
+search with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
 
 ```json
 [
-  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (\"AI\" OR \"artificial intelligence\" OR LLM OR Claude OR \"Claude Code\" OR vibe OR \"vibe coding\" OR \"vibe coder\") (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow OR loop OR loops OR \"SKILL.md\" OR \"/goal\" OR \"/loop\" OR \"/schedule\" OR CI OR Lighthouse)) -filter:replies -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
-  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (Cursor OR Fable OR OpenCode OR Copilot OR Codex OR Cline) (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow OR loop OR loops OR CI)) -filter:replies -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
-  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (Gemini OR GPT OR Sonnet OR Opus OR NotebookLM) (code OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals OR workflow OR loop OR loops OR CI)) -filter:replies -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+  "((article) (\"open source\" OR \"source code\" OR \"closed source\" OR \"self-hosted\" OR OSS OR local)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
 
-Small buckets avoid `noResults`; article-gated families keep recall while limiting parser complexity.
+## SEO
 
-Save raw lists to `lists/x/original/<timestamp>-<name>.md` and filtered lists to `lists/x/distilled/<timestamp>-<name>.md`.
+search with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
+
+```json
+[
+  "((article) (SEO OR AEO OR GEO OR \"AI Overview\" OR organic OR ASO) (citation OR backlink OR backlinks OR entities OR PR OR \"press release\" OR anchor OR SERP OR programmatic OR mention OR metatitle OR metadescription OR technical OR authority OR search OR link) ) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+]
+```
 
 ## Social Media Marketing
 
-Compact article-gated query for influencer, UGC, and short-form growth topics:
+Compact article-gated query for influencer, UGC, and short-form growth topics; search with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
 
 ```json
 [
-  "((article OR \"this article\" OR \"read this\" OR \"wrote about\") (TikTok OR Instagram OR creator OR creators or X or youtube) (influencer OR influencers OR UGC OR ads OR advertising OR \"creator ads\" OR \"paid social\" OR conversion OR revenue OR campaign or followers or following or monetize or monetization)) -filter:replies -filter:retweets -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
+  "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR \"creator ads\" OR \"paid social\" OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price"
 ]
 ```
 
-This version uses a separate strategy bucket so generic TikTok/Instagram article chatter is less likely to leak in.
 
 ## Formations Considered
 
-Broad generic AI queries found long posts but too much noise. Oversized first buckets broke into `noResults`, so the safer pattern is multiple smaller families. Direct article-body phrase searches failed, so native article text is still not a reliable retrieval surface. The best salvage pattern so far is article/share-intent language plus product terms plus workflow terms, especially around Claude Code and loops. Adding `article` materially improved article-adjacent discovery, while removing `-filter:retweets` changed almost nothing in the Claude loops slice. Current bias: optimize for tweets that quote or point to worthwhile articles, not for direct article-body search.
+***Broad generic AI queries found long posts but too much noise.*** 
+
+***Adding `article` materially improved article-adjacent discovery***
+

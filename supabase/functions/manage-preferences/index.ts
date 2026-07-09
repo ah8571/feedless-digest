@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.50.3";
+import { reconcileListmonkSubscriber } from "../_shared/listmonk.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -105,7 +106,7 @@ Deno.serve(async (request) => {
 
     const { data: signup, error: lookupError } = await supabase
       .from("newsletter_signups")
-      .select("id, email, status, topics")
+      .select("id, email, status, topics, source")
       .eq("unsubscribe_token", token)
       .maybeSingle();
 
@@ -150,9 +151,21 @@ Deno.serve(async (request) => {
         });
       }
 
+      const syncResult = await reconcileListmonkSubscriber({
+        email: signup.email,
+        topics: [],
+        source: signup.source,
+        unsubscribeToken: token,
+        subscribed: false,
+      });
+      if (!syncResult.ok) {
+        console.error("Listmonk sync failed after unsubscribe", syncResult.reason);
+      }
+
       return jsonResponse(200, {
         ok: true,
         status: "unsubscribed",
+        listmonk_synced: syncResult.ok && syncResult.synced,
       });
     }
 
@@ -175,10 +188,23 @@ Deno.serve(async (request) => {
       });
     }
 
+    const nextStatus = topics.length > 0 ? "confirmed" : "unsubscribed";
+    const syncResult = await reconcileListmonkSubscriber({
+      email: signup.email,
+      topics,
+      source: signup.source,
+      unsubscribeToken: token,
+      subscribed: nextStatus === "confirmed",
+    });
+    if (!syncResult.ok) {
+      console.error("Listmonk sync failed after saving preferences", syncResult.reason);
+    }
+
     return jsonResponse(200, {
       ok: true,
-      status: topics.length > 0 ? "confirmed" : "unsubscribed",
+      status: nextStatus,
       topics,
+      listmonk_synced: syncResult.ok && syncResult.synced,
     });
   } catch (error) {
     return jsonResponse(500, {

@@ -137,12 +137,11 @@ function buildLaneLookup(lanes) {
   return map;
 }
 
-async function fetchConfirmedSignups(supabase) {
+async function fetchManagedSignups(supabase) {
   const { data, error } = await supabase
     .from('newsletter_signups')
-    .select('email, source, topics, unsubscribe_token, confirmed_at, created_at, updated_at')
-    .eq('status', 'confirmed')
-    .is('unsubscribed_at', null)
+    .select('email, source, status, topics, unsubscribe_token, confirmed_at, created_at, updated_at')
+    .in('status', ['confirmed', 'unsubscribed'])
     .order('confirmed_at', { ascending: false, nullsFirst: false })
     .order('created_at', { ascending: false });
 
@@ -197,33 +196,116 @@ function buildSyncPlan(signups, existingSubscribers, laneLookup, managedListMap)
     const email = signup.email?.trim().toLowerCase();
     if (!email) continue;
 
-    const matchedLaneSlugs = (signup.topics ?? []).filter((topic) => laneLookup.has(topic));
-    const targetListIds = matchedLaneSlugs
+    const desiredLaneSlugs = signup.status === 'confirmed'
+      ? (signup.topics ?? []).filter((topic) => laneLookup.has(topic))
+      : [];
+    const desiredManagedListIds = desiredLaneSlugs
       .map((slug) => managedListMap.get(slug)?.id)
       .filter(Boolean);
 
     const existing = existingByEmail.get(email) ?? null;
     const currentListIds = (existing?.lists ?? []).map((entry) => entry.id);
+    const currentManagedSubscriptions = (existing?.lists ?? [])
+      .filter((entry) => managedListIds.has(entry.id))
+      .map((entry) => ({ id: entry.id, subscriptionStatus: entry.subscription_status }));
     const preservedListIds = currentListIds.filter((id) => !managedListIds.has(id));
-    const finalListIds = Array.from(new Set([...preservedListIds, ...targetListIds]));
+    const finalListIds = Array.from(new Set([...preservedListIds, ...desiredManagedListIds]));
+    const listsToConfirm = desiredManagedListIds.filter((id) => {
+      const subscription = currentManagedSubscriptions.find((entry) => entry.id === id);
+      return !subscription || subscription.subscriptionStatus !== 'confirmed';
+    });
+    const listsToRemove = currentManagedSubscriptions
+      .filter((entry) => !desiredManagedListIds.includes(entry.id))
+      .map((entry) => entry.id);
 
     plan.push({
       email,
       source: signup.source ?? 'landing-page',
+      signupStatus: signup.status,
       topics: signup.topics ?? [],
       unsubscribeToken: signup.unsubscribe_token ?? null,
       existingSubscriberId: existing?.id ?? null,
-      matchedLaneSlugs,
+      matchedLaneSlugs: desiredLaneSlugs,
+      desiredManagedListIds,
       finalListIds,
       currentListIds,
+      listsToConfirm,
+      listsToRemove,
     });
   }
 
   return plan;
 }
 
+async function updateSubscriberLists(baseUrl, authHeader, subscriberId, action, targetListIds, status) {
+  if (!targetListIds.length) return;
+
+  const payload = {
+    ids: [subscriberId],
+    action,
+    target_list_ids: targetListIds,
+  };
+
+  if (status) {
+    payload.status = status;
+  }
+
+  await requestJson(`${baseUrl}/api/subscribers/lists`, {
+    method: 'PUT',
+    headers: {
+      Authorization: authHeader,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
 async function applySyncPlan(baseUrl, authHeader, plan) {
   for (const entry of plan) {
+    if (entry.existingSubscriberId) {
+      const payload = {
+        email: entry.email,
+        name: entry.email,
+        status: 'enabled',
+        attribs: {
+          topics: entry.topics,
+          source: entry.source,
+          sync_source: 'supabase',
+          unsubscribe_token: entry.unsubscribeToken,
+        },
+      };
+
+      await requestJson(`${baseUrl}/api/subscribers/${entry.existingSubscriberId}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: authHeader,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      await updateSubscriberLists(
+        baseUrl,
+        authHeader,
+        entry.existingSubscriberId,
+        'remove',
+        entry.listsToRemove
+      );
+      await updateSubscriberLists(
+        baseUrl,
+        authHeader,
+        entry.existingSubscriberId,
+        'add',
+        entry.listsToConfirm,
+        'confirmed'
+      );
+      continue;
+    }
+
+    if (!entry.desiredManagedListIds.length) {
+      continue;
+    }
+
     const payload = {
       email: entry.email,
       name: entry.email,
@@ -237,18 +319,6 @@ async function applySyncPlan(baseUrl, authHeader, plan) {
       },
       preconfirm_subscriptions: true,
     };
-
-    if (entry.existingSubscriberId) {
-      await requestJson(`${baseUrl}/api/subscribers/${entry.existingSubscriberId}`, {
-        method: 'PATCH',
-        headers: {
-          Authorization: authHeader,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-      continue;
-    }
 
     await requestJson(`${baseUrl}/api/subscribers`, {
       method: 'POST',
@@ -297,7 +367,7 @@ async function main() {
   const laneLookup = buildLaneLookup(lanes);
 
   const [signups, lists, subscribers] = await Promise.all([
-    fetchConfirmedSignups(supabase),
+    fetchManagedSignups(supabase),
     fetchLists(baseUrl, authHeader),
     fetchSubscribers(baseUrl, authHeader),
   ]);
@@ -311,7 +381,7 @@ async function main() {
     return;
   }
 
-  await applySyncPlan(baseUrl, authHeader, plan.filter((entry) => entry.finalListIds.length > 0));
+  await applySyncPlan(baseUrl, authHeader, plan);
   console.log('Applied subscriber sync.');
   console.log(summarizePlan(plan, managedListMap));
 }

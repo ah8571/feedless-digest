@@ -1,5 +1,6 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.50.3";
+import { reconcileListmonkSubscriber } from "../_shared/listmonk.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -177,7 +178,7 @@ Deno.serve(async (request: Request) => {
 
     const { data: existingSignup, error: lookupError } = await supabase
       .from("newsletter_signups")
-      .select("id, status")
+      .select("id, status, source, unsubscribe_token")
       .eq("email", email)
       .maybeSingle();
 
@@ -204,9 +205,21 @@ Deno.serve(async (request: Request) => {
         });
       }
 
+      const syncResult = await reconcileListmonkSubscriber({
+        email,
+        topics,
+        source: existingSignup.source,
+        unsubscribeToken: existingSignup.unsubscribe_token ?? null,
+        subscribed: true,
+      });
+      if (!syncResult.ok) {
+        console.error("Listmonk sync failed after confirmed signup update", syncResult.reason);
+      }
+
       return jsonResponse(200, {
         ok: true,
         status: "confirmed_existing" satisfies SignupStatus,
+        listmonk_synced: syncResult.ok && syncResult.synced,
       });
     }
 

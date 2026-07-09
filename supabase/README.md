@@ -22,4 +22,5 @@ This folder keeps the project's Supabase-specific assets in one place.
 2. Build the `create-signup` Edge Function.
 3. Build the `confirm-signup` Edge Function.
 4. Test with your own email.
-5. Later sync confirmed users into Listmonk.
+5. Configure `LISTMONK_URL`, `LISTMONK_USERNAME`, and `LISTMONK_PASSWORD` for the Edge Functions so confirmations and preference changes reconcile to Listmonk immediately.
+6. Use `npm run listmonk:sync-subscribers -- --apply` as a repair/backfill tool if external state ever drifts.
