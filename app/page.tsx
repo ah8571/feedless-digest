@@ -98,7 +98,7 @@ export default function HomePage() {
               {issue.summary ? <p>{issue.summary}</p> : null}
               {issue.title ? (
                 <Link className="text-link" href={`/archive#${issue.id}`}>
-                  Jump to this edition in the archive
+                  Read {issue.title} in the archive
                 </Link>
               ) : null}
             </article>

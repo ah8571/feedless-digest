@@ -1,6 +1,13 @@
-import { aiEngineering001Issue, type ArchiveIssue } from "./archive-digests";
+import {
+  aiEngineering001Issue,
+  aiEngineering002Issue,
+  socialMediaMarketing001Issue,
+  type ArchiveIssue,
+} from "./archive-digests";
 
 export const archiveIssues: ArchiveIssue[] = [
+  aiEngineering002Issue,
+  socialMediaMarketing001Issue,
   aiEngineering001Issue,
   {
     id: "2026-07-04",
