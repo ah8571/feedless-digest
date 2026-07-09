@@ -31,9 +31,6 @@ export function ShareEditionButton({ path }: ShareEditionButtonProps) {
             ? "Copy failed"
             : "Share link"}
       </button>
-      <a className="text-link" href={path}>
-        Open anchored view
-      </a>
     </div>
   );
 }

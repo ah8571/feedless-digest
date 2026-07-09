@@ -10,9 +10,4 @@ export const archiveIssues: ArchiveIssue[] = [
     id: "2026-06-27",
     date: "June 27, 2026",
   },
-  {
-    id: "2026-06-20",
-    title: "Issue 001",
-    summary: "To come.",
-  },
 ];
