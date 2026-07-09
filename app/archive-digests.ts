@@ -15,6 +15,7 @@ export type ArchiveIssue = {
   summary?: string;
   intro?: string;
   volumeNote?: string;
+  disclosure?: string;
   items?: ArchiveDigestItem[];
 };
 
@@ -29,6 +30,8 @@ export const aiEngineering001Issue: ArchiveIssue = {
     "Hey, providing these articles below in case people missed them. There are many interesting articles floating around X, but they are easy to miss. Here are summaries and links in case helpful.",
   volumeNote:
     "This set includes 12 informational articles published between June 7 and July 6, 2026.",
+  disclosure:
+    "[disclosure: for efficiency, this was written with AI with human article selection. If you would like to see more lists with the latest AI advice, please subscribe to the newsletter]",
   items: [
     {
       title: "Getting started with loops",

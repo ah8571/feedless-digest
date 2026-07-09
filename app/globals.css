@@ -499,9 +499,12 @@ h2 {
 .archive-subscribe {
   position: relative;
   z-index: 1;
-  margin-top: 20px;
-  border-top: 1px solid rgba(29, 27, 24, 0.12);
-  padding-top: 18px;
+}
+
+.archive-subscribe-sticky {
+  position: sticky;
+  top: 12px;
+  z-index: 20;
 }
 
 .archive-subscribe-toggle {
@@ -516,6 +519,9 @@ h2 {
   font-weight: 700;
   color: var(--ink);
   list-style: none;
+  background: rgba(255, 248, 242, 0.94);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 .archive-subscribe-toggle::-webkit-details-marker {
@@ -527,7 +533,11 @@ h2 {
 }
 
 .archive-subscribe-panel {
-  margin-top: 16px;
+  margin-top: 12px;
+}
+
+.archive-subscribe-panel.panel {
+  padding: 22px;
 }
 
 .archive-digest-list {
@@ -547,6 +557,13 @@ h2 {
 
 .archive-meta {
   margin: 4px 0;
+}
+
+.archive-disclosure {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(29, 27, 24, 0.1);
+  font-size: 0.94rem;
 }
 
 .legal-copy h2 + p {

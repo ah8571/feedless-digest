@@ -13,15 +13,14 @@ export default function ArchivePage() {
           a specific date from the homepage. Over time, this becomes the public
           record of the best issues without forcing anyone back into the feed.
         </p>
-        <details className="archive-subscribe">
-          <summary className="archive-subscribe-toggle">
-            Open the subscription form
-          </summary>
-          <div className="archive-subscribe-panel">
-            <SignupForm />
-          </div>
-        </details>
       </section>
+
+      <details className="archive-subscribe archive-subscribe-sticky">
+        <summary className="archive-subscribe-toggle">Open subscription form</summary>
+        <div className="archive-subscribe-panel panel panel-warm">
+          <SignupForm />
+        </div>
+      </details>
 
       <section className="archive-list">
         {archiveIssues.filter((issue) => issue.title).map((issue) => (
@@ -69,6 +68,9 @@ export default function ArchivePage() {
                   </section>
                 ))}
               </div>
+            ) : null}
+            {issue.disclosure ? (
+              <p className="archive-disclosure">{issue.disclosure}</p>
             ) : null}
           </article>
         ))}

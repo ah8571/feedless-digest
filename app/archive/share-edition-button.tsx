@@ -26,10 +26,10 @@ export function ShareEditionButton({ path }: ShareEditionButtonProps) {
     <div className="archive-share-group">
       <button className="button button-secondary" onClick={handleCopy} type="button">
         {status === "copied"
-          ? "Link copied"
+          ? "Copied"
           : status === "error"
             ? "Copy failed"
-            : "Copy review link"}
+            : "Share link"}
       </button>
       <a className="text-link" href={path}>
         Open anchored view
