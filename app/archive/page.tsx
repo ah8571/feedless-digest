@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
 import { SignupForm } from "../components/signup-form";
@@ -209,9 +209,17 @@ async function readLinkedEdition(alias: string | undefined) {
     return null;
   }
 
-  const filePath = path.join(process.cwd(), "lists", "editions", `${alias}-feedfree-linked.md`);
+  const editionsDir = path.join(process.cwd(), "lists", "editions");
+  const fileNameSuffix = `${alias}-feedfree-linked.md`;
 
   try {
+    const fileName = (await readdir(editionsDir)).find((entry) => entry.endsWith(fileNameSuffix));
+
+    if (!fileName) {
+      return null;
+    }
+
+    const filePath = path.join(editionsDir, fileName);
     const content = await readFile(filePath, "utf8");
     return parseEditionMarkdown(content);
   } catch {
