@@ -357,6 +357,12 @@ function renderBodyHtml(rawBody) {
       continue;
     }
 
+    if (line.startsWith('### ')) {
+      blocks.push(`<h3 style="font-size:18px; line-height:1.35; margin:18px 0 10px; color:#1d1b18; font-weight:700;">${renderInlineLinksForHeading(line.slice(4).trim())}</h3>`);
+      index += 1;
+      continue;
+    }
+
     if (line.startsWith('- ')) {
       const items = [];
       while (index < lines.length && lines[index].trim().startsWith('- ')) {
@@ -370,7 +376,7 @@ function renderBodyHtml(rawBody) {
     const paragraphLines = [];
     while (index < lines.length) {
       const current = lines[index].trim();
-      if (!current || current.startsWith('# ') || current.startsWith('## ') || current.startsWith('- ')) {
+      if (!current || current.startsWith('# ') || current.startsWith('## ') || current.startsWith('### ') || current.startsWith('- ')) {
         break;
       }
       paragraphLines.push(current);

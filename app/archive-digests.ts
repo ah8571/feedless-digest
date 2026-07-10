@@ -159,7 +159,7 @@ export const aiEngineering002Issue: ArchiveIssue = {
   date: "July 8, 2026",
   title: "AI Engineering 002",
   summary:
-    "23 AI articles on loops, context design, memory systems, and production agent infrastructure, with both long-form commentary and title-linked reading.",
+    "23 AI articles on loop ownership, reliability, memory, infrastructure, and trust, presented in the linked grouped format used in the newsletter.",
   intro:
     "Yesterday was a busy day for AI engineering advice articles. A lot of people are describing the same change from different angles. We have summarized the key points below and linked the articles inline so you can read further.",
   body: [
@@ -347,7 +347,7 @@ export const socialMediaMarketing001Issue: ArchiveIssue = {
   date: "July 8, 2026",
   title: "Social Media Marketing 001",
   summary:
-    "15 social media marketing articles on distribution, creative systems, video workflows, and trust, with both long-form commentary and title-linked reading.",
+    "15 social media marketing articles on distribution, content systems, production pipelines, and trust, presented in the linked grouped format used in the newsletter.",
   intro:
     "Yesterday was a busy day for social media marketing articles on X. The useful posts were less about one grand framework and more about a set of operators comparing notes on distribution, creative systems, and what the current attention economy is doing to both creators and audiences.",
   body: [

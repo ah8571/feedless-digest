@@ -80,7 +80,12 @@ function parseArgs(argv) {
       continue;
     }
 
-    if (!next && !['--help', '-h'].includes(arg)) {
+    if (arg === '--no-template') {
+      options.noTemplate = true;
+      continue;
+    }
+
+    if (!next && !['--help', '-h', '--no-template'].includes(arg)) {
       throw new Error(`${arg} requires a value.`);
     }
 
@@ -117,11 +122,6 @@ function parseArgs(argv) {
     if (arg === '--lane') {
       options.lane = next;
       index += 1;
-      continue;
-    }
-
-    if (arg === '--no-template') {
-      options.noTemplate = true;
       continue;
     }
 
@@ -395,6 +395,12 @@ function renderBodyHtml(rawBody) {
       continue;
     }
 
+    if (line.startsWith('### ')) {
+      blocks.push(`<h3 style="font-size:18px; line-height:1.35; margin:18px 0 10px; color:#1d1b18; font-weight:700;">${renderInlineLinksForHeading(line.slice(4).trim())}</h3>`);
+      index += 1;
+      continue;
+    }
+
     if (line.startsWith('- ')) {
       const items = [];
       while (index < lines.length && lines[index].trim().startsWith('- ')) {
@@ -408,7 +414,7 @@ function renderBodyHtml(rawBody) {
     const paragraphLines = [];
     while (index < lines.length) {
       const current = lines[index].trim();
-      if (!current || current.startsWith('# ') || current.startsWith('## ') || current.startsWith('- ')) {
+      if (!current || current.startsWith('# ') || current.startsWith('## ') || current.startsWith('### ') || current.startsWith('- ')) {
         break;
       }
       paragraphLines.push(current);
