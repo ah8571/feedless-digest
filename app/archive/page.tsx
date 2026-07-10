@@ -245,7 +245,11 @@ export default async function ArchivePage() {
       </details>
 
       <section className="archive-list">
-        {issues.map(({ issue, edition }) => (
+        {issues.map(({ issue, edition }) => {
+          const introText = edition ? edition.intro : issue.intro;
+          const bodyParagraphs = edition ? edition.body : issue.body;
+
+          return (
           <article className="panel archive-card" id={issue.id} key={issue.id}>
             {issue.aliases?.map((alias) => (
               <span aria-hidden="true" className="archive-anchor-alias" id={alias} key={alias} />
@@ -256,13 +260,13 @@ export default async function ArchivePage() {
             <div className="archive-actions">
               <ShareEditionButton path={`/archive#${issue.id}`} />
             </div>
-            {edition?.intro ?? issue.intro ? <p>{edition?.intro ?? issue.intro}</p> : null}
+            {introText ? <p>{introText}</p> : null}
             {issue.volumeNote ? (
               <p className="archive-volume-note">{issue.volumeNote}</p>
             ) : null}
-            {(edition?.body.length ? edition.body : issue.body)?.length ? (
+            {bodyParagraphs?.length ? (
               <div className="archive-story-body">
-                {(edition?.body.length ? edition.body : issue.body ?? []).map((paragraph) => (
+                {bodyParagraphs.map((paragraph) => (
                   <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
                 ))}
               </div>
@@ -341,7 +345,8 @@ export default async function ArchivePage() {
               <p className="archive-disclosure">{edition?.disclosure ?? issue.disclosure}</p>
             ) : null}
           </article>
-        ))}
+          );
+        })}
       </section>
     </div>
   );
