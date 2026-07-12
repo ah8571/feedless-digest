@@ -125,7 +125,7 @@ export function SignupForm() {
   if (isSuccess) {
     return (
       <div className="signup-success-panel" aria-live="polite">
-        <p className="signup-label">Join the waitlist</p>
+        <p className="signup-label">Join the newsletter</p>
         <h2 className="signup-success-title">
           {message === "You are already subscribed."
             ? "You are already subscribed"
@@ -143,7 +143,7 @@ export function SignupForm() {
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
       <label className="signup-label" htmlFor="email">
-        Join the waitlist
+        Join the newsletter
       </label>
       <div className="signup-row">
         <input
