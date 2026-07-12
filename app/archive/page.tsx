@@ -269,9 +269,6 @@ export default async function ArchivePage() {
               <ShareEditionButton path={`/archive#${issue.id}`} />
             </div>
             {introText ? <p>{introText}</p> : null}
-            {issue.volumeNote ? (
-              <p className="archive-volume-note">{issue.volumeNote}</p>
-            ) : null}
             {bodyParagraphs?.length ? (
               <div className="archive-story-body">
                 {bodyParagraphs.map((paragraph) => (
