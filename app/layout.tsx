@@ -45,6 +45,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var twclid = params.get("twclid");
+    var gclid = params.get("gclid");
+    var fbclid = params.get("fbclid");
+    if (twclid) sessionStorage.setItem("twclid", twclid);
+    if (gclid) sessionStorage.setItem("gclid", gclid);
+    if (fbclid) sessionStorage.setItem("fbclid", fbclid);
+  } catch (_) {}
+})();
+            `.trim(),
+          }}
+        />
+      </head>
       <body className={`${fraunces.variable} ${workSans.variable}`}>
         <div className="site-shell">
           <header className="site-header">
@@ -83,23 +102,6 @@ export default function RootLayout({
             </nav>
           </footer>
         </div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-(function () {
-  try {
-    var params = new URLSearchParams(window.location.search);
-    var twclid = params.get("twclid");
-    var gclid = params.get("gclid");
-    var fbclid = params.get("fbclid");
-    if (twclid) sessionStorage.setItem("twclid", twclid);
-    if (gclid) sessionStorage.setItem("gclid", gclid);
-    if (fbclid) sessionStorage.setItem("fbclid", fbclid);
-  } catch (_) {}
-})();
-          `.trim(),
-          }}
-        />
       </body>
     </html>
   );
