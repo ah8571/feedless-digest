@@ -1,0 +1,232 @@
+Growing on X, tiktok or other channels can be a serious challenge for most of us (me included). However below you will see articles written by those with significant success with social media to drive their products or services. 
+
+For instance a push-up app designed to get people to stop doomscrolling just clearly 1 million ARR.
+
+Everyday people are creating apps and monetizing channels in ways it would have never been possible several years ago. 
+
+Take a look at the summaries below and check out their respective articles if you want to learn more
+
+->
+
+# TikTok Growth
+
+"How I marketed my Screen-Time app to $1,000,000 (with a $0 budget)"
+Author: @skyirezumi
+Source: https://x.com/i/web/status/2074524268285538350
+
+This case study breaks down how a founder drove serious revenue through organic TikTok without paid spend.
+- Build content around the problem your product solves rather than around the product itself.
+- Post consistently enough that the algorithm has enough signal to learn who to show your videos to.
+- Turn comments and duets into a feedback loop that shapes the next batch of content.
+
+"The only 2 content formats you need to hit 100K TikTok views for your app:"
+Author: @eglitisX
+Source: https://x.com/i/web/status/2075249298045079564
+
+This article simplifies TikTok growth for app founders down to two repeatable formats that reliably attract views.
+- Identify the two formats your audience already responds to and master them before expanding.
+- Optimize the first one to three seconds so the hook stops the scroll.
+- Reuse winning formats with new angles rather than reinventing the structure each time.
+
+"The ULTIMATE TikTok Organic Marketing Guide for App Founders..."
+Author: @karilovv
+Source: https://x.com/i/web/status/2073838691521569196
+
+This guide pulls together the full organic playbook for app founders trying to grow on TikTok.
+- Treat TikTok as a discovery channel where proof and personality matter more than polished production.
+- Design a posting cadence you can sustain while still responding to comments and trends.
+- Track the right proxy metrics, because virality without downloads is not real growth.
+
+# AI Video Generation
+
+"The actual pipeline behind my AI videos"
+Author: @adam_rosler
+Source: https://x.com/i/web/status/2075460539711639996
+
+This article reveals the real workflow behind consistent AI-generated video output, not just the finished clips.
+- Document every stage from idea to final export so the process can be repeated and improved.
+- Separate generation, editing, and quality control so one weak step does not ruin the whole asset.
+- Build a prompt and parameter library so the style stays consistent across posts.
+
+"Claude's Fable 5 Is CRACKED for ORGANIC AI UGC..."
+Author: @adriansolarzz
+Source: https://x.com/i/web/status/2075709029108830470
+
+This piece explains how Fable 5 can be used to produce user-generated-style content that performs organically.
+- Use AI to lower the cost of testing many UGC angles quickly.
+- Keep the scripts grounded in real user language rather than generic marketing speak.
+- Review every output for authenticity because audiences are quick to dismiss synthetic-feeling UGC.
+
+"AI Anime Creation Playbook: Turning Story Ideas Into a Complete Production Workflow (Tutorial & Prompt)"
+Author: @apob_ai
+Source: https://x.com/i/web/status/2075484415753617710
+
+This playbook maps out how to turn a story idea into a finished AI anime production through a structured workflow.
+- Break the project into story, visual style, generation, and post-production stages.
+- Lock the style guide early so every scene feels like it belongs to the same world.
+- Save successful prompts and settings as reusable production assets.
+
+# X Growth
+
+"Viral trends on X"
+Author: @James_apolo101
+Source: https://x.com/i/web/status/2075519115003859441
+
+This article tracks what is currently working on X and how to ride trends without looking like a copycat.
+- Move fast on trends while they are still fresh, but add your own point of view.
+- Study the structure of viral posts rather than just the topic.
+- Use trends as entry points to your own themes so the audience has a reason to stay.
+
+"Mastering the X Algorithm: The Blueprint to Build Authority and Income"
+Author: @GetMrVic
+Source: https://x.com/i/web/status/2073961643332301293
+
+This piece frames the X algorithm as a system that rewards consistency, engagement depth, and clear positioning.
+- Post around a narrow set of topics so the algorithm learns who to surface your content to.
+- Engage genuinely in replies because reciprocal interaction signals matter.
+- Convert attention into authority by backing claims with proof and stories.
+
+# Ad Structure
+
+"How to Start TikTok Ads With Completely Untested Creatives (Print $$$ in Weeks)"
+Author: @maxzrco
+Source: https://x.com/i/web/status/2074360121212219472
+
+This article explains how to launch TikTok ads quickly even when you do not have proven creative assets yet.
+- Launch with volume and let early spend data tell you which angles survive.
+- Build variations around a few core hooks rather than one polished hero video.
+- Kill losers fast and double down on the first creative that shows positive signs.
+
+"How To Find Unlimited New Ad Angles"
+Author: @jakobcounts123
+Source: https://x.com/i/web/status/2075439304046673953
+
+This piece provides a system for generating fresh ad angles so campaigns do not stagnate.
+- Mine reviews, support tickets, and sales calls for the exact language customers use.
+- Rotate angles around different emotions, outcomes, and objections.
+- Keep a running library of proven hooks so new creative starts from a strong base.
+
+# YouTube Growth
+
+"📘 The Creator Blueprint #4 How the YouTube Algorithm Really Works (2026 Edition):"
+Author: @Themrbachelor
+Source: https://x.com/i/web/status/2075517827398689145
+
+This article updates the YouTube algorithm playbook for the current environment with a focus on practical signals.
+- Prioritize click-through rate and watch time by matching thumbnail and title to delivery.
+- Build series and playlists that keep viewers on your channel longer.
+- Use audience retention graphs to identify exactly where attention drops.
+
+[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]
+
+----
+
+Growing on X, tiktok or other channels can be a serious challenge for most of us (me included). However below you will see articles written by those with significant success with social media to drive their products or services. 
+
+For instance a push-up app designed to get people to stop doomscrolling just clearly 1 million ARR.
+
+Everyday people are creating apps and monetizing channels in ways it would have never been possible several years ago. 
+
+Take a look at the summaries below and check out their respective articles if you want to learn more
+
+->
+
+# TikTok Growth
+
+"How I marketed my Screen-Time app to $1,000,000 (with a $0 budget)"
+Author: @skyirezumi
+
+This case study breaks down how a founder drove serious revenue through organic TikTok without paid spend.
+- Build content around the problem your product solves rather than around the product itself.
+- Post consistently enough that the algorithm has enough signal to learn who to show your videos to.
+- Turn comments and duets into a feedback loop that shapes the next batch of content.
+
+"The only 2 content formats you need to hit 100K TikTok views for your app:"
+Author: @eglitisX
+
+This article simplifies TikTok growth for app founders down to two repeatable formats that reliably attract views.
+- Identify the two formats your audience already responds to and master them before expanding.
+- Optimize the first one to three seconds so the hook stops the scroll.
+- Reuse winning formats with new angles rather than reinventing the structure each time.
+
+"The ULTIMATE TikTok Organic Marketing Guide for App Founders..."
+Author: @karilovv
+
+This guide pulls together the full organic playbook for app founders trying to grow on TikTok.
+- Treat TikTok as a discovery channel where proof and personality matter more than polished production.
+- Design a posting cadence you can sustain while still responding to comments and trends.
+- Track the right proxy metrics, because virality without downloads is not real growth.
+
+# AI Video Generation
+
+"The actual pipeline behind my AI videos"
+Author: @adam_rosler
+
+This article reveals the real workflow behind consistent AI-generated video output, not just the finished clips.
+- Document every stage from idea to final export so the process can be repeated and improved.
+- Separate generation, editing, and quality control so one weak step does not ruin the whole asset.
+- Build a prompt and parameter library so the style stays consistent across posts.
+
+"Claude's Fable 5 Is CRACKED for ORGANIC AI UGC..."
+Author: @adriansolarzz
+
+This piece explains how Fable 5 can be used to produce user-generated-style content that performs organically.
+- Use AI to lower the cost of testing many UGC angles quickly.
+- Keep the scripts grounded in real user language rather than generic marketing speak.
+- Review every output for authenticity because audiences are quick to dismiss synthetic-feeling UGC.
+
+"AI Anime Creation Playbook: Turning Story Ideas Into a Complete Production Workflow (Tutorial & Prompt)"
+Author: @apob_ai
+
+This playbook maps out how to turn a story idea into a finished AI anime production through a structured workflow.
+- Break the project into story, visual style, generation, and post-production stages.
+- Lock the style guide early so every scene feels like it belongs to the same world.
+- Save successful prompts and settings as reusable production assets.
+
+# X Growth
+
+"Viral trends on X"
+Author: @James_apolo101
+
+This article tracks what is currently working on X and how to ride trends without looking like a copycat.
+- Move fast on trends while they are still fresh, but add your own point of view.
+- Study the structure of viral posts rather than just the topic.
+- Use trends as entry points to your own themes so the audience has a reason to stay.
+
+"Mastering the X Algorithm: The Blueprint to Build Authority and Income"
+Author: @GetMrVic
+
+This piece frames the X algorithm as a system that rewards consistency, engagement depth, and clear positioning.
+- Post around a narrow set of topics so the algorithm learns who to surface your content to.
+- Engage genuinely in replies because reciprocal interaction signals matter.
+- Convert attention into authority by backing claims with proof and stories.
+
+# Ad Structure
+
+"How to Start TikTok Ads With Completely Untested Creatives (Print $$$ in Weeks)"
+Author: @maxzrco
+
+This article explains how to launch TikTok ads quickly even when you do not have proven creative assets yet.
+- Launch with volume and let early spend data tell you which angles survive.
+- Build variations around a few core hooks rather than one polished hero video.
+- Kill losers fast and double down on the first creative that shows positive signs.
+
+"How To Find Unlimited New Ad Angles"
+Author: @jakobcounts123
+
+This piece provides a system for generating fresh ad angles so campaigns do not stagnate.
+- Mine reviews, support tickets, and sales calls for the exact language customers use.
+- Rotate angles around different emotions, outcomes, and objections.
+- Keep a running library of proven hooks so new creative starts from a strong base.
+
+# YouTube Growth
+
+"📘 The Creator Blueprint #4 How the YouTube Algorithm Really Works (2026 Edition):"
+Author: @Themrbachelor
+
+This article updates the YouTube algorithm playbook for the current environment with a focus on practical signals.
+- Prioritize click-through rate and watch time by matching thumbnail and title to delivery.
+- Build series and playlists that keep viewers on your channel longer.
+- Use audience retention graphs to identify exactly where attention drops.
+
+[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]

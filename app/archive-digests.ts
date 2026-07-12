@@ -469,3 +469,51 @@ export const socialMediaMarketing001Issue: ArchiveIssue = {
     },
   ],
 };
+
+export const aiEngineering003Issue: ArchiveIssue = {
+  id: "ai-003",
+  aliases: ["ai-engineering-003"],
+  series: "AI Engineering",
+  date: "July 11, 2026",
+  title: "AI Engineering 003",
+  summary:
+    "10 AI engineering articles on harness design, prompting, memory systems, loop engineering, and toolsets.",
+  intro:
+    "Plenty of useful AI engineering writing is still easy to miss on X. Below are summaries and links to the pieces we found most useful from July 11.",
+  volumeNote: "This set includes 10 informational articles published on July 11, 2026.",
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};
+
+export const socialMediaMarketing002Issue: ArchiveIssue = {
+  id: "social-002",
+  aliases: ["social-media-marketing-002"],
+  series: "Social Media Marketing",
+  date: "July 11, 2026",
+  title: "Social Media Marketing 002",
+  summary:
+    "11 social media marketing articles on TikTok growth, AI video production, X growth, ad structure, and YouTube strategy.",
+  intro:
+    "The best social media marketing writing from July 11 covers organic growth systems, AI-assisted creative pipelines, and platform-specific distribution mechanics.",
+  volumeNote: "This set includes 11 informational articles published on July 11, 2026.",
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};
+
+export const seo001Issue: ArchiveIssue = {
+  id: "seo-001",
+  aliases: ["seo-001"],
+  series: "SEO",
+  date: "July 11, 2026",
+  title: "SEO 001",
+  summary:
+    "13 SEO articles on ranking in AI overviews, agent-assisted SEO workflows, and social media SEO.",
+  intro:
+    "Search is changing fast. This first SEO edition collects the most practical writing from July 11 on AI overview visibility, agent SEO workflows, and platform-specific search optimization.",
+  volumeNote: "This set includes 13 informational articles published on July 11, 2026.",
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};
