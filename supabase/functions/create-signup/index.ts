@@ -2,6 +2,52 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.50.3";
 import { reconcileListmonkSubscriber } from "../_shared/listmonk.ts";
 
+async function sha256(message: string) {
+  const data = new TextEncoder().encode(message);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function sendXConversion(email: string, eventName: string) {
+  const pixelId = Deno.env.get("X_PIXEL_ID");
+  const xAccessToken = Deno.env.get("X_ADS_ACCESS_TOKEN");
+
+  if (!pixelId || !xAccessToken) {
+    console.log("X conversion tracking skipped — missing X_PIXEL_ID or X_ADS_ACCESS_TOKEN.");
+    return;
+  }
+
+  try {
+    const hashedEmail = await sha256(email.trim().toLowerCase());
+    const payload = {
+      pixel_id: pixelId,
+      conversions: [
+        {
+          event_name: eventName,
+          event_time: new Date().toISOString(),
+          hashed_email: hashedEmail,
+        },
+      ],
+    };
+
+    const response = await fetch("https://ads-api.twitter.com/11/measurement/conversions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${xAccessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      console.error("X conversion tracking failed", await response.text());
+    }
+  } catch (error) {
+    console.error("X conversion tracking error", error);
+  }
+}
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -272,6 +318,9 @@ Deno.serve(async (request: Request) => {
         details: emailResult.error,
       });
     }
+
+    // Fire-and-forget X conversion event (server-side, privacy-respecting)
+    sendXConversion(email, "CompleteRegistration");
 
     return jsonResponse(200, {
       ok: true,

@@ -159,9 +159,9 @@ export const aiEngineering002Issue: ArchiveIssue = {
   date: "July 8, 2026",
   title: "AI Engineering 002",
   summary:
-    "23 AI articles on loop ownership, reliability, memory, infrastructure, and trust, presented in the linked grouped format used in the newsletter.",
+    "23 X articles on loop ownership, reliability, memory, infrastructure, and trust, presented in the linked grouped format used in the newsletter.",
   intro:
-    "Yesterday was a busy day for AI engineering advice articles. A lot of people are describing the same change from different angles. We have summarized the key points below and linked the articles inline so you can read further.",
+    "Yesterday was a busy day for AI engineering advice X articles. A lot of people are describing the same change from different angles. We have summarized the key points below and linked the articles inline so you can read further.",
   body: [
     "The interesting work is no longer about one perfect prompt. It is about building systems with loops, memory, review, recovery, infrastructure, and boundaries strong enough to let autonomy be useful instead of reckless.",
     "The dominant theme was loop engineering. [Own the Outer Loop](https://x.com/addyosmani/status/2074927530482835916) gives the clearest statement of the problem: as models get more capable, the hard part is not generating output but owning accountability for what the system does. Addy frames that with quality checks, verdicts, and answerability, which complements [Everything about loop engineering](https://x.com/Hartdrawss/status/2074870641829023864), where the loop is described more practically as a goal, a way to test progress, and a stopping rule. Together they make the same point from two levels: loops are not magic autonomy, they are structured responsibility.",
@@ -347,7 +347,7 @@ export const socialMediaMarketing001Issue: ArchiveIssue = {
   date: "July 8, 2026",
   title: "Social Media Marketing 001",
   summary:
-    "15 social media marketing articles on distribution, content systems, production pipelines, and trust, presented in the linked grouped format used in the newsletter.",
+    "15 X articles on distribution, content systems, production pipelines, and trust, presented in the linked grouped format used in the newsletter.",
   intro:
     "Yesterday was a busy day for social media marketing articles on X. The useful posts were less about one grand framework and more about a set of operators comparing notes on distribution, creative systems, and what the current attention economy is doing to both creators and audiences.",
   body: [
@@ -477,7 +477,7 @@ export const aiEngineering003Issue: ArchiveIssue = {
   date: "July 12, 2026",
   title: "AI Engineering 003",
   summary:
-    "10 AI engineering articles on harness design, prompting, memory systems, loop engineering, and toolsets.",
+    "10 X articles on harness design, prompting, memory systems, loop engineering, and toolsets.",
   intro:
     "Plenty of useful AI engineering writing is still easy to miss on X. Below are summaries and links to the pieces we found most useful from July 11.",
 
@@ -493,7 +493,7 @@ export const socialMediaMarketing002Issue: ArchiveIssue = {
   date: "July 12, 2026",
   title: "Social Media Marketing 002",
   summary:
-    "11 social media marketing articles on TikTok growth, AI video production, X growth, ad structure, and YouTube strategy.",
+    "11 X articles on TikTok growth, AI video production, X growth, ad structure, and YouTube strategy.",
   intro:
     "Growing on X, TikTok or other channels can be a serious challenge for most of us. However below you will see articles written by those with significant success using social media to drive their products or services. For instance a push-up app designed to get people to stop doomscrolling just cleared 1 million ARR. Everyday people are creating apps and monetizing channels in ways it would have never been possible several years ago. Take a look at the summaries below and check out their respective articles if you want to learn more.",
 
@@ -509,7 +509,7 @@ export const seo001Issue: ArchiveIssue = {
   date: "July 12, 2026",
   title: "SEO 001",
   summary:
-    "13 SEO articles on ranking in AI overviews, agent-assisted SEO workflows, and social media SEO.",
+    "13 X articles on ranking in AI overviews, agent-assisted SEO workflows, and social media SEO.",
   intro:
     "Search is changing fast. This first SEO edition collects the most practical writing from July 11 on AI overview visibility, agent SEO workflows, and platform-specific search optimization.",
 

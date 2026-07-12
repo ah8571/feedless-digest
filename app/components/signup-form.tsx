@@ -162,7 +162,7 @@ export function SignupForm() {
             ? "Saving..."
             : needsTopicSelection
               ? "Pick a Topic"
-              : "Get Early Access"}
+              : "Get Access"}
         </button>
       </div>
       <fieldset className="signup-subnewsletter">
