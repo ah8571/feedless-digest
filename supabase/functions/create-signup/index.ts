@@ -9,12 +9,17 @@ async function sha256(message: string) {
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-async function sendXConversion(email: string, eventName: string) {
+async function sendXConversion(email: string, eventName: string, twclid?: string) {
   const pixelId = Deno.env.get("X_PIXEL_ID");
   const xAccessToken = Deno.env.get("X_ADS_ACCESS_TOKEN");
 
   if (!pixelId || !xAccessToken) {
     console.log("X conversion tracking skipped — missing X_PIXEL_ID or X_ADS_ACCESS_TOKEN.");
+    return;
+  }
+
+  if (!twclid) {
+    console.log("X conversion tracking skipped — no twclid in click source.");
     return;
   }
 
@@ -27,6 +32,7 @@ async function sendXConversion(email: string, eventName: string) {
           event_name: eventName,
           event_time: new Date().toISOString(),
           hashed_email: hashedEmail,
+          conversion_id: twclid,
         },
       ],
     };
@@ -57,6 +63,11 @@ const corsHeaders = {
 type CreateSignupPayload = {
   email?: string;
   topics?: string[];
+  click_source?: {
+    twclid?: string;
+    gclid?: string;
+    fbclid?: string;
+  };
 };
 
 type SignupStatus = "pending_confirmation" | "confirmed_existing";
@@ -320,7 +331,8 @@ Deno.serve(async (request: Request) => {
     }
 
     // Fire-and-forget X conversion event (server-side, privacy-respecting)
-    sendXConversion(email, "SignUp");
+    // Only fires when the signup came from an X ad click (twclid present)
+    sendXConversion(email, "SignUp", payload.click_source?.twclid);
 
     return jsonResponse(200, {
       ok: true,

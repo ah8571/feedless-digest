@@ -4,6 +4,24 @@ import { FormEvent, useMemo, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { activeSubnewsletterOptions } from "../lib/topics";
 
+function readClickSource(): Record<string, string> {
+  if (typeof window === "undefined") return {};
+
+  const params = new URLSearchParams(window.location.search);
+  const source: Record<string, string> = {};
+
+  const twclid = params.get("twclid");
+  if (twclid) source.twclid = twclid;
+
+  const gclid = params.get("gclid");
+  if (gclid) source.gclid = gclid;
+
+  const fbclid = params.get("fbclid");
+  if (fbclid) source.fbclid = fbclid;
+
+  return source;
+}
+
 type SubmitState = "idle" | "loading" | "success" | "error";
 
 export function SignupForm() {
@@ -83,10 +101,13 @@ export function SignupForm() {
         return;
       }
 
+      const clickSource = readClickSource();
+
       const { data, error } = await supabase.functions.invoke("create-signup", {
         body: {
           email: normalizedEmail,
           topics: selectedTopics,
+          click_source: Object.keys(clickSource).length > 0 ? clickSource : undefined,
         },
       });
 
