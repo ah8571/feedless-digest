@@ -50,24 +50,24 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
     return;
   }
 
-  if (!twclid) {
-    console.log("X conversion tracking skipped — no twclid in click source.");
-    return;
-  }
-
   const accessToken = await getXAdsAccessToken();
   if (!accessToken) return;
 
   try {
     const hashedEmail = await sha256(email.trim().toLowerCase());
+    const conversion: Record<string, unknown> = {
+      event_name: eventName,
+      event_time: new Date().toISOString(),
+      hashed_email: hashedEmail,
+    };
+
+    // Include twclid for precise ad attribution when available
+    if (twclid) conversion.conversion_id = twclid;
+
     const payload = {
       pixel_id: pixelId,
-      conversions: [
-        {
-          event_name: eventName,
-          event_time: new Date().toISOString(),
-          hashed_email: hashedEmail,
-          conversion_id: twclid,
+      conversions: [conversion],
+    };
         },
       ],
     };

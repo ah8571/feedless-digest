@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Fraunces, Work_Sans } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -47,17 +46,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${workSans.variable}`}>
-        <Script id="capture-clicks" strategy="beforeInteractive">
-          {`
-var params = new URLSearchParams(window.location.search);
-var twclid = params.get("twclid");
-if (twclid) { sessionStorage.setItem("twclid", twclid); console.log("twclid captured:", twclid); }
-var gclid = params.get("gclid");
-if (gclid) { sessionStorage.setItem("gclid", gclid); console.log("gclid captured:", gclid); }
-var fbclid = params.get("fbclid");
-if (fbclid) { sessionStorage.setItem("fbclid", fbclid); console.log("fbclid captured:", fbclid); }
-          `}
-        </Script>
         <div className="site-shell">
           <header className="site-header">
             <Link className="brand" href="/">
