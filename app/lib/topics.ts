@@ -11,4 +11,11 @@ export const subnewsletterOptions = [
   { value: "social-media-marketing", label: "Social Media marketing" },
 ] as const;
 
+export const activeSubnewsletterOptions = subnewsletterOptions.filter(
+  (o) =>
+    o.value === "ai-engineering" ||
+    o.value === "seo" ||
+    o.value === "social-media-marketing",
+);
+
 export const subnewsletterTopicValues = subnewsletterOptions.map((option) => option.value);

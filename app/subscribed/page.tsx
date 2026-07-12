@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { createClient } from "@supabase/supabase-js";
-import { subnewsletterOptions } from "../lib/topics";
+import { activeSubnewsletterOptions } from "../lib/topics";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
@@ -242,7 +242,7 @@ function SubscribedPageContent() {
             <fieldset className="signup-subnewsletter">
               <p className="signup-subhelp">Select one or more topics to keep receiving</p>
               <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
-                {subnewsletterOptions.map((option) => {
+                {activeSubnewsletterOptions.map((option) => {
                   const checked = selectedTopics.includes(option.value);
 
                   return (

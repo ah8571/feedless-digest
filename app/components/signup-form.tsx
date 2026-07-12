@@ -2,7 +2,7 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { subnewsletterOptions } from "../lib/topics";
+import { activeSubnewsletterOptions } from "../lib/topics";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 
@@ -168,7 +168,7 @@ export function SignupForm() {
       <fieldset className="signup-subnewsletter">
         <p className="signup-subhelp">Choose one or more topics to follow</p>
         <div className="signup-checklist" role="group" aria-label="Sub-newsletter topics">
-          {subnewsletterOptions.map((option) => {
+          {activeSubnewsletterOptions.map((option) => {
             const checked = topics.includes(option.value);
 
             return (

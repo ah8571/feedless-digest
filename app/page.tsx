@@ -20,7 +20,7 @@ const trackedPlatforms = [
   },
 ];
 
-const editionSeriesOrder = ["AI Engineering", "Social Media Marketing"] as const;
+const editionSeriesOrder = ["AI Engineering", "Social Media Marketing", "SEO"] as const;
 
 export default function HomePage() {
   const publishedIssues = archiveIssues.filter((issue) => issue.title);
