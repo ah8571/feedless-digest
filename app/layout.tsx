@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description:
     "A curated newsletter that isolates high-signal long-form posts from X, forums, and social platforms so you can stay informed without doomscrolling.",
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
@@ -49,7 +49,7 @@ export default function RootLayout({
         <div className="site-shell">
           <header className="site-header">
             <Link className="brand" href="/">
-              <img className="brand-mark" src="/icon.png" alt="" width="32" height="32" />
+              <img className="brand-mark" src="/icon.svg" alt="" width="36" height="36" />
               <span className="brand-copy">
                 <strong>Feedfree Digest</strong>
                 <span>Long-form signal without the feed</span>

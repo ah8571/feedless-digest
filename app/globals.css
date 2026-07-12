@@ -86,8 +86,7 @@ a {
   display: block;
   width: 36px;
   height: 36px;
-  border-radius: 8px;
-  background: #fff;
+  border-radius: 6px;
 }
 
 .brand-copy {
