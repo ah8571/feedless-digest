@@ -9,12 +9,44 @@ async function sha256(message: string) {
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+async function getXAdsAccessToken() {
+  const consumerKey = Deno.env.get("X_ADS_CONSUMER_KEY");
+  const consumerSecret = Deno.env.get("X_ADS_CONSUMER_SECRET");
+
+  if (!consumerKey || !consumerSecret) {
+    console.log("X conversion tracking skipped — missing X_ADS_CONSUMER_KEY or X_ADS_CONSUMER_SECRET.");
+    return null;
+  }
+
+  try {
+    const basic = btoa(`${consumerKey}:${consumerSecret}`);
+    const response = await fetch("https://api.x.com/2/oauth2/token", {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basic}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "grant_type=client_credentials&scope=ads%3Awrite",
+    });
+
+    if (!response.ok) {
+      console.error("Failed to get X Ads access token", await response.text());
+      return null;
+    }
+
+    const data = await response.json();
+    return data.access_token as string | null;
+  } catch (error) {
+    console.error("X Ads token exchange error", error);
+    return null;
+  }
+}
+
 async function sendXConversion(email: string, eventName: string, twclid?: string) {
   const pixelId = Deno.env.get("X_PIXEL_ID");
-  const xAccessToken = Deno.env.get("X_ADS_ACCESS_TOKEN");
 
-  if (!pixelId || !xAccessToken) {
-    console.log("X conversion tracking skipped — missing X_PIXEL_ID or X_ADS_ACCESS_TOKEN.");
+  if (!pixelId) {
+    console.log("X conversion tracking skipped — missing X_PIXEL_ID.");
     return;
   }
 
@@ -22,6 +54,9 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
     console.log("X conversion tracking skipped — no twclid in click source.");
     return;
   }
+
+  const accessToken = await getXAdsAccessToken();
+  if (!accessToken) return;
 
   try {
     const hashedEmail = await sha256(email.trim().toLowerCase());
@@ -37,10 +72,10 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
       ],
     };
 
-    const response = await fetch("https://ads-api.twitter.com/11/measurement/conversions", {
+    const response = await fetch("https://ads-api.x.com/11/measurement/conversions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${xAccessToken}`,
+        Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
