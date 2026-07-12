@@ -230,7 +230,7 @@ export function SignupForm() {
         {message ||
           (needsTopicSelection
             ? "Choose at least one topic to continue."
-            : "Thoughtful long-form curation, delivered by email.")}
+            : "")}
       </p>
     </form>
   );
