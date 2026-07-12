@@ -1,4 +1,4 @@
-# Ad Networks for starting out
+# Ad Buyer Networks
 
 1. Passionfroot (The Best for Independent Creators)
 
@@ -31,3 +31,8 @@ BuySellAds is a premium marketplace where corporations specifically go to buy de
 How you use it: You create a profile detailing your metrics (subscribers, open rates, categories) and set your own flat prices.
 
 The Control Level: Advertisers find you via their directory and submit a request. You get an alert showing exactly what their ad text says. You can click "Accept" or "Reject". If you accept, they pay BuySellAds, you copy-paste the text into your open-source template, and BuySellAds takes a cut of the payout.
+
+## Exchange / Cross-promotions networks (ie an ad for your newsletter for an ad in theirs)
+
+Paved, Sample
+

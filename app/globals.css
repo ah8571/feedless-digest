@@ -83,15 +83,11 @@ a {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  background: linear-gradient(145deg, var(--accent), var(--accent-deep));
-  color: #fff7f0;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fff;
 }
 
 .brand-copy {
