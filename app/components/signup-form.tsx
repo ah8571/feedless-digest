@@ -7,16 +7,23 @@ import { activeSubnewsletterOptions } from "../lib/topics";
 function readClickSource(): Record<string, string> {
   if (typeof window === "undefined") return {};
 
-  const params = new URLSearchParams(window.location.search);
   const source: Record<string, string> = {};
 
-  const twclid = params.get("twclid");
+  // Try URL params first (captured before any redirect)
+  const params = new URLSearchParams(window.location.search);
+  let twclid = params.get("twclid");
+  let gclid = params.get("gclid");
+  let fbclid = params.get("fbclid");
+
+  // Fall back to sessionStorage (set on first page load before redirects)
+  try {
+    if (!twclid) twclid = sessionStorage.getItem("twclid");
+    if (!gclid) gclid = sessionStorage.getItem("gclid");
+    if (!fbclid) fbclid = sessionStorage.getItem("fbclid");
+  } catch (_) {}
+
   if (twclid) source.twclid = twclid;
-
-  const gclid = params.get("gclid");
   if (gclid) source.gclid = gclid;
-
-  const fbclid = params.get("fbclid");
   if (fbclid) source.fbclid = fbclid;
 
   return source;

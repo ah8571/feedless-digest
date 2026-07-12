@@ -41,7 +41,11 @@ The Dev Tools Corporations: @supabase, @vercel, @stripe_dev, @github, @docker.
 
 The Framework Hubs: @nextjs, @golang, @rustlang.
 
-Iconic Dev Thought Leaders: @leeerob (Lee Robinson), @tobi (Tobi Lütke), @housecor (Cory House).
+Iconic Dev Thought Leaders:
+
+ @leeerob (Lee Robinson), @tobi (Tobi Lütke), @housecor (Cory House).
+
+[consider: @thsottiaux]
 
 For the Growth/Marketing Track:
 
