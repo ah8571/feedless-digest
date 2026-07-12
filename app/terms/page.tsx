@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms",
+  description:
+    "Feedfree Digest terms of use — content attribution, sponsorship disclosure, and site policies.",
+};
+
 export default function TermsPage() {
   return (
     <div className="page-stack narrow-stack">

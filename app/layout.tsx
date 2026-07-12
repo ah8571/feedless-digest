@@ -15,9 +15,16 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://feedfree.tech"),
-  title: "Feedfree Digest",
+  title: {
+    default: "Feedfree Digest — Long-form signal without the feed",
+    template: "%s — Feedfree Digest",
+  },
   description:
-    "A weekly newsletter that isolates high-signal long-form posts from forums and social platforms so readers can skip the scroll.",
+    "A curated newsletter that isolates high-signal long-form posts from X, forums, and social platforms so you can stay informed without doomscrolling.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 const primaryNav = [

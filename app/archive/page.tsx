@@ -1,9 +1,16 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import type { Metadata } from "next";
 
 import { SignupForm } from "../components/signup-form";
 import { archiveIssues } from "../archive-issues";
 import { ShareEditionButton } from "./share-edition-button";
+
+export const metadata: Metadata = {
+  title: "Archive — Past Issues",
+  description:
+    "Browse past editions of Feedfree Digest, organized by date and topic. Each issue isolates the best long-form posts from X, forums, and social platforms.",
+};
 
 const inlineLinkPattern = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
 

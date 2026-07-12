@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Advertise With Us",
+  description:
+    "Sponsor Feedfree Digest and reach professionals who deliberately choose long-form writing over algorithmic noise. Ideal for developer tools, research platforms, and operator-focused services.",
+};
+
 export default function AdvertisePage() {
   return (
     <div className="page-stack narrow-stack">

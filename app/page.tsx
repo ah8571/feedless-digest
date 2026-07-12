@@ -1,6 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { archiveIssues } from "./archive-issues";
 import { SignupForm } from "./components/signup-form";
+
+export const metadata: Metadata = {
+  title: "Feedfree Digest — Long-form signal without the feed",
+  description:
+    "A curated newsletter that isolates substantive posts, deep threads, and long-form discussions from X, forums, and social platforms. Skip the scroll. Read what matters.",
+};
 
 const trackedPlatforms = [
   {

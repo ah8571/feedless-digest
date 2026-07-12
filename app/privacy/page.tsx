@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Feedfree Digest privacy policy — how subscriber data is collected, used, and protected.",
+};
+
 export default function PrivacyPage() {
   return (
     <div className="page-stack narrow-stack">
