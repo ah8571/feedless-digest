@@ -45,26 +45,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${fraunces.variable} ${workSans.variable}`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
 (function () {
-  try {
-    var params = new URLSearchParams(window.location.search);
-    var twclid = params.get("twclid");
-    var gclid = params.get("gclid");
-    var fbclid = params.get("fbclid");
-    if (twclid) sessionStorage.setItem("twclid", twclid);
-    if (gclid) sessionStorage.setItem("gclid", gclid);
-    if (fbclid) sessionStorage.setItem("fbclid", fbclid);
-  } catch (_) {}
+  var params = new URLSearchParams(window.location.search);
+  var twclid = params.get("twclid");
+  if (twclid) { sessionStorage.setItem("twclid", twclid); console.log("twclid captured:", twclid); }
+  var gclid = params.get("gclid");
+  if (gclid) { sessionStorage.setItem("gclid", gclid); console.log("gclid captured:", gclid); }
+  var fbclid = params.get("fbclid");
+  if (fbclid) { sessionStorage.setItem("fbclid", fbclid); console.log("fbclid captured:", fbclid); }
 })();
             `.trim(),
           }}
         />
-      </head>
-      <body className={`${fraunces.variable} ${workSans.variable}`}>
         <div className="site-shell">
           <header className="site-header">
             <Link className="brand" href="/">
