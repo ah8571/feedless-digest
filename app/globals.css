@@ -83,10 +83,16 @@ a {
 }
 
 .brand-mark {
-  display: block;
+  display: grid;
+  place-items: center;
   width: 36px;
   height: 36px;
   border-radius: 6px;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  transform: scale(1.4);
 }
 
 .brand-copy {
