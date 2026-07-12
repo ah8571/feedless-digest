@@ -99,6 +99,7 @@ type CreateSignupPayload = {
     twclid?: string;
     gclid?: string;
     fbclid?: string;
+    referrer?: string;
   };
 };
 
@@ -362,9 +363,14 @@ Deno.serve(async (request: Request) => {
       });
     }
 
-    // Fire-and-forget X conversion event (server-side, privacy-respecting)
-    // Only fires when the signup came from an X ad click (twclid present)
-    sendXConversion(email, "SignUp", payload.click_source?.twclid);
+    // Fire X conversion event only when referrer indicates an X ad click
+    const referrer = payload.click_source?.referrer ?? "";
+    const cameFromX = referrer.includes("x.com") || referrer.includes("t.co");
+    if (cameFromX) {
+      sendXConversion(email, "SignUp", payload.click_source?.twclid);
+    } else {
+      console.log("X conversion tracking skipped — referrer does not indicate X ad click.");
+    }
 
     return jsonResponse(200, {
       ok: true,

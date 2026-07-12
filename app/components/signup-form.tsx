@@ -9,22 +9,28 @@ function readClickSource(): Record<string, string> {
 
   const source: Record<string, string> = {};
 
-  // Try URL params first (captured before any redirect)
-  const params = new URLSearchParams(window.location.search);
-  let twclid = params.get("twclid");
-  let gclid = params.get("gclid");
-  let fbclid = params.get("fbclid");
-
-  // Fall back to sessionStorage (set on first page load before redirects)
+  // Use document.referrer for reliable platform attribution
+  // Survives Next.js hydration since it's set by the browser at navigation time
   try {
-    if (!twclid) twclid = sessionStorage.getItem("twclid");
-    if (!gclid) gclid = sessionStorage.getItem("gclid");
-    if (!fbclid) fbclid = sessionStorage.getItem("fbclid");
+    const ref = document.referrer;
+    if (ref) source.referrer = ref;
   } catch (_) {}
 
-  if (twclid) source.twclid = twclid;
-  if (gclid) source.gclid = gclid;
-  if (fbclid) source.fbclid = fbclid;
+  // Try URL params for click IDs (fragile — Next.js strips these)
+  const params = new URLSearchParams(window.location.search);
+  const twclid = params.get("twclid");
+  const gclid = params.get("gclid");
+  const fbclid = params.get("fbclid");
+
+  // Fall back to sessionStorage
+  try {
+    if (twclid) source.twclid = twclid;
+    else { const v = sessionStorage.getItem("twclid"); if (v) source.twclid = v; }
+    if (gclid) source.gclid = gclid;
+    else { const v = sessionStorage.getItem("gclid"); if (v) source.gclid = v; }
+    if (fbclid) source.fbclid = fbclid;
+    else { const v = sessionStorage.getItem("fbclid"); if (v) source.fbclid = v; }
+  } catch (_) {}
 
   return source;
 }
