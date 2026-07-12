@@ -29,7 +29,7 @@ export const aiEngineering001Issue: ArchiveIssue = {
   date: "July 8, 2026",
   title: "AI Engineering 001",
   summary:
-    "Twelve high-signal X articles on loops, memory, harness design, and production AI agents, preserved with summaries and source links.",
+    "12 high-signal X articles on loops, memory, harness design, and production AI agents, preserved with summaries and source links.",
   intro:
     "Hey, providing these articles below in case people missed them. There are many interesting articles floating around X, but they are easy to miss. Here are summaries and links in case helpful.",
   volumeNote:

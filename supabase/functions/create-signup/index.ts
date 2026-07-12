@@ -320,7 +320,7 @@ Deno.serve(async (request: Request) => {
     }
 
     // Fire-and-forget X conversion event (server-side, privacy-respecting)
-    sendXConversion(email, "CompleteRegistration");
+    sendXConversion(email, "SignUp");
 
     return jsonResponse(200, {
       ok: true,
