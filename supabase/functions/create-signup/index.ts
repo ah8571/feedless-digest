@@ -68,9 +68,6 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
       pixel_id: pixelId,
       conversions: [conversion],
     };
-        },
-      ],
-    };
 
     const response = await fetch("https://ads-api.x.com/11/measurement/conversions", {
       method: "POST",
