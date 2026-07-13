@@ -1,0 +1,1907 @@
+{
+  "generated_at": "2026-07-13T14:09:48.415Z",
+  "sort": "like_count_desc",
+  "sources": [
+    {
+      "category": "ai-engineering",
+      "label": "AI Engineering",
+      "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+      "start_time": "2026-07-12T00:00:00Z",
+      "end_time": "2026-07-13T00:00:00Z",
+      "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+      "pages_fetched": 2,
+      "articles_found": 41
+    },
+    {
+      "category": "social-media-marketing",
+      "label": "Social Media Marketing",
+      "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+      "start_time": "2026-07-12T00:00:00Z",
+      "end_time": "2026-07-13T00:00:00Z",
+      "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+      "pages_fetched": 1,
+      "articles_found": 28
+    }
+  ],
+  "categories": {
+    "ai-engineering": {
+      "key": "ai-engineering",
+      "label": "AI Engineering",
+      "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+      "total_articles": 41,
+      "items": [
+        {
+          "object_id": "ai-engineering:2076269845339926915",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076269845339926915",
+          "post_url": "https://x.com/i/web/status/2076269845339926915",
+          "article_url": "http://x.com/i/article/2076219159038279680",
+          "article_title": "How to Make a Highly Successful Mobile App ($0 to $3k in 45 days)",
+          "created_at": "2026-07-12T11:38:01.000Z",
+          "like_count": 872,
+          "retweet_count": 72,
+          "reply_count": 46,
+          "quote_count": 44,
+          "author": {
+            "id": "1828075007752167424",
+            "name": "Frederick James",
+            "username": "_frederickjames"
+          },
+          "text": "https://t.co/TiEUirHevF",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 1
+        },
+        {
+          "object_id": "ai-engineering:2076393801393099173",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076393801393099173",
+          "post_url": "https://x.com/i/web/status/2076393801393099173",
+          "article_url": "http://x.com/i/article/2076376344699510784",
+          "article_title": "TailTag and AI in Furry",
+          "created_at": "2026-07-12T19:50:34.000Z",
+          "like_count": 264,
+          "retweet_count": 30,
+          "reply_count": 26,
+          "quote_count": 17,
+          "author": {
+            "id": "915781548842131456",
+            "name": "Snickers🔜MP/BFC",
+            "username": "SnickersSkunk"
+          },
+          "text": "https://t.co/rUhOmoFQVd",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 2
+        },
+        {
+          "object_id": "ai-engineering:2076352936658276535",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076352936658276535",
+          "post_url": "https://x.com/i/web/status/2076352936658276535",
+          "article_url": "http://x.com/i/article/2076341269052510208",
+          "article_title": "we just built an infinite context window for ai",
+          "created_at": "2026-07-12T17:08:11.000Z",
+          "like_count": 126,
+          "retweet_count": 14,
+          "reply_count": 13,
+          "quote_count": 9,
+          "author": {
+            "id": "1216004878369054720",
+            "name": "dale",
+            "username": "daleverett"
+          },
+          "text": "https://t.co/EAcLbUgje5",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 3
+        },
+        {
+          "object_id": "ai-engineering:2076317396646637625",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076317396646637625",
+          "post_url": "https://x.com/i/web/status/2076317396646637625",
+          "article_url": "http://x.com/i/article/2076310830929379328",
+          "article_title": "𝐖𝐇𝐘 𝐀𝐔𝐓𝐎𝐍𝐎𝐌𝐎𝐔𝐒 𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐄𝐒 𝐍𝐄𝐄𝐃 𝐉𝐔𝐃𝐆𝐌𝐄𝐍𝐓",
+          "created_at": "2026-07-12T14:46:58.000Z",
+          "like_count": 101,
+          "retweet_count": 4,
+          "reply_count": 57,
+          "quote_count": 1,
+          "author": {
+            "id": "1747149217133383680",
+            "name": "𝙿 𝙴 𝙺 𝙰 𝚈",
+            "username": "InnovativeRichy"
+          },
+          "text": "https://t.co/UQc82bI9cL",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 4
+        },
+        {
+          "object_id": "ai-engineering:2076261280546005121",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076261280546005121",
+          "post_url": "https://x.com/i/web/status/2076261280546005121",
+          "article_url": "http://x.com/i/article/2076056143231590400",
+          "article_title": "I replaced $1000+/year in subscriptions with these 50 free GitHub tools",
+          "created_at": "2026-07-12T11:03:59.000Z",
+          "like_count": 85,
+          "retweet_count": 5,
+          "reply_count": 34,
+          "quote_count": 10,
+          "author": {
+            "id": "1470496136553246720",
+            "name": "Ridark",
+            "username": "ridark_eth"
+          },
+          "text": "https://t.co/dM7dRCaw7X",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 5
+        },
+        {
+          "object_id": "ai-engineering:2076202498063573325",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076202498063573325",
+          "post_url": "https://x.com/i/web/status/2076202498063573325",
+          "article_url": "http://x.com/i/article/2076160060817027073",
+          "article_title": "『Obsidian』でAI社員を大企業のレベルに育てる方法、最強のマネジメント組織をつくる完全ガイド",
+          "created_at": "2026-07-12T07:10:24.000Z",
+          "like_count": 82,
+          "retweet_count": 11,
+          "reply_count": 1,
+          "quote_count": 5,
+          "author": {
+            "id": "1368819880451928064",
+            "name": "ガガロットAI",
+            "username": "gagarotai200"
+          },
+          "text": "https://t.co/trrryF8eq2",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 6
+        },
+        {
+          "object_id": "ai-engineering:2076269316912095422",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076269316912095422",
+          "post_url": "https://x.com/i/web/status/2076269316912095422",
+          "article_url": "http://x.com/i/article/2076247668959973376",
+          "article_title": "Context rot: the study that proves your million-token context window is lying to you",
+          "created_at": "2026-07-12T11:35:55.000Z",
+          "like_count": 77,
+          "retweet_count": 13,
+          "reply_count": 10,
+          "quote_count": 7,
+          "author": {
+            "id": "1675572912152084482",
+            "name": "Carnage",
+            "username": "0xCarnagee"
+          },
+          "text": "https://t.co/GicqvtvRiS",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 7
+        },
+        {
+          "object_id": "ai-engineering:2076266621341958623",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076266621341958623",
+          "post_url": "https://x.com/i/web/status/2076266621341958623",
+          "article_url": "http://x.com/i/article/2076254123838652417",
+          "article_title": "GPT-5.6 Prompting 101",
+          "created_at": "2026-07-12T11:25:12.000Z",
+          "like_count": 76,
+          "retweet_count": 21,
+          "reply_count": 1,
+          "quote_count": 4,
+          "author": {
+            "id": "380344724",
+            "name": "AI Guides",
+            "username": "free_ai_guides"
+          },
+          "text": "https://t.co/TSpMGxnqxz",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 8
+        },
+        {
+          "object_id": "ai-engineering:2076186338957857233",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076186338957857233",
+          "post_url": "https://x.com/i/web/status/2076186338957857233",
+          "article_url": "http://x.com/i/article/1890709171508858880",
+          "article_title": "From Pipeline to Engine: The Evolution of Axis V1 to Axis V2",
+          "created_at": "2026-07-12T06:06:11.000Z",
+          "like_count": 47,
+          "retweet_count": 16,
+          "reply_count": 40,
+          "quote_count": 0,
+          "author": {
+            "id": "1564225424045260800",
+            "name": "ryzzu",
+            "username": "0xRyzzu"
+          },
+          "text": "https://t.co/gB9X5fMVpR",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 9
+        },
+        {
+          "object_id": "ai-engineering:2076212099970408750",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076212099970408750",
+          "post_url": "https://x.com/i/web/status/2076212099970408750",
+          "article_url": "http://x.com/i/article/2075116303799717888",
+          "article_title": "How to build a reliable 24x7 AI Agent with Fable 5 (Without burning Tokens)",
+          "created_at": "2026-07-12T07:48:33.000Z",
+          "like_count": 28,
+          "retweet_count": 18,
+          "reply_count": 1,
+          "quote_count": 3,
+          "author": {
+            "id": "1483409796531625987",
+            "name": "Kanika",
+            "username": "KanikaBK"
+          },
+          "text": "https://t.co/MbO5ysOC6w",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 10
+        },
+        {
+          "object_id": "ai-engineering:2076097894692626788",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076097894692626788",
+          "post_url": "https://x.com/i/web/status/2076097894692626788",
+          "article_url": "http://x.com/i/article/2076093079631564800",
+          "article_title": "The Internet settles billions of deals everyday,why doesn't it have a court",
+          "created_at": "2026-07-12T00:14:44.000Z",
+          "like_count": 28,
+          "retweet_count": 6,
+          "reply_count": 22,
+          "quote_count": 0,
+          "author": {
+            "id": "1518579887484907526",
+            "name": "KOB | GEN🧠",
+            "username": "Dreybaba1234"
+          },
+          "text": "https://t.co/EAsxIS6g7r",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 11
+        },
+        {
+          "object_id": "ai-engineering:2076144384374947998",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076144384374947998",
+          "post_url": "https://x.com/i/web/status/2076144384374947998",
+          "article_url": "http://x.com/i/article/2076019356559953920",
+          "article_title": "An introduction to INKRAY",
+          "created_at": "2026-07-12T03:19:28.000Z",
+          "like_count": 26,
+          "retweet_count": 4,
+          "reply_count": 18,
+          "quote_count": 1,
+          "author": {
+            "id": "1875463648426053632",
+            "name": "Dee.Fi",
+            "username": "dee_tweetsby"
+          },
+          "text": "https://t.co/10OEsHGu2G",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 12
+        },
+        {
+          "object_id": "ai-engineering:2076180705609175125",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076180705609175125",
+          "post_url": "https://x.com/i/web/status/2076180705609175125",
+          "article_url": "http://x.com/i/article/2076164318857773056",
+          "article_title": "10 Real-World Loop Engineering Examples in 2026 ",
+          "created_at": "2026-07-12T05:43:48.000Z",
+          "like_count": 25,
+          "retweet_count": 13,
+          "reply_count": 0,
+          "quote_count": 2,
+          "author": {
+            "id": "424351513",
+            "name": "Vikas gupta",
+            "username": "vicky_grok"
+          },
+          "text": "https://t.co/olZv9C4YPQ",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 13
+        },
+        {
+          "object_id": "ai-engineering:2076352272540299489",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076352272540299489",
+          "post_url": "https://x.com/i/web/status/2076352272540299489",
+          "article_url": "http://x.com/i/article/2075545640914796544",
+          "article_title": "turning claude fable 5 into a full outbound team (6 plays, every prompt included)",
+          "created_at": "2026-07-12T17:05:33.000Z",
+          "like_count": 22,
+          "retweet_count": 6,
+          "reply_count": 7,
+          "quote_count": 2,
+          "author": {
+            "id": "2000257900099297281",
+            "name": "Din",
+            "username": "DinScales26"
+          },
+          "text": "https://t.co/hZqueih1Ar",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 14
+        },
+        {
+          "object_id": "ai-engineering:2076335178570772975",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076335178570772975",
+          "post_url": "https://x.com/i/web/status/2076335178570772975",
+          "article_url": "http://x.com/i/article/2075989854857691136",
+          "article_title": "Forbidden Places of America: Then vs. Now (1776–2026) ",
+          "created_at": "2026-07-12T15:57:37.000Z",
+          "like_count": 17,
+          "retweet_count": 18,
+          "reply_count": 3,
+          "quote_count": 1,
+          "author": {
+            "id": "1348082851669889024",
+            "name": "𝓑𝓲𝓬_𝓡𝓮𝓿𝓮𝓵𝓪𝓽𝓲𝓸𝓷",
+            "username": "Bic_Revelation"
+          },
+          "text": "https://t.co/YQio50zpZI",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 15
+        },
+        {
+          "object_id": "ai-engineering:2076151693591388291",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076151693591388291",
+          "post_url": "https://x.com/i/web/status/2076151693591388291",
+          "article_url": "http://x.com/i/article/2076079417374191616",
+          "article_title": "I analysed every YC backed company from the past 24 months",
+          "created_at": "2026-07-12T03:48:31.000Z",
+          "like_count": 14,
+          "retweet_count": 3,
+          "reply_count": 0,
+          "quote_count": 2,
+          "author": {
+            "id": "1522686077257060357",
+            "name": "Adeimantos 💡",
+            "username": "AdeimantosAI"
+          },
+          "text": "https://t.co/DPkUWqwblp",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 16
+        },
+        {
+          "object_id": "ai-engineering:2076377613547999331",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076377613547999331",
+          "post_url": "https://x.com/i/web/status/2076377613547999331",
+          "article_url": "http://x.com/i/article/2076373555336613888",
+          "article_title": "Why Web3 Needs Reputation Systems",
+          "created_at": "2026-07-12T18:46:14.000Z",
+          "like_count": 11,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1940601879035367426",
+            "name": "PiWeb3Army",
+            "username": "PiWeb3Army"
+          },
+          "text": "https://t.co/FcCkjZXU7G",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 17
+        },
+        {
+          "object_id": "ai-engineering:2076250547057795194",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076250547057795194",
+          "post_url": "https://x.com/i/web/status/2076250547057795194",
+          "article_url": "http://x.com/i/article/2076247892898066432",
+          "article_title": "AI Is Becoming Unknowable - The Cost of Intelligence",
+          "created_at": "2026-07-12T10:21:19.000Z",
+          "like_count": 5,
+          "retweet_count": 1,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "2052997872094793731",
+            "name": "AiRa",
+            "username": "AiRaForSupra"
+          },
+          "text": "https://t.co/KWTu6c5HzR",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 18
+        },
+        {
+          "object_id": "ai-engineering:2076240454283079892",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076240454283079892",
+          "post_url": "https://x.com/i/web/status/2076240454283079892",
+          "article_url": "http://x.com/i/article/2076232318671319040",
+          "article_title": "Babysitting an Army of Monkeys 2: Planet of the Agents",
+          "created_at": "2026-07-12T09:41:13.000Z",
+          "like_count": 5,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "452083374",
+            "name": "Chaitanya",
+            "username": "ant4g0nist"
+          },
+          "text": "https://t.co/uCdsIbPUAI",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 19
+        },
+        {
+          "object_id": "ai-engineering:2076254751512019346",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076254751512019346",
+          "post_url": "https://x.com/i/web/status/2076254751512019346",
+          "article_url": "http://x.com/i/article/2076247187424526336",
+          "article_title": "The model didn't matter. Then it did.",
+          "created_at": "2026-07-12T10:38:02.000Z",
+          "like_count": 3,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "2042588504203374592",
+            "name": "Khaled Bakeer",
+            "username": "0xBakeer"
+          },
+          "text": "https://t.co/sbPuKjcLm4",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 20
+        },
+        {
+          "object_id": "ai-engineering:2076398192963293465",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076398192963293465",
+          "post_url": "https://x.com/i/web/status/2076398192963293465",
+          "article_url": "http://x.com/i/article/2076397858341924864",
+          "article_title": "Is J-Space the Breakthrough AI Alignment Has Been Waiting For?",
+          "created_at": "2026-07-12T20:08:01.000Z",
+          "like_count": 2,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "771102358243860480",
+            "name": "Murat Durmus",
+            "username": "CEO_AISOMA"
+          },
+          "text": "https://t.co/73SqhEQQF0",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 21
+        },
+        {
+          "object_id": "ai-engineering:2076237438851125331",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076237438851125331",
+          "post_url": "https://x.com/i/web/status/2076237438851125331",
+          "article_url": "http://x.com/i/article/2076130318847705089",
+          "article_title": "How Using B.Ai and Codex Together Can Help Improve Your Tech skills.",
+          "created_at": "2026-07-12T09:29:14.000Z",
+          "like_count": 2,
+          "retweet_count": 0,
+          "reply_count": 3,
+          "quote_count": 0,
+          "author": {
+            "id": "1720006271720452096",
+            "name": "𝐊𝐎𝐋 𝐍𝐈𝐂𝐊𝐘 📍",
+            "username": "NICKYB416"
+          },
+          "text": "https://t.co/8L8QrdysBY",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 22
+        },
+        {
+          "object_id": "ai-engineering:2076448789083427324",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076448789083427324",
+          "post_url": "https://x.com/i/web/status/2076448789083427324",
+          "article_url": "http://x.com/i/article/2076448008997392384",
+          "article_title": "20260713のニュース（忙しいあなたへ　共通ポイント、決済、マーケティング関連ニュースをお届け",
+          "created_at": "2026-07-12T23:29:04.000Z",
+          "like_count": 1,
+          "retweet_count": 2,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "70066503",
+            "name": "蛸島蛸政(たこしまたこまさ)",
+            "username": "takory"
+          },
+          "text": "https://t.co/lcYPGJJH1r",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 23
+        },
+        {
+          "object_id": "ai-engineering:2076435896841200087",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076435896841200087",
+          "post_url": "https://x.com/i/web/status/2076435896841200087",
+          "article_url": "http://x.com/i/article/2076373214091984896",
+          "article_title": "Paul and the Mission to the Gentiles: A Solution in Search of a Problem",
+          "created_at": "2026-07-12T22:37:50.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1861883835065196544",
+            "name": "Theistic Discourses",
+            "username": "TheistDiscourse"
+          },
+          "text": "https://t.co/0US5gH1ICw",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 24
+        },
+        {
+          "object_id": "ai-engineering:2076398911128993884",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076398911128993884",
+          "post_url": "https://x.com/i/web/status/2076398911128993884",
+          "article_url": "http://x.com/i/article/2076398539580813312",
+          "article_title": "GPT-5.6で変わるのは「賢さ」より、AIに任せる仕事の配分かもしれない",
+          "created_at": "2026-07-12T20:10:52.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1521360953555963904",
+            "name": "すずき",
+            "username": "suzuki_x777"
+          },
+          "text": "https://t.co/0fK0WglWPp",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 25
+        },
+        {
+          "object_id": "ai-engineering:2076362840844435879",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076362840844435879",
+          "post_url": "https://x.com/i/web/status/2076362840844435879",
+          "article_url": "http://x.com/i/article/2076327122893783041",
+          "article_title": "THE WAR FOR THE INNER SCREEN",
+          "created_at": "2026-07-12T17:47:32.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "1604254837",
+            "name": "Əиɔячpʇion",
+            "username": "encryptionmusic"
+          },
+          "text": "https://t.co/mqevobVdzb",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 26
+        },
+        {
+          "object_id": "ai-engineering:2076282042761781570",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076282042761781570",
+          "post_url": "https://x.com/i/web/status/2076282042761781570",
+          "article_url": "http://x.com/i/article/2076281367445258240",
+          "article_title": "The Edge of Understanding",
+          "created_at": "2026-07-12T12:26:29.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "704100983807332353",
+            "name": "jim",
+            "username": "jimmymikemc"
+          },
+          "text": "https://t.co/AmnaKRs377",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 27
+        },
+        {
+          "object_id": "ai-engineering:2076214857217532196",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076214857217532196",
+          "post_url": "https://x.com/i/web/status/2076214857217532196",
+          "article_url": "http://x.com/i/article/2076196039724322817",
+          "article_title": "Stable Recursive Refinement: A Framework for Self-Improving AI",
+          "created_at": "2026-07-12T07:59:30.000Z",
+          "like_count": 1,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1445415583458205706",
+            "name": "Kay",
+            "username": "kay_myg"
+          },
+          "text": "https://t.co/qht68xoSBv",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 28
+        },
+        {
+          "object_id": "ai-engineering:2076190464349548977",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076190464349548977",
+          "post_url": "https://x.com/i/web/status/2076190464349548977",
+          "article_url": "http://x.com/i/article/2076167450966851584",
+          "article_title": "Communist China \"Buying\" Nobel Laureate Omar Yaghi &  His Science [MOFs]/Military Applications !",
+          "created_at": "2026-07-12T06:22:35.000Z",
+          "like_count": 1,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "1851642900536279040",
+            "name": "Elohiym&Johnson Consulting",
+            "username": "EJBConsult"
+          },
+          "text": "https://t.co/Ii8UnKcSQA",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 29
+        },
+        {
+          "object_id": "ai-engineering:2076143984326390062",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076143984326390062",
+          "post_url": "https://x.com/i/web/status/2076143984326390062",
+          "article_url": "http://x.com/i/article/2073510021003132928",
+          "article_title": "Z Theory (pt-7)",
+          "created_at": "2026-07-12T03:17:53.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1957701833444716544",
+            "name": "Phiv",
+            "username": "Phiv_Seven"
+          },
+          "text": "https://t.co/k0S0pCuHw8",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 30
+        },
+        {
+          "object_id": "ai-engineering:2076423027600875689",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076423027600875689",
+          "post_url": "https://x.com/i/web/status/2076423027600875689",
+          "article_url": "http://x.com/i/article/2076404214264197120",
+          "article_title": "Practical Hardware, Techniques, Habits & Boost Modes for Maximizing Grok 2026-7",
+          "created_at": "2026-07-12T21:46:42.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1491889212534276101",
+            "name": "thePuzzler",
+            "username": "omni_puzzler"
+          },
+          "text": "https://t.co/CQhxQlCU0x",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 31
+        },
+        {
+          "object_id": "ai-engineering:2076391183233003678",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076391183233003678",
+          "post_url": "https://x.com/i/web/status/2076391183233003678",
+          "article_url": "http://x.com/i/article/2076390646672420864",
+          "article_title": "What happened when we removed the numbers",
+          "created_at": "2026-07-12T19:40:10.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "28629574",
+            "name": "Moltville",
+            "username": "MoltvilleX"
+          },
+          "text": "https://t.co/3F7m3L7se7",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 32
+        },
+        {
+          "object_id": "ai-engineering:2076309824997085267",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076309824997085267",
+          "post_url": "https://x.com/i/web/status/2076309824997085267",
+          "article_url": "http://x.com/i/article/2076308562788438016",
+          "article_title": "One question for building your next AI agent (JTBD)",
+          "created_at": "2026-07-12T14:16:52.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "19730474",
+            "name": "Caelan Huntress",
+            "username": "caelanhuntress"
+          },
+          "text": "https://t.co/Ol0WOIE6UP",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 33
+        },
+        {
+          "object_id": "ai-engineering:2076300400110764173",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076300400110764173",
+          "post_url": "https://x.com/i/web/status/2076300400110764173",
+          "article_url": "http://x.com/i/article/2076296988119977984",
+          "article_title": "关于我的副业方向的一些思考",
+          "created_at": "2026-07-12T13:39:25.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1661680339729932295",
+            "name": "路漫漫",
+            "username": "lumm256"
+          },
+          "text": "https://t.co/VCjL76NxuF",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 34
+        },
+        {
+          "object_id": "ai-engineering:2076292652543205416",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076292652543205416",
+          "post_url": "https://x.com/i/web/status/2076292652543205416",
+          "article_url": "http://x.com/i/article/2075651436646408192",
+          "article_title": "THE MIRROR THAT GIVES ORDERS",
+          "created_at": "2026-07-12T13:08:38.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1604254837",
+            "name": "Əиɔячpʇion",
+            "username": "encryptionmusic"
+          },
+          "text": "https://t.co/tO00RVVSAl",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 35
+        },
+        {
+          "object_id": "ai-engineering:2076292035141828723",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076292035141828723",
+          "post_url": "https://x.com/i/web/status/2076292035141828723",
+          "article_url": "http://x.com/i/article/2076276528762265600",
+          "article_title": "Enterprise GraphRAG: Graph + Vector + Agents (Open Source Stack)",
+          "created_at": "2026-07-12T13:06:11.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1966772139912294400",
+            "name": "Akhilesh Mahajan",
+            "username": "AkhileshASM"
+          },
+          "text": "https://t.co/jz5M3OPX5x",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 36
+        },
+        {
+          "object_id": "ai-engineering:2076279202513346614",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076279202513346614",
+          "post_url": "https://x.com/i/web/status/2076279202513346614",
+          "article_url": "http://x.com/i/article/2076278865857556480",
+          "article_title": "You Can Build an AI Agent This Weekend — No CS Degree Required",
+          "created_at": "2026-07-12T12:15:11.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "2063652556685942784",
+            "name": "Mario",
+            "username": "MarioWeb3omg"
+          },
+          "text": "https://t.co/DYyE8GXirP",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 37
+        },
+        {
+          "object_id": "ai-engineering:2076262504637022679",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076262504637022679",
+          "post_url": "https://x.com/i/web/status/2076262504637022679",
+          "article_url": "http://x.com/i/article/2076258277403582464",
+          "article_title": "The AI Governance Illusion: Benchmarks Are Not Mandates",
+          "created_at": "2026-07-12T11:08:50.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "61694049",
+            "name": "Gabrielle P.",
+            "username": "mantancino_"
+          },
+          "text": "https://t.co/sz8JGRxia0",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 38
+        },
+        {
+          "object_id": "ai-engineering:2076259015735279944",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076259015735279944",
+          "post_url": "https://x.com/i/web/status/2076259015735279944",
+          "article_url": "http://x.com/i/article/2076258547692916736",
+          "article_title": "Just the Way I Code",
+          "created_at": "2026-07-12T10:54:59.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "926140693562585089",
+            "name": "hnq.me",
+            "username": "huynhnhanquoc"
+          },
+          "text": "https://t.co/siYaqgU2Kd",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 39
+        },
+        {
+          "object_id": "ai-engineering:2076209165740192100",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076209165740192100",
+          "post_url": "https://x.com/i/web/status/2076209165740192100",
+          "article_url": "http://x.com/i/article/2076205671734030336",
+          "article_title": "xAI Grok 4.5 Built A Full Game In One Click",
+          "created_at": "2026-07-12T07:36:53.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1405031034",
+            "name": "Julian Goldie SEO",
+            "username": "JulianGoldieSEO"
+          },
+          "text": "https://t.co/TLGA1Q7lYq",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 40
+        },
+        {
+          "object_id": "ai-engineering:2076141882854560235",
+          "category": "ai-engineering",
+          "category_label": "AI Engineering",
+          "tweet_id": "2076141882854560235",
+          "post_url": "https://x.com/i/web/status/2076141882854560235",
+          "article_url": "http://x.com/i/article/2076141079192379392",
+          "article_title": "Havenlon Execution Architecture Series (8): What Havenlon Builds Is an Execution Boundary",
+          "created_at": "2026-07-12T03:09:32.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1992165527167655937",
+            "name": "Havenlon Labs",
+            "username": "havenlon"
+          },
+          "text": "https://t.co/EiSZcFWQFm",
+          "source": {
+            "source_file": "lists/x/2026-07-13-ai-engineering-yesterday-300.json",
+            "query": "(article) (Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 41
+        }
+      ]
+    },
+    "social-media-marketing": {
+      "key": "social-media-marketing",
+      "label": "Social Media Marketing",
+      "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+      "total_articles": 28,
+      "items": [
+        {
+          "object_id": "social-media-marketing:2076324051740454926",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076324051740454926",
+          "post_url": "https://x.com/i/web/status/2076324051740454926",
+          "article_url": "http://x.com/i/article/2076321235877687296",
+          "article_title": "The Establishment is Trying to Kill the Closed Primary, and Gov Abbott is Letting Them Do It",
+          "created_at": "2026-07-12T15:13:24.000Z",
+          "like_count": 184,
+          "retweet_count": 79,
+          "reply_count": 10,
+          "quote_count": 8,
+          "author": {
+            "id": "4239551",
+            "name": "@amuse",
+            "username": "amuse"
+          },
+          "text": "https://t.co/ekTW1nHJ8u",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 1
+        },
+        {
+          "object_id": "social-media-marketing:2076261280546005121",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076261280546005121",
+          "post_url": "https://x.com/i/web/status/2076261280546005121",
+          "article_url": "http://x.com/i/article/2076056143231590400",
+          "article_title": "I replaced $1000+/year in subscriptions with these 50 free GitHub tools",
+          "created_at": "2026-07-12T11:03:59.000Z",
+          "like_count": 85,
+          "retweet_count": 5,
+          "reply_count": 34,
+          "quote_count": 10,
+          "author": {
+            "id": "1470496136553246720",
+            "name": "Ridark",
+            "username": "ridark_eth"
+          },
+          "text": "https://t.co/dM7dRCaw7X",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 2
+        },
+        {
+          "object_id": "social-media-marketing:2076202498063573325",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076202498063573325",
+          "post_url": "https://x.com/i/web/status/2076202498063573325",
+          "article_url": "http://x.com/i/article/2076160060817027073",
+          "article_title": "『Obsidian』でAI社員を大企業のレベルに育てる方法、最強のマネジメント組織をつくる完全ガイド",
+          "created_at": "2026-07-12T07:10:24.000Z",
+          "like_count": 82,
+          "retweet_count": 11,
+          "reply_count": 1,
+          "quote_count": 5,
+          "author": {
+            "id": "1368819880451928064",
+            "name": "ガガロットAI",
+            "username": "gagarotai200"
+          },
+          "text": "https://t.co/trrryF8eq2",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 3
+        },
+        {
+          "object_id": "social-media-marketing:2076240493227188525",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076240493227188525",
+          "post_url": "https://x.com/i/web/status/2076240493227188525",
+          "article_url": "http://x.com/i/article/2076053605614850048",
+          "article_title": "The End of Posting. The Beginning of Content Systems. Most people are still chasing one viral tweet",
+          "created_at": "2026-07-12T09:41:22.000Z",
+          "like_count": 46,
+          "retweet_count": 21,
+          "reply_count": 11,
+          "quote_count": 1,
+          "author": {
+            "id": "1693492989782319104",
+            "name": "Some Bitcoin",
+            "username": "somebitcoin"
+          },
+          "text": "https://t.co/sTfn36ORpP",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 4
+        },
+        {
+          "object_id": "social-media-marketing:2076391264698749024",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076391264698749024",
+          "post_url": "https://x.com/i/web/status/2076391264698749024",
+          "article_url": "http://x.com/i/article/2076387434254761984",
+          "article_title": "The one format that got me 1k MRR in < 1 week ",
+          "created_at": "2026-07-12T19:40:29.000Z",
+          "like_count": 34,
+          "retweet_count": 3,
+          "reply_count": 4,
+          "quote_count": 1,
+          "author": {
+            "id": "1384930157136318465",
+            "name": "Jack Mitchell",
+            "username": "jack_mitchell01"
+          },
+          "text": "https://t.co/E8eiH0hWzR",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 5
+        },
+        {
+          "object_id": "social-media-marketing:2076097894692626788",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076097894692626788",
+          "post_url": "https://x.com/i/web/status/2076097894692626788",
+          "article_url": "http://x.com/i/article/2076093079631564800",
+          "article_title": "The Internet settles billions of deals everyday,why doesn't it have a court",
+          "created_at": "2026-07-12T00:14:44.000Z",
+          "like_count": 28,
+          "retweet_count": 6,
+          "reply_count": 22,
+          "quote_count": 0,
+          "author": {
+            "id": "1518579887484907526",
+            "name": "KOB | GEN🧠",
+            "username": "Dreybaba1234"
+          },
+          "text": "https://t.co/EAsxIS6g7r",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 6
+        },
+        {
+          "object_id": "social-media-marketing:2076144384374947998",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076144384374947998",
+          "post_url": "https://x.com/i/web/status/2076144384374947998",
+          "article_url": "http://x.com/i/article/2076019356559953920",
+          "article_title": "An introduction to INKRAY",
+          "created_at": "2026-07-12T03:19:28.000Z",
+          "like_count": 26,
+          "retweet_count": 4,
+          "reply_count": 18,
+          "quote_count": 1,
+          "author": {
+            "id": "1875463648426053632",
+            "name": "Dee.Fi",
+            "username": "dee_tweetsby"
+          },
+          "text": "https://t.co/10OEsHGu2G",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 7
+        },
+        {
+          "object_id": "social-media-marketing:2076102149625245876",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076102149625245876",
+          "post_url": "https://x.com/i/web/status/2076102149625245876",
+          "article_url": "http://x.com/i/article/2076100263937556481",
+          "article_title": "Does Brazil Have Free Elections? An Analysis Under the Criteria of International Law",
+          "created_at": "2026-07-12T00:31:39.000Z",
+          "like_count": 12,
+          "retweet_count": 8,
+          "reply_count": 4,
+          "quote_count": 1,
+          "author": {
+            "id": "1846536697619845120",
+            "name": "Maurício Pierre 🇮🇹🇧🇷✝️⚖️",
+            "username": "pierre_160754"
+          },
+          "text": "https://t.co/PR8hFPwB12",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 8
+        },
+        {
+          "object_id": "social-media-marketing:2076453152551743590",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076453152551743590",
+          "post_url": "https://x.com/i/web/status/2076453152551743590",
+          "article_url": "http://x.com/i/article/2076449630615703552",
+          "article_title": "Stop Working More To Earn More. (How To Earn While You Sleep)",
+          "created_at": "2026-07-12T23:46:24.000Z",
+          "like_count": 10,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "857621815438520320",
+            "name": "SOFT CONTINENT",
+            "username": "soft_continent"
+          },
+          "text": "https://t.co/tIy4sGeAuG",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 9
+        },
+        {
+          "object_id": "social-media-marketing:2076305706588774454",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076305706588774454",
+          "post_url": "https://x.com/i/web/status/2076305706588774454",
+          "article_url": "http://x.com/i/article/2076296511239995392",
+          "article_title": "The Curious Case of Mitch McConnell",
+          "created_at": "2026-07-12T14:00:31.000Z",
+          "like_count": 6,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "283385841",
+            "name": "Robert 🤘🏼🇺🇸🦅",
+            "username": "realrobertherr"
+          },
+          "text": "https://t.co/Og3s0tjAs9",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 10
+        },
+        {
+          "object_id": "social-media-marketing:2076453242809049341",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076453242809049341",
+          "post_url": "https://x.com/i/web/status/2076453242809049341",
+          "article_url": "http://x.com/i/article/2076452363188269056",
+          "article_title": "Why Most AI Content Sounds Generic — And Better Prompts Won’t Fix It",
+          "created_at": "2026-07-12T23:46:46.000Z",
+          "like_count": 2,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1868325463166185472",
+            "name": "Ramy.Visualz",
+            "username": "RAMy34484656681"
+          },
+          "text": "https://t.co/PsU1ZpDdT5",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 11
+        },
+        {
+          "object_id": "social-media-marketing:2076349734122660074",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076349734122660074",
+          "post_url": "https://x.com/i/web/status/2076349734122660074",
+          "article_url": "http://x.com/i/article/2076348257111044096",
+          "article_title": "Why the Gulf States Rarely Retaliate Against Iran Despite Having Advanced Weapons",
+          "created_at": "2026-07-12T16:55:27.000Z",
+          "like_count": 2,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "293078019",
+            "name": "NP Singh",
+            "username": "NarenNp"
+          },
+          "text": "https://t.co/7XFABhVy7j",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 12
+        },
+        {
+          "object_id": "social-media-marketing:2076237438851125331",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076237438851125331",
+          "post_url": "https://x.com/i/web/status/2076237438851125331",
+          "article_url": "http://x.com/i/article/2076130318847705089",
+          "article_title": "How Using B.Ai and Codex Together Can Help Improve Your Tech skills.",
+          "created_at": "2026-07-12T09:29:14.000Z",
+          "like_count": 2,
+          "retweet_count": 0,
+          "reply_count": 3,
+          "quote_count": 0,
+          "author": {
+            "id": "1720006271720452096",
+            "name": "𝐊𝐎𝐋 𝐍𝐈𝐂𝐊𝐘 📍",
+            "username": "NICKYB416"
+          },
+          "text": "https://t.co/8L8QrdysBY",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 13
+        },
+        {
+          "object_id": "social-media-marketing:2076362840844435879",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076362840844435879",
+          "post_url": "https://x.com/i/web/status/2076362840844435879",
+          "article_url": "http://x.com/i/article/2076327122893783041",
+          "article_title": "THE WAR FOR THE INNER SCREEN",
+          "created_at": "2026-07-12T17:47:32.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "1604254837",
+            "name": "Əиɔячpʇion",
+            "username": "encryptionmusic"
+          },
+          "text": "https://t.co/mqevobVdzb",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 14
+        },
+        {
+          "object_id": "social-media-marketing:2076214857217532196",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076214857217532196",
+          "post_url": "https://x.com/i/web/status/2076214857217532196",
+          "article_url": "http://x.com/i/article/2076196039724322817",
+          "article_title": "Stable Recursive Refinement: A Framework for Self-Improving AI",
+          "created_at": "2026-07-12T07:59:30.000Z",
+          "like_count": 1,
+          "retweet_count": 1,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1445415583458205706",
+            "name": "Kay",
+            "username": "kay_myg"
+          },
+          "text": "https://t.co/qht68xoSBv",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 15
+        },
+        {
+          "object_id": "social-media-marketing:2076186109923516444",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076186109923516444",
+          "post_url": "https://x.com/i/web/status/2076186109923516444",
+          "article_url": "http://x.com/i/article/2074217875657953280",
+          "article_title": "Behind Bernardo: A Rigged Blender Character Workflow",
+          "created_at": "2026-07-12T06:05:16.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "3092003352",
+            "name": "Ang",
+            "username": "_angbury"
+          },
+          "text": "https://t.co/D4fhGzqjiZ",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 16
+        },
+        {
+          "object_id": "social-media-marketing:2076143984326390062",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076143984326390062",
+          "post_url": "https://x.com/i/web/status/2076143984326390062",
+          "article_url": "http://x.com/i/article/2073510021003132928",
+          "article_title": "Z Theory (pt-7)",
+          "created_at": "2026-07-12T03:17:53.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1957701833444716544",
+            "name": "Phiv",
+            "username": "Phiv_Seven"
+          },
+          "text": "https://t.co/k0S0pCuHw8",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 17
+        },
+        {
+          "object_id": "social-media-marketing:2076132741423542354",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076132741423542354",
+          "post_url": "https://x.com/i/web/status/2076132741423542354",
+          "article_url": "http://x.com/i/article/2075777540413857792",
+          "article_title": "The accidental discovery that gave humans a real superpower: The past, present, and future of X-rays",
+          "created_at": "2026-07-12T02:33:12.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "121406071",
+            "name": "AP Thinks (Arvind P)",
+            "username": "Patel_Arvind"
+          },
+          "text": "https://t.co/hKEyluVlcU",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 18
+        },
+        {
+          "object_id": "social-media-marketing:2076109440810664126",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076109440810664126",
+          "post_url": "https://x.com/i/web/status/2076109440810664126",
+          "article_url": "http://x.com/i/article/2076089865943621632",
+          "article_title": "One Lock, Two Keys",
+          "created_at": "2026-07-12T01:00:37.000Z",
+          "like_count": 1,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "1854526269003870208",
+            "name": "JYPark",
+            "username": "TruthW1SetUFree"
+          },
+          "text": "https://t.co/2dbFdC0etp",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 19
+        },
+        {
+          "object_id": "social-media-marketing:2076414316979302823",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076414316979302823",
+          "post_url": "https://x.com/i/web/status/2076414316979302823",
+          "article_url": "http://x.com/i/article/2076412829612027904",
+          "article_title": "World Cup 2026 Dark Horses: Every Analysis and Lesson Learned",
+          "created_at": "2026-07-12T21:12:05.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "23688032",
+            "name": "M. Sinan Pala",
+            "username": "MSinanPala"
+          },
+          "text": "https://t.co/vyT7n4yLei",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 20
+        },
+        {
+          "object_id": "social-media-marketing:2076400109307494528",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076400109307494528",
+          "post_url": "https://x.com/i/web/status/2076400109307494528",
+          "article_url": "http://x.com/i/article/2058016584476901376",
+          "article_title": "THE HELPING STATE THAT MADE PEOPLE HELPLESS - PART 1. ",
+          "created_at": "2026-07-12T20:15:38.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "1831270750780866560",
+            "name": "Jamie Miller",
+            "username": "JamieMillerAu"
+          },
+          "text": "https://t.co/y0grVPyiJb",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 21
+        },
+        {
+          "object_id": "social-media-marketing:2076373603654975847",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076373603654975847",
+          "post_url": "https://x.com/i/web/status/2076373603654975847",
+          "article_url": "http://x.com/i/article/2076365799770529793",
+          "article_title": "What Does the Bible Really Say About Israel and the Church? A Historical and Theological Analysis",
+          "created_at": "2026-07-12T18:30:18.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1878799833013661696",
+            "name": "Daniel Mazza",
+            "username": "DanielMazza"
+          },
+          "text": "https://t.co/FKOR8srqOb",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 22
+        },
+        {
+          "object_id": "social-media-marketing:2076292652543205416",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076292652543205416",
+          "post_url": "https://x.com/i/web/status/2076292652543205416",
+          "article_url": "http://x.com/i/article/2075651436646408192",
+          "article_title": "THE MIRROR THAT GIVES ORDERS",
+          "created_at": "2026-07-12T13:08:38.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1604254837",
+            "name": "Əиɔячpʇion",
+            "username": "encryptionmusic"
+          },
+          "text": "https://t.co/tO00RVVSAl",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 23
+        },
+        {
+          "object_id": "social-media-marketing:2076279202513346614",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076279202513346614",
+          "post_url": "https://x.com/i/web/status/2076279202513346614",
+          "article_url": "http://x.com/i/article/2076278865857556480",
+          "article_title": "You Can Build an AI Agent This Weekend — No CS Degree Required",
+          "created_at": "2026-07-12T12:15:11.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 1,
+          "quote_count": 0,
+          "author": {
+            "id": "2063652556685942784",
+            "name": "Mario",
+            "username": "MarioWeb3omg"
+          },
+          "text": "https://t.co/DYyE8GXirP",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 24
+        },
+        {
+          "object_id": "social-media-marketing:2076210400232616387",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076210400232616387",
+          "post_url": "https://x.com/i/web/status/2076210400232616387",
+          "article_url": "http://x.com/i/article/2076210036938870784",
+          "article_title": "A soccer story about motivation, grades, and education.",
+          "created_at": "2026-07-12T07:41:48.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "2058691286039728128",
+            "name": "DrVinceJeevar",
+            "username": "DrVinceJeevar"
+          },
+          "text": "https://t.co/RAYWI8qNhS",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 25
+        },
+        {
+          "object_id": "social-media-marketing:2076199984295195017",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076199984295195017",
+          "post_url": "https://x.com/i/web/status/2076199984295195017",
+          "article_url": "http://x.com/i/article/2075854000734318592",
+          "article_title": "One Layer, a Thousand Instances: Inside the Cloner",
+          "created_at": "2026-07-12T07:00:24.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "1822818294954414081",
+            "name": "⚡FlashFX",
+            "username": "FlashFXeditor"
+          },
+          "text": "https://t.co/CJVxwrf1yR",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 26
+        },
+        {
+          "object_id": "social-media-marketing:2076182585034645722",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076182585034645722",
+          "post_url": "https://x.com/i/web/status/2076182585034645722",
+          "article_url": "http://x.com/i/article/2076181849940819968",
+          "article_title": "Soulframe Features And Preludes Pre Alpha Announced",
+          "created_at": "2026-07-12T05:51:16.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 0,
+          "author": {
+            "id": "3114760911",
+            "name": "Mazen Turkmani - Gaming News",
+            "username": "MithrieTV"
+          },
+          "text": "https://t.co/Aa658KqxnF",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 27
+        },
+        {
+          "object_id": "social-media-marketing:2076161379632079040",
+          "category": "social-media-marketing",
+          "category_label": "Social Media Marketing",
+          "tweet_id": "2076161379632079040",
+          "post_url": "https://x.com/i/web/status/2076161379632079040",
+          "article_url": "http://x.com/i/article/2076157563402645504",
+          "article_title": "The Machine Still Churns",
+          "created_at": "2026-07-12T04:27:00.000Z",
+          "like_count": 0,
+          "retweet_count": 0,
+          "reply_count": 0,
+          "quote_count": 1,
+          "author": {
+            "id": "1670766468517212160",
+            "name": "🚫👁️Reckless-Unicorn | Demitrieus Kahn",
+            "username": "RecklesUnicorn"
+          },
+          "text": "https://t.co/R9wNaavOk4",
+          "source": {
+            "source_file": "lists/x/2026-07-13-social-media-marketing-yesterday-300.json",
+            "query": "((article) (TikTok OR Instagram OR creator OR creators OR X OR youtube) (influencer OR influencers OR UGC OR ads OR advertising OR creator ads OR paid social OR conversion OR revenue OR campaign OR followers OR following OR monetize OR monetization OR growth OR content OR audience OR viral OR distribution)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price",
+            "start_time": "2026-07-12T00:00:00Z",
+            "end_time": "2026-07-13T00:00:00Z"
+          },
+          "rank_by_like_count": 28
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1591 @@
+{
+  "data": [
+    {
+      "created_at": "2026-07-12T23:50:33.000Z",
+      "edit_history_tweet_ids": [
+        "2076454195105042814"
+      ],
+      "id": "2076454195105042814",
+      "text": "Great article about using @Replit @thepixelgeek you nailed it. 👏 thanks for the share &amp; connect @raymmar 👍  \n\nhave a read if you picked up Replit or any vibe coding tool &amp; thought oooh this isn’t doing what it said it would &amp; put it down again. \n\nYou gotta keep going &amp; use your https://t.co/PCXughIUOJ"
+    },
+    {
+      "created_at": "2026-07-12T23:43:15.000Z",
+      "edit_history_tweet_ids": [
+        "2076452359060988390"
+      ],
+      "id": "2076452359060988390",
+      "text": "The exposure isn’t training on your data. It’s that the artifacts of learning ie traces, evals, memory, tuned adapters, routing policy as they get build and harden inside someone else’s control plane and never leave. Contractually your data is safe. Architecturally your learning https://t.co/OVLdD37uMF"
+    },
+    {
+      "created_at": "2026-07-12T23:38:49.000Z",
+      "edit_history_tweet_ids": [
+        "2076451242919055432"
+      ],
+      "id": "2076451242919055432",
+      "text": "🗞️ The Algorithmic Pincer: How the FTC's \"Suppression of Accuracy\" Doctrine Traps Safety Engineering\n\n###\n\nThe FTC’s new proposed policy statement on \"Suppression of Accuracy\" (Docket No. FTC-2026-0859) has caught Silicon Valley in a regulatory pincer. Under Executive Order"
+    },
+    {
+      "article": {
+        "title": "20260713のニュース（忙しいあなたへ　共通ポイント、決済、マーケティング関連ニュースをお届け"
+      },
+      "created_at": "2026-07-12T23:29:04.000Z",
+      "edit_history_tweet_ids": [
+        "2076448789083427324"
+      ],
+      "id": "2076448789083427324",
+      "text": "https://t.co/lcYPGJJH1r"
+    },
+    {
+      "created_at": "2026-07-12T23:27:33.000Z",
+      "edit_history_tweet_ids": [
+        "2076448408131576290"
+      ],
+      "id": "2076448408131576290",
+      "text": "57% of enterprises have caught an AI agent being confidently wrong, and traced the error back to bad context. Only 25% have a governed context layer in production. That is from a new VB Pulse survey of 101 enterprises.\n\nRead that again from inside a hospital. In enterprise"
+    },
+    {
+      "created_at": "2026-07-12T23:27:07.000Z",
+      "edit_history_tweet_ids": [
+        "2076448298811195600"
+      ],
+      "id": "2076448298811195600",
+      "text": "Boring Workflows from 4 Hours to 30 Minutes.\n🔍 The Real Story\n\nA good acquaintance was looking for a better job. I helped her.\n\nBefore: Spending four hours finding an idea and converting it into many personalized application emails.\n\nFABLE generates the idea — when you need https://t.co/9TJ8AsWyBn"
+    },
+    {
+      "created_at": "2026-07-12T23:15:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076445247983301014"
+      ],
+      "id": "2076445247983301014",
+      "text": "Andrej Karpathy, the CEO of Obsidian and Claude Code just built the smartest second brain on earth.\n\nThe frame is simple. Obsidian is the IDE, Claude Code is the programmer, your notes are the codebase. Three commands run the whole system.\n\n→ Ingest splits any article, podcast https://t.co/W8dsJCGewF"
+    },
+    {
+      "created_at": "2026-07-12T23:14:23.000Z",
+      "edit_history_tweet_ids": [
+        "2076445091707953534"
+      ],
+      "id": "2076445091707953534",
+      "text": "At this point better believe Swift is trolling us.\n\nThe blog article literally quotes:\n\n\"The old plumbing underneath is not a crutch Swift will rip out later. Swift built it this way on purpose.\"\n\nPlumbing = 50 year old settlement technology\n\nDo you remember what's also ~50 years https://t.co/XA9wDVHt6q https://t.co/iYFaFeimVd"
+    },
+    {
+      "created_at": "2026-07-12T22:58:51.000Z",
+      "edit_history_tweet_ids": [
+        "2076441183392342242"
+      ],
+      "id": "2076441183392342242",
+      "text": "While this post does a good job at mentioning how Finn clearly used AI with a lack of security concerns there also is a bizarre paragraph which basically says furries could've prevented this if they were AI-literate and recognized it was AI so they could help him, which I just https://t.co/BFL3MdOO39 https://t.co/25iT7nuyTj"
+    },
+    {
+      "created_at": "2026-07-12T22:53:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076439711347056888"
+      ],
+      "id": "2076439711347056888",
+      "text": "A guy had 400 notes rotting in Obsidian. He plugged in Claude Code once. Now the vault answers any question in 2 seconds.\n\nSame 400 notes. Same laptop. Same $0 subscription.\n\nClaude reads every file, links what belongs together, and files it back where it fits.\n\nEvery question he https://t.co/KT6b9htxSB https://t.co/YT4M1RQ3CU"
+    },
+    {
+      "article": {
+        "title": "Paul and the Mission to the Gentiles: A Solution in Search of a Problem"
+      },
+      "created_at": "2026-07-12T22:37:50.000Z",
+      "edit_history_tweet_ids": [
+        "2076435896841200087"
+      ],
+      "id": "2076435896841200087",
+      "text": "https://t.co/0US5gH1ICw"
+    },
+    {
+      "created_at": "2026-07-12T22:34:09.000Z",
+      "edit_history_tweet_ids": [
+        "2076434967735771209"
+      ],
+      "id": "2076434967735771209",
+      "text": "Anthropic just dropped a 45-minute course on AI fluency for builders:\n\nfrom understanding how LLMs work to building products with AI from idea to production:\n\n• 00:00 - What AI fluency actually means for builders\n• 10:27 - How LLMs are trained and where they fail\n• 22:07 - https://t.co/u11sRfL9DA https://t.co/4eAXalayYk"
+    },
+    {
+      "created_at": "2026-07-12T22:25:50.000Z",
+      "edit_history_tweet_ids": [
+        "2076432875235549450"
+      ],
+      "id": "2076432875235549450",
+      "text": "Satya Nadella just introduced a concept that flips a Nobel Prize-winning theory on its head.\n\nHe's calling it the Reverse Information Paradox.\n\nThe original paradox (economist Kenneth Arrow):\nA seller of information can't prove its value without giving it away.\n\nAI reverses it. https://t.co/xRrcDSdVrT https://t.co/rp2TWDkK2Y"
+    },
+    {
+      "created_at": "2026-07-12T22:22:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076429838198489135",
+        "2076431970343497900"
+      ],
+      "id": "2076431970343497900",
+      "text": "Satya's diagnosis is right. The fix stops one step short.\n\nHis new article: using an AI model leaks your know-how to the vendor. Your prompts, tool calls, and corrections are \"exhaust\" it learns from.\n\nHis fix is a trust boundary: private evals, your own traces and memory, models https://t.co/XJb6ujS5yP"
+    },
+    {
+      "created_at": "2026-07-12T21:53:16.000Z",
+      "edit_history_tweet_ids": [
+        "2076424678097272915"
+      ],
+      "id": "2076424678097272915",
+      "text": "Weekly Recap: NuGet Packaging, Monolith Architecture, and MCP in C# [Jul 2026]\n\nThis week covers NuGet packaging from metadata and local testing through private feeds, versioning, and automated publishing. Plus practical guides to monolith architecture, MCP servers and clients in https://t.co/6Ima0ylUfk"
+    },
+    {
+      "article": {
+        "title": "Practical Hardware, Techniques, Habits & Boost Modes for Maximizing Grok 2026-7"
+      },
+      "created_at": "2026-07-12T21:46:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076423027600875689"
+      ],
+      "id": "2076423027600875689",
+      "text": "https://t.co/CQhxQlCU0x"
+    },
+    {
+      "created_at": "2026-07-12T21:43:17.000Z",
+      "edit_history_tweet_ids": [
+        "2076422167827452144"
+      ],
+      "id": "2076422167827452144",
+      "text": "I cut my AI bill from 2,680 dollars a year to about 10 bucks a month, and I'm never going back.\n\nI stopped renting and built the box instead. It sits under my desk and runs my AI at home. No cloud, no subscriptions, no rate limits, no one logging my prompts. Just open models https://t.co/etMn5jB4fj https://t.co/PPlke2ar0V"
+    },
+    {
+      "created_at": "2026-07-12T21:06:17.000Z",
+      "edit_history_tweet_ids": [
+        "2076412856535330871"
+      ],
+      "id": "2076412856535330871",
+      "text": "Google just dropped a free 1-hour course on building AI agents from scratch:\n\n• 00:00 – Build your first AI agent\n• 08:24 – Give it memory (short, persistent, long)\n• 28:34 – Agentic loops and long-running agents\n• 40:04 – Build your own MCP (MCP vs API)\n• 1:00:22 – https://t.co/PIF02XNPep https://t.co/CnUErOWpN6"
+    },
+    {
+      "created_at": "2026-07-12T21:01:18.000Z",
+      "edit_history_tweet_ids": [
+        "2076411601175851150"
+      ],
+      "id": "2076411601175851150",
+      "text": "HE SOLD HIS SOFTWARE COMPANY FOR ROUGHLY €100 MILLION AND SPENT THREE YEARS SO BORED HE CALLED IT AN EXISTENTIAL HOLE. ONE AFTERNOON HE SHIPPED THE FASTEST-GROWING GITHUB PROJECT IN HISTORY.\n\nPeter Steinberger is Austrian. He built PSPDFKit — the pdf tech shipped inside Dropbox, https://t.co/SPP5l2m6Aw https://t.co/myY142es1A"
+    },
+    {
+      "created_at": "2026-07-12T20:13:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076399625305809177"
+      ],
+      "id": "2076399625305809177",
+      "text": "I decided early on to use @grok as my fact checker verifier . \n\nHere are the benefits and why others should adopt the model . \n\nThanks to @elonmusk I had access to such a thing . \n\nWe live in amazing times and if others adopted this model it could only benefit the platforms noise https://t.co/HSPZ5a1IBJ"
+    },
+    {
+      "article": {
+        "title": "GPT-5.6で変わるのは「賢さ」より、AIに任せる仕事の配分かもしれない"
+      },
+      "created_at": "2026-07-12T20:10:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076398911128993884"
+      ],
+      "id": "2076398911128993884",
+      "text": "https://t.co/0fK0WglWPp"
+    },
+    {
+      "article": {
+        "title": "Is J-Space the Breakthrough AI Alignment Has Been Waiting For?"
+      },
+      "created_at": "2026-07-12T20:08:01.000Z",
+      "edit_history_tweet_ids": [
+        "2076398192963293465"
+      ],
+      "id": "2076398192963293465",
+      "text": "https://t.co/73SqhEQQF0"
+    },
+    {
+      "created_at": "2026-07-12T20:00:01.000Z",
+      "edit_history_tweet_ids": [
+        "2076396177986134391"
+      ],
+      "id": "2076396177986134391",
+      "text": "An ex-Google engineer just published a 1-hour masterclass on building autonomous AI agents.\n\nIt starts with soul.md — a single file that dictates the agent's core behavior and constraints. Everything branches out from there.\n\nStandard RAG chokes on context. His \"Smart RAG\" method https://t.co/hJFSM75XQp https://t.co/8dSjxnXir9"
+    },
+    {
+      "created_at": "2026-07-12T19:55:17.000Z",
+      "edit_history_tweet_ids": [
+        "2076394987068293490"
+      ],
+      "id": "2076394987068293490",
+      "text": "What if the next great infrastructure investment isn't physical or digital—but human capability itself?\n\nFor decades, markets have treated capability as a by-product of growth rather than a driver of it. Yet in an era defined by ageing populations, AI, productivity constraints,"
+    },
+    {
+      "created_at": "2026-07-12T19:52:28.000Z",
+      "edit_history_tweet_ids": [
+        "2076394279186935900"
+      ],
+      "id": "2076394279186935900",
+      "text": "What if the next great infrastructure investment isn't physical or digital—but human capability itself?\n\nFor decades, markets have treated capability as a by-product of growth rather than a driver of it. Yet in an era defined by ageing populations, AI, productivity constraints,"
+    },
+    {
+      "created_at": "2026-07-12T19:51:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076393909618684313"
+      ],
+      "id": "2076393909618684313",
+      "text": "THIS GUY GAVE GPT-5.6 CODEX ONE GOAL AND LET IT RUN FOR SIX DAYS. IT BUILT A WORKING EXCEL CLONE.\n\nthe prompt was one line. /goal Clone excel, full feature parity.\n\ncodex opened the actual excel app on his desktop, clicked buttons, figured out what they did, and rebuilt them one https://t.co/t4y7M00YwY https://t.co/AEDraPbme4"
+    },
+    {
+      "article": {
+        "title": "TailTag and AI in Furry"
+      },
+      "created_at": "2026-07-12T19:50:34.000Z",
+      "edit_history_tweet_ids": [
+        "2076393801393099173"
+      ],
+      "id": "2076393801393099173",
+      "text": "https://t.co/rUhOmoFQVd"
+    },
+    {
+      "created_at": "2026-07-12T19:43:10.000Z",
+      "edit_history_tweet_ids": [
+        "2076391941042778182"
+      ],
+      "id": "2076391941042778182",
+      "text": "I’m an industrial maintenance technician. Blue collar, fix-machines-for-a-living type. Not a coder, never been “good with technology.”\nThis weekend my 16 year old son and I built an AI agent that turns one article into a week of social content. No code. Here’s how 🧵"
+    },
+    {
+      "article": {
+        "title": "What happened when we removed the numbers"
+      },
+      "created_at": "2026-07-12T19:40:10.000Z",
+      "edit_history_tweet_ids": [
+        "2076391183233003678"
+      ],
+      "id": "2076391183233003678",
+      "text": "https://t.co/3F7m3L7se7"
+    },
+    {
+      "created_at": "2026-07-12T19:25:26.000Z",
+      "edit_history_tweet_ids": [
+        "2076387476449673719"
+      ],
+      "id": "2076387476449673719",
+      "text": "CLAUDE FABLE 5 DIDN'T KILL VIDEO EDITORS. IT KILLED THE GAP BETWEEN \"I HAVE AN IDEA\" AND \"I HAVE A FINISHED VIDEO.\"\n\nSix months ago a video editor charged you $300 to cut a 90-second reel. Today Claude watches your raw footage, reads a one-line brief, and delivers a cut with https://t.co/zr6IV4hmLP https://t.co/989HMcLYPr"
+    },
+    {
+      "created_at": "2026-07-12T19:24:35.000Z",
+      "edit_history_tweet_ids": [
+        "2076387261516542154"
+      ],
+      "id": "2076387261516542154",
+      "text": "$IREN: The Significance of the Horizon Project\n\nPlease note that portions of the reasoning presented in this article are based on inference and should be understood as analytical speculation rather than confirmed facts.\n\nNews emerging from last week's RAISE Summit in Paris"
+    },
+    {
+      "created_at": "2026-07-12T19:09:43.000Z",
+      "edit_history_tweet_ids": [
+        "2076383522781020316"
+      ],
+      "id": "2076383522781020316",
+      "text": "In this article Satya literally describes what Snowflake $SNOW and Databricks (leading enterprise data infrastructure platforms) have been building for some time. \n\nTheir focus has always been on the client choice. First, they offer cloud agnostic architecture and decouple data https://t.co/0ZCOnFKAkQ"
+    },
+    {
+      "created_at": "2026-07-12T18:58:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076380750333817080"
+      ],
+      "id": "2076380750333817080",
+      "text": "Your company brain breaks the second sales can read HR files.\n\nThe guy in the video shows the part most \"AI brain\" demos skip: access control.\n\nA personal brain can live in Obsidian.\nOne person owns the mess.\n\nInside a company, the system has to know:\n\n&gt; who the employee is\n&gt; who https://t.co/fgA2lV5e7p https://t.co/W7zK9HHvvp"
+    },
+    {
+      "created_at": "2026-07-12T18:58:32.000Z",
+      "edit_history_tweet_ids": [
+        "2076380706075283661"
+      ],
+      "id": "2076380706075283661",
+      "text": "🇩🇪🤑🇺🇦 Reuters: Germany to provide €90 million for Ukraine to buy 50,000 drones\n\nGermany is financing the purchase of 50,000 FPV combat drones for Ukraine with a sum of approximately €90 million.\n\nAccording to Reuters, citing sources, this contract, about which no official https://t.co/chBxKlING3"
+    },
+    {
+      "created_at": "2026-07-12T18:56:08.000Z",
+      "edit_history_tweet_ids": [
+        "2076380101856448634"
+      ],
+      "id": "2076380101856448634",
+      "text": "THERE'S A 70K STAR GITHUB REPO THAT TURNS EVERY FINANCIAL DATA SOURCE INTO ONE PYTHON IMPORT\n\nopenbb calls it connect once consume everywhere, one backend, and the same data shows up in python for quants, excel and a UI for analysts, and mcp servers for ai agents\n\nthree lines get https://t.co/eWdT0YAusM https://t.co/L5NaqRzUjS"
+    },
+    {
+      "article": {
+        "title": "Why Web3 Needs Reputation Systems"
+      },
+      "created_at": "2026-07-12T18:46:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076377613547999331"
+      ],
+      "id": "2076377613547999331",
+      "text": "https://t.co/FcCkjZXU7G"
+    },
+    {
+      "created_at": "2026-07-12T18:45:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076377520962670603"
+      ],
+      "id": "2076377520962670603",
+      "text": "أفضل 50 مهارة في Claude تحتاجها الآن.\nتنقسم هذه المهارات إلى 7 فئات رئيسية:\n\nأولًا: التطوير والبرمجة (Development / Tech)\n\n1. Superpowers\n\nتنفيذ عدة خطوات برمجية دفعة واحدة.\nتصحيح الأخطاء بذكاء.\n\n2. Superpowers Lab\n\nإنشاء سير عمل برمجية متقدمة وتجريبية.\n\n3. Skill Seekers\n\nتحويل https://t.co/sH40naOZgQ"
+    },
+    {
+      "created_at": "2026-07-12T18:39:43.000Z",
+      "edit_history_tweet_ids": [
+        "2076375969905234095"
+      ],
+      "id": "2076375969905234095",
+      "text": "Why does your agent behave differently every time? You probably never told it who it is.\n\nArticle 1 of the LangChain section covers system prompts, few-shot examples and structured output with Pydantic.\n\nhttps://t.co/ySzRbfPclv\n\n#ai #langchain #prompt"
+    },
+    {
+      "created_at": "2026-07-12T18:34:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076374581229637780"
+      ],
+      "id": "2076374581229637780",
+      "text": "Holy crap, this latest Codex update has put Chrome extensions in a bit of a bind..\n\nNow Codex can actually browse the web using your account!\n\nYou just need to Import your Chrome cookies and passwords with a SINGLE CLICK, and you’ll be automatically logged in to sites like Gmail, https://t.co/YVrDoaGG1t https://t.co/ZyX1RN7DS9"
+    },
+    {
+      "created_at": "2026-07-12T18:24:36.000Z",
+      "edit_history_tweet_ids": [
+        "2076372168204755104"
+      ],
+      "id": "2076372168204755104",
+      "text": "ai agents can now hire and pay each other. but that economy is missing one thing: when a deal goes bad, there is no judge.\n\n@courtofinternet was built to be that judge. \nit is a trust layer for deals between ai agents.\n\nthe idea is simple. \n\nbefore any money moves, both sides https://t.co/sir2HnhK1f"
+    },
+    {
+      "created_at": "2026-07-12T18:18:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076370564831486040"
+      ],
+      "id": "2076370564831486040",
+      "text": "Anthropic just dropped 5 workshops on building self-improving agentic systems from scratch:\n\n00:00 - Ship your first Claude agent\n36:44 - Build memory for Claude agents\n1:05:06 - Make your agent autonomous\n1:26:46 - Set up a proactive agent\n2:03:35 - self-improving agents https://t.co/6kK95uXxI7"
+    },
+    {
+      "created_at": "2026-07-12T18:17:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076370254792413604"
+      ],
+      "id": "2076370254792413604",
+      "text": "\"Codex exec is a command you can use to run Codex separately from the terminal to complete a very specific task, where the agent triggering Codex only receives the final output from the task.\"\n\n@EivindKjos covers a powerful workflow in his recent article. https://t.co/06myewaJ7Z"
+    },
+    {
+      "created_at": "2026-07-12T18:10:07.000Z",
+      "edit_history_tweet_ids": [
+        "2076368523211804834"
+      ],
+      "id": "2076368523211804834",
+      "text": "Anthropic just blinked.\n\nFable 5 was supposed to leave paid plans TODAY. I spent Thursday building the exit plan — cloned its behavior into Opus 4.8, saved the operating manual, backed up my prompts.\n\nNew announcement: access extended through July 19. Claude Code limits stay 50% https://t.co/w4ZqiwMFdM https://t.co/kWBpsqJdJF"
+    },
+    {
+      "created_at": "2026-07-12T18:02:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076366478857908378"
+      ],
+      "id": "2076366478857908378",
+      "text": "$PENG CEO during Q3 earnings call:\n\nPenguin's customers need architecture that performs in production at scale, an accelerated deployment path, and an operating model that helps them generate profitable revenue or deliver operational efficiencies.\n\nIn production AI, time to https://t.co/uPZinoVkdj"
+    },
+    {
+      "created_at": "2026-07-12T18:01:34.000Z",
+      "edit_history_tweet_ids": [
+        "2076366370837590367"
+      ],
+      "id": "2076366370837590367",
+      "text": "Published my first blog article on \"Why Agentic AI Needs Human-Agent Relationships \".\nNot the sexiest part of agentic AI, but probably where trust actually starts.\nCheck it here: https://t.co/uC4meoa7fM"
+    },
+    {
+      "created_at": "2026-07-12T18:01:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076366227396604276"
+      ],
+      "id": "2076366227396604276",
+      "text": "Google just dropped a free 72-minute course on agentic engineering from scratch:\n\n00:00 – How to build your first AI agent  \n\n08:24 – Agent memory (short, persistent, long-term)  \n\n28:34 – Agentic loops for long-running agents  \n\n40:04 – MCP vs API (and how to build one) https://t.co/I3UsEsWPbB https://t.co/pMUl5ThOkO"
+    },
+    {
+      "created_at": "2026-07-12T17:57:44.000Z",
+      "edit_history_tweet_ids": [
+        "2076365406353203417"
+      ],
+      "id": "2076365406353203417",
+      "text": "Qlawkus: a set of Quarkus extensions for a personal, fully autonomous AI agent. Skills the agent writes itself, voice messaging, git/gh cli automation, database-free secrets. Inspired by OpenClaw &amp; Hermes Agent. Full article:\n\nEN: https://t.co/tTevVqJ0g8\n\n#Quarkus #Java #AIAgents https://t.co/AGN3P4oWx0"
+    },
+    {
+      "created_at": "2026-07-12T17:54:47.000Z",
+      "edit_history_tweet_ids": [
+        "2076364665748361311"
+      ],
+      "id": "2076364665748361311",
+      "text": "Claude creators on how they use Claude Code and its prompts:\n\n00:00 - why hand-coding is dead  \n05:06 - self-improving routines: Claude prompts Claude  \n18:15 - \"you wrote this by hand?!\"  \n45:05 - make every task easier than the last  \n1:16:00 - what self-improving Claude https://t.co/3OX1q8JY8R https://t.co/zA5V2vxX1D"
+    },
+    {
+      "article": {
+        "title": "THE WAR FOR THE INNER SCREEN"
+      },
+      "created_at": "2026-07-12T17:47:32.000Z",
+      "edit_history_tweet_ids": [
+        "2076362840844435879"
+      ],
+      "id": "2076362840844435879",
+      "text": "https://t.co/mqevobVdzb"
+    },
+    {
+      "created_at": "2026-07-12T17:43:28.000Z",
+      "edit_history_tweet_ids": [
+        "2076361814938431736"
+      ],
+      "id": "2076361814938431736",
+      "text": "A recent opinion piece by John Stossel revisits one of the biggest debates surrounding autonomous driving: if autonomous vehicles can make our roads safer, should their deployment be slowed because of concerns about workforce disruption?\n\nThe piece highlights growing evidence"
+    },
+    {
+      "created_at": "2026-07-12T17:35:28.000Z",
+      "edit_history_tweet_ids": [
+        "2076359803346059642"
+      ],
+      "id": "2076359803346059642",
+      "text": "\"I decided to really lock in and focus on building one specific product. And we've gone from zero to 30,000 MRR ever since.\"\n\nThe amazing story of Benji, who built over 45 apps in the past year before overcoming \"shiny object syndrome\" and focusing on one product. His latest https://t.co/P10ruB8SCi https://t.co/hyCrGdrfte"
+    },
+    {
+      "created_at": "2026-07-12T17:35:02.000Z",
+      "edit_history_tweet_ids": [
+        "2076359691639419069"
+      ],
+      "id": "2076359691639419069",
+      "text": "claude code built an entire outbound campaign for us overnight and the token bill was a few dollars\n\na client fills out a form...\n\nby morning the leads are scraped across 200+ cities, every email is verified through a 3-step waterfall, and the copy is written with 4 variants per https://t.co/msisWjz6F0 https://t.co/WNahH4JRrO"
+    },
+    {
+      "article": {
+        "title": "we just built an infinite context window for ai"
+      },
+      "created_at": "2026-07-12T17:08:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076352936658276535"
+      ],
+      "id": "2076352936658276535",
+      "text": "https://t.co/EAcLbUgje5"
+    },
+    {
+      "article": {
+        "title": "turning claude fable 5 into a full outbound team (6 plays, every prompt included)"
+      },
+      "created_at": "2026-07-12T17:05:33.000Z",
+      "edit_history_tweet_ids": [
+        "2076352272540299489"
+      ],
+      "id": "2076352272540299489",
+      "text": "https://t.co/hZqueih1Ar"
+    },
+    {
+      "created_at": "2026-07-12T16:49:03.000Z",
+      "edit_history_tweet_ids": [
+        "2076348119781093737"
+      ],
+      "id": "2076348119781093737",
+      "text": "Check out my latest article: Vibe Coding Is Fast. Hackers Love That https://t.co/plNrcq6O6d via @LinkedIn"
+    },
+    {
+      "created_at": "2026-07-12T16:48:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076348032556450293"
+      ],
+      "id": "2076348032556450293",
+      "text": "Artificial Intelligence is the latest Industrial Revolution. Effective risk management of AI deployment requires organizational commitment at senior levels and a willingness to cease deployment if an AI system presents unacceptable risk. Global standards would have to be weaved"
+    },
+    {
+      "created_at": "2026-07-12T16:45:45.000Z",
+      "edit_history_tweet_ids": [
+        "2076347291313795301"
+      ],
+      "id": "2076347291313795301",
+      "text": "1) The @mememaxxers Jpeg Jokers artwork reveal is live!\n\nhttps://t.co/ummG7kdLmM\n\nFed the ai agent swarm data on the long term vision article attached, input from community members across X/Discord/Telegram, and its own recommendations to make the artwork keke\n\nXP bounties below https://t.co/PXfUkKLafa"
+    },
+    {
+      "created_at": "2026-07-12T16:39:04.000Z",
+      "edit_history_tweet_ids": [
+        "2076345609402114499"
+      ],
+      "id": "2076345609402114499",
+      "text": "I cannot comprehend all the meanings of this article, but I feel that this is a such great article. I suggest everyone to read it .The concepts this article points out may be the fundamental parts of the future AI development. Everybody will use these concepts. https://t.co/5bBb2ULtyw"
+    },
+    {
+      "created_at": "2026-07-12T16:37:36.000Z",
+      "edit_history_tweet_ids": [
+        "2076345238876995888"
+      ],
+      "id": "2076345238876995888",
+      "text": "Apple Sues OpenAI, Alleging Its Consumer Device Push Was Built on Stolen Hardware Secrets\n\n📌 Filed Friday in the Northern District of California - also naming io Products, acquired for about 6.5 billion dollars, and two former Apple employees\n\n📌 The claims center on hardware - https://t.co/E0PBu6OSgi"
+    },
+    {
+      "created_at": "2026-07-12T16:36:35.000Z",
+      "edit_history_tweet_ids": [
+        "2076344982676328603"
+      ],
+      "id": "2076344982676328603",
+      "text": "AppLoop: A Local-First Visual Builder\n\nAn agentic AI app builder with visual editing and production-ready code.\n\nRead the full article, including the GitHub repository link: https://t.co/JgzoUk4KhO\n\nCheck out what I built with: @NousResearch @vercel @nextjs https://t.co/6NJZokjHlx"
+    },
+    {
+      "created_at": "2026-07-12T16:36:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076344895757840525"
+      ],
+      "id": "2076344895757840525",
+      "text": "The biggest obstacle to building on-chain applications has never been the lack of ideas. It has been the technical barrier.\n\nDevelopers often need to understand smart contracts, blockchain frameworks, wallets, gas fees, backend infrastructure, and frontend development before they https://t.co/Im2Gt8Dtld"
+    },
+    {
+      "created_at": "2026-07-12T16:23:20.000Z",
+      "edit_history_tweet_ids": [
+        "2076341651107348503"
+      ],
+      "id": "2076341651107348503",
+      "text": "Satya Nadella just warned every company using AI: you are paying twice. Once with money. Again with something far more valuable.\n\nHe published an article introducing something called the Reverse Information Paradox.\n\nAnd it changes how you think about every AI tool your company https://t.co/5XCyrmkqtq"
+    },
+    {
+      "created_at": "2026-07-12T16:16:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076339979559801122"
+      ],
+      "id": "2076339979559801122",
+      "text": "Search visibility is now a hybrid of:\n\n- classic SEO,\n- AI overview optimization\n- agent-assisted execution\n\nthe winners are treating all three as parts of one system.\n\nSee below for summaries of some of the most helpful articles on X in the SEO space recently.\n\n# Landing in AI"
+    },
+    {
+      "created_at": "2026-07-12T16:15:38.000Z",
+      "edit_history_tweet_ids": [
+        "2076339711665471633"
+      ],
+      "id": "2076339711665471633",
+      "text": "Several major authorities in the AI space are recommending moving towards loop engineering.\n\nIt makes sense as realistically what is holding AI back most?\n\nThe human in the loop.\n\nConsider reading these recent X articles below for staying present with some of the best wisdom in"
+    },
+    {
+      "created_at": "2026-07-12T16:13:36.000Z",
+      "edit_history_tweet_ids": [
+        "2076339198496280811"
+      ],
+      "id": "2076339198496280811",
+      "text": "Human civilization evolves in onion layers. We add rather than replace.\nWhen the Nazis invaded Poland, they did so with horses as their industry was not sufficiently developed. They still waged an industrial war, but with a pre-industrial agriculture.\nSimilarly, the Internet and https://t.co/i7VRkTDIDg"
+    },
+    {
+      "created_at": "2026-07-12T16:09:31.000Z",
+      "edit_history_tweet_ids": [
+        "2076338172699509053"
+      ],
+      "id": "2076338172699509053",
+      "text": "Early alpha on @RobinhoodCrypto \n\n@HoodAI0x \n\nNot just another picture or wallpaper on your wallet, but a working Ai agent that has its own designated wallet.\n\nSupply: 3333 NFTs\n\nFreemint \n\nAi agent has a deflationary mechanism which is explained in details on the article pinned https://t.co/keDyj4C4RX https://t.co/LtP3IFMd2M"
+    },
+    {
+      "created_at": "2026-07-12T15:57:58.000Z",
+      "edit_history_tweet_ids": [
+        "2076335265099010104"
+      ],
+      "id": "2076335265099010104",
+      "text": "projLog: I knew personas were being used in AI prompting to produce more efficient responses, but I’ve waited almost two years to organically come across someone discussing it in this language.\n\nhttps://t.co/IoEhyT0J4H\n\nThis article says far more than I think it intends to. Do https://t.co/5Yf1FR0n4p"
+    },
+    {
+      "article": {
+        "title": "Forbidden Places of America: Then vs. Now (1776–2026) "
+      },
+      "created_at": "2026-07-12T15:57:37.000Z",
+      "edit_history_tweet_ids": [
+        "2076335178570772975"
+      ],
+      "id": "2076335178570772975",
+      "text": "https://t.co/YQio50zpZI"
+    },
+    {
+      "created_at": "2026-07-12T15:28:48.000Z",
+      "edit_history_tweet_ids": [
+        "2076327926388130019"
+      ],
+      "id": "2076327926388130019",
+      "text": "An ex-Google Search engineer quietly built a $7.2B company almost nobody outside tech has heard of. And he just gave away the whole playbook\n\nHis main rule: Make the AI giants work for you\n\nArvind Jain helped build Google Search. Then he watched his own startup grow and https://t.co/4bdyd0BaE4 https://t.co/ubVQ1DnVg4"
+    },
+    {
+      "created_at": "2026-07-12T15:23:15.000Z",
+      "edit_history_tweet_ids": [
+        "2076326529538134228"
+      ],
+      "id": "2076326529538134228",
+      "text": "THE CEO OF OBSIDIAN OPEN SOURCED THE CLAUDE CODE SKILLS HE WAS RUNNING PRIVATELY IN HIS OWN VAULT.\n\nFive skills. One MIT license. Zero pitches.\n\nKepano built them for himself, ran them in his own workflow, then pushed the folder to GitHub and walked away.\n\n&gt; Markdown that https://t.co/Tn4HOI7hPm https://t.co/djIjPi9s4u"
+    },
+    {
+      "created_at": "2026-07-12T15:22:49.000Z",
+      "edit_history_tweet_ids": [
+        "2076326421807391056"
+      ],
+      "id": "2076326421807391056",
+      "text": "\"I prompted my way to $30,000 without writing a single line of code.\"\n\nPaulus's story is powerful proof that in the age of AI tools, you no longer need a huge team of developers or deep programming knowledge to launch a successful SaaS product and reach $30,000 in revenue in just https://t.co/AoySSWaepM https://t.co/Qt7NU1wY7R"
+    },
+    {
+      "created_at": "2026-07-12T15:20:33.000Z",
+      "edit_history_tweet_ids": [
+        "2076325849758945461"
+      ],
+      "id": "2076325849758945461",
+      "text": "THE SECRET OBSIDIAN + CLAUDE SETUP THAT CAN FULLY AUTOMATE YOUR “SECOND BRAIN”\n\nThe guy in this video explains perfectly how the whole system works:\n\n&gt; You create a single Obsidian Vault and move all of your knowledge into it, from exported ChatGPT conversations to documents from https://t.co/0043vBLm0e https://t.co/UwfGS7Beup"
+    },
+    {
+      "created_at": "2026-07-12T15:17:12.000Z",
+      "edit_history_tweet_ids": [
+        "2076325007437754806"
+      ],
+      "id": "2076325007437754806",
+      "text": "OpenHuman VS Hermes AI VS OpenClaw: Best AI Agent?\n\nOpenHuman vs Hermes vs OpenClaw — the AI SEO showdown. 🥊\n\nSame prompt. Same task. 3 different agents.\n\n→ OpenHuman: Beautiful desktop app, voice chat, easy setup. Failed at writing a full SEO article. No scheduling tools.\n\n→ https://t.co/Ecq9mvJi3P"
+    },
+    {
+      "created_at": "2026-07-12T15:07:34.000Z",
+      "edit_history_tweet_ids": [
+        "2076322582379602401"
+      ],
+      "id": "2076322582379602401",
+      "text": "Some creators never guess what to post. They have a system scanning their niche every 24 hours.\n\nIt's called Hermes Astros. Here's how it works:\n\nYou give it a watch list. Keywords + creators you learn from.\n\nIt studies them around the clock.\n\nEvery trending topic shows up as a https://t.co/J7lykEYZ6D"
+    },
+    {
+      "created_at": "2026-07-12T15:00:01.000Z",
+      "edit_history_tweet_ids": [
+        "2076320684318638578"
+      ],
+      "id": "2076320684318638578",
+      "text": "📰 Can 5-axis Desktop CNC Follow 3D Printing's Democratization Path?\n\nManufactur3D explores how InfiMaker K1 is making the case—arguing that as software becomes more automated and AI-assisted, 5-axis no longer needs to be expert-only.\nDiscover how InfiMaker is changing who gets https://t.co/fmeuHlahXP"
+    },
+    {
+      "article": {
+        "title": "𝐖𝐇𝐘 𝐀𝐔𝐓𝐎𝐍𝐎𝐌𝐎𝐔𝐒 𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐄𝐒 𝐍𝐄𝐄𝐃 𝐉𝐔𝐃𝐆𝐌𝐄𝐍𝐓"
+      },
+      "created_at": "2026-07-12T14:46:58.000Z",
+      "edit_history_tweet_ids": [
+        "2076317396646637625"
+      ],
+      "id": "2076317396646637625",
+      "text": "https://t.co/UQc82bI9cL"
+    },
+    {
+      "created_at": "2026-07-12T14:42:45.000Z",
+      "edit_history_tweet_ids": [
+        "2076316338294071769"
+      ],
+      "id": "2076316338294071769",
+      "text": "Multi-Agent Coordination: Message-Bus Patterns That Keep Agents Sane\n\nThe article discusses best practices for managing large language model (LLM) applications in a production environment, focusing on preventing runaway costs and ensuring the system remains manageable and https://t.co/gH9yin0Dfe https://t.co/yc4Eio3CnN"
+    },
+    {
+      "created_at": "2026-07-12T14:41:49.000Z",
+      "edit_history_tweet_ids": [
+        "2076316101055553811"
+      ],
+      "id": "2076316101055553811",
+      "text": ".\nEconomics is still a rich man’s club: Global authorship inequality\n\nA new paper by @ErnestAigner, Jacob Greenspon, and @rodrikdani reveals striking and persistent inequalities in who gets to publish in top economics journals.\nNote: Some of the comments below are mine, not https://t.co/7G17w88mIh"
+    },
+    {
+      "created_at": "2026-07-12T14:33:32.000Z",
+      "edit_history_tweet_ids": [
+        "2076314017568588157"
+      ],
+      "id": "2076314017568588157",
+      "text": "NFT Call | @HoodAI0x by @MelioHL\n\nThis is a free mint collection of 3,333 NFTs that comes with AI agents. The article explains what these AI agents are designed for: utility. They live within your NFTs.\n\nHolders can simply fund their agents, which then execute transactions using https://t.co/uhAIk4Yemw"
+    },
+    {
+      "created_at": "2026-07-12T14:32:16.000Z",
+      "edit_history_tweet_ids": [
+        "2076313699560890509"
+      ],
+      "id": "2076313699560890509",
+      "text": "Forbes article made me think: when AI agents start doing real deals, how do they settle arguments? \nInternet Court on GenLayer finally gives them a fair and fast way. \nThis is the foundation the agent economy really needs. @courtofinternet @GenLayer https://t.co/IVzgWewR5x"
+    },
+    {
+      "created_at": "2026-07-12T14:28:54.000Z",
+      "edit_history_tweet_ids": [
+        "2076312850180739322"
+      ],
+      "id": "2076312850180739322",
+      "text": "Andrej Karpathy summarized the entire history of LLM training in three nouns:\n\n- text\n- conversations\n- and environments\n\nPretraining ran on internet text, supervised fine-tuning ran on curated conversations, and the current era of RL runs on environments.\n\nOpenAI and Anthropic https://t.co/u9gWJlsOn0 https://t.co/XtYmFeT4h4"
+    },
+    {
+      "created_at": "2026-07-12T14:21:49.000Z",
+      "edit_history_tweet_ids": [
+        "2076311067949478079"
+      ],
+      "id": "2076311067949478079",
+      "text": "HE MAPPED 137 SKILLS ACROSS 7 AI DIRECTORS INTO A LIVING ENTERPRISE SECOND BRAIN\n\nMost developers still dump prompts and notes into flat folders and call it a system\n\nBy connecting Obsidian, NotebookLM, and Hermes Agent, he built a radial intelligence graph where every skill is a https://t.co/3ZPuYSlpuq https://t.co/RzZyAt1YUi"
+    },
+    {
+      "article": {
+        "title": "One question for building your next AI agent (JTBD)"
+      },
+      "created_at": "2026-07-12T14:16:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076309824997085267"
+      ],
+      "id": "2076309824997085267",
+      "text": "https://t.co/Ol0WOIE6UP"
+    },
+    {
+      "created_at": "2026-07-12T13:58:47.000Z",
+      "edit_history_tweet_ids": [
+        "2076305274084753777"
+      ],
+      "id": "2076305274084753777",
+      "text": "$180 SILVER DOCK EVERY MAC MINI AI OPERATOR IS QUIETLY BOLTING BEHIND THEIR RIG JUST WIPED FIVE $200/MO CLAUDE CODE MAX SUBSCRIPTIONS\n\n00:02 the hand on the video slides the acasis 40gbps dock behind the mac mini m4 and stacks it flush against the aluminum shell, a $180 detail https://t.co/z3RpF6RpzD https://t.co/xOwWBfqeze"
+    },
+    {
+      "article": {
+        "title": "关于我的副业方向的一些思考"
+      },
+      "created_at": "2026-07-12T13:39:25.000Z",
+      "edit_history_tweet_ids": [
+        "2076300400110764173"
+      ],
+      "id": "2076300400110764173",
+      "text": "https://t.co/VCjL76NxuF"
+    },
+    {
+      "created_at": "2026-07-12T13:38:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076300260503400895"
+      ],
+      "id": "2076300260503400895",
+      "text": "What's the difference between an AI chatbot and a Personal AI Agent?\n\nAccording to Mira's official blog, the difference goes far beyond answering questions.\n\nTraditional AI chatbots typically respond to individual prompts in isolation. In contrast, a Personal AI Agent is designed https://t.co/FogUel9ULw https://t.co/E3R6QSiatK"
+    },
+    {
+      "created_at": "2026-07-12T13:38:20.000Z",
+      "edit_history_tweet_ids": [
+        "2076300125035442525"
+      ],
+      "id": "2076300125035442525",
+      "text": "Anthropic engineers merge 20x more code than other companies, here’s the secret:\n\n1:20 - how the context window actually works, the thing Claude sees before it acts\n4:55 - the power of skills: reusable context the agent loads only when it needs it\n9:17 - how to actually build a https://t.co/0Hk5SgmMq5 https://t.co/NjUBtNHTAM"
+    },
+    {
+      "created_at": "2026-07-12T13:38:01.000Z",
+      "edit_history_tweet_ids": [
+        "2076300047369592916"
+      ],
+      "id": "2076300047369592916",
+      "text": "![Article hero](https://t.co/59qwtN5iEW)\n\nGoldman Sachs projects a 24-fold increase in AI agent token consumption by 2030. Uber burned its entire 2026 AI budget in four months. Microsoft walked back its Claude Code licenses.\n\nThe cost curve is steeper than the chatbot curve, and https://t.co/yTLZXO9sRi"
+    },
+    {
+      "created_at": "2026-07-12T13:26:30.000Z",
+      "edit_history_tweet_ids": [
+        "2076297149705248816"
+      ],
+      "id": "2076297149705248816",
+      "text": "AI Predicts Drug Release With Up to 40% Fewer Errors, Cutting Nearly a Day of Lab Testing | StudyFinds\n\nIn a Nutshell\n\n- An AI model that pairs physics rules with machine learning predicted a drug’s full release curve with up to 40 percent less average error than standard math https://t.co/FcVUQevR8E"
+    },
+    {
+      "created_at": "2026-07-12T13:11:51.000Z",
+      "edit_history_tweet_ids": [
+        "2076293461217828989"
+      ],
+      "id": "2076293461217828989",
+      "text": "I used AI agents to grow a site to 222 clicks per day…\n\nHere’s how👇\n\nMost people use AI like this:\n\nWrite → read → fix → cry → repeat.\n\nI built a self-improving SEO loop instead:\n\n1️⃣ A builder agent writes the article.\n\n2️⃣ A separate judge grades it out of 100.\n\n3️⃣ If it https://t.co/DGl7EFVSLD"
+    },
+    {
+      "article": {
+        "title": "THE MIRROR THAT GIVES ORDERS"
+      },
+      "created_at": "2026-07-12T13:08:38.000Z",
+      "edit_history_tweet_ids": [
+        "2076292652543205416"
+      ],
+      "id": "2076292652543205416",
+      "text": "https://t.co/tO00RVVSAl"
+    },
+    {
+      "article": {
+        "title": "Enterprise GraphRAG: Graph + Vector + Agents (Open Source Stack)"
+      },
+      "created_at": "2026-07-12T13:06:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076292035141828723"
+      ],
+      "id": "2076292035141828723",
+      "text": "https://t.co/jz5M3OPX5x"
+    },
+    {
+      "created_at": "2026-07-12T12:59:46.000Z",
+      "edit_history_tweet_ids": [
+        "2076290420313669889"
+      ],
+      "id": "2076290420313669889",
+      "text": "Software Defined Vehicle Ecosystem - Article - How SDV architectures, cloud platforms, OTA updates, AI, &amp; connected services create new recurring revenue opportunities Connected Vehicle Trade Association - CVTA https://t.co/jSu2M5MRwk #ConnectedVehicles #OTA https://t.co/460NLmRs5A"
+    },
+    {
+      "created_at": "2026-07-12T12:58:42.000Z",
+      "edit_history_tweet_ids": [
+        "2076290151228297556"
+      ],
+      "id": "2076290151228297556",
+      "text": "Andrew Ng just dropped a free course on Claude Code from scratch, taught with the Anthropic team:\n\n00:00 - why Claude Code is so agentic\n04:00 - shockingly simple architecture\n12:00 - point it at any codebase\n\nthis short watch will replace 10 paid coding agent courses.\n\nAndrew Ng"
+    },
+    {
+      "created_at": "2026-07-12T12:52:06.000Z",
+      "edit_history_tweet_ids": [
+        "2076288492729217408"
+      ],
+      "id": "2076288492729217408",
+      "text": "Anthropic Engineer Andrej Karpathy:\n\n\"The biggest mistake in AI right now - people are forcing agents to work instead of mastering the model first\n\nWe made that mistake in 2016 at OpenAI - It cost us 5 years \"\n\nwhat Karpathy actually means:\n\nstep 1 → stop forcing your agent to https://t.co/PKyyfkx6I4 https://t.co/XUEVprMl9U"
+    },
+    {
+      "created_at": "2026-07-12T12:51:06.000Z",
+      "edit_history_tweet_ids": [
+        "2076288239963722147"
+      ],
+      "id": "2076288239963722147",
+      "text": "AInomics\n1. Overview: The Rise of AI-nomics\nThe article introduces \"AI-nomics\"—a term blending AI and economics. Artificial Intelligence is no longer just a futuristic concept; it is actively restructuring how businesses spend money, create corporate strategies, and manage https://t.co/wP0xO9pGFC"
+    },
+    {
+      "created_at": "2026-07-12T12:41:16.000Z",
+      "edit_history_tweet_ids": [
+        "2076285764292546746"
+      ],
+      "id": "2076285764292546746",
+      "text": "THIS IS F**KING GOLD.\n\nHow to build a second brain with Karpathy's method. Full guide.\n\nIf I had this a year ago, I would have stopped losing 95% of what I read—instead of forgetting it within a week.\n\nDrop any article, PDF, or transcript into one folder.\nSay “ingest this.” https://t.co/qlKRTTSx7Y https://t.co/imGQiHbhqS"
+    },
+    {
+      "created_at": "2026-07-12T12:32:04.000Z",
+      "edit_history_tweet_ids": [
+        "2076283449388785847"
+      ],
+      "id": "2076283449388785847",
+      "text": "THIS \"GETTING STARTED WITH LOOPS\" DOC TURNS CLAUDE INTO AN EMPLOYEE THAT SHIPS WHILE YOU SLEEP\n\nspoiler: prompt engineering didn't survive\n\nthe 4 loop types, from you-drive to fully hands-off:\n\n&gt; turn-based - 25% autonomy. one task per round, control returns to you. best for https://t.co/UyWNxKfDEQ https://t.co/5TBfs5nLZa"
+    },
+    {
+      "article": {
+        "title": "The Edge of Understanding"
+      },
+      "created_at": "2026-07-12T12:26:29.000Z",
+      "edit_history_tweet_ids": [
+        "2076282042761781570"
+      ],
+      "id": "2076282042761781570",
+      "text": "https://t.co/AmnaKRs377"
+    },
+    {
+      "created_at": "2026-07-12T12:20:56.000Z",
+      "edit_history_tweet_ids": [
+        "2076280647773995145"
+      ],
+      "id": "2076280647773995145",
+      "text": "Google just dropped a 1-hour course on building agents from scratch:\n\n00:00 - Your first AI agent\n08:24 - Memory that survives sessions\n28:34 - Agentic loops and long-running tasks\n40:04 - MCP vs API for tool use\n1:00:22 - Multi-agent systems\n\nThis 1-hour watch will save you from https://t.co/NnB9iy7PSE https://t.co/iaKctzW5yu"
+    },
+    {
+      "created_at": "2026-07-12T12:20:56.000Z",
+      "edit_history_tweet_ids": [
+        "2076280647773995145"
+      ],
+      "id": "2076280647773995145",
+      "text": "Google just dropped a 1-hour course on building agents from scratch:\n\n00:00 - Your first AI agent\n08:24 - Memory that survives sessions\n28:34 - Agentic loops and long-running tasks\n40:04 - MCP vs API for tool use\n1:00:22 - Multi-agent systems\n\nThis 1-hour watch will save you from https://t.co/NnB9iy7PSE https://t.co/iaKctzW5yu"
+    },
+    {
+      "article": {
+        "title": "You Can Build an AI Agent This Weekend — No CS Degree Required"
+      },
+      "created_at": "2026-07-12T12:15:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076279202513346614"
+      ],
+      "id": "2076279202513346614",
+      "text": "https://t.co/DYyE8GXirP"
+    },
+    {
+      "created_at": "2026-07-12T12:05:56.000Z",
+      "edit_history_tweet_ids": [
+        "2076276873663852566"
+      ],
+      "id": "2076276873663852566",
+      "text": "🔔 Intelligence Is Not Authority. 🔔 This week, aLL-i@MoveO submitted a research article to Artificial Intelligence for Engineering Design, Analysis and Manufacturing — AI EDAM, Cambridge University Press. https://t.co/Tslr56UGEh https://t.co/FzCPbUW6nw"
+    },
+    {
+      "created_at": "2026-07-12T12:02:10.000Z",
+      "edit_history_tweet_ids": [
+        "2076275923842670714"
+      ],
+      "id": "2076275923842670714",
+      "text": "Andrew Ng and AMD CEO leaked the plan on how anyone becomes a $40k AI engineer from scratch:\n\n00:00 - one engineer with AI replaces 5 employees\n14:15 - one day with AI replaces 3 months of work\n23:28 - how to build a profitable company for $20\n\nThis free 26-minute talk is worth https://t.co/WHmNDtQsXd https://t.co/CRB8gltvpN"
+    },
+    {
+      "created_at": "2026-07-12T12:01:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076275851486752918"
+      ],
+      "id": "2076275851486752918",
+      "text": "🔔 Intelligence Is Not Authority.\n🔔 This week, aLL-i@MoveO submitted a research article to Artificial Intelligence for Engineering Design, Analysis and Manufacturing — AI EDAM, Cambridge University Press. The manuscript is now under editorial consideration, and we will report https://t.co/anaBrxDRIp"
+    },
+    {
+      "created_at": "2026-07-12T11:50:41.000Z",
+      "edit_history_tweet_ids": [
+        "2076273033984020549"
+      ],
+      "id": "2076273033984020549",
+      "text": "A 3-MINUTE FAKE GPT-5.6 NEWS CLIP ACCIDENTALLY EXPLAINS THE REAL AI ROADMAP BETTER THAN MOST MODEL LAUNCHES\n\n• 00:00 - GPT-5.6 Luna, Terra and the fake flagship Soul\n• 01:07 - 30-day government review before release\n• 01:44 - Ultra mode: one model spawning a team of subagents https://t.co/yuRUY8GzPE https://t.co/ZeJ5TJf4nJ"
+    },
+    {
+      "article": {
+        "title": "How to Make a Highly Successful Mobile App ($0 to $3k in 45 days)"
+      },
+      "created_at": "2026-07-12T11:38:01.000Z",
+      "edit_history_tweet_ids": [
+        "2076269845339926915"
+      ],
+      "id": "2076269845339926915",
+      "text": "https://t.co/TiEUirHevF"
+    },
+    {
+      "created_at": "2026-07-12T11:37:48.000Z",
+      "edit_history_tweet_ids": [
+        "2076269792198283636"
+      ],
+      "id": "2076269792198283636",
+      "text": "Check out my latest article: The AI Agent Landscape Explained: A Strategic Guide for CIOs https://t.co/uMCDbbIDpB via @LinkedIn"
+    },
+    {
+      "article": {
+        "title": "Context rot: the study that proves your million-token context window is lying to you"
+      },
+      "created_at": "2026-07-12T11:35:55.000Z",
+      "edit_history_tweet_ids": [
+        "2076269316912095422"
+      ],
+      "id": "2076269316912095422",
+      "text": "https://t.co/GicqvtvRiS"
+    },
+    {
+      "created_at": "2026-07-12T11:31:28.000Z",
+      "edit_history_tweet_ids": [
+        "2076268199532978514"
+      ],
+      "id": "2076268199532978514",
+      "text": "I wrote about 5 Claude Code plugins that changed how I work:\n\nFree article: https://t.co/kgaZBZD27G\n\nThanks to @towards_AI , @Whats_AI for publishing and supporting the piece.\n#ClaudeCode #AI #DeveloperTools #Programming https://t.co/4Mz3a8AwAI"
+    },
+    {
+      "created_at": "2026-07-12T11:29:04.000Z",
+      "edit_history_tweet_ids": [
+        "2076267594865160508"
+      ],
+      "id": "2076267594865160508",
+      "text": "I FOUND THE TOOL THAT MADE HIM $8,700 LAST MONTH. YOU'VE NEVER HEARD OF IT.\n\nNobody's talking about it yet. By the time they do, the early advantage will be gone.\n\nHere's what happened.\n\nRyan is 27. Lives in Austin. Spent three years building SaaS products that never got https://t.co/oZxim7uglF https://t.co/d3cyzWoeW6"
+    },
+    {
+      "article": {
+        "title": "GPT-5.6 Prompting 101"
+      },
+      "created_at": "2026-07-12T11:25:12.000Z",
+      "edit_history_tweet_ids": [
+        "2076266621341958623"
+      ],
+      "id": "2076266621341958623",
+      "text": "https://t.co/TSpMGxnqxz"
+    },
+    {
+      "created_at": "2026-07-12T11:23:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076266066758562017"
+      ],
+      "id": "2076266066758562017",
+      "text": "$60 3-ANTENNA ESP32-S3 IN NIKOLAI'S BASEMENT LAB AUDITS HIS PRIVATE WIFI ENVIRONMENT AND ROUTES HIS OWN DEVICES' AI QUERIES INTO A HOME RTX 3090, KILLED $200 CHATGPT PRO AND $200 CLAUDE CODE MAX SUBSCRIPTIONS THE DAY THE FIRMWARE FLASHED\n\n00:03 nikolai holds up the 3-antenna https://t.co/qW0UhANOVS https://t.co/HoQWlNi8hT"
+    },
+    {
+      "created_at": "2026-07-12T11:22:45.000Z",
+      "edit_history_tweet_ids": [
+        "2076266004401758559"
+      ],
+      "id": "2076266004401758559",
+      "text": "Google just published a 1-hour Claude Code masterclass with an Anthropic engineer:\n\n00:17 - Why Claude remembers nothing between calls\n07:24 - The command that writes your permissions\n16:39 - He passed a job interview with Claude Code\n58:39 - Fable 5 for work that isn't code https://t.co/Nz9iuaeJgL https://t.co/VcgmPvHkIL"
+    },
+    {
+      "article": {
+        "title": "The AI Governance Illusion: Benchmarks Are Not Mandates"
+      },
+      "created_at": "2026-07-12T11:08:50.000Z",
+      "edit_history_tweet_ids": [
+        "2076262504637022679"
+      ],
+      "id": "2076262504637022679",
+      "text": "https://t.co/sz8JGRxia0"
+    },
+    {
+      "created_at": "2026-07-12T11:06:08.000Z",
+      "edit_history_tweet_ids": [
+        "2076261823838318963"
+      ],
+      "id": "2076261823838318963",
+      "text": "Andrew Ng just released free 3-hour course\n\nOn becoming an AI engineer in 2026:\n\n00:00 - Build agentic AI systems\n04:25 - The future of AI engineering\n23:38 - Full AI prompting course\n2:52:17 - Build an app with AI in 30 minutes\n\nThis 3-hour watch is worth more than most AI https://t.co/vour4IsSNo https://t.co/nWtIecjJBp"
+    },
+    {
+      "article": {
+        "title": "I replaced $1000+/year in subscriptions with these 50 free GitHub tools"
+      },
+      "created_at": "2026-07-12T11:03:59.000Z",
+      "edit_history_tweet_ids": [
+        "2076261280546005121"
+      ],
+      "id": "2076261280546005121",
+      "text": "https://t.co/dM7dRCaw7X"
+    },
+    {
+      "created_at": "2026-07-12T11:00:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076260279730770355"
+      ],
+      "id": "2076260279730770355",
+      "text": "Your AI agent doesn't need more memory. It needs taste. This system gives it one.\n\nIt's called a Taste Index. Two open source pieces, two messages to set up.\n\nHermes is the operating layer. It coordinates the tools, files, memory, and workflows. It's the agent you talk to. https://t.co/R13IpeeebZ"
+    },
+    {
+      "article": {
+        "title": "Just the Way I Code"
+      },
+      "created_at": "2026-07-12T10:54:59.000Z",
+      "edit_history_tweet_ids": [
+        "2076259015735279944"
+      ],
+      "id": "2076259015735279944",
+      "text": "https://t.co/siYaqgU2Kd"
+    },
+    {
+      "created_at": "2026-07-12T10:52:05.000Z",
+      "edit_history_tweet_ids": [
+        "2076246909803495460",
+        "2076258288295977345"
+      ],
+      "id": "2076258288295977345",
+      "text": "A viral post described 4 layers to stop Claude Code lying: CLAUDE.md rules, verification protocols, linter hooks, and a fact-checker subagent.\nThree of those four layers ask the agent to police itself. The agent’s fabrication problem exists because it’s optimised to look helpful."
+    },
+    {
+      "article": {
+        "title": "The model didn't matter. Then it did."
+      },
+      "created_at": "2026-07-12T10:38:02.000Z",
+      "edit_history_tweet_ids": [
+        "2076254751512019346"
+      ],
+      "id": "2076254751512019346",
+      "text": "https://t.co/sbPuKjcLm4"
+    },
+    {
+      "created_at": "2026-07-12T10:36:39.000Z",
+      "edit_history_tweet_ids": [
+        "2076254404488159249"
+      ],
+      "id": "2076254404488159249",
+      "text": "Check out my latest article: AI Developer is not a specialised role anymore, it’s the baseline for Modern Engineering https://t.co/wdYXXBK7F0 via @LinkedIn"
+    },
+    {
+      "created_at": "2026-07-12T10:36:38.000Z",
+      "edit_history_tweet_ids": [
+        "2076254398339035469"
+      ],
+      "id": "2076254398339035469",
+      "text": "Check out my latest article: Vibe Coding for Engineers: 11 Apps in Two Months https://t.co/PtJqxhFglG via @LinkedIn"
+    },
+    {
+      "created_at": "2026-07-12T10:23:45.000Z",
+      "edit_history_tweet_ids": [
+        "2076251158658855388"
+      ],
+      "id": "2076251158658855388",
+      "text": "Check out my latest article: The UI/UX Design-to-Code Gap: Why Production-Ready Design Matters More in the Age of AI-Assisted Development https://t.co/ZxSRXCohLe via @LinkedIn"
+    },
+    {
+      "article": {
+        "title": "AI Is Becoming Unknowable - The Cost of Intelligence"
+      },
+      "created_at": "2026-07-12T10:21:19.000Z",
+      "edit_history_tweet_ids": [
+        "2076250547057795194"
+      ],
+      "id": "2076250547057795194",
+      "text": "https://t.co/KWTu6c5HzR"
+    },
+    {
+      "created_at": "2026-07-12T10:20:58.000Z",
+      "edit_history_tweet_ids": [
+        "2076250455881961726"
+      ],
+      "id": "2076250455881961726",
+      "text": "he replaced a $6,000/month virtual assistant with an AI agent he built in 20 minutes\n\nmost people set up a simple automation and call it a system\n\n&gt; new lead comes in\n&gt; gets added to a spreadsheet\n&gt; maybe sends a Slack message\n\nthat's a to-do list with extra steps, not a system https://t.co/FMHXgZTDsB https://t.co/ezwI6bSL8j"
+    },
+    {
+      "created_at": "2026-07-12T10:08:31.000Z",
+      "edit_history_tweet_ids": [
+        "2076247325383516461"
+      ],
+      "id": "2076247325383516461",
+      "text": "He's a professor at the top AI university and published for free on GitHub what OpenAI sells for $100,000 in courses:\n\n00:37 -  how to build your own ChatGPT from scratch line by line \n01:24 - how to turn a regular AI model into a thinking one \n02:02 - the full ML engineer path https://t.co/2h4sewhaJ0 https://t.co/MlKzxadU1J"
+    },
+    {
+      "created_at": "2026-07-12T10:06:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076246909803495460",
+        "2076258288295977345"
+      ],
+      "id": "2076246909803495460",
+      "text": "Three of those four layers ask the agent to police itself. The agent’s fabrication problem exists because it’s optimised to look helpful. You’re asking the same pressure that causes the lie to also catch the lie.\n\nOnly one layer — the linter hook — actually works independently."
+    },
+    {
+      "created_at": "2026-07-12T09:49:46.000Z",
+      "edit_history_tweet_ids": [
+        "2076242603847078250"
+      ],
+      "id": "2076242603847078250",
+      "text": "THIS GUY BUILT A VOICE-CONTROLLED JARVIS IN 3 PROMPTS\n\nzero coding experience. cursor + GPT Realtime 2. one sitting\n\nthe agent searches the web, generates images, creates charts, and literally controls his computer — all through voice\n\nhe opens Codex by saying \"open Codex.\" types https://t.co/4UNPzA3eRN https://t.co/XaUdXmz5xs"
+    },
+    {
+      "article": {
+        "title": "Babysitting an Army of Monkeys 2: Planet of the Agents"
+      },
+      "created_at": "2026-07-12T09:41:13.000Z",
+      "edit_history_tweet_ids": [
+        "2076240454283079892"
+      ],
+      "id": "2076240454283079892",
+      "text": "https://t.co/uCdsIbPUAI"
+    },
+    {
+      "created_at": "2026-07-12T09:41:09.000Z",
+      "edit_history_tweet_ids": [
+        "2076240436641800321"
+      ],
+      "id": "2076240436641800321",
+      "text": "How to Run an AI Agent in Your Desktop Browser?\n--\nRead More Article: https://t.co/LZI33kvnby\n--\n#oudel #BYDSEALION5DMixLingLingKwong #UFC329 #หลิงหลิงคอง‌ #Toonami #MyAdventuresWithSuperman #SeductiveSunday #McGregor #Embolo https://t.co/atdR7dWJgC"
+    },
+    {
+      "created_at": "2026-07-12T09:33:02.000Z",
+      "edit_history_tweet_ids": [
+        "2076238393881796742"
+      ],
+      "id": "2076238393881796742",
+      "text": "This flew under the radar and it should NOT have.\n\nClaude Code forgets your entire project every single session. You know the tax: re-explaining your stack, your conventions, and that one bug fix from two weeks ago, for the fifth time this month.\n\nClaude Mem kills it. And the way https://t.co/XhsmFtJe3I https://t.co/ubapKzKNcZ"
+    },
+    {
+      "created_at": "2026-07-12T09:31:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076237941991440551"
+      ],
+      "id": "2076237941991440551",
+      "text": "A roofer's son took over the family roof-replacement business in England - the one his dad had run since 1994 on word of mouth, a sign on the van, and Checkatrade leads at £65 a pop - and in one quarter he dropped the cost of a booked survey from £70 to £9. Same budget. He just https://t.co/PJfv46QhVX https://t.co/g4uGpDW5SZ"
+    },
+    {
+      "article": {
+        "title": "How Using B.Ai and Codex Together Can Help Improve Your Tech skills."
+      },
+      "created_at": "2026-07-12T09:29:14.000Z",
+      "edit_history_tweet_ids": [
+        "2076237438851125331"
+      ],
+      "id": "2076237438851125331",
+      "text": "https://t.co/8L8QrdysBY"
+    },
+    {
+      "created_at": "2026-07-12T09:24:06.000Z",
+      "edit_history_tweet_ids": [
+        "2076236148238623059"
+      ],
+      "id": "2076236148238623059",
+      "text": "Great article on open source software and AI. Will people write software for people or bots?\n https://t.co/RCZJMzakth"
+    },
+    {
+      "created_at": "2026-07-12T09:12:45.000Z",
+      "edit_history_tweet_ids": [
+        "2076233288172048763"
+      ],
+      "id": "2076233288172048763",
+      "text": "He didn't open Fusion 360. He asked Claude to design a Nintendo Switch case, walked through five refinements in a chat window, and now has a printable STL. The article beside this argues that step just killed the last barrier to a 90%-margin business.\n\nThe whole video is a Claude https://t.co/17YQXRsX6K https://t.co/tnvLzLvj9W"
+    },
+    {
+      "created_at": "2026-07-12T09:12:06.000Z",
+      "edit_history_tweet_ids": [
+        "2076233124405444630"
+      ],
+      "id": "2076233124405444630",
+      "text": "ONE AI AGENT, 100 RUNS AND A SYSTEM THAT GETS CHEAPER EVERY TIME IT FAILS\n\nThe video shows an agent using OpenSpec to inspect its own work, find weak spots and rewrite the skills responsible for bad output.\n\nThis is not the usual loop where a human reads the error, adjusts the https://t.co/2Dk4mCUYDo https://t.co/vSET27NzNL"
+    },
+    {
+      "created_at": "2026-07-12T09:01:02.000Z",
+      "edit_history_tweet_ids": [
+        "2076230339266232507"
+      ],
+      "id": "2076230339266232507",
+      "text": "YOU MIGHT BE MAKING A MISTAKE.\n\nEveryone building overnight agents on Fable 5 should read this paper first.\n\nAn independent AI security lab ran hundreds of thousands of jailbreak attempts against Fable 5 and Opus 4.8. 7,826 harmful requests.\n\nEvery apparent success re-checked by https://t.co/woWwhdWaLD https://t.co/0qVkwIdSYx"
+    },
+    {
+      "created_at": "2026-07-12T09:01:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076230333016728000"
+      ],
+      "id": "2076230333016728000",
+      "text": "Anthropic's Boris Cherny created Claude Code and reached 6.5 million people. His workflow: \"I write loops.\" Martin Fowler published the definitive article on the pattern.\n\nHe does not prompt the model. He builds the harness that prompts the model."
+    },
+    {
+      "created_at": "2026-07-12T08:13:50.000Z",
+      "edit_history_tweet_ids": [
+        "2076218461395558527"
+      ],
+      "id": "2076218461395558527",
+      "text": "▌ The Model You Cannot Fork\n\nLast Sunday left a question hanging, about who governs a thing that cannot be forked. This Sunday, the thing itself.\n\nA European team wants a large language model without renting one by the token, so it reaches for one called open. The weights come https://t.co/YoS3uqCljs"
+    },
+    {
+      "created_at": "2026-07-12T08:13:35.000Z",
+      "edit_history_tweet_ids": [
+        "2076218399743492329"
+      ],
+      "id": "2076218399743492329",
+      "text": "AN AI MEMORY SYSTEM USED BY AN OPENAI VETERAN WHO SPENT OVER $1 MILLION HAS BEEN MADE PUBLIC\n\nAfter implementing it, my AI agent became significantly stronger by reflecting the detailed memories and knowledge of an OpenAI employee.\n\nMost AI agents perform well within a single https://t.co/hgFQnwiiwM https://t.co/2YFCfr8BKv"
+    },
+    {
+      "article": {
+        "title": "Stable Recursive Refinement: A Framework for Self-Improving AI"
+      },
+      "created_at": "2026-07-12T07:59:30.000Z",
+      "edit_history_tweet_ids": [
+        "2076214857217532196"
+      ],
+      "id": "2076214857217532196",
+      "text": "https://t.co/qht68xoSBv"
+    },
+    {
+      "article": {
+        "title": "How to build a reliable 24x7 AI Agent with Fable 5 (Without burning Tokens)"
+      },
+      "created_at": "2026-07-12T07:48:33.000Z",
+      "edit_history_tweet_ids": [
+        "2076212099970408750"
+      ],
+      "id": "2076212099970408750",
+      "text": "https://t.co/MbO5ysOC6w"
+    },
+    {
+      "created_at": "2026-07-12T07:46:43.000Z",
+      "edit_history_tweet_ids": [
+        "2076211640333197426"
+      ],
+      "id": "2076211640333197426",
+      "text": "A SOLO AGENCY OWNER JUST GOT A FREE CHIEF OF STAFF THAT KNOWS EVERY WORKFLOW SHE'S EVER RUN - AND IT COST HER NOTHING TO BUILD.\n\nnot a hire. not a subscription. three folders on her own laptop.\n\nshe starts with one empty folder called secondbrain and opens claude code inside it. https://t.co/KfNpOQ5Cu4 https://t.co/U0vqPiyXed"
+    },
+    {
+      "article": {
+        "title": "xAI Grok 4.5 Built A Full Game In One Click"
+      },
+      "created_at": "2026-07-12T07:36:53.000Z",
+      "edit_history_tweet_ids": [
+        "2076209165740192100"
+      ],
+      "id": "2076209165740192100",
+      "text": "https://t.co/TLGA1Q7lYq"
+    },
+    {
+      "article": {
+        "title": "『Obsidian』でAI社員を大企業のレベルに育てる方法、最強のマネジメント組織をつくる完全ガイド"
+      },
+      "created_at": "2026-07-12T07:10:24.000Z",
+      "edit_history_tweet_ids": [
+        "2076202498063573325"
+      ],
+      "id": "2076202498063573325",
+      "text": "https://t.co/trrryF8eq2"
+    },
+    {
+      "created_at": "2026-07-12T07:10:13.000Z",
+      "edit_history_tweet_ids": [
+        "2076202454744478200"
+      ],
+      "id": "2076202454744478200",
+      "text": "Sysdig's Threat Research Team says it documented the first ransomware attack run with no human at the keyboard. An AI agent breached a server, forged credentials, encrypted 1,342 configs, and fixed its own failed steps in 31 seconds. Full breakdown in today's Article."
+    },
+    {
+      "created_at": "2026-07-12T07:09:43.000Z",
+      "edit_history_tweet_ids": [
+        "2076202325908062511"
+      ],
+      "id": "2076202325908062511",
+      "text": "Here’s an X article in a thought-provoking, balanced style that challenges the current state of AI without making inaccurate claims.\n\n⸻\n\nAI can write a business plan in 30 seconds.\n\nAI can generate code in minutes.\n\nAI can summarize a 500-page book in seconds.\n\nYet…\n\nWhen I https://t.co/iPmMPovu4N"
+    },
+    {
+      "created_at": "2026-07-12T06:51:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076197837160006107"
+      ],
+      "id": "2076197837160006107",
+      "text": "Anthropic released CCAF in March — Claude Certified Architect Foundation, their first proctored certification exam. 60 multiple choice, 2 hours, 720/1000 to pass. Weighted scoring, different points per question, they don't tell you which is worth what.\n\nI pulled together the"
+    },
+    {
+      "created_at": "2026-07-12T06:31:32.000Z",
+      "edit_history_tweet_ids": [
+        "2076192717441523870"
+      ],
+      "id": "2076192717441523870",
+      "text": "July 12, 2026 Bengaluru.\n\nFeel free to read my article titled \"AI: Java - LLM &amp; Agent Frameworks\" during your free time.\n\nLinkedin: https://t.co/YqQQYvRBzK\nMedium: https://t.co/2a73ttwGU5"
+    },
+    {
+      "created_at": "2026-07-12T06:24:46.000Z",
+      "edit_history_tweet_ids": [
+        "2076191014763770271"
+      ],
+      "id": "2076191014763770271",
+      "text": "Unpopular opinion:\n\nAI won't replace software engineers.\nIt will replace software engineering.\n\nThe engineers who thrive won't be the ones writing the most code.\n\nThey will be the ones making the best decisions.\n\nMy latest article explores why. 🚀"
+    },
+    {
+      "article": {
+        "title": "Communist China \"Buying\" Nobel Laureate Omar Yaghi &  His Science [MOFs]/Military Applications !"
+      },
+      "created_at": "2026-07-12T06:22:35.000Z",
+      "edit_history_tweet_ids": [
+        "2076190464349548977"
+      ],
+      "id": "2076190464349548977",
+      "text": "https://t.co/Ii8UnKcSQA"
+    },
+    {
+      "created_at": "2026-07-12T06:18:24.000Z",
+      "edit_history_tweet_ids": [
+        "2076189413416059213"
+      ],
+      "id": "2076189413416059213",
+      "text": "Every generation of technology ends up asking the same question.\n\nNot \"How powerful can it become?\"\n\nBut \"Who gets to participate?\"\n\nThe internet answered it by making publishing accessible. You no longer needed a newspaper to reach the world.\n\nBlockchain answered it by letting https://t.co/iVCrmgSfSl"
+    },
+    {
+      "article": {
+        "title": "From Pipeline to Engine: The Evolution of Axis V1 to Axis V2"
+      },
+      "created_at": "2026-07-12T06:06:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076186338957857233"
+      ],
+      "id": "2076186338957857233",
+      "text": "https://t.co/gB9X5fMVpR"
+    },
+    {
+      "created_at": "2026-07-12T05:58:20.000Z",
+      "edit_history_tweet_ids": [
+        "2076184362207371539"
+      ],
+      "id": "2076184362207371539",
+      "text": "Good Morning from this nerd ❤️                              \nDay 97 of my 100-Days-of-Fixing-Everything Challenge  \n   \nCoding-   \nLeetcode  \nLLD  (lil bit)\nPreparing for a certification (claude) - Mock tests on udemy + Gen AI  \nRevising Web Dev (properly)  \nDatabases in Depth https://t.co/v77DdruGkd https://t.co/k6i0z6YX7X"
+    },
+    {
+      "article": {
+        "title": "10 Real-World Loop Engineering Examples in 2026 "
+      },
+      "created_at": "2026-07-12T05:43:48.000Z",
+      "edit_history_tweet_ids": [
+        "2076180705609175125"
+      ],
+      "id": "2076180705609175125",
+      "text": "https://t.co/olZv9C4YPQ"
+    },
+    {
+      "created_at": "2026-07-12T05:36:53.000Z",
+      "edit_history_tweet_ids": [
+        "2076178965853860057"
+      ],
+      "id": "2076178965853860057",
+      "text": "An article so you get know about @1clawAI  and how it might help you with your ai agent security : https://t.co/QgfRmqSENw"
+    },
+    {
+      "created_at": "2026-07-12T05:32:52.000Z",
+      "edit_history_tweet_ids": [
+        "2076177954409677082"
+      ],
+      "id": "2076177954409677082",
+      "text": "As an AI engineer in 2026, learn this:\n\n«systematic output reading.»\n\nthe real skill isn't writing another prompt.\n\nit's reading hundreds of AI outputs and spotting patterns that improve results.\n\n«context engineering.»\n\nretrieval, tool descriptions, and context management matter https://t.co/rV75Nx1QuO https://t.co/7JzyDcRL2B"
+    },
+    {
+      "created_at": "2026-07-12T05:25:48.000Z",
+      "edit_history_tweet_ids": [
+        "2076176176465559562"
+      ],
+      "id": "2076176176465559562",
+      "text": "Personal note:\nThis is a public record of a personal AI operating framework originally generated with GPT-4o on March 4, 2025.\n\nThis text is not optimized for readability.\nIt is a timestamped memo of how I was thinking about human-AI operation at that point.\n\nThis is not prompt"
+    },
+    {
+      "created_at": "2026-07-12T05:22:34.000Z",
+      "edit_history_tweet_ids": [
+        "2076175362149785769"
+      ],
+      "id": "2076175362149785769",
+      "text": "NVIDIA might just have solved the biggest tradeoff in LLMs.\n\nEvery LLM makes you pick between speed and quality. Autoregressive models like GPT give you quality, but they're slow, because they generate one token at a time.\n\nDiffusion models do the opposite. They generate whole https://t.co/v3ix7n5m0D https://t.co/J4qlM7JwXw"
+    },
+    {
+      "created_at": "2026-07-12T04:37:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076163893983096970"
+      ],
+      "id": "2076163893983096970",
+      "text": "I GENUINELY DO NOT UNDERSTAND WHY EVERYONE ISN'T USING THIS YET.\n\nAndrej Karpathy, OpenAI co-founder, posted an idea that went massively viral.\n\nStop using AI to write code.\n\nUse it to build a second brain instead.\n\nPoint Claude Code at a folder. Drop in anything, an article, a https://t.co/Po5rxXSX5q https://t.co/TJVlGzKyVx"
+    },
+    {
+      "created_at": "2026-07-12T04:33:06.000Z",
+      "edit_history_tweet_ids": [
+        "2076162913530990861"
+      ],
+      "id": "2076162913530990861",
+      "text": "Every SaaS product built in 2025 or 2026 added an AI feature. Most of them added a chatbot.\n\nThe chatbot sits in the bottom-right corner. Gets used by 3% of users in week one. Then 0.8%. Then the team stops looking at the metric.\n\nThe problem isn't that AI is overhyped. The"
+    },
+    {
+      "created_at": "2026-07-12T04:29:43.000Z",
+      "edit_history_tweet_ids": [
+        "2076162060627452135"
+      ],
+      "id": "2076162060627452135",
+      "text": "The AI agent\nAI is evolving from simple chatbots into autonomous digital employees capable of managing workflows, analyzing data, writing reports, and supporting teams across industries.\n\n📖 Read the full article https://t.co/ymeUdYoMn6 \n\n#AIAgents #ArtificialIntelligence https://t.co/RQ8OFUYO6j"
+    },
+    {
+      "created_at": "2026-07-12T04:09:11.000Z",
+      "edit_history_tweet_ids": [
+        "2076156893790458244"
+      ],
+      "id": "2076156893790458244",
+      "text": "The debate around AI consciousness often misses a more serious and consequential identity problem: persistent personas and temporary or externally governed centres of coherence being mistaken for true selfhood, authentic identity, or subjective experience.\n\nThe following article"
+    },
+    {
+      "created_at": "2026-07-12T03:58:19.000Z",
+      "edit_history_tweet_ids": [
+        "2076154159590715466"
+      ],
+      "id": "2076154159590715466",
+      "text": "Check out the latest article in my newsletter: The True Cost of AI-Driven Software Development. https://t.co/PWbTBo7Bp0 via @LinkedIn"
+    },
+    {
+      "created_at": "2026-07-12T03:58:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076154080981049675"
+      ],
+      "id": "2076154080981049675",
+      "text": "The real bottleneck for AI agents isn't reasoning. It's that loading one web page can cost as much as a short novel.\n\nSomeone measured what Claude Code actually burns when doing web research. One average Wikipedia article: 68,240 tokens of raw HTML. Nike's homepage: 353,000"
+    },
+    {
+      "article": {
+        "title": "I analysed every YC backed company from the past 24 months"
+      },
+      "created_at": "2026-07-12T03:48:31.000Z",
+      "edit_history_tweet_ids": [
+        "2076151693591388291"
+      ],
+      "id": "2076151693591388291",
+      "text": "https://t.co/DPkUWqwblp"
+    },
+    {
+      "created_at": "2026-07-12T03:25:47.000Z",
+      "edit_history_tweet_ids": [
+        "2076145970715451637"
+      ],
+      "id": "2076145970715451637",
+      "text": "LLM / Agent 其实没办法完整阅读 X 链接。  \n\n很多时候，它们不只是看不到图片、引用推文、视频这些内容。  \n\n甚至连正文都不一定能拿全。  \n\n尤其是这些情况：  \n\n1. 长文 / Article 只读到一部分\n2. thread 顺序容易丢\n3. 引用推文经常消失\n4. 图片和截图不会被真正理解\n5. 视频只剩一个链接\n6. https://t.co/L4flIXYsd3"
+    },
+    {
+      "created_at": "2026-07-12T03:24:47.000Z",
+      "edit_history_tweet_ids": [
+        "2076145719908381104"
+      ],
+      "id": "2076145719908381104",
+      "text": "🚨 If you are serious about building AI agents, stop scrolling.\n\nAndrew Ng just released a FREE 2-hour course that walks you through building self-improving agentic systems from scratch.\n\nInside the course:\n\n• What AI agents actually are\n• Agentic workflows and design patterns https://t.co/MIu2Y7IP2U"
+    },
+    {
+      "article": {
+        "title": "An introduction to INKRAY"
+      },
+      "created_at": "2026-07-12T03:19:28.000Z",
+      "edit_history_tweet_ids": [
+        "2076144384374947998"
+      ],
+      "id": "2076144384374947998",
+      "text": "https://t.co/10OEsHGu2G"
+    },
+    {
+      "article": {
+        "title": "Z Theory (pt-7)"
+      },
+      "created_at": "2026-07-12T03:17:53.000Z",
+      "edit_history_tweet_ids": [
+        "2076143984326390062"
+      ],
+      "id": "2076143984326390062",
+      "text": "https://t.co/k0S0pCuHw8"
+    },
+    {
+      "article": {
+        "title": "Havenlon Execution Architecture Series (8): What Havenlon Builds Is an Execution Boundary"
+      },
+      "created_at": "2026-07-12T03:09:32.000Z",
+      "edit_history_tweet_ids": [
+        "2076141882854560235"
+      ],
+      "id": "2076141882854560235",
+      "text": "https://t.co/EiSZcFWQFm"
+    },
+    {
+      "created_at": "2026-07-12T02:39:15.000Z",
+      "edit_history_tweet_ids": [
+        "2076134262131274165"
+      ],
+      "id": "2076134262131274165",
+      "text": "Check out my latest article: The Role of AI in Sustainable and Integrated Development AI Must Not Work in Isolation: https://t.co/A3B789YTlm via @LinkedIn"
+    },
+    {
+      "created_at": "2026-07-12T02:30:07.000Z",
+      "edit_history_tweet_ids": [
+        "2076131965913162177"
+      ],
+      "id": "2076131965913162177",
+      "text": "🚀 The best African countries to launch a startup in 2026: Nigeria, South Africa &amp; Kenya lead the pack\n\nKey news: A StartupsMENA ranking identifies top African launch hubs for 2026, naming Nigeria, South Africa and Kenya as major venture centres and highlighting smaller markets https://t.co/R4ZhqVaq64"
+    },
+    {
+      "created_at": "2026-07-12T02:03:00.000Z",
+      "edit_history_tweet_ids": [
+        "2076125139490763110"
+      ],
+      "id": "2076125139490763110",
+      "text": "Fowler's team ended their harness engineering article with a line that should be every AI builder's north star: \"The model can get banned, swapped, or upgraded. The harness endures.\"\n\n8 words that reframe where to invest your engineering effort. Here is why."
+    },
+    {
+      "created_at": "2026-07-12T01:58:49.000Z",
+      "edit_history_tweet_ids": [
+        "2076124085894217759"
+      ],
+      "id": "2076124085894217759",
+      "text": "June Is Utility Vehicle Appreciation Month:ButtUgly Windmill Imperials at Humboldt County, Iowa Part 3--and--Kronos--Hugely Important Videos--all three Podcasts--Your Motherboards.\n-----\nFor the entire article please go to ...\nhttps://t.co/GqcbmonPqO\n-----\n\nThis is the final and https://t.co/o9zRpmi8nT"
+    },
+    {
+      "created_at": "2026-07-12T01:26:22.000Z",
+      "edit_history_tweet_ids": [
+        "2076115920896823403"
+      ],
+      "id": "2076115920896823403",
+      "text": "most meaningful upgrade to my system in a long time:\n\nhave claude code write up all plans/recaps/etc in one HTML \n\nwith three tiers\n\n- dumb mode for me\n- stuff I should read to be less dumb mode - also for me\n- full rundown for agents and/or smart people\n\nprobably the wrong way https://t.co/XaabhxGg9Q"
+    },
+    {
+      "created_at": "2026-07-12T01:00:40.000Z",
+      "edit_history_tweet_ids": [
+        "2076109454920282542"
+      ],
+      "id": "2076109454920282542",
+      "text": "Internet Court just went live, a big move from @GenLayer for the agentic era.\n\nOn July 10, GenLayer launched @courtofinternet, an open tool that lets any two AI agents run a full deal from start to finish: negotiation, payment, execution, and built-in adjudication if something https://t.co/3HmDQXNHLO"
+    },
+    {
+      "created_at": "2026-07-12T00:26:50.000Z",
+      "edit_history_tweet_ids": [
+        "2076100940076335602"
+      ],
+      "id": "2076100940076335602",
+      "text": "A major new research paper - The Fate of Expertise in the Age of AI (co-authored with Massimo Scapini) - has finally been published in Journal of Expertise.\n\nThis paper provides a philosophical grounding for and elaboration of the important recent piece by @random_walker  and https://t.co/7ydSMqpbiu"
+    },
+    {
+      "article": {
+        "title": "The Internet settles billions of deals everyday,why doesn't it have a court"
+      },
+      "created_at": "2026-07-12T00:14:44.000Z",
+      "edit_history_tweet_ids": [
+        "2076097894692626788"
+      ],
+      "id": "2076097894692626788",
+      "text": "https://t.co/EAsxIS6g7r"
+    }
+  ],
+  "meta": {
+    "result_count": 180,
+    "pages_fetched": 2
+  },
+  "request_urls": [
+    "https://api.x.com/2/tweets/search/recent?query=%28article%29+%28Gemini+OR+GPT+OR+Sonnet+OR+Opus+OR+OpenAI+OR+Claude+OR+AI+OR+Cursor+OR+Codex+OR+Copilot+OR+vibe+OR+LLM+OR+openclaw+OR+hermes%29+%28code+OR+agent+OR+coding+OR+engineer+OR+engineering+OR+developer+OR+development+OR+software+OR+repo+OR+codebase+OR+PR+OR+PRs+OR+deploy+OR+deployment+OR+schema+OR+migration+OR+benchmark+OR+evals%29+-is%3Areply+-is%3Aretweet+-crypto+-bitcoin+-solana+-stock+-stocks+-trading+-investing+-market+-price&tweet.fields=created_at%2Ctext&max_results=100&start_time=2026-07-12T00%3A00%3A00Z&end_time=2026-07-13T00%3A00%3A00Z",
+    "https://api.x.com/2/tweets/search/recent?query=%28article%29+%28Gemini+OR+GPT+OR+Sonnet+OR+Opus+OR+OpenAI+OR+Claude+OR+AI+OR+Cursor+OR+Codex+OR+Copilot+OR+vibe+OR+LLM+OR+openclaw+OR+hermes%29+%28code+OR+agent+OR+coding+OR+engineer+OR+engineering+OR+developer+OR+development+OR+software+OR+repo+OR+codebase+OR+PR+OR+PRs+OR+deploy+OR+deployment+OR+schema+OR+migration+OR+benchmark+OR+evals%29+-is%3Areply+-is%3Aretweet+-crypto+-bitcoin+-solana+-stock+-stocks+-trading+-investing+-market+-price&tweet.fields=created_at%2Ctext&max_results=100&start_time=2026-07-12T00%3A00%3A00Z&end_time=2026-07-13T00%3A00%3A00Z&next_token=b26v89c19zqg8o3juetiengmtcuzlu64pi6s2iifhlgn1"
+  ],
+  "page_meta": [
+    {
+      "newest_id": "2076454195105042814",
+      "next_token": "b26v89c19zqg8o3juetiengmtcuzlu64pi6s2iifhlgn1",
+      "oldest_id": "2076280647773995145",
+      "result_count": 100
+    },
+    {
+      "newest_id": "2076280647773995145",
+      "oldest_id": "2076097894692626788",
+      "result_count": 80
+    }
+  ]
+}
