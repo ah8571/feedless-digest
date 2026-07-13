@@ -1,11 +1,31 @@
 # RSS Feeds
 
-- updatedAt: 2026-07-08
+- updatedAt: 2026-07-13
 
 ## Publications
 
 - status: tracking list initialized
 - note: add publication RSS feeds here as they are approved for ongoing monitoring
+
+## Google Alert Feeds
+
+- note: Google Alerts RSS often shows results in the UI but returns sparse or empty feeds. Investigating alternative RSS tools (RSSHub, FetchRSS, Feed Creator) for more reliable ingestion.
+
+### Medium AI
+
+- source: Google Alerts
+- label: Medium AI articles
+- pollUrl: https://www.google.com/alerts/feeds/08005269678685949440/14674252247237648824
+- topic: AI articles on Medium
+- status: tested 2026-07-13 — returns 1 entry; too sparse for daily use
+
+### LinkedIn Pulse AI
+
+- source: Google Alerts
+- label: LinkedIn Pulse AI news
+- pollUrl: https://www.google.com/alerts/feeds/08005269678685949440/10504422194672090579
+- topic: AI articles on LinkedIn Pulse
+- status: tested 2026-07-13 — returns 1 entry; too sparse for daily use
 
 ## Reddit Test Feeds
 
