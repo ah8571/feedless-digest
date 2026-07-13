@@ -8,7 +8,7 @@ Check these links below for recent commentary on state of the art use cases and 
 
 ## Novel Use Case: Claude as an Outbound Team
 
-### [turning claude fable 5 into a full outbound team (6 plays, every prompt included)](https://x.com/DinScales26/article/2075545640914796544)
+### [turning claude fable 5 into a full outbound team (6 plays, every prompt included)](https://x.com/DinScales26/status/2076352272540299489)
 Author: DinScales26 (@DinScales26)
 
 This article shows how Fable 5 can be retooled from a coding assistant into a complete outbound sales operation with six repeatable playbooks.
@@ -18,7 +18,7 @@ This article shows how Fable 5 can be retooled from a coding assistant into a co
 
 ## Scope With Agent Work
 
-### [One question for building your next AI agent (JTBD)](https://x.com/caelanhuntress/article/2076308562788438016)
+### [One question for building your next AI agent (JTBD)](https://x.com/caelanhuntress/status/2076309824997085267)
 Author: Caelan Huntress (@caelanhuntress)
 
 This article applies Jobs-to-be-Done thinking to agent design, arguing that the most important question is what job the agent is hired to do.
@@ -28,7 +28,7 @@ This article applies Jobs-to-be-Done thinking to agent design, arguing that the 
 
 ## Most Recent YC Backed Companies Are AI Oriented
 
-### [I analysed every YC backed company from the past 24 months](https://x.com/AdeimantosAI/article/2076079417374191616)
+### [I analysed every YC backed company from the past 24 months](https://x.com/AdeimantosAI/status/2076151693591388291)
 Author: AdeimantosAI (@AdeimantosAI)
 
 This analysis of recent Y Combinator cohorts shows AI has become the dominant category, reshaping what investors and founders are betting on.
@@ -38,7 +38,7 @@ This analysis of recent Y Combinator cohorts shows AI has become the dominant ca
 
 ## Model Testing
 
-### [The model didn't matter. Then it did.](https://x.com/0xBakeer/article/2076247187424526336)
+### [The model didn't matter. Then it did.](https://x.com/0xBakeer/status/2076254751512019346)
 Author: 0xBakeer (@0xBakeer)
 
 This article ran four models through progressively harder tests and found that model choice only matters past a certain complexity threshold.
@@ -48,7 +48,7 @@ This article ran four models through progressively harder tests and found that m
 
 ## Loop Engineering Advice
 
-### [10 Real-World Loop Engineering Examples in 2026](https://x.com/vicky_grok/article/2076164318857773056)
+### [10 Real-World Loop Engineering Examples in 2026](https://x.com/vicky_grok/status/2076180705609175125)
 Author: Vikas Gupta (@vicky_grok)
 
 This piece catalogs ten production loop engineering examples across content, bug fixing, research, learning, support, sales, intelligence, finance, social media, and legal use cases.
@@ -58,7 +58,7 @@ This piece catalogs ten production loop engineering examples across content, bug
 
 ## Memory / Context Storing
 
-### [we just built an infinite context window for ai](https://x.com/daleverett/article/2076341269052510208)
+### [we just built an infinite context window for ai](https://x.com/daleverett/status/2076352936658276535)
 Author: daleverett (@daleverett)
 
 This article describes a system that gives AI effectively unlimited context by structuring memory as a searchable external layer rather than cramming everything into a single prompt.
@@ -66,7 +66,7 @@ This article describes a system that gives AI effectively unlimited context by s
 - Index knowledge by task and recency so the AI pulls in what matters without being overwhelmed.
 - Test retrieval quality separately from generation quality when diagnosing memory failures.
 
-### [Context rot: the study that proves your million-token context window is lying to you](https://x.com/0xCarnagee/article/2076247668959973376)
+### [Context rot: the study that proves your million-token context window is lying to you](https://x.com/0xCarnagee/status/2076269316912095422)
 Author: 0xCarnagee (@0xCarnagee)
 
 This study demonstrates that larger context windows degrade in reliability, with models losing accuracy on information in the middle and later portions of long inputs.
@@ -74,7 +74,7 @@ This study demonstrates that larger context windows degrade in reliability, with
 - Structure critical information near the beginning of the context where attention is strongest.
 - Test your prompts for positional degradation before relying on long-context reasoning in production.
 
-### [Enterprise GraphRAG: Graph + Vector + Agents (Open Source Stack)](https://x.com/AkhileshASM/article/2076276528762265600)
+### [Enterprise GraphRAG: Graph + Vector + Agents (Open Source Stack)](https://x.com/AkhileshASM/status/2076292035141828723)
 Author: AkhileshASM (@AkhileshASM)
 
 This article presents an open-source stack that combines graph databases, vector search, and agents to build enterprise-grade RAG systems.
@@ -84,7 +84,7 @@ This article presents an open-source stack that combines graph databases, vector
 
 ## AI Safety
 
-### [AI Is Becoming Unknowable - The Cost of Intelligence](https://x.com/AiRaForSupra/article/2076247892898066432)
+### [AI Is Becoming Unknowable - The Cost of Intelligence](https://x.com/AiRaForSupra/status/2076250547057795194)
 Author: AiRaForSupra (@AiRaForSupra)
 
 This article argues that as models get more capable, they also become less interpretable, and that uninterpretability itself is a growing risk.
@@ -92,7 +92,7 @@ This article argues that as models get more capable, they also become less inter
 - Treat interpretability as a first-class requirement in agent design, not a research footnote.
 - Plan for the operational cost of not understanding why a model made a decision.
 
-### [The AI Governance Illusion: Benchmarks Are Not Mandates](https://x.com/mantancino_/article/2076258277403582464)
+### [The AI Governance Illusion: Benchmarks Are Not Mandates](https://x.com/mantancino_/status/2076262504637022679)
 Author: mantancino_ (@mantancino_)
 
 This piece argues that passing AI benchmarks does not equal being governed, and that the gap between measurement and mandate is where real risk lives.

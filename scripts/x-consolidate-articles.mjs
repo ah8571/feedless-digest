@@ -212,6 +212,12 @@ function getPostUrl(id) {
   return `https://x.com/i/web/status/${id}`;
 }
 
+function getArticleUrl(postId, username) {
+  // Use the status URL — this is the canonical X URL that renders the article inline.
+  // The article entity URL (i/article/ID) uses a different ID and redirects unreliably on mobile.
+  return username ? `https://x.com/${username}/status/${postId}` : `https://x.com/i/web/status/${postId}`;
+}
+
 function toArticleRecord(category, post, users, sourceInfo) {
   const author = users.get(post.author_id);
   const likeCount = Number(post.public_metrics?.like_count ?? 0);
@@ -222,7 +228,7 @@ function toArticleRecord(category, post, users, sourceInfo) {
     category_label: category.label,
     tweet_id: post.id,
     post_url: getPostUrl(post.id),
-    article_url: getExpandedUrl(post),
+    article_url: getArticleUrl(post.id, author?.username),
     article_title: post.article?.title ?? '',
     created_at: post.created_at,
     like_count: likeCount,

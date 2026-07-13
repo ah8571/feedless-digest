@@ -10,7 +10,7 @@ Consider reading these recent X articles below for staying present with some of 
 
 ## Harness Engineering
 
-### [Cost effective harnesses with Fable](https://x.com/RLanceMartin/article/2075610072118702081)
+### [Cost effective harnesses with Fable](https://x.com/RLanceMartin/status/2075641284635799865)
 Author: Lance Martin (@RLanceMartin)
 
 This article shows how to keep agent harnesses cheap without sacrificing reliability by being deliberate about what gets delegated to the model.
@@ -18,7 +18,7 @@ This article shows how to keep agent harnesses cheap without sacrificing reliabi
 - Use cheaper models or shorter contexts for validation, routing, and formatting while reserving heavy models for real reasoning.
 - Measure cost per successful outcome so optimization targets the full system, not just the prompt.
 
-### [How to Build an AI Memory System in 30 Minutes (Templates Included)](https://x.com/ivanainai/article/2075321080781078528)
+### [How to Build an AI Memory System in 30 Minutes (Templates Included)](https://x.com/ivanainai/status/2075663229968326934)
 Author: ivanainai (@ivanainai)
 
 This piece makes long-term memory approachable by breaking it into a quick-build system with ready-to-use templates.
@@ -28,7 +28,7 @@ This piece makes long-term memory approachable by breaking it into a quick-build
 
 ## Prompt Engineering
 
-### [GPT-5.6 Prompting Masterclass (by OpenAI)](https://x.com/aiedge_/article/2075299675213815808)
+### [GPT-5.6 Prompting Masterclass (by OpenAI)](https://x.com/aiedge_/status/2075605460745687047)
 Author: AI Edge (@aiedge_)
 
 This masterclass distills the current OpenAI guidance on prompting into practical patterns that improve model output quality and consistency.
@@ -38,7 +38,7 @@ This masterclass distills the current OpenAI guidance on prompting into practica
 
 ## Second Brain / Memory Engineering
 
-### [Build a memory system that survives across sessions with Fable 5: write, consolidate, recall, apply](https://x.com/cyrilXBT/article/2075059889487921152)
+### [Build a memory system that survives across sessions with Fable 5: write, consolidate, recall, apply](https://x.com/cyrilXBT/status/2075623918417723502)
 Author: cyrilXBT (@cyrilXBT)
 
 This article treats memory as an active loop where information is captured, refined, retrieved, and put to use instead of simply stored.
@@ -46,7 +46,7 @@ This article treats memory as an active loop where information is captured, refi
 - Build recall around the task at hand rather than returning the entire memory history.
 - Close the loop by applying retrieved memory to a real action and feeding the result back in.
 
-### [I built a living 24x7 Knowledge Graph in Obsidian that updates itself daily with AI](https://x.com/KanikaBK/article/2074027334777339904)
+### [I built a living 24x7 Knowledge Graph in Obsidian that updates itself daily with AI](https://x.com/KanikaBK/status/2075505201092727147)
 Author: Kanika B.K. (@KanikaBK)
 
 This piece demonstrates how a knowledge graph can become a self-updating thinking tool when paired with a daily AI ingestion habit.
@@ -56,7 +56,7 @@ This piece demonstrates how a knowledge graph can become a self-updating thinkin
 
 ## Loop Engineering
 
-### [How To Build Your First AI Loop in 2026](https://x.com/sairahul1/article/2071479916043059200)
+### [How To Build Your First AI Loop in 2026](https://x.com/sairahul1/status/2075479271032942658)
 Author: Sai Rahul (@sairahul1)
 
 This article makes loop building concrete for practitioners who are ready to move beyond one-shot prompts.
@@ -64,7 +64,7 @@ This article makes loop building concrete for practitioners who are ready to mov
 - Give the loop a way to measure progress against the goal on each iteration.
 - Keep the first version simple and observable before adding self-healing or multi-agent steps.
 
-### [The End of Prompting: The Beginning of AI Loops](https://x.com/Nekt_0/article/2074441080817192960)
+### [The End of Prompting: The Beginning of AI Loops](https://x.com/Nekt_0/status/2075491315932905911)
 Author: Nekt (@Nekt_0)
 
 This piece argues that loops replace static prompting because they let the system iterate, evaluate, and decide what to do next.
@@ -74,7 +74,7 @@ This piece argues that loops replace static prompting because they let the syste
 
 ## Jarvis-like Agent Engineering
 
-### [Hermes Agent Master Class Part 5: Tools and Toolsets](https://x.com/tonysimons_/article/2075378102516031488)
+### [Hermes Agent Master Class Part 5: Tools and Toolsets](https://x.com/tonysimons_/status/2075526192476631476)
 Author: Tony Simons (@tonysimons_)
 
 This installment focuses on how tools and toolsets turn a language model into an agent that can act on the world.
