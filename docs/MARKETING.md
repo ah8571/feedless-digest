@@ -2,28 +2,37 @@
 
 ## Social media / blog forum posting
 
-### Medium, X, Linkedin, Thread posts
+### Medium
 
 Could write posts summarizing major findings on certain useful topics and then ask people to subscribe
+
+#### X Possibilities [w/ linkedin / threads distributions]
+
+- consider breaking down a highly useful article into main points for people to apply for themselves (like a breakout article to focus on and unpack for people to better understand)
+- then start syndicating to Linkedin and Threads 
+
+#### Youtube breakdowns of important X concepts? [w/ other social media distribution]
+
+developing a kind of avatar presence for describing high value concepts
 
 ### Reddit, Indie Hackers
 
 Could put together explanations of my system for creating this, especially if open sourced
 
-### Ad settings
+## Ad settings
 
 Executing Your First X & Reddit Ad Setup Safely
 
 Since you are funding this out of your own pocket, you must use strict guardrails to ensure you don’t waste money on empty clicks:
 
-#### The Reddit Ad Settings:
+### The Reddit Ad Settings:
 
 Objective: Choose Traffic or Conversions. Never select "Reach."
 Targeting: Do not target general interests. Use Community Targeting and manually type in your exact target subreddits (e.g., r/golang, r/GrowthHacking). This ensures your ad is only seen by your precise target personas.
 
 Device: Restrict to Mobile Devices Only. People doom-scrolling on their phones will hit your clean Cloudflare landing page and opt-in in two seconds.
 
-#### The X Ad Settings:
+### The X Ad Settings:
 
 Targeting: Use Follower Lookalikes. 
 

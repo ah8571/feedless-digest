@@ -8,3 +8,6 @@ pnpm-debug.log*
 .env
 .env.local
 supabase/.temp/
+
+# X search results and article candidates — full article content, keep local only
+lists/x/

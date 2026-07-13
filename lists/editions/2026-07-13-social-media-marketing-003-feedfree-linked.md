@@ -10,7 +10,7 @@ For more advice on building systems with social media and other creative how-to'
 
 ## Success Case Studies
 
-### [How to Make a Highly Successful Mobile App ($0 to $3k in 45 days)](http://x.com/i/article/2076219159038279680)
+### [How to Make a Highly Successful Mobile App ($0 to $3k in 45 days)](https://x.com/_frederickjames/article/2076219159038279680)
 Author: Frederick James (@_frederickjames)
 
 This case study walks through building and monetizing a mobile app from zero to $3,000 in 45 days with no ad budget.
@@ -18,7 +18,7 @@ This case study walks through building and monetizing a mobile app from zero to 
 - Use organic social content as your primary distribution channel rather than paid acquisition.
 - Track revenue per day, not just total downloads, to know when you have product-market fit.
 
-### [The one format that got me 1k MRR in < 1 week](http://x.com/i/article/2076387434254761984)
+### [The one format that got me 1k MRR in < 1 week](https://x.com/jack_mitchell01/article/2076387434254761984)
 Author: Jack Mitchell (@jack_mitchell01)
 
 This article isolates a single content format that drove $1,000 in monthly recurring revenue within a week.
@@ -28,7 +28,7 @@ This article isolates a single content format that drove $1,000 in monthly recur
 
 ## Systems with Social Distribution
 
-### [The End of Posting. The Beginning of Content Systems.](http://x.com/i/article/2076053605614850048)
+### [The End of Posting. The Beginning of Content Systems.](https://x.com/somebitcoin/article/2076053605614850048)
 Author: somebitcoin (@somebitcoin)
 
 This article argues that the era of individual viral posts is giving way to systematic content production where process beats inspiration.
@@ -36,7 +36,7 @@ This article argues that the era of individual viral posts is giving way to syst
 - Separate ideation from execution so you are never starting from a blank page.
 - Measure system throughput, not just post performance, because systems compound while posts decay.
 
-### [Stop Working More To Earn More. (How To Earn While You Sleep)](http://x.com/i/article/2076449630615703552)
+### [Stop Working More To Earn More. (How To Earn While You Sleep)](https://x.com/soft_continent/article/2076449630615703552)
 Author: soft continent (@soft_continent)
 
 This piece explains how to set up automated revenue streams from content so income continues without constant active effort.
@@ -46,7 +46,7 @@ This piece explains how to set up automated revenue streams from content so inco
 
 ## How to Build Game Style Characters
 
-### [Behind Bernardo: A Rigged Blender Character Workflow](http://x.com/i/article/2074217875657953280)
+### [Behind Bernardo: A Rigged Blender Character Workflow](https://x.com/_angbury/article/2074217875657953280)
 Author: angbury (@_angbury)
 
 This article breaks down the full rigging and character workflow for creating a game-style animated character in Blender.

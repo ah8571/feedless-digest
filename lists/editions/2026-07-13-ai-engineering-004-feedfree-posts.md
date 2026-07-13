@@ -1,8 +1,8 @@
 Everyday there are new articles explaining key concepts in AI theory on X with many novel use cases and ways of organizing agents for success. 
 
-A recent article indicates YC backed companies recieved funding are finding ways to improve and development upon AI. 
+Research on YC backed companies shows a probably obvious trend: most companies receiving funding are finding ways to improve and development upon AI. 
 
-Check these links below for recent commentary on state of the art use cases and agent design. 
+Check these X articles below for recent commentary on state of the art use cases and agent design with AI. 
 
 ->
 
@@ -110,7 +110,9 @@ This piece argues that passing AI benchmarks does not equal being governed, and 
 - Build governance processes that go beyond benchmark scores and include operational safeguards.
 - Treat benchmarks as a floor for capability, not a ceiling for responsibility.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]
+If you would like to see more articles like this, please subscribe to my free newsletter in the bio
+
+[disclosure: this was written with AI with human edits and article selection.]
 
 AI Engineering 004 - Feedfree Digest [For links see the comments]
 
@@ -216,4 +218,6 @@ This piece argues that passing AI benchmarks does not equal being governed, and 
 - Build governance processes that go beyond benchmark scores and include operational safeguards.
 - Treat benchmarks as a floor for capability, not a ceiling for responsibility.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]
+If you would like to see more articles like this, please subscribe to my free newsletter in the bio
+
+[disclosure: this was written with AI with human edits and article selection.]

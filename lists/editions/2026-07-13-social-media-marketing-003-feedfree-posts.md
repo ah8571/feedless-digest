@@ -2,7 +2,7 @@ Many articles on X cite a common theme for social media success: systems and rep
 
 If you find a viral method for presenting your product, keep building on that concept.
 
-For more advice on building systems with social media and other creative how-to's, see these recent articles below on X.
+For more advice on building systems with social media and other creative how-to's, see these recent X articles below.
 
 ->
 
@@ -57,7 +57,9 @@ This article breaks down the full rigging and character workflow for creating a 
 - Document your node setup and export settings so consistency survives across projects.
 - Use reference footage or concept art early to lock proportions before investing in detail work.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]
+If you would like to see more articles like this, please subscribe to my free newsletter in the bio
+
+[disclosure: this was written with AI with human edits and article selection.]
 
 Social Media Marketing 003 - Feedfree Digest [For links see the comments]
 
@@ -115,4 +117,6 @@ This article breaks down the full rigging and character workflow for creating a 
 - Document your node setup and export settings so consistency survives across projects.
 - Use reference footage or concept art early to lock proportions before investing in detail work.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to my free newsletter in the bio]
+If you would like to see more articles like this, please subscribe to my free newsletter in the bio
+
+[disclosure: this was written with AI with human edits and article selection.]

@@ -13,7 +13,7 @@ See below for summaries of some of the most helpful articles on X in the SEO spa
 
 ## Landing in AI Overviews
 
-### [Rank #1 on AI Search with Instagram Carousels (Automated with Claude)](http://x.com/i/article/2075229357186945024)
+### [Rank #1 on AI Search with Instagram Carousels (Automated with Claude)](https://x.com/borjafat/article/2075229357186945024)
 Author: Borja Fatás (@borjafat)
 
 This article shows how Instagram carousels can be engineered to show up as the source in AI-generated search answers.
@@ -21,7 +21,7 @@ This article shows how Instagram carousels can be engineered to show up as the s
 - Use Claude to speed up carousel production without losing the human editorial layer.
 - Optimize for the questions people actually ask rather than chasing head keywords alone.
 
-### [I Reverse Engineered 1000s of AI Overviews: Here's Exactly How To Get Google To Cite YOU](http://x.com/i/article/2075601325216473088)
+### [I Reverse Engineered 1000s of AI Overviews: Here's Exactly How To Get Google To Cite YOU](https://x.com/Charles_SEO/article/2075601325216473088)
 Author: Charles Floate (@Charles_SEO)
 
 This piece distills patterns from thousands of AI overviews into a repeatable method for earning citations.
@@ -29,7 +29,7 @@ This piece distills patterns from thousands of AI overviews into a repeatable me
 - Use clear headings, lists, and definitions that match the format AI overviews prefer.
 - Build topical authority because citations tend to cluster around trusted sources.
 
-### [How To Trick Chatbots into Recommending Your Product](http://x.com/i/article/2074972311456002048)
+### [How To Trick Chatbots into Recommending Your Product](https://x.com/Jlafortetech/article/2074972311456002048)
 Author: J Laforte (@Jlafortetech)
 
 This article explores how to influence the recommendation behavior of AI assistants and chatbots in your favor.
@@ -37,7 +37,7 @@ This article explores how to influence the recommendation behavior of AI assista
 - Create content that clearly associates your product with the problems it solves.
 - Avoid manipulative framing that could backfire as models and platforms improve detection.
 
-### [How I grew my traffic by 75% with Ranking on AI Answers](http://x.com/i/article/2072168444682760192)
+### [How I grew my traffic by 75% with Ranking on AI Answers](https://x.com/withhimu/article/2072168444682760192)
 Author: withhimu (@withhimu)
 
 This case study explains how one site captured significant traffic by optimizing for AI answer engines instead of traditional rankings alone.
@@ -45,7 +45,7 @@ This case study explains how one site captured significant traffic by optimizing
 - Focus on long-tail informational queries where AI answers are most likely to appear.
 - Measure traffic from AI referrals separately so you can iterate on what works.
 
-### [How to Use Reddit for SEO and AI Visibility: A SEORCE Guide](http://x.com/i/article/2074083773185212416)
+### [How to Use Reddit for SEO and AI Visibility: A SEORCE Guide](https://x.com/seorce_/article/2074083773185212416)
 Author: SEORCE (@seorce_)
 
 This guide explains how Reddit fits into modern SEO and AI visibility strategies.
@@ -53,7 +53,7 @@ This guide explains how Reddit fits into modern SEO and AI visibility strategies
 - Participate authentically because both users and AI systems reward genuine expertise.
 - Use Reddit discussions as a source of content ideas and proof points for your own pages.
 
-### [SEORCE Guide: 6 SEO Priorities to Rethink for AI Search](http://x.com/i/article/2074446139659800576)
+### [SEORCE Guide: 6 SEO Priorities to Rethink for AI Search](https://x.com/seorce_/article/2074446139659800576)
 Author: SEORCE (@seorce_)
 
 This article identifies six SEO priorities that need to change now that AI is reshaping how search results are built.
@@ -61,7 +61,7 @@ This article identifies six SEO priorities that need to change now that AI is re
 - Invest in content clarity and structure because extraction quality depends on it.
 - Re-evaluate which keywords still justify traditional optimization versus AI-first formats.
 
-### [SEO Roadmap Strategy For Ranking On Google And AI Search](http://x.com/i/article/2073427036564279296)
+### [SEO Roadmap Strategy For Ranking On Google And AI Search](https://x.com/JulianGoldieSEO/article/2073427036564279296)
 Author: Julian Goldie (@JulianGoldieSEO)
 
 This piece lays out a practical roadmap for ranking in both classic Google results and the newer AI search experiences.
@@ -69,7 +69,7 @@ This piece lays out a practical roadmap for ranking in both classic Google resul
 - Create content that serves both human readers and machine extraction.
 - Track rankings, citations, and referral traffic together to see the full picture.
 
-### [Most advice about "AI SEO" skips the most important part.](http://x.com/i/article/2074478438644146176)
+### [Most advice about "AI SEO" skips the most important part.](https://x.com/_asifsyed/article/2074478438644146176)
 Author: Asif Syed (@_asifsyed)
 
 This article argues that most AI SEO conversations ignore the fundamentals that still make everything else possible.
@@ -79,7 +79,7 @@ This article argues that most AI SEO conversations ignore the fundamentals that 
 
 ## Agent SEO Work
 
-### [Claude Fable 5, my New pSEO Engine](http://x.com/i/article/2073475904521596928)
+### [Claude Fable 5, my New pSEO Engine](https://x.com/borjafat/article/2073475904521596928)
 Author: Borja Fatás (@borjafat)
 
 This article explains how Fable 5 is being used as a programmable SEO engine to scale programmatic content.
@@ -87,7 +87,7 @@ This article explains how Fable 5 is being used as a programmable SEO engine to 
 - Build templates and data pipelines so the output is consistent and maintainable.
 - Review agent output for accuracy and originality before publishing.
 
-### [25 AI Agent Loops That Turn Fable 5 Into an Autonomous Business Operator](http://x.com/i/article/2070374438596710400)
+### [25 AI Agent Loops That Turn Fable 5 Into an Autonomous Business Operator](https://x.com/DivyanshT91162/article/2070374438596710400)
 Author: Divyansh Tiwari (@DivyanshT91162)
 
 This piece catalogs loops that let Fable 5 run parts of a business with minimal human intervention.
@@ -95,7 +95,7 @@ This piece catalogs loops that let Fable 5 run parts of a business with minimal 
 - Add checkpoints so a human can approve or correct work before it goes live.
 - Start with one loop and measure outcomes before wiring everything together.
 
-### [I rebuilt FooPlugins.com in three weeks with an agent dev team](http://x.com/i/article/2075591392437452801)
+### [I rebuilt FooPlugins.com in three weeks with an agent dev team](https://x.com/bradvin/article/2075591392437452801)
 Author: Brad Vincent (@bradvin)
 
 This case study shows how agent-assisted development can compress a major site rebuild into weeks.
@@ -103,7 +103,7 @@ This case study shows how agent-assisted development can compress a major site r
 - Use agents for code generation, testing, and refactoring to move faster.
 - Keep quality gates strict because speed is only valuable if the result is reliable.
 
-### [New Qwen Model Runs Local SEO Workflows FREE](http://x.com/i/article/2074656489613217792)
+### [New Qwen Model Runs Local SEO Workflows FREE](https://x.com/JulianGoldieSEO/article/2074656489613217792)
 Author: Julian Goldie (@JulianGoldieSEO)
 
 This article introduces a local model option that can run SEO workflows without API costs.
@@ -113,7 +113,7 @@ This article introduces a local model option that can run SEO workflows without 
 
 ## Social Media SEO
 
-### [Pinterest SEO 101: How It Really Works in 2026 (and What Changes with AI)](http://x.com/i/article/2074852596720795648)
+### [Pinterest SEO 101: How It Really Works in 2026 (and What Changes with AI)](https://x.com/seocopydebby/article/2074852596720795648)
 Author: Debby from Seo Copy (@seocopydebby)
 
 This article explains how Pinterest search works today and where AI is changing the rules.
