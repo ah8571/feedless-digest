@@ -1,3 +1,24 @@
+/**
+ * X Recent Search — Step 1 of the article discovery pipeline.
+ *
+ * Queries the X API v2 recent search endpoint for tweets matching a search query
+ * within a time window. Saves the raw JSON response for downstream processing.
+ *
+ * Pipeline:
+ *   1. x-recent-search.mjs       → raw search results (this script)
+ *   2. x-consolidate-articles.mjs → isolate X Article cards, rank by likes, output JSON + MD
+ *   3. Human review of the MD file → select articles for new editions
+ *   4. Create edition files in lists/editions/ → send via listmonk
+ *
+ * Usage:
+ *   $env:X_BEARER_TOKEN = '...'
+ *   $env:X_MAX_RESULTS = '300'
+ *   $env:X_START_TIME = '2026-07-12T00:00:00Z'
+ *   $env:X_END_TIME = '2026-07-13T00:00:00Z'
+ *   npm run x:recent-search -- --out lists/x/<date>-<topic>-yesterday-300.json '<query>'
+ *
+ * Search queries are maintained in docs/api-research/x-query-workbench.md
+ */
 const DEFAULT_QUERY = '(AI OR "artificial intelligence" OR LLM OR agent OR agents) -is:retweet -is:reply lang:en';
 const DEFAULT_TWEET_FIELDS = ['created_at', 'text'].join(',');
 

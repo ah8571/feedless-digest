@@ -1,3 +1,28 @@
+/**
+ * X Article Consolidation — Step 2 of the article discovery pipeline.
+ *
+ * Reads raw search JSON files from x-recent-search.mjs, refetches tweets with
+ * richer fields (author, public_metrics, entities), isolates tweets that link to
+ * X Article cards, ranks them by like count per category, and outputs:
+ *   - A JSON file with full article objects for programmatic use
+ *   - A Markdown file grouped by newsletter topic for human review
+ *
+ * Categories are inferred from input filenames (ai-engineering, social-media-marketing, seo).
+ *
+ * Pipeline:
+ *   1. x-recent-search.mjs       → raw search results
+ *   2. x-consolidate-articles.mjs → isolate X Article cards, rank by likes (this script)
+ *   3. Human review of the MD file → select articles for new editions
+ *   4. Create edition files in lists/editions/ → send via listmonk
+ *
+ * Usage:
+ *   $env:X_BEARER_TOKEN = '...'
+ *   node scripts/x-consolidate-articles.mjs \
+ *     --out-json lists/x/<date>-article-candidates.json \
+ *     --out-md lists/x/<date>-article-candidates.md \
+ *     lists/x/<date>-<topic1>-yesterday-300.json \
+ *     lists/x/<date>-<topic2>-yesterday-300.json
+ */
 import { readFile, writeFile } from 'node:fs/promises';
 
 function parseArgs(argv) {
