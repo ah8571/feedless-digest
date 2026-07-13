@@ -1,4 +1,8 @@
-Growing on X, TikTok, or other channels can be a serious challenge for most of us. However below you will see articles written by those with significant success using social media to drive their products or services. Everyday people are creating apps and monetizing channels in ways that would have never been possible several years ago. Take a look at the summaries below and check out their respective articles if you want to learn more.
+Many articles on X cite a common theme for social media success: systems and repetition of what works. 
+
+If you find a viral method for presenting your product, keep building on that concept.
+
+For more advice on building systems with social media and other creative how-to's, see these recent articles below on X.
 
 ->
 
@@ -57,7 +61,11 @@ This article breaks down the full rigging and character workflow for creating a 
 
 Social Media Marketing 003 - Feedfree Digest [For links see the comments]
 
-Growing on X, TikTok, or other channels can be a serious challenge for most of us. However below you will see articles written by those with significant success using social media to drive their products or services. Everyday people are creating apps and monetizing channels in ways that would have never been possible several years ago. Take a look at the summaries below and check out their respective articles if you want to learn more.
+Many articles on X cite a common theme for social media success: systems and repetition of what works. 
+
+If you find a viral method for presenting your product, keep building on that concept.
+
+For more advice on building systems with social media and other creative how-to's, see these recent articles below on X.
 
 ->
 

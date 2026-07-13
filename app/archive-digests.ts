@@ -517,3 +517,35 @@ export const seo001Issue: ArchiveIssue = {
   disclosure:
     "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
 };
+
+export const aiEngineering004Issue: ArchiveIssue = {
+  id: "ai-004",
+  aliases: ["ai-engineering-004"],
+  series: "AI Engineering",
+  date: "July 13, 2026",
+  title: "AI Engineering 004",
+  summary:
+    "10 X articles on Claude as an outbound team, JTBD agent scoping, YC AI trends, model testing, loop engineering examples, infinite context, context rot, GraphRAG, and AI safety.",
+  intro:
+    "Several major authorities in the AI space are recommending moving towards loop engineering. It makes sense — the human in the loop is what holds AI back most. Consider these recent X articles below for staying current with some of the best wisdom in the AI space.",
+
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};
+
+export const socialMediaMarketing003Issue: ArchiveIssue = {
+  id: "social-003",
+  aliases: ["social-media-marketing-003"],
+  series: "Social Media Marketing",
+  date: "July 13, 2026",
+  title: "Social Media Marketing 003",
+  summary:
+    "5 X articles on app monetization case studies, content format optimization, content systems, automated revenue, and Blender character workflows.",
+  intro:
+    "Growing on X, TikTok, or other channels can be a serious challenge for most of us. However below you will see articles written by those with significant success using social media to drive their products or services. Everyday people are creating apps and monetizing channels in ways that would have never been possible several years ago. Take a look at the summaries below and check out their respective articles if you want to learn more.",
+
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};

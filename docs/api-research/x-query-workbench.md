@@ -6,7 +6,7 @@ Updated: 2026-07-06
 
 Baseline article-gated query that worked before the larger family split:
 
-one version like this with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
+one version like this with no english parameter, articles from 1 day before (300 results cap); 
 
 ```json
 [
@@ -43,7 +43,7 @@ search with no english parameter, articles from 1 day before (200 results cap); 
 
 ## SEO
 
-search with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
+search with no english parameter, articles from 1 day before (200 results cap); 
 
 ```json
 [
@@ -53,7 +53,7 @@ search with no english parameter, articles from 1 day before (200 results cap); 
 
 ## Social Media Marketing
 
-Compact article-gated query for influencer, UGC, and short-form growth topics; search with no english parameter, articles from 1 day before (200 results cap); one version like this with an english parameter and 1 day before (100)
+Compact article-gated query for influencer, UGC, and short-form growth topics; search with no english parameter, articles from 1 day before (300 results cap);
 
 ```json
 [

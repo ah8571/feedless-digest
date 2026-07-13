@@ -1,4 +1,8 @@
-Several major authorities in the AI space are recommending moving towards loop engineering. It makes sense — the human in the loop is what holds AI back most. Consider these recent X articles below for staying current with some of the best wisdom in the AI space.
+Everyday there are new articles explaining key concepts in AI theory on X with many novel use cases and ways of organizing agents for success. 
+
+A recent article indicates YC backed companies recieved funding are finding ways to improve and development upon AI. 
+
+Check these links below for recent commentary on state of the art use cases and agent design. 
 
 ->
 
@@ -110,7 +114,11 @@ This piece argues that passing AI benchmarks does not equal being governed, and 
 
 AI Engineering 004 - Feedfree Digest [For links see the comments]
 
-Several major authorities in the AI space are recommending moving towards loop engineering. It makes sense — the human in the loop is what holds AI back most. Consider these recent X articles below for staying current with some of the best wisdom in the AI space.
+Everyday there are new articles explaining key concepts in AI theory on X, with many novel use cases and ways of organizing agents for success. 
+
+Research on YC backed companies shows a probably obvious trend: most companies recently funding are finding ways to improve and development upon AI. 
+
+Check these links below for recent commentary on state of the art use cases and agent design. 
 
 ->
 

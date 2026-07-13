@@ -2,13 +2,17 @@ import {
   aiEngineering001Issue,
   aiEngineering002Issue,
   aiEngineering003Issue,
+  aiEngineering004Issue,
   seo001Issue,
   socialMediaMarketing001Issue,
   socialMediaMarketing002Issue,
+  socialMediaMarketing003Issue,
   type ArchiveIssue,
 } from "./archive-digests";
 
 export const archiveIssues: ArchiveIssue[] = [
+  aiEngineering004Issue,
+  socialMediaMarketing003Issue,
   aiEngineering003Issue,
   socialMediaMarketing002Issue,
   seo001Issue,

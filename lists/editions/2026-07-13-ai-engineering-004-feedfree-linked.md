@@ -1,6 +1,10 @@
-# AI Engineering 004 - Feedfree Digest - Published 7/13/2026
+# AI Engineering 004 - Feedfree Digest
 
-Several major authorities in the AI space are recommending moving towards loop engineering. It makes sense — the human in the loop is what holds AI back most. Consider these recent X articles below for staying current with some of the best wisdom in the AI space.
+Everyday there are new articles explaining key concepts in AI theory on X, with many novel use cases and ways of organizing agents for success. 
+
+Research on YC backed companies shows a probably obvious trend: most companies recently funding are finding ways to improve and development upon AI. 
+
+Check these links below for recent commentary on state of the art use cases and agent design. 
 
 ## Novel Use Case: Claude as an Outbound Team
 

@@ -99,4 +99,6 @@
 
 ## later potential developments
 - custom newsletter based on a person's interests (we can use the same engine)
-- could create a mobile app for people to adjust their preferences/ what they are looking for
+
+- fix dmarc issues
+- verify server side conversions are working
