@@ -1,0 +1,88 @@
+# Social API Quick Reference — Post, Metrics, Login
+
+Bare essentials per platform for building cross-platform posting/reading scripts.
+
+---
+
+## X (Twitter)
+
+| | URL |
+|---|---|
+| **Post / Reply** | `POST https://api.x.com/2/tweets` → [docs](https://docs.x.com/x-api/tweets/manage-tweets) |
+| **Delete** | `DELETE https://api.x.com/2/tweets/:id` → [docs](https://docs.x.com/x-api/tweets/manage-tweets) |
+| **Read tweet** | `GET https://api.x.com/2/tweets/:id` → [docs](https://docs.x.com/x-api/tweets/lookup) |
+| **Read metrics** | `GET https://api.x.com/2/tweets/:id?tweet.fields=public_metrics` → [docs](https://docs.x.com/x-api/tweets/lookup) |
+| **Read replies** | `GET https://api.x.com/2/tweets/search/recent?query=conversation_id::tweet_id` → [docs](https://docs.x.com/x-api/tweets/search) |
+| **Login** | OAuth 1.0a 3-legged flow → [docs](https://docs.x.com/resources/fundamentals/authentication/obtaining-user-access-tokens) |
+
+Auth: OAuth 1.0a (4 keys) for posting/deleting, Bearer token for reading. ⚠️ Already implemented in `scripts/x-*.mjs`.
+
+---
+
+## LinkedIn
+
+| | URL |
+|---|---|
+| **Post** (text, image, video, article, poll) | `POST https://api.linkedin.com/rest/posts` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api) |
+| **Get post** | `GET https://api.linkedin.com/rest/posts/{urn}` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api#get-posts-by-urn) |
+| **Find posts by author** | `GET https://api.linkedin.com/rest/posts?author={urn}&q=author` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api#find-posts-by-authors) |
+| **Delete** | `DELETE https://api.linkedin.com/rest/posts/{urn}` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api#delete-posts) |
+| **Read metrics** | Use post URN + [social metadata API](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/social-metadata-api) for likes/comments/shares |
+| **Login** | OAuth 2.0 Authorization Code Flow → [docs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow) |
+
+Auth: OAuth 2.0 Bearer. Headers: `Linkedin-Version: YYYYMM`, `X-Restli-Protocol-Version: 2.0.0`
+
+---
+
+## Instagram (via Facebook Graph API)
+
+Note: Requires Professional account (Business/Creator) connected to a Facebook Page.
+
+| | URL |
+|---|---|
+| **Post** (image, video, carousel, reel, story) | `POST https://graph.facebook.com/v25.0/{IG_USER_ID}/media` → `POST …/media_publish` → [docs](https://developers.facebook.com/docs/instagram-platform/content-publishing) |
+| **Get media** | `GET https://graph.facebook.com/v25.0/{IG_USER_ID}/media` → [docs](https://developers.facebook.com/docs/instagram-api/reference/ig-user/media) |
+| **Read metrics** | `GET https://graph.facebook.com/v25.0/{IG_MEDIA_ID}/insights?metric=impressions,reach,likes` → [docs](https://developers.facebook.com/docs/instagram-api/reference/ig-media/insights) |
+| **Login** | Facebook Login for Business → exchange for Page token → [docs](https://developers.facebook.com/docs/facebook-login) |
+
+Auth: Facebook OAuth. Permissions: `instagram_basic`, `instagram_content_publish`, `pages_read_engagement`. Rate limit: 100 posts/24h.
+
+---
+
+## Facebook Pages
+
+| | URL |
+|---|---|
+| **Post** | `POST https://graph.facebook.com/v25.0/{page-id}/feed` → [docs](https://developers.facebook.com/docs/graph-api/reference/page/feed) |
+| **Read posts** | `GET https://graph.facebook.com/v25.0/{page-id}/feed` → [docs](https://developers.facebook.com/docs/graph-api/reference/page/feed) |
+| **Read metrics** | `GET https://graph.facebook.com/v25.0/{post-id}/insights` → [docs](https://developers.facebook.com/docs/graph-api/reference/post/insights) |
+| **Login** | Facebook Login → [docs](https://developers.facebook.com/docs/facebook-login) (same as Instagram) |
+
+Auth: Facebook OAuth. Permissions: `pages_manage_posts`, `pages_read_engagement`. Latest Graph API: v25.0.
+
+---
+
+## TikTok
+
+| | URL |
+|---|---|
+| **Post** | Content Posting API → [docs](https://developers.tiktok.com/products/content-posting-api) |
+| **Read videos** | Display API: `GET /v2/video/list/` + `GET /v2/video/query/` → [docs](https://developers.tiktok.com/doc/display-api-get-started) |
+| **Read metrics** | Included in Display API video query responses |
+| **Login** | Login Kit (OAuth 2.0) → [docs](https://developers.tiktok.com/products/login-kit) |
+
+Auth: OAuth 2.0 via Login Kit. Content Posting API requires separate app review.
+
+---
+
+## Auth cheat sheet
+
+| Platform | Auth | Complexity |
+|---|---|---|
+| X | OAuth 1.0a | Medium |
+| LinkedIn | OAuth 2.0 Bearer | Low |
+| Instagram | Facebook OAuth | Medium |
+| Facebook | Facebook OAuth | Medium |
+| TikTok | OAuth 2.0 (Login Kit) | Medium |
+
+
