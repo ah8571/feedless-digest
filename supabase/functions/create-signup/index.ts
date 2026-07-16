@@ -10,13 +10,20 @@ async function sha256(message: string) {
 }
 
 async function getXAdsAccessToken() {
-  // OAuth 2.0 Client ID and Secret from X Developer Portal.
-  // These are separate from OAuth 1.0a consumer keys used for posting/reading.
+  // Try OAuth 1.0a Bearer token first (works for posting — may work for conversions).
+  // Many X Ads API endpoints accept the same Bearer token used for reading/posting.
+  const bearerToken = Deno.env.get("X_BEARER_TOKEN");
+  if (bearerToken) {
+    console.log("[x-conversion] Using X_BEARER_TOKEN for Ads API auth.");
+    return bearerToken;
+  }
+
+  // Fallback: OAuth 2.0 client credentials flow.
   const clientId = Deno.env.get("X_ADS_CONSUMER_KEY") || Deno.env.get("X_OAUTH2_CLIENT_ID");
   const clientSecret = Deno.env.get("X_ADS_CONSUMER_SECRET") || Deno.env.get("X_OAUTH2_CLIENT_SECRET");
 
   if (!clientId || !clientSecret) {
-    console.log("[x-conversion] X Ads auth SKIPPED — missing OAuth 2.0 credentials (set X_OAUTH2_CLIENT_ID and X_OAUTH2_CLIENT_SECRET or X_ADS_CONSUMER_KEY/SECRET).");
+    console.log("[x-conversion] X Ads auth SKIPPED — no OAuth 2.0 credentials or X_BEARER_TOKEN set.");
     return null;
   }
 
@@ -30,6 +37,7 @@ async function getXAdsAccessToken() {
         grant_type: "client_credentials",
         client_id: clientId,
         client_secret: clientSecret,
+        client_type: "confidential",
       }).toString(),
     });
 
