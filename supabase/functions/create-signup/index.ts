@@ -19,21 +19,24 @@ async function getXAdsAccessToken() {
   }
 
   try {
-    // X OAuth2 token endpoint expects client_id + client_secret as form body params,
-    // NOT as a Basic auth header (that's for the older OAuth 1.0a flow).
-    const body = new URLSearchParams({
+    // X OAuth2 token endpoint for Ads API.
+    // Requires client_id + client_secret as form body params + client_type.
+    // These are OAuth 2.0 client credentials (NOT the OAuth 1.0a consumer key/secret
+    // used for posting/reading). If you only have OAuth 1.0a keys, generate
+    // OAuth 2.0 credentials in the X Developer Portal under your Ads App.
+    const params: Record<string, string> = {
       grant_type: "client_credentials",
       client_id: consumerKey,
       client_secret: consumerSecret,
-      scope: "ads:write",
-    });
+      client_type: "confidential",
+    };
 
     const response = await fetch("https://api.x.com/2/oauth2/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: body.toString(),
+      body: new URLSearchParams(params).toString(),
     });
 
     if (!response.ok) {
