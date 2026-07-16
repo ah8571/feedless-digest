@@ -127,6 +127,8 @@ type CreateSignupPayload = {
     utm_source?: string;
     utm_medium?: string;
     utm_campaign?: string;
+    utm_term?: string;
+    utm_content?: string;
     referrer?: string;
   };
 };
@@ -292,6 +294,8 @@ Deno.serve(async (request: Request) => {
       utm_source: payload.click_source?.utm_source ?? "none",
       utm_medium: payload.click_source?.utm_medium ?? "none",
       utm_campaign: payload.click_source?.utm_campaign ?? "none",
+      utm_term: payload.click_source?.utm_term ?? "none",
+      utm_content: payload.click_source?.utm_content ?? "none",
       referrer: payload.click_source?.referrer ?? "none",
     }));
 
