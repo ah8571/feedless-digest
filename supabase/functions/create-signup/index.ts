@@ -55,7 +55,7 @@ async function getXAdsAccessToken() {
   }
 }
 
-async function sendXConversion(email: string, eventName: string, twclid?: string) {
+async function sendXConversion(eventName: string, twclid?: string) {
   const pixelId = Deno.env.get("X_PIXEL_ID");
 
   if (!pixelId) {
@@ -74,14 +74,14 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
   console.log("[x-conversion] Access token obtained (length:", accessToken.length, ")");
 
   try {
-    const hashedEmail = await sha256(email.trim().toLowerCase());
     const conversion: Record<string, unknown> = {
       event_name: eventName,
       event_time: new Date().toISOString(),
-      hashed_email: hashedEmail,
     };
 
-    // Include twclid for precise ad attribution when available
+    // Include twclid for precise ad attribution when available.
+    // No hashed email is sent — twclid alone is sufficient since X already
+    // knows which user clicked the ad.
     if (twclid) conversion.conversion_id = twclid;
 
     const payload = {
@@ -89,7 +89,7 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
       conversions: [conversion],
     };
 
-    console.log("[x-conversion] Sending to X Ads API — payload:", JSON.stringify({ ...payload, conversions: [{ ...conversion, hashed_email: hashedEmail.slice(0, 12) + "..." }] }));
+    console.log("[x-conversion] Sending to X Ads API — payload:", JSON.stringify(payload));
 
     const response = await fetch("https://ads-api.x.com/11/measurement/conversions", {
       method: "POST",
@@ -444,7 +444,7 @@ Deno.serve(async (request: Request) => {
     }));
 
     if (cameFromX) {
-      sendXConversion(email, "SignUp", twclid || undefined);
+      sendXConversion("SignUp", twclid || undefined);
     } else {
       console.log("[signup] Conversion tracking SKIPPED — not from X (utm_source='" + (utmSource || "none") + "', referrer='" + (referrer || "none") + "')");
     }
