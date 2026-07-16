@@ -9,107 +9,122 @@ async function sha256(message: string) {
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-async function getXAdsAccessToken() {
-  // Try OAuth 1.0a Bearer token first (works for posting — may work for conversions).
-  // Many X Ads API endpoints accept the same Bearer token used for reading/posting.
-  const bearerToken = Deno.env.get("X_BEARER_TOKEN");
-  if (bearerToken) {
-    console.log("[x-conversion] Using X_BEARER_TOKEN for Ads API auth.");
-    return bearerToken;
-  }
+// ── OAuth 1.0a (HMAC-SHA1) signing for X Ads API ─────────────────────────
 
-  // Fallback: OAuth 2.0 client credentials flow.
-  const clientId = Deno.env.get("X_ADS_CONSUMER_KEY") || Deno.env.get("X_OAUTH2_CLIENT_ID");
-  const clientSecret = Deno.env.get("X_ADS_CONSUMER_SECRET") || Deno.env.get("X_OAUTH2_CLIENT_SECRET");
-
-  if (!clientId || !clientSecret) {
-    console.log("[x-conversion] X Ads auth SKIPPED — no OAuth 2.0 credentials or X_BEARER_TOKEN set.");
-    return null;
-  }
-
-  try {
-    const response = await fetch("https://api.x.com/2/oauth2/token", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-        grant_type: "client_credentials",
-        client_id: clientId,
-        client_secret: clientSecret,
-        client_type: "confidential",
-        scope: "ads:write",
-      }).toString(),
-    });
-
-    if (!response.ok) {
-      console.error("Failed to get X Ads access token", await response.text());
-      return null;
-    }
-
-    const data = await response.json();
-    return data.access_token as string | null;
-  } catch (error) {
-    console.error("X Ads token exchange error", error);
-    return null;
-  }
+async function hmacSha1(key: Uint8Array, message: string): Promise<ArrayBuffer> {
+  const cryptoKey = await crypto.subtle.importKey(
+    "raw", key, { name: "HMAC", hash: "SHA-1" }, false, ["sign"]
+  );
+  return crypto.subtle.sign("HMAC", cryptoKey, new TextEncoder().encode(message));
 }
 
+function base64Encode(buffer: ArrayBuffer): string {
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+  return btoa(binary);
+}
+
+async function oauthHeader(
+  method: string, url: string,
+  consumerKey: string, consumerSecret: string,
+  accessToken: string, accessTokenSecret: string,
+): Promise<string> {
+  const oauthParams: Record<string, string> = {
+    oauth_consumer_key: consumerKey,
+    oauth_nonce: crypto.randomUUID().replace(/-/g, ""),
+    oauth_signature_method: "HMAC-SHA1",
+    oauth_timestamp: Math.floor(Date.now() / 1000).toString(),
+    oauth_token: accessToken,
+    oauth_version: "1.0",
+  };
+
+  const encodedParams = Object.entries(oauthParams)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join("&");
+
+  const signatureBase = [method.toUpperCase(), encodeURIComponent(url), encodeURIComponent(encodedParams)].join("&");
+  const signingKey = `${encodeURIComponent(consumerSecret)}&${encodeURIComponent(accessTokenSecret)}`;
+  const sigBuffer = await hmacSha1(new TextEncoder().encode(signingKey), signatureBase);
+  oauthParams.oauth_signature = base64Encode(sigBuffer);
+
+  const headerValue = "OAuth " +
+    Object.entries(oauthParams)
+      .map(([k, v]) => `${encodeURIComponent(k)}="${encodeURIComponent(v)}"`)
+      .join(", ");
+
+  return headerValue;
+}
+
+// ── X Ads Conversion API ──────────────────────────────────────────────────
+
 async function sendXConversion(eventName: string, twclid?: string) {
-  const pixelId = Deno.env.get("X_PIXEL_ID");
+  const pixelId = Deno.env.get("X_PIXEL_ID") ?? "rdp4k";
+  const eventId = Deno.env.get("X_EVENT_ID") ?? "tw-rdp4k-rdp4x";
 
-  if (!pixelId) {
-    console.log("[x-conversion] SKIPPED — missing X_PIXEL_ID env var.");
+  if (!pixelId || !eventId) {
+    console.log("[x-conversion] SKIPPED — missing X_PIXEL_ID or X_EVENT_ID.");
     return;
   }
 
-  console.log("[x-conversion] Starting — pixel_id:", pixelId, "event:", eventName, "has_twclid:", !!twclid, "twclid_preview:", twclid ? twclid.slice(0, 8) + "..." : "none");
+  // OAuth 1.0a credentials (same as x-post.mjs)
+  const consumerKey = Deno.env.get("X_CONSUMER_KEY") ?? Deno.env.get("consumer_key");
+  const consumerSecret = Deno.env.get("X_CONSUMER_KEY_SECRET") ?? Deno.env.get("consumer_key_secret");
+  const accessToken = Deno.env.get("X_ACCESS_TOKEN") ?? Deno.env.get("access_token");
+  const accessTokenSecret = Deno.env.get("X_ACCESS_TOKEN_SECRET") ?? Deno.env.get("access_token_secret");
 
-  const accessToken = await getXAdsAccessToken();
-  if (!accessToken) {
-    console.log("[x-conversion] SKIPPED — could not obtain X Ads access token.");
+  if (!consumerKey || !consumerSecret || !accessToken || !accessTokenSecret) {
+    console.log("[x-conversion] SKIPPED — missing OAuth 1.0a credentials.");
     return;
   }
 
-  console.log("[x-conversion] Access token obtained (length:", accessToken.length, ")");
+  console.log("[x-conversion] Starting — pixel:", pixelId, "event:", eventId, "name:", eventName, "twclid:", twclid?.slice(0, 8) + "..." ?? "none");
 
   try {
     const conversion: Record<string, unknown> = {
-      event_name: eventName,
-      event_time: new Date().toISOString(),
+      event_id: eventId,
+      conversion_time: new Date().toISOString(),
     };
 
-    // Include twclid for precise ad attribution when available.
-    // No hashed email is sent — twclid alone is sufficient since X already
-    // knows which user clicked the ad.
-    if (twclid) conversion.conversion_id = twclid;
+    if (twclid) {
+      conversion.identifiers = [{ twclid }];
+      conversion.conversion_id = twclid.slice(0, 36); // dedup key
+    }
 
-    const payload = {
-      pixel_id: pixelId,
-      conversions: [conversion],
-    };
+    const payload = { conversions: [conversion] };
+    const url = `https://ads-api.x.com/12/measurement/conversions/${pixelId}`;
 
-    console.log("[x-conversion] Sending to X Ads API — payload:", JSON.stringify(payload));
+    console.log("[x-conversion] Sending — payload:", JSON.stringify(payload));
 
-    const response = await fetch("https://ads-api.x.com/11/measurement/conversions", {
+    const authHeader = await oauthHeader(
+      "POST", url,
+      consumerKey, consumerSecret, accessToken, accessTokenSecret,
+    );
+
+    const response = await fetch(url, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: authHeader,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
     });
 
+    const responseText = await response.text();
+
     if (!response.ok) {
-      const errorBody = await response.text();
-      console.error("[x-conversion] FAILED — HTTP", response.status, "— body:", errorBody.slice(0, 500));
+      console.error("[x-conversion] FAILED — HTTP", response.status, "— body:", responseText.slice(0, 500));
     } else {
-      console.log("[x-conversion] SUCCESS — HTTP", response.status, "— conversion recorded for pixel", pixelId);
+      console.log("[x-conversion] SUCCESS — HTTP", response.status, "—", responseText.slice(0, 200));
     }
   } catch (error) {
     console.error("[x-conversion] EXCEPTION —", error instanceof Error ? error.message : String(error));
   }
 }
+
+// ── Deprecated: old OAuth 2.0 token function (no longer used) ─────────────
+// sendXConversion now uses OAuth 1.0a directly, matching the X Ads API docs.
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",

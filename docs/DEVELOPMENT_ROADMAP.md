@@ -102,3 +102,48 @@
 
 - fix dmarc issues
 - verify server side conversions are working
+
+
+## Privacy regulations:
+- GPC signal incorporation: 
+
+GPC signal reference
+
+The Global Privacy Control (GPC) signal is a standardized browser header (Sec-GPC: 1) or JavaScript property (navigator.globalPrivacyControl === '1') that allows users to broadcast a universal opt-out of the sale or sharing of their data [FTC.gov ftc.gov]. Under California's CCPA/CPRA, websites are legally required to honor this signal automatically.To engineer for GPC on your frontend, implement this simple detection script:javascript// 1. Check if the user has enabled Global Privacy Control
+const isGpcEnabled = () => {
+  return navigator.globalPrivacyControl === '1' || 
+         navigator.globalPrivacyControl === true;
+};
+
+// 2. Control your tracking pipeline based on the signal
+if (isGpcEnabled()) {
+  console.log("GPC Signal Detected. Turning off third-party ad tracking pixels.");
+  
+  // Disable your X (Twitter) CAPI trigger or Server-Side click ID transmission
+  window.disableThirdPartySharing = true; 
+  
+  // Set your local compliance state so your server knows not to share data
+  localStorage.setItem('ccpa_opt_out', 'true');
+} else {
+  // Proceed with normal privacy-first operations
+  window.disableThirdPartySharing = false;
+}
+
+What Your Backend Code Looks Like (The Server Check)If you are processing tracking on the server side, your backend should inspect the incoming HTTP requests for the Sec-GPC header before deciding whether to fire an ad network event:javascript// Example Node.js/Express server middleware
+app.use((req, res, next) => {
+  const gpcHeader = req.headers['sec-gpc'];
+  
+  if (gpcHeader === '1') {
+    // Flag this user session as "Opted Out"
+    req.session.isOptedOut = true;
+  }
+  next();
+});
+
+If a user with GPC enabled lands on your site from California, you must provide a visible confirmation message in the browser.Under the updated California Privacy Rights Act (CPRA) regulations (specifically section § 7025), if a business chooses to process user-agent signals (like GPC) instead of displaying a standard cookie banner, the website must provide a clear, visible response on the screen indicating that the signal was successfully detected and honored
+
+Focus on UTM tracking with privacy oriented tools
+
+Europe: unless you have cookies and someone actively consents to tracking, you can't send conversion events, can only look at things like utm tracking via plausible or posthog
+
+Perhaps will not to focus ads in US / Canada for now; later consider europe tracking but with caution if we are tracking click id's 

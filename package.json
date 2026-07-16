@@ -13,6 +13,7 @@
     "x:recent-search": "node scripts/x-recent-search.mjs",
     "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
     "x:apify-run": "node scripts/x-apify-run.mjs",
+    "x:delete": "node scripts/x-delete.mjs",
     "x:post": "node scripts/x-post.mjs",
     "x:read": "node scripts/x-read.mjs",
     "x:metrics": "node scripts/x-metrics.mjs",
