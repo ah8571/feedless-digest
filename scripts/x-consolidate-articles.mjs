@@ -15,6 +15,24 @@
  *   3. Human review of the MD file → select articles for new editions
  *   4. Create edition files in lists/editions/ → send via listmonk
  *
+ * === Review MD format (newsletter-ready) ===
+ *
+ * Each article entry in the review markdown uses this convention:
+ *
+ *   ## N. Article Title
+ *
+ *   - **Author:** [@handle](https://x.com/handle)  |  **Date:** Jul 14, 2026
+ *   - **Likes:** N  |  **Bookmarks:** N  |  **Retweets:** N  |  **Impressions:** N
+ *   - **Link:** https://x.com/handle/status/tweetID
+ *
+ *   [full plain_text body]
+ *
+ * Key formatting rules:
+ *   - Link uses author handle, NOT the x.com/i/article/ID format (that 404s in newsletters).
+ *   - Date is human-readable "Mon DD, YYYY" not ISO 8601.
+ *   - Author handle is clickable for attribution and engagement tracking.
+ *   - Metrics on one line for quick scanning before reading the body.
+ *
  * Usage:
  *   $env:X_BEARER_TOKEN = '...'
  *   node scripts/x-consolidate-articles.mjs \

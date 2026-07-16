@@ -10,17 +10,31 @@
  *   3. Human review of the MD file → select articles for new editions
  *   4. Create edition files in lists/editions/ → send via listmonk
  *
- * Usage:
- *   $env:X_BEARER_TOKEN = '...'
- *   $env:X_MAX_RESULTS = '300'
- *   $env:X_START_TIME = '2026-07-12T00:00:00Z'
- *   $env:X_END_TIME = '2026-07-13T00:00:00Z'
- *   npm run x:recent-search -- --out lists/x/<date>-<topic>-yesterday-300.json '<query>'
+ * === Two complementary search strategies ===
+ *
+ * Strategy A — Article-gated (formal X Articles, 1,000-10,000+ words):
+ *   Query includes the "(article)" operator. No lang:en filter (articles
+ *   are predominantly English anyway). Use recency since articles are sparse.
+ *   Yields: article.plain_text via separate tweet lookup (x-article-resolve.mjs).
+ *
+ * Strategy B — No-gate long-form (note_tweet posts, 100-400 words):
+ *   Query omits "(article)" but adds lang:en to filter noise. Use RELEVANCE
+ *   sorting — it surfaces higher-liked content vs recency which returns
+ *   chronological but often zero-engagement posts.
+ *   Yields: note_tweet.text directly in search results.
+ *
+ *   Run with:
+ *     $env:X_SORT_ORDER='relevancy'
+ *     $env:X_OUTPUT_FILE='lists/x/<date>-<topic>-relevance-en-300.json'
+ *     npm run x:recent-search
+ *
+ * Recommended: run BOTH strategies per topic — they find different content.
  *
  * Search queries are maintained in docs/api-research/x-query-workbench.md
  */
-const DEFAULT_QUERY = '(AI OR "artificial intelligence" OR LLM OR agent OR agents) -is:retweet -is:reply lang:en';
+const DEFAULT_QUERY = '((Gemini OR GPT OR Sonnet OR Opus OR OpenAI OR Claude OR AI OR Cursor OR Codex OR Copilot OR vibe OR LLM OR openclaw OR hermes) (code OR agent OR coding OR engineer OR engineering OR developer OR development OR software OR repo OR codebase OR PR OR PRs OR deploy OR deployment OR schema OR migration OR benchmark OR evals)) -is:reply -is:retweet -crypto -bitcoin -solana -stock -stocks -trading -investing -market -price lang:en';
 const DEFAULT_TWEET_FIELDS = ['created_at', 'text'].join(',');
+const DEFAULT_ARTICLE_FIELDS = ['plain_text'].join(',');
 
 function parseArgs(argv) {
   const options = {
@@ -122,10 +136,21 @@ function buildRequestParams(query, pageSize, nextToken = '') {
     query,
     'tweet.fields': getTweetFields(),
     max_results: String(pageSize),
+    sort_order: getOptionalValue('X_SORT_ORDER') || 'recency',
   });
 
   const expansions = getOptionalValue('X_EXPANSIONS');
-  if (expansions) {
+  const articleFields = getOptionalValue('X_ARTICLE_FIELDS') || DEFAULT_ARTICLE_FIELDS;
+  if (articleFields) {
+    params.set('article.fields', articleFields);
+    // article.fields requires expansions=article to resolve
+    const hasArticleExpansion = expansions && expansions.split(',').map(s => s.trim()).includes('article');
+    if (!hasArticleExpansion) {
+      params.set('expansions', expansions ? `${expansions},article` : 'article');
+    } else {
+      params.set('expansions', expansions);
+    }
+  } else if (expansions) {
     params.set('expansions', expansions);
   }
 

@@ -3,6 +3,7 @@ import {
   aiEngineering002Issue,
   aiEngineering003Issue,
   aiEngineering004Issue,
+  aiEngineering005Issue,
   seo001Issue,
   socialMediaMarketing001Issue,
   socialMediaMarketing002Issue,
@@ -11,6 +12,7 @@ import {
 } from "./archive-digests";
 
 export const archiveIssues: ArchiveIssue[] = [
+  aiEngineering005Issue,
   aiEngineering004Issue,
   socialMediaMarketing003Issue,
   aiEngineering003Issue,

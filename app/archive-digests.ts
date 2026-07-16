@@ -534,6 +534,22 @@ export const aiEngineering004Issue: ArchiveIssue = {
     "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
 };
 
+export const aiEngineering005Issue: ArchiveIssue = {
+  id: "ai-005",
+  aliases: ["ai-engineering-005"],
+  series: "AI Engineering",
+  date: "July 16, 2026",
+  title: "AI Engineering 005 — Real World AI Skills",
+  summary:
+    "8 X articles on skill engineering, outreach automation, DIY SEO tools, enterprise finance AI, and AI content creation workflows.",
+  intro:
+    "Today you will find several case studies in AI skills in the articles and tweets below. Instead of large concepts like loop engineering, sometimes we just need to focus on real world use cases applied to specialized fields.",
+
+  itemsTitle: "Links-first version",
+  disclosure:
+    "[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]",
+};
+
 export const socialMediaMarketing003Issue: ArchiveIssue = {
   id: "social-003",
   aliases: ["social-media-marketing-003"],

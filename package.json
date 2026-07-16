@@ -12,13 +12,15 @@
     "x:article-resolve": "node scripts/x-article-resolve.mjs",
     "x:recent-search": "node scripts/x-recent-search.mjs",
     "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
-    "x:apify-run": "node scripts/x-apify-run.mjs"
+    "x:apify-run": "node scripts/x-apify-run.mjs",
+    "x:post": "node scripts/x-post.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "2.50.3",
     "next": "16.2.10",
+    "oauth-1.0a": "^2.2.6",
     "react": "19.2.7",
-    "react-dom": "19.2.7",
-    "@supabase/supabase-js": "2.50.3"
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
     "@types/node": "22.15.30",
