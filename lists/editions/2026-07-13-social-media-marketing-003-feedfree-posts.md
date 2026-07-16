@@ -59,7 +59,7 @@ This article breaks down the full rigging and character workflow for creating a 
 
 If you would like to see more articles like this, please subscribe to my free newsletter in the bio
 
-[disclosure: this was written with AI with human edits and article selection.]
+[disclosure: this was written with a mix of AI and human writing]
 
 Social Media Marketing 003 - Feedfree Digest [For links see the comments]
 
@@ -119,4 +119,4 @@ This article breaks down the full rigging and character workflow for creating a 
 
 If you would like to see more articles like this, please subscribe to my free newsletter in the bio
 
-[disclosure: this was written with AI with human edits and article selection.]
+[disclosure: this was written with a mix of AI and human writing]

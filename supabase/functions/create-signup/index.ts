@@ -19,14 +19,21 @@ async function getXAdsAccessToken() {
   }
 
   try {
-    const basic = btoa(`${consumerKey}:${consumerSecret}`);
+    // X OAuth2 token endpoint expects client_id + client_secret as form body params,
+    // NOT as a Basic auth header (that's for the older OAuth 1.0a flow).
+    const body = new URLSearchParams({
+      grant_type: "client_credentials",
+      client_id: consumerKey,
+      client_secret: consumerSecret,
+      scope: "ads:write",
+    });
+
     const response = await fetch("https://api.x.com/2/oauth2/token", {
       method: "POST",
       headers: {
-        Authorization: `Basic ${basic}`,
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: "grant_type=client_credentials&scope=ads%3Awrite",
+      body: body.toString(),
     });
 
     if (!response.ok) {

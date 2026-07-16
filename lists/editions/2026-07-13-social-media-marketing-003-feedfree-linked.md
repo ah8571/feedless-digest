@@ -54,4 +54,4 @@ This article breaks down the full rigging and character workflow for creating a 
 - Document your node setup and export settings so consistency survives across projects.
 - Use reference footage or concept art early to lock proportions before investing in detail work.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]
+[disclosure: this was written with a mix of AI and human writing]

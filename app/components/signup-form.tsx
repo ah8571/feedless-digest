@@ -26,6 +26,17 @@ function readClickSource(): Record<string, string> {
     } catch (_) {}
   }
 
+  // Fallback: extract twclid from document.referrer if not already found.
+  // X often passes twclid in the referring URL before the redirect chain
+  // strips it from the landing page.
+  if (!source.twclid && source.referrer) {
+    try {
+      const refParams = new URLSearchParams(source.referrer.split("?")[1] || "");
+      const refTwclid = refParams.get("twclid");
+      if (refTwclid) source.twclid = refTwclid;
+    } catch (_) {}
+  }
+
   // UTM params — identifies which ad network sent the visitor
   for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"]) {
     try {

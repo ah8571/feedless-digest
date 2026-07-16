@@ -100,4 +100,4 @@ This piece argues that passing AI benchmarks does not equal being governed, and 
 - Build governance processes that go beyond benchmark scores and include operational safeguards.
 - Treat benchmarks as a floor for capability, not a ceiling for responsibility.
 
-[disclosure: this was written with AI with human edits and article selection. If you would like to see more articles like this, please subscribe to our newsletter]
+[disclosure: this was written with a mix of AI and human writing]

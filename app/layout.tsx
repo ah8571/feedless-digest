@@ -57,6 +57,35 @@ export default function RootLayout({
                     var v = params.get(keys[i]);
                     if (v) sessionStorage.setItem(keys[i], v);
                   }
+
+                  // Fallback: extract click IDs from document.referrer.
+                  // X (and other ad networks) often pass twclid/gclid in the
+                  // referring URL before redirecting. The landing URL may have
+                  // already been cleaned by the time this script runs.
+                  var ref = document.referrer;
+                  if (ref) {
+                    try {
+                      var refParams = new URLSearchParams(ref.split('?')[1] || '');
+                      for (var j = 0; j < keys.length; j++) {
+                        var rv = refParams.get(keys[j]);
+                        if (rv && !sessionStorage.getItem(keys[j])) {
+                          sessionStorage.setItem(keys[j], rv);
+                        }
+                      }
+                    } catch(e) {}
+                  }
+
+                  // Debug: log what was captured (remove in production)
+                  console.log('[feedfree] Captured params:', {
+                    url: window.location.href,
+                    referrer: ref,
+                    stored: {
+                      twclid: sessionStorage.getItem('twclid'),
+                      utm_source: sessionStorage.getItem('utm_source'),
+                      utm_medium: sessionStorage.getItem('utm_medium'),
+                      utm_campaign: sessionStorage.getItem('utm_campaign'),
+                    }
+                  });
                 } catch(e) {}
               })();
             `,
