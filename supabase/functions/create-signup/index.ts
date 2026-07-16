@@ -10,33 +10,27 @@ async function sha256(message: string) {
 }
 
 async function getXAdsAccessToken() {
-  const consumerKey = Deno.env.get("X_ADS_CONSUMER_KEY");
-  const consumerSecret = Deno.env.get("X_ADS_CONSUMER_SECRET");
+  // OAuth 2.0 Client ID and Secret from X Developer Portal.
+  // These are separate from OAuth 1.0a consumer keys used for posting/reading.
+  const clientId = Deno.env.get("X_ADS_CONSUMER_KEY") || Deno.env.get("X_OAUTH2_CLIENT_ID");
+  const clientSecret = Deno.env.get("X_ADS_CONSUMER_SECRET") || Deno.env.get("X_OAUTH2_CLIENT_SECRET");
 
-  if (!consumerKey || !consumerSecret) {
-    console.log("X conversion tracking skipped — missing X_ADS_CONSUMER_KEY or X_ADS_CONSUMER_SECRET.");
+  if (!clientId || !clientSecret) {
+    console.log("[x-conversion] X Ads auth SKIPPED — missing OAuth 2.0 credentials (set X_OAUTH2_CLIENT_ID and X_OAUTH2_CLIENT_SECRET or X_ADS_CONSUMER_KEY/SECRET).");
     return null;
   }
 
   try {
-    // X OAuth2 token endpoint for Ads API.
-    // Requires client_id + client_secret as form body params + client_type.
-    // These are OAuth 2.0 client credentials (NOT the OAuth 1.0a consumer key/secret
-    // used for posting/reading). If you only have OAuth 1.0a keys, generate
-    // OAuth 2.0 credentials in the X Developer Portal under your Ads App.
-    const params: Record<string, string> = {
-      grant_type: "client_credentials",
-      client_id: consumerKey,
-      client_secret: consumerSecret,
-      client_type: "confidential",
-    };
-
     const response = await fetch("https://api.x.com/2/oauth2/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: new URLSearchParams(params).toString(),
+      body: new URLSearchParams({
+        grant_type: "client_credentials",
+        client_id: clientId,
+        client_secret: clientSecret,
+      }).toString(),
     });
 
     if (!response.ok) {
