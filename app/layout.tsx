@@ -53,36 +53,43 @@ export default function RootLayout({
             __html: `
               (function(){
                 try {
-                  // Respect Global Privacy Control (GPC) signal.
-                  // If the user's browser broadcasts GPC, do not capture
-                  // any click identifiers or UTM params.
-                  if (navigator.globalPrivacyControl) {
-                    console.log('[feedfree] GPC signal detected — skipping all param capture.');
-                    return;
-                  }
-
                   // Respect CCPA opt-out stored from footer link.
+                  // This is an explicit choice — skip ALL param capture.
                   if (localStorage.getItem('ccpa_opt_out') === 'true') {
                     console.log('[feedfree] CCPA opt-out active — skipping all param capture.');
                     return;
                   }
 
+                  var allKeys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+                  var clickIdKeys = ['twclid','gclid','fbclid'];
+
+                  // Respect Global Privacy Control (GPC) signal.
+                  // GPC is a browser-level \"do not track\" — we skip click IDs
+                  // (ad attribution) but still capture UTM params for internal
+                  // analytics so you can see traffic sources.
+                  var gpcActive = false;
+                  try { gpcActive = !!navigator.globalPrivacyControl; } catch(e) {}
+
                   var params = new URLSearchParams(window.location.search);
-                  var keys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
-                  for (var i = 0; i < keys.length; i++) {
-                    var v = params.get(keys[i]);
-                    if (v) sessionStorage.setItem(keys[i], v);
+                  for (var i = 0; i < allKeys.length; i++) {
+                    var key = allKeys[i];
+                    // GPC: skip click IDs, allow UTM params
+                    if (gpcActive && clickIdKeys.indexOf(key) !== -1) continue;
+                    var v = params.get(key);
+                    if (v) sessionStorage.setItem(key, v);
                   }
 
                   // Fallback: extract click IDs from document.referrer.
                   var ref = document.referrer;
-                  if (ref) {
+                  if (ref && !gpcActive) {
                     try {
                       var refParams = new URLSearchParams(ref.split('?')[1] || '');
-                      for (var j = 0; j < keys.length; j++) {
-                        var rv = refParams.get(keys[j]);
-                        if (rv && !sessionStorage.getItem(keys[j])) {
-                          sessionStorage.setItem(keys[j], rv);
+                      for (var j = 0; j < allKeys.length; j++) {
+                        var rk = allKeys[j];
+                        if (gpcActive && clickIdKeys.indexOf(rk) !== -1) continue;
+                        var rv = refParams.get(rk);
+                        if (rv && !sessionStorage.getItem(rk)) {
+                          sessionStorage.setItem(rk, rv);
                         }
                       }
                     } catch(e) {}

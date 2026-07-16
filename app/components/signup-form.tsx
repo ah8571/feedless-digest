@@ -7,18 +7,19 @@ import { activeSubnewsletterOptions } from "../lib/topics";
 function readClickSource(): Record<string, string> {
   if (typeof window === "undefined") return {};
 
-  // Respect Global Privacy Control (GPC) browser signal.
-  try {
-    if ((navigator as Record<string, unknown>).globalPrivacyControl) {
-      return {};
-    }
-  } catch (_) {}
-
-  // Respect CCPA opt-out set via footer link.
+  // Respect CCPA opt-out set via footer link — explicit choice, skip everything.
   try {
     if (localStorage.getItem("ccpa_opt_out") === "true") {
       return {};
     }
+  } catch (_) {}
+
+  // Respect Global Privacy Control (GPC) browser signal.
+  // GPC is an automatic browser setting — we skip click IDs for ad
+  // attribution but still allow UTM params for internal analytics.
+  var gpcActive = false;
+  try {
+    gpcActive = !!(navigator as Record<string, unknown>).globalPrivacyControl;
   } catch (_) {}
 
   const source: Record<string, string> = {};
@@ -32,23 +33,23 @@ function readClickSource(): Record<string, string> {
   // Try URL params for click IDs (our layout script also stores these in sessionStorage)
   const params = new URLSearchParams(window.location.search);
 
-  // Click IDs — network-specific identifiers
-  for (const key of ["twclid", "gclid", "fbclid"]) {
-    try {
-      const v = params.get(key) || sessionStorage.getItem(key);
-      if (v) source[key] = v;
-    } catch (_) {}
-  }
+  // Click IDs — network-specific identifiers. Skip under GPC.
+  if (!gpcActive) {
+    for (const key of ["twclid", "gclid", "fbclid"]) {
+      try {
+        const v = params.get(key) || sessionStorage.getItem(key);
+        if (v) source[key] = v;
+      } catch (_) {}
+    }
 
-  // Fallback: extract twclid from document.referrer if not already found.
-  // X often passes twclid in the referring URL before the redirect chain
-  // strips it from the landing page.
-  if (!source.twclid && source.referrer) {
-    try {
-      const refParams = new URLSearchParams(source.referrer.split("?")[1] || "");
-      const refTwclid = refParams.get("twclid");
-      if (refTwclid) source.twclid = refTwclid;
-    } catch (_) {}
+    // Fallback: extract twclid from document.referrer if not already found.
+    if (!source.twclid && source.referrer) {
+      try {
+        const refParams = new URLSearchParams(source.referrer.split("?")[1] || "");
+        const refTwclid = refParams.get("twclid");
+        if (refTwclid) source.twclid = refTwclid;
+      } catch (_) {}
+    }
   }
 
   // UTM params — identifies which ad network sent the visitor
