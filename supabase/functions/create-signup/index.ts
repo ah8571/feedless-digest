@@ -46,12 +46,19 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
   const pixelId = Deno.env.get("X_PIXEL_ID");
 
   if (!pixelId) {
-    console.log("X conversion tracking skipped — missing X_PIXEL_ID.");
+    console.log("[x-conversion] SKIPPED — missing X_PIXEL_ID env var.");
     return;
   }
 
+  console.log("[x-conversion] Starting — pixel_id:", pixelId, "event:", eventName, "has_twclid:", !!twclid, "twclid_preview:", twclid ? twclid.slice(0, 8) + "..." : "none");
+
   const accessToken = await getXAdsAccessToken();
-  if (!accessToken) return;
+  if (!accessToken) {
+    console.log("[x-conversion] SKIPPED — could not obtain X Ads access token.");
+    return;
+  }
+
+  console.log("[x-conversion] Access token obtained (length:", accessToken.length, ")");
 
   try {
     const hashedEmail = await sha256(email.trim().toLowerCase());
@@ -69,6 +76,8 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
       conversions: [conversion],
     };
 
+    console.log("[x-conversion] Sending to X Ads API — payload:", JSON.stringify({ ...payload, conversions: [{ ...conversion, hashed_email: hashedEmail.slice(0, 12) + "..." }] }));
+
     const response = await fetch("https://ads-api.x.com/11/measurement/conversions", {
       method: "POST",
       headers: {
@@ -79,10 +88,13 @@ async function sendXConversion(email: string, eventName: string, twclid?: string
     });
 
     if (!response.ok) {
-      console.error("X conversion tracking failed", await response.text());
+      const errorBody = await response.text();
+      console.error("[x-conversion] FAILED — HTTP", response.status, "— body:", errorBody.slice(0, 500));
+    } else {
+      console.log("[x-conversion] SUCCESS — HTTP", response.status, "— conversion recorded for pixel", pixelId);
     }
   } catch (error) {
-    console.error("X conversion tracking error", error);
+    console.error("[x-conversion] EXCEPTION —", error instanceof Error ? error.message : String(error));
   }
 }
 
@@ -253,6 +265,23 @@ Deno.serve(async (request: Request) => {
       });
     }
 
+    // ── Diagnostic: log incoming payload (mask email for privacy) ──
+    const maskedEmail = payload.email
+      ? payload.email.slice(0, 3) + "***@" + payload.email.split("@")[1]
+      : "missing";
+    console.log("[signup] Incoming payload:", JSON.stringify({
+      email: maskedEmail,
+      topics: payload.topics,
+      click_source: payload.click_source ?? null,
+      has_twclid: !!payload.click_source?.twclid,
+      has_gclid: !!payload.click_source?.gclid,
+      has_fbclid: !!payload.click_source?.fbclid,
+      utm_source: payload.click_source?.utm_source ?? "none",
+      utm_medium: payload.click_source?.utm_medium ?? "none",
+      utm_campaign: payload.click_source?.utm_campaign ?? "none",
+      referrer: payload.click_source?.referrer ?? "none",
+    }));
+
     const email = payload.email?.trim().toLowerCase();
     const topics = normalizeTopics(payload.topics);
 
@@ -366,21 +395,33 @@ Deno.serve(async (request: Request) => {
       });
     }
 
-    // Route conversion events only to the ad network that sent the visitor.
+    // ── Route conversion events only to the ad network that sent the visitor ──
     // UTM source is the primary signal — more reliable than document.referrer.
     const utmSource = (payload.click_source?.utm_source ?? "").toLowerCase();
-    const cameFromX =
-      utmSource === "x" || utmSource === "twitter" ||
-      (payload.click_source?.referrer ?? "").includes("x.com") ||
-      (payload.click_source?.referrer ?? "").includes("t.co");
+    const referrer = payload.click_source?.referrer ?? "";
+    const twclid = payload.click_source?.twclid;
 
-    if (cameFromX && payload.click_source?.twclid) {
-      sendXConversion(email, "SignUp", payload.click_source.twclid);
-    } else if (cameFromX) {
-      console.log("X conversion sent without twclid (utm_source indicates X ad click).");
-      sendXConversion(email, "SignUp");
+    const utmMatch = utmSource === "x" || utmSource === "twitter";
+    const referrerMatch = referrer.includes("x.com") || referrer.includes("t.co");
+    const cameFromX = utmMatch || referrerMatch;
+
+    console.log("[signup] Conversion routing decision:", JSON.stringify({
+      utm_source: utmSource || "none",
+      utm_match: utmMatch,
+      referrer: referrer || "none",
+      referrer_match: referrerMatch,
+      came_from_x: cameFromX,
+      has_twclid: !!twclid,
+      twclid_preview: twclid ? twclid.slice(0, 8) + "..." : "none",
+      action: cameFromX
+        ? (twclid ? "SEND_X_WITH_TWCLID" : "SEND_X_WITHOUT_TWCLID")
+        : "SKIP",
+    }));
+
+    if (cameFromX) {
+      sendXConversion(email, "SignUp", twclid || undefined);
     } else {
-      console.log("Conversion tracking skipped — not an X ad click (utm_source:", utmSource || "none", ").");
+      console.log("[signup] Conversion tracking SKIPPED — not from X (utm_source='" + (utmSource || "none") + "', referrer='" + (referrer || "none") + "')");
     }
 
     return jsonResponse(200, {
