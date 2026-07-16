@@ -27,6 +27,9 @@
  *
  *   # Dry-run (print what would be posted without sending):
  *   npm run x:post -- --dry-run "testing"
+ *
+ *   # Reply to a tweet:
+ *   npm run x:post -- --reply-to 2077859250143990188 "Nice point!"
  */
 
 import { createHmac } from 'node:crypto';
@@ -43,7 +46,7 @@ function getEnv(name, ...fallbacks) {
 }
 
 function parseArgs(argv) {
-  const options = { text: '', file: '', dryRun: false, textParts: [] };
+  const options = { text: '', file: '', dryRun: false, replyTo: '', textParts: [] };
 
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
@@ -51,6 +54,11 @@ function parseArgs(argv) {
       options.file = argv[++i]?.trim() ?? '';
     } else if (arg === '--dry-run') {
       options.dryRun = true;
+    } else if (arg === '--reply-to') {
+      const raw = argv[++i]?.trim() ?? '';
+      // Support full URLs like https://x.com/user/status/ID
+      const match = raw.match(/status\/(\d+)/);
+      options.replyTo = match ? match[1] : raw.replace(/[^\d]/g, '');
     } else {
       options.textParts.push(arg);
     }
@@ -100,7 +108,7 @@ function oauthHeader(method, url, consumerKey, consumerSecret, accessToken, acce
   return headerValue;
 }
 
-async function postTweet(text) {
+async function postTweet(text, replyToId) {
   const consumerKey = getEnv('X_CONSUMER_KEY', 'consumer_key');
   const consumerSecret = getEnv('X_CONSUMER_KEY_SECRET', 'consumer_key_secret');
   const accessToken = getEnv('X_ACCESS_TOKEN', 'access_token');
@@ -117,13 +125,16 @@ async function postTweet(text) {
 
   const authHeader = oauthHeader('POST', POST_URL, consumerKey, consumerSecret, accessToken, accessTokenSecret);
 
+  const body = { text };
+  if (replyToId) body.reply = { in_reply_to_tweet_id: replyToId };
+
   const res = await fetch(POST_URL, {
     method: 'POST',
     headers: {
       Authorization: authHeader,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify(body),
   });
 
   const body = await res.json();
@@ -173,6 +184,7 @@ if (text.length > 280) {
 
 if (opts.dryRun) {
   console.log('── Dry run — would post: ──');
+  if (opts.replyTo) console.log(`(in reply to tweet ${opts.replyTo})`);
   console.log(text);
   console.log('────────────────────────────');
   console.log(`Char count: ${text.length}`);
@@ -180,7 +192,7 @@ if (opts.dryRun) {
 }
 
 try {
-  const result = await postTweet(text);
+  const result = await postTweet(text, opts.replyTo || undefined);
   const tweetId = result?.data?.id;
   const tweetText = result?.data?.text;
   console.log(`✓ Posted: https://x.com/i/status/${tweetId}`);

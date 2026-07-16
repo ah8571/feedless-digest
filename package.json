@@ -14,6 +14,7 @@
     "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
     "x:apify-run": "node scripts/x-apify-run.mjs",
     "x:post": "node scripts/x-post.mjs",
+    "x:metrics": "node scripts/x-metrics.mjs",
     "publish-edition": "node scripts/publish-edition.mjs"
   },
   "dependencies": {
