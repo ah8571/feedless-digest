@@ -125,8 +125,8 @@ async function postTweet(text, replyToId) {
 
   const authHeader = oauthHeader('POST', POST_URL, consumerKey, consumerSecret, accessToken, accessTokenSecret);
 
-  const body = { text };
-  if (replyToId) body.reply = { in_reply_to_tweet_id: replyToId };
+  const reqBody = { text };
+  if (replyToId) reqBody.reply = { in_reply_to_tweet_id: replyToId };
 
   const res = await fetch(POST_URL, {
     method: 'POST',
@@ -134,7 +134,7 @@ async function postTweet(text, replyToId) {
       Authorization: authHeader,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify(reqBody),
   });
 
   const body = await res.json();
