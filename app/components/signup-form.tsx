@@ -7,6 +7,20 @@ import { activeSubnewsletterOptions } from "../lib/topics";
 function readClickSource(): Record<string, string> {
   if (typeof window === "undefined") return {};
 
+  // Respect Global Privacy Control (GPC) browser signal.
+  try {
+    if ((navigator as Record<string, unknown>).globalPrivacyControl) {
+      return {};
+    }
+  } catch (_) {}
+
+  // Respect CCPA opt-out set via footer link.
+  try {
+    if (localStorage.getItem("ccpa_opt_out") === "true") {
+      return {};
+    }
+  } catch (_) {}
+
   const source: Record<string, string> = {};
 
   // Use document.referrer for reliable platform attribution

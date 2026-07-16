@@ -38,6 +38,8 @@ const footerNav = [
   { href: "/advertise", label: "Advertise With Us" },
 ];
 
+const privacyOptOutLabel = "Do Not Sell or Share My Personal Information";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,6 +53,20 @@ export default function RootLayout({
             __html: `
               (function(){
                 try {
+                  // Respect Global Privacy Control (GPC) signal.
+                  // If the user's browser broadcasts GPC, do not capture
+                  // any click identifiers or UTM params.
+                  if (navigator.globalPrivacyControl) {
+                    console.log('[feedfree] GPC signal detected — skipping all param capture.');
+                    return;
+                  }
+
+                  // Respect CCPA opt-out stored from footer link.
+                  if (localStorage.getItem('ccpa_opt_out') === 'true') {
+                    console.log('[feedfree] CCPA opt-out active — skipping all param capture.');
+                    return;
+                  }
+
                   var params = new URLSearchParams(window.location.search);
                   var keys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
                   for (var i = 0; i < keys.length; i++) {
@@ -59,9 +75,6 @@ export default function RootLayout({
                   }
 
                   // Fallback: extract click IDs from document.referrer.
-                  // X (and other ad networks) often pass twclid/gclid in the
-                  // referring URL before redirecting. The landing URL may have
-                  // already been cleaned by the time this script runs.
                   var ref = document.referrer;
                   if (ref) {
                     try {
@@ -74,18 +87,6 @@ export default function RootLayout({
                       }
                     } catch(e) {}
                   }
-
-                  // Debug: log what was captured (remove in production)
-                  console.log('[feedfree] Captured params:', {
-                    url: window.location.href,
-                    referrer: ref,
-                    stored: {
-                      twclid: sessionStorage.getItem('twclid'),
-                      utm_source: sessionStorage.getItem('utm_source'),
-                      utm_medium: sessionStorage.getItem('utm_medium'),
-                      utm_campaign: sessionStorage.getItem('utm_campaign'),
-                    }
-                  });
                 } catch(e) {}
               })();
             `,
@@ -127,7 +128,31 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
+              <button
+                type="button"
+                className="privacy-optout-link"
+                onClick={() => {
+                  localStorage.setItem("ccpa_opt_out", "true");
+                  // Clear any previously captured click data
+                  ["twclid", "gclid", "fbclid"].forEach(function (k) {
+                    try { sessionStorage.removeItem(k); } catch (_) {}
+                  });
+                  var el = document.getElementById("privacy-optout-msg");
+                  if (el) {
+                    el.style.display = "block";
+                    setTimeout(function () { el.style.display = "none"; }, 4000);
+                  }
+                }}
+              >
+                {privacyOptOutLabel}
+              </button>
             </nav>
+            <p
+              id="privacy-optout-msg"
+              style={{ display: "none", marginTop: 8, fontSize: "0.85rem", color: "#6b6254" }}
+            >
+              Preference saved. Your click data will not be shared with ad platforms.
+            </p>
           </footer>
         </div>
       </body>

@@ -129,14 +129,29 @@ h2 {
 
 .site-nav a,
 .footer-nav a,
+.footer-nav .privacy-optout-link,
 .text-link {
   color: var(--olive);
 }
 
 .site-nav a:hover,
 .footer-nav a:hover,
+.footer-nav .privacy-optout-link:hover,
 .text-link:hover {
   color: var(--accent-deep);
+}
+
+/* Make opt-out button look like a link */
+.privacy-optout-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .page-stack {
