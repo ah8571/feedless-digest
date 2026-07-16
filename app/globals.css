@@ -643,6 +643,13 @@ h2 {
   margin-top: 24px;
 }
 
+.policy-date {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: #6b6254;
+  font-style: italic;
+}
+
 @media (max-width: 900px) {
   .card-grid,
   .content-grid,
