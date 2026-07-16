@@ -408,19 +408,6 @@ Deno.serve(async (request: Request) => {
       });
     }
 
-    // ── Respect Global Privacy Control (GPC) signal ──
-    // GPC is a browser-level opt-out that is sent as an HTTP header.
-    // If present, skip all conversion tracking regardless of UTM params.
-    const gpcHeader = request.headers.get("Sec-GPC");
-    if (gpcHeader === "1") {
-      console.log("[signup] GPC signal detected via Sec-GPC header — skipping conversion tracking.");
-      return jsonResponse(200, {
-        ok: true,
-        status: "pending_confirmation" satisfies SignupStatus,
-        gpc_respected: true,
-      });
-    }
-
     // ── Route conversion events only to the ad network that sent the visitor ──
     // UTM source + medium is the primary signal. We require BOTH:
     //   utm_source = "x" (or "twitter") — came from X

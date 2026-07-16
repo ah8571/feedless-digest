@@ -56,40 +56,25 @@ export default function RootLayout({
                   // Respect CCPA opt-out stored from footer link.
                   // This is an explicit choice — skip ALL param capture.
                   if (localStorage.getItem('ccpa_opt_out') === 'true') {
-                    console.log('[feedfree] CCPA opt-out active — skipping all param capture.');
                     return;
                   }
 
-                  var allKeys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
-                  var clickIdKeys = ['twclid','gclid','fbclid'];
-
-                  // Respect Global Privacy Control (GPC) signal.
-                  // GPC is a browser-level \"do not track\" — we skip click IDs
-                  // (ad attribution) but still capture UTM params for internal
-                  // analytics so you can see traffic sources.
-                  var gpcActive = false;
-                  try { gpcActive = !!navigator.globalPrivacyControl; } catch(e) {}
-
+                  var keys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
                   var params = new URLSearchParams(window.location.search);
-                  for (var i = 0; i < allKeys.length; i++) {
-                    var key = allKeys[i];
-                    // GPC: skip click IDs, allow UTM params
-                    if (gpcActive && clickIdKeys.indexOf(key) !== -1) continue;
-                    var v = params.get(key);
-                    if (v) sessionStorage.setItem(key, v);
+                  for (var i = 0; i < keys.length; i++) {
+                    var v = params.get(keys[i]);
+                    if (v) sessionStorage.setItem(keys[i], v);
                   }
 
-                  // Fallback: extract click IDs from document.referrer.
+                  // Fallback: extract params from document.referrer.
                   var ref = document.referrer;
-                  if (ref && !gpcActive) {
+                  if (ref) {
                     try {
                       var refParams = new URLSearchParams(ref.split('?')[1] || '');
-                      for (var j = 0; j < allKeys.length; j++) {
-                        var rk = allKeys[j];
-                        if (gpcActive && clickIdKeys.indexOf(rk) !== -1) continue;
-                        var rv = refParams.get(rk);
-                        if (rv && !sessionStorage.getItem(rk)) {
-                          sessionStorage.setItem(rk, rv);
+                      for (var j = 0; j < keys.length; j++) {
+                        var rv = refParams.get(keys[j]);
+                        if (rv && !sessionStorage.getItem(keys[j])) {
+                          sessionStorage.setItem(keys[j], rv);
                         }
                       }
                     } catch(e) {}
