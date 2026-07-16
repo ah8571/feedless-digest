@@ -403,18 +403,30 @@ Deno.serve(async (request: Request) => {
     }
 
     // ── Route conversion events only to the ad network that sent the visitor ──
-    // UTM source is the primary signal — more reliable than document.referrer.
+    // UTM source + medium is the primary signal. We require BOTH:
+    //   utm_source = "x" (or "twitter") — came from X
+    //   utm_medium = "cpc" / "paid" / "ppc" / "paid_social" — it was a paid click
+    // This prevents organic X traffic from being counted as ad conversions.
     const utmSource = (payload.click_source?.utm_source ?? "").toLowerCase();
+    const utmMedium = (payload.click_source?.utm_medium ?? "").toLowerCase();
     const referrer = payload.click_source?.referrer ?? "";
     const twclid = payload.click_source?.twclid;
 
-    const utmMatch = utmSource === "x" || utmSource === "twitter";
+    const isXSource = utmSource === "x" || utmSource === "twitter";
+    const isPaidMedium = ["cpc", "paid", "ppc", "paid_social"].includes(utmMedium);
     const referrerMatch = referrer.includes("x.com") || referrer.includes("t.co");
-    const cameFromX = utmMatch || referrerMatch;
+
+    // Require paid medium for UTM-based detection. Allow referrer fallback
+    // only when no UTM params are present (organic sharing usually has none).
+    const cameFromX =
+      (isXSource && isPaidMedium) ||
+      (!utmSource && !utmMedium && referrerMatch);
 
     console.log("[signup] Conversion routing decision:", JSON.stringify({
       utm_source: utmSource || "none",
-      utm_match: utmMatch,
+      utm_medium: utmMedium || "none",
+      is_x_source: isXSource,
+      is_paid_medium: isPaidMedium,
       referrer: referrer || "none",
       referrer_match: referrerMatch,
       came_from_x: cameFromX,
