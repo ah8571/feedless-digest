@@ -13,7 +13,8 @@
     "x:recent-search": "node scripts/x-recent-search.mjs",
     "x:apify-dataset": "node scripts/x-apify-dataset.mjs",
     "x:apify-run": "node scripts/x-apify-run.mjs",
-    "x:post": "node scripts/x-post.mjs"
+    "x:post": "node scripts/x-post.mjs",
+    "publish-edition": "node scripts/publish-edition.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.50.3",

@@ -45,6 +45,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                try {
+                  var params = new URLSearchParams(window.location.search);
+                  var keys = ['twclid','gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+                  for (var i = 0; i < keys.length; i++) {
+                    var v = params.get(keys[i]);
+                    if (v) sessionStorage.setItem(keys[i], v);
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`${fraunces.variable} ${workSans.variable}`}>
         <div className="site-shell">
           <header className="site-header">

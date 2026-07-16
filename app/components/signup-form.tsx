@@ -10,27 +10,29 @@ function readClickSource(): Record<string, string> {
   const source: Record<string, string> = {};
 
   // Use document.referrer for reliable platform attribution
-  // Survives Next.js hydration since it's set by the browser at navigation time
   try {
     const ref = document.referrer;
     if (ref) source.referrer = ref;
   } catch (_) {}
 
-  // Try URL params for click IDs (fragile — Next.js strips these)
+  // Try URL params for click IDs (our layout script also stores these in sessionStorage)
   const params = new URLSearchParams(window.location.search);
-  const twclid = params.get("twclid");
-  const gclid = params.get("gclid");
-  const fbclid = params.get("fbclid");
 
-  // Fall back to sessionStorage
-  try {
-    if (twclid) source.twclid = twclid;
-    else { const v = sessionStorage.getItem("twclid"); if (v) source.twclid = v; }
-    if (gclid) source.gclid = gclid;
-    else { const v = sessionStorage.getItem("gclid"); if (v) source.gclid = v; }
-    if (fbclid) source.fbclid = fbclid;
-    else { const v = sessionStorage.getItem("fbclid"); if (v) source.fbclid = v; }
-  } catch (_) {}
+  // Click IDs — network-specific identifiers
+  for (const key of ["twclid", "gclid", "fbclid"]) {
+    try {
+      const v = params.get(key) || sessionStorage.getItem(key);
+      if (v) source[key] = v;
+    } catch (_) {}
+  }
+
+  // UTM params — identifies which ad network sent the visitor
+  for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"]) {
+    try {
+      const v = params.get(key) || sessionStorage.getItem(key);
+      if (v) source[key] = v;
+    } catch (_) {}
+  }
 
   return source;
 }

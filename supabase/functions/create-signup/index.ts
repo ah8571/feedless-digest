@@ -99,6 +99,9 @@ type CreateSignupPayload = {
     twclid?: string;
     gclid?: string;
     fbclid?: string;
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
     referrer?: string;
   };
 };
@@ -363,13 +366,21 @@ Deno.serve(async (request: Request) => {
       });
     }
 
-    // Fire X conversion event only when referrer indicates an X ad click
-    const referrer = payload.click_source?.referrer ?? "";
-    const cameFromX = referrer.includes("x.com") || referrer.includes("t.co");
-    if (cameFromX) {
-      sendXConversion(email, "SignUp", payload.click_source?.twclid);
+    // Route conversion events only to the ad network that sent the visitor.
+    // UTM source is the primary signal — more reliable than document.referrer.
+    const utmSource = (payload.click_source?.utm_source ?? "").toLowerCase();
+    const cameFromX =
+      utmSource === "x" || utmSource === "twitter" ||
+      (payload.click_source?.referrer ?? "").includes("x.com") ||
+      (payload.click_source?.referrer ?? "").includes("t.co");
+
+    if (cameFromX && payload.click_source?.twclid) {
+      sendXConversion(email, "SignUp", payload.click_source.twclid);
+    } else if (cameFromX) {
+      console.log("X conversion sent without twclid (utm_source indicates X ad click).");
+      sendXConversion(email, "SignUp");
     } else {
-      console.log("X conversion tracking skipped — referrer does not indicate X ad click.");
+      console.log("Conversion tracking skipped — not an X ad click (utm_source:", utmSource || "none", ").");
     }
 
     return jsonResponse(200, {
