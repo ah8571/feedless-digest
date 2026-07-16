@@ -15,6 +15,7 @@
     "x:apify-run": "node scripts/x-apify-run.mjs",
     "x:post": "node scripts/x-post.mjs",
     "x:metrics": "node scripts/x-metrics.mjs",
+    "x:replies": "node scripts/x-replies.mjs",
     "publish-edition": "node scripts/publish-edition.mjs"
   },
   "dependencies": {
