@@ -38,6 +38,7 @@ async function getXAdsAccessToken() {
         client_id: clientId,
         client_secret: clientSecret,
         client_type: "confidential",
+        scope: "ads:write",
       }).toString(),
     });
 
