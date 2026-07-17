@@ -8,6 +8,7 @@ Bare essentials per platform for building cross-platform posting/reading scripts
 
 | | URL |
 |---|---|
+| **🔑 Get API keys** | [developer.x.com/en/portal/dashboard](https://developer.x.com/en/portal/dashboard) — create a Project & App, then Keys & Tokens |
 | **Post / Reply** | `POST https://api.x.com/2/tweets` → [docs](https://docs.x.com/x-api/tweets/manage-tweets) |
 | **Delete** | `DELETE https://api.x.com/2/tweets/:id` → [docs](https://docs.x.com/x-api/tweets/manage-tweets) |
 | **Read tweet** | `GET https://api.x.com/2/tweets/:id` → [docs](https://docs.x.com/x-api/tweets/lookup) |
@@ -23,6 +24,7 @@ Auth: OAuth 1.0a (4 keys) for posting/deleting, Bearer token for reading. ⚠️
 
 | | URL |
 |---|---|
+| **🔑 Get API keys** | [linkedin.com/developers/apps](https://www.linkedin.com/developers/apps) — create an app, request `Community Management API` product |
 | **Post** (text, image, video, article, poll) | `POST https://api.linkedin.com/rest/posts` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api) |
 | **Get post** | `GET https://api.linkedin.com/rest/posts/{urn}` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api#get-posts-by-urn) |
 | **Find posts by author** | `GET https://api.linkedin.com/rest/posts?author={urn}&q=author` → [docs](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api#find-posts-by-authors) |
@@ -40,6 +42,7 @@ Note: Requires Professional account (Business/Creator) connected to a Facebook P
 
 | | URL |
 |---|---|
+| **🔑 Get API keys** | [developers.facebook.com/apps](https://developers.facebook.com/apps) — create a Meta app, add Instagram Graph API product |
 | **Post** (image, video, carousel, reel, story) | `POST https://graph.facebook.com/v25.0/{IG_USER_ID}/media` → `POST …/media_publish` → [docs](https://developers.facebook.com/docs/instagram-platform/content-publishing) |
 | **Get media** | `GET https://graph.facebook.com/v25.0/{IG_USER_ID}/media` → [docs](https://developers.facebook.com/docs/instagram-api/reference/ig-user/media) |
 | **Read metrics** | `GET https://graph.facebook.com/v25.0/{IG_MEDIA_ID}/insights?metric=impressions,reach,likes` → [docs](https://developers.facebook.com/docs/instagram-api/reference/ig-media/insights) |
@@ -53,6 +56,7 @@ Auth: Facebook OAuth. Permissions: `instagram_basic`, `instagram_content_publish
 
 | | URL |
 |---|---|
+| **🔑 Get API keys** | [developers.facebook.com/apps](https://developers.facebook.com/apps) — same Meta app as Instagram, add Facebook Login product |
 | **Post** | `POST https://graph.facebook.com/v25.0/{page-id}/feed` → [docs](https://developers.facebook.com/docs/graph-api/reference/page/feed) |
 | **Read posts** | `GET https://graph.facebook.com/v25.0/{page-id}/feed` → [docs](https://developers.facebook.com/docs/graph-api/reference/page/feed) |
 | **Read metrics** | `GET https://graph.facebook.com/v25.0/{post-id}/insights` → [docs](https://developers.facebook.com/docs/graph-api/reference/post/insights) |
@@ -66,6 +70,7 @@ Auth: Facebook OAuth. Permissions: `pages_manage_posts`, `pages_read_engagement`
 
 | | URL |
 |---|---|
+| **🔑 Get API keys** | [developers.tiktok.com/apps](https://developers.tiktok.com/apps) — create an app, request Content Posting API access |
 | **Post** | Content Posting API → [docs](https://developers.tiktok.com/products/content-posting-api) |
 | **Read videos** | Display API: `GET /v2/video/list/` + `GET /v2/video/query/` → [docs](https://developers.tiktok.com/doc/display-api-get-started) |
 | **Read metrics** | Included in Display API video query responses |
@@ -77,12 +82,13 @@ Auth: OAuth 2.0 via Login Kit. Content Posting API requires separate app review.
 
 ## Auth cheat sheet
 
-| Platform | Auth | Complexity |
-|---|---|---|
-| X | OAuth 1.0a | Medium |
-| LinkedIn | OAuth 2.0 Bearer | Low |
-| Instagram | Facebook OAuth | Medium |
-| Facebook | Facebook OAuth | Medium |
-| TikTok | OAuth 2.0 (Login Kit) | Medium |
+| Platform | Auth | Complexity | Get Keys |
+|---|---|---|---|
+| X | OAuth 1.0a | Medium | [developer.x.com](https://developer.x.com/en/portal/dashboard) |
+| LinkedIn | OAuth 2.0 Bearer | Low | [linkedin.com/developers](https://www.linkedin.com/developers/apps) |
+| Instagram | Facebook OAuth | Medium | [developers.facebook.com](https://developers.facebook.com/apps) |
+| Facebook | Facebook OAuth | Medium | [developers.facebook.com](https://developers.facebook.com/apps) |
+| TikTok | OAuth 2.0 (Login Kit) | Medium | [developers.tiktok.com](https://developers.tiktok.com/apps) |
+
 
 
