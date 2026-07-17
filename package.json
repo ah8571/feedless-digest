@@ -18,6 +18,14 @@
     "x:read": "node scripts/x-read.mjs",
     "x:metrics": "node scripts/x-metrics.mjs",
     "x:replies": "node scripts/x-replies.mjs",
+    "linkedin:post": "node scripts/social/linkedin-post.mjs",
+    "linkedin:metrics": "node scripts/social/linkedin-metrics.mjs",
+    "facebook:post": "node scripts/social/facebook-post.mjs",
+    "facebook:metrics": "node scripts/social/facebook-metrics.mjs",
+    "instagram:post": "node scripts/social/instagram-post.mjs",
+    "instagram:metrics": "node scripts/social/instagram-metrics.mjs",
+    "tiktok:post": "node scripts/social/tiktok-post.mjs",
+    "tiktok:metrics": "node scripts/social/tiktok-metrics.mjs",
     "publish-edition": "node scripts/publish-edition.mjs"
   },
   "dependencies": {
