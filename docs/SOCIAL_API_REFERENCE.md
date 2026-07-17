@@ -80,6 +80,21 @@ Auth: OAuth 2.0 via Login Kit. Content Posting API requires separate app review.
 
 ---
 
+## Bluesky (AT Protocol)
+
+| | URL |
+|---|---|
+| **🔑 Get API keys** | [bsky.app/settings/app-passwords](https://bsky.app/settings/app-passwords) — create an App Password (no developer app needed!) |
+| **Post** | `POST https://bsky.social/xrpc/com.atproto.repo.createRecord` → [docs](https://docs.bsky.app/docs/get-started) |
+| **Read post / metrics** | `GET https://bsky.social/xrpc/app.bsky.feed.getPosts?uris=...` → [docs](https://docs.bsky.app/docs/get-started) |
+| **Delete** | `POST https://bsky.social/xrpc/com.atproto.repo.deleteRecord` |
+| **Login** | App Password → `POST /xrpc/com.atproto.server.createSession` → [docs](https://docs.bsky.app/docs/get-started) |
+| **OAuth (complex)** | OAuth 2.0 + DPoP + PKCE + PAR → [docs](https://docs.bsky.app/docs/advanced-guides/oauth-client) |
+
+Auth: App Password (simplest), or full OAuth 2.0 with DPoP for "Login with Bluesky" (complex, needs `@atproto/api` SDK).
+
+---
+
 ## Auth cheat sheet
 
 | Platform | Auth | Complexity | Get Keys |
@@ -89,6 +104,7 @@ Auth: OAuth 2.0 via Login Kit. Content Posting API requires separate app review.
 | Instagram | Facebook OAuth | Medium | [developers.facebook.com](https://developers.facebook.com/apps) |
 | Facebook | Facebook OAuth | Medium | [developers.facebook.com](https://developers.facebook.com/apps) |
 | TikTok | OAuth 2.0 (Login Kit) | Medium | [developers.tiktok.com](https://developers.tiktok.com/apps) |
+| Bluesky | App Password or OAuth 2.0 + DPoP | Low / High | [bsky.app/settings](https://bsky.app/settings/app-passwords) |
 
 
 

@@ -26,6 +26,8 @@
     "instagram:metrics": "node scripts/social/instagram-metrics.mjs",
     "tiktok:post": "node scripts/social/tiktok-post.mjs",
     "tiktok:metrics": "node scripts/social/tiktok-metrics.mjs",
+    "bluesky:post": "node scripts/social/bluesky-post.mjs",
+    "bluesky:metrics": "node scripts/social/bluesky-metrics.mjs",
     "publish-edition": "node scripts/publish-edition.mjs"
   },
   "dependencies": {
