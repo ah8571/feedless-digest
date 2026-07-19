@@ -71,19 +71,6 @@ export default function HomePage() {
 
       <section className="workflow-section">
         <div className="section-heading">
-          <p className="section-label">Top Articles This Week</p>
-          <h2>Long-form signal, no scrolling required</h2>
-        </div>
-
-        <div className="articles-grid">
-          {topArticles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-          ))}
-        </div>
-      </section>
-
-      <section className="workflow-section">
-        <div className="section-heading">
           <p className="section-label">Past Editions</p>
           <h2>See past editions</h2>
         </div>
@@ -96,15 +83,23 @@ export default function HomePage() {
                 <h3>{section.series}</h3>
               </div>
 
-              <div className="workflow-grid">
-                {section.issues.map((issue) => (
-                  <Link className="panel workflow-card workflow-card-link" href={`/archive#${issue.id}`} key={issue.id}>
-                    {issue.date ? <span className="step-chip">{issue.date}</span> : null}
-                    {issue.title ? <h3>{issue.title}</h3> : null}
-                    {issue.summary ? <p>{issue.summary}</p> : null}
-                  </Link>
-                ))}
-              </div>
+              {section.series === "AI Engineering" ? (
+                <div className="workflow-grid">
+                  {topArticles.map((article) => (
+                    <ArticleCard key={article.id} article={article} />
+                  ))}
+                </div>
+              ) : (
+                <div className="workflow-grid">
+                  {section.issues.map((issue) => (
+                    <Link className="panel workflow-card workflow-card-link" href={`/archive#${issue.id}`} key={issue.id}>
+                      {issue.date ? <span className="step-chip">{issue.date}</span> : null}
+                      {issue.title ? <h3>{issue.title}</h3> : null}
+                      {issue.summary ? <p>{issue.summary}</p> : null}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
