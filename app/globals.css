@@ -715,3 +715,97 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Article Cards ───────────────────────────────────────────── */
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease;
+  text-decoration: none;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(29, 27, 24, 0.18);
+}
+
+.article-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.article-card-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.article-card-author {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.article-card-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-card-handle {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.article-card-title {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  color: var(--ink);
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}

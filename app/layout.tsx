@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Work_Sans } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import { PrivacyOptOut } from "./components/privacy-optout";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -120,31 +121,8 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
-              <button
-                type="button"
-                className="privacy-optout-link"
-                onClick={() => {
-                  localStorage.setItem("ccpa_opt_out", "true");
-                  // Clear any previously captured click data
-                  ["twclid", "gclid", "fbclid"].forEach(function (k) {
-                    try { sessionStorage.removeItem(k); } catch (_) {}
-                  });
-                  var el = document.getElementById("privacy-optout-msg");
-                  if (el) {
-                    el.style.display = "block";
-                    setTimeout(function () { el.style.display = "none"; }, 4000);
-                  }
-                }}
-              >
-                {privacyOptOutLabel}
-              </button>
+              <PrivacyOptOut label={privacyOptOutLabel} />
             </nav>
-            <p
-              id="privacy-optout-msg"
-              style={{ display: "none", marginTop: 8, fontSize: "0.85rem", color: "#6b6254" }}
-            >
-              Preference saved. Your click data will not be shared with ad platforms.
-            </p>
           </footer>
         </div>
       </body>

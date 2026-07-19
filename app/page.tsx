@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { archiveIssues } from "./archive-issues";
 import { SignupForm } from "./components/signup-form";
+import { ArticleCard } from "./components/article-card";
+import { topArticles } from "./top-articles";
 
 export const metadata: Metadata = {
   title: "Feedfree Digest — Long-form signal without the feed",
@@ -65,6 +67,19 @@ export default function HomePage() {
           <span className="stat-label">What it preserves</span>
           <p className="stat-value">Depth, nuance, original sources</p>
         </aside>
+      </section>
+
+      <section className="workflow-section">
+        <div className="section-heading">
+          <p className="section-label">Top Articles This Week</p>
+          <h2>Long-form signal, no scrolling required</h2>
+        </div>
+
+        <div className="articles-grid">
+          {topArticles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
       </section>
 
       <section className="workflow-section">
